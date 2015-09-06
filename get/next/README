@@ -1,0 +1,42 @@
+========================================================
+This is a little RLE (Utah Raster tool kit) file viewer.
+========================================================
+
+There is GIF viewers for the NeXT, so i thought that it was time that
+someone wrote a RLE/RASF viewer for the NeXT. 
+
+The source is included but you need to have the utah raster toolkit
+version 3.0 installed on your system to compile it.  
+(the include files and libraries for the utah raster toolkit)
+(should be installed in /usr/local/lib and /usr/local/include)
+The code that reads and write GraphicsLand Raster Files (rasf) is
+included 
+
+I'd like to thank Robert Hood, for his NeXTGIF program which RLEViewer
+is heavily based on.
+
+This program is in the Public Domain, all I ask is that if you make
+any improvements or Bug fixes, you should let me know.
+
+
+==========================================================================
+See the ChangeLog file for a list of differences between this and
+latter versions of RLEViewer
+==========================================================================
+
+vince demarco
+demarco@cpsc.ucalgary.ca
+
+
+==========================================================================
+Note added by SWT:
+
+Assuming IB.proj is not automatically generated (I don't have a NeXT,
+so I don't know how these things work), you will need to uudecode
+IB.proj.uu.
+
+Same goes for RLEViewer.nib.uu.
+
+You will also need to uudecode all the *.tiff.uu files.
+
+The 3.1 changes have not been tested.

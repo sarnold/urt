@@ -1,0 +1,64 @@
+#
+# Makefile for include subdirectory.
+# 
+# Only thing to do here is install the .h files somewhere if INC_DEST is
+# set.
+#
+
+# default action builds rle_config.h
+default: rle_config.h
+
+#alldefs CONFIGDEFS
+CONFIGDEFS =
+
+#ifdef INC_DEST
+#set DEST INC_DEST
+DEST =
+#endif
+
+HDRS = \
+	exit_status.h \
+	pyramid.h \
+	rle.h \
+	rle_code.h \
+	rle_put.h \
+	rle_raw.h \
+	rle_config.h
+
+post-config: rle_config.h
+
+rle_config.h: ${CONFIG} makefile
+	sh make-config-h ${CONFIGDEFS} >rle_config.h
+	cat rle_config.tlr >>rle_config.h
+
+install: $(HDRS)
+	@sh -c "if test 'x$(DEST)' != x ; then \
+		if test 'x$(HDRS)' != x ; then eval \
+			'for hdr in $?; do \
+				echo cp \$$hdr $(DEST)/\$$hdr ; \
+				cp \$$hdr $(DEST)/\$$hdr; \
+			done' ; \
+		else \
+		    true ; \
+		fi ; \
+	else \
+		true ; \
+	fi"
+	touch install
+
+# Nothing to clean
+clean:
+	rm rle_config.h
+
+# Remove installed headers
+pristine:
+	@-if test "x$(DEST)" != x ; then eval \
+		'for hdr in $(HDRS); do \
+			echo rm -f $(DEST)/$$hdr; \
+			rm -f $(DEST)/$$hdr; \
+		done' ; \
+	else \
+		true ; \
+	fi
+	rm -f install
+

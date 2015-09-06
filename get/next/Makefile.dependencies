@@ -1,0 +1,6 @@
+Image.o : Image.m Image.h 
+Myapp.o : Myapp.m Myapp.h RLE.h Image.h RASF.h 
+RASF.o : RASF.m RASF.h Image.h
+RLE.o : RLE.m RLE.h Image.h 
+RLEViewer_main.o : RLEViewer_main.m Myapp.h 
+

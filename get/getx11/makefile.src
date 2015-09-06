@@ -1,0 +1,88 @@
+# Makefile for get/getx11 directory
+
+# Default thing to make is everything
+default: all
+
+#set	DEST	GET_DEST	Where to install it.
+DEST = ../../../bin
+
+#ifdef USE_XLIBINT_H
+XGHC_C = XGetHClrs.c
+XGHC_O = XGetHClrs.o
+#endif
+
+#ifdef X_SHARED_MEMORY
+LIBEXT = -lXext
+#endif
+
+# Point to X11 include directory, if it's in a strange place
+DIRFLAGS = $(INCX11)
+
+# -lX11 is X11 support library
+DIRLIBS = $(LIBX11) $(LIBEXT) -lm
+
+# Executables.  The .out will be stripped off in the install action.
+
+X_C_FILES =\
+	getx11.c x11_stuff.c timer.c map_scan.c in_cmap.c XCopyImg.c \
+	$(XGHC_C)
+
+X_O_FILES =\
+	getx11.o x11_stuff.o timer.o map_scan.o in_cmap.o XCopyImg.o \
+	$(XGHC_O)
+
+PGMS = getx11.out
+
+#ifdef HAVE_CPROTO
+all: make-fns
+#endif
+all: $(PGMS)
+
+$(X_O_FILES): $(RI)/rle_config.h getx11.h
+#ifdef USE_PROTOTYPES
+$(X_O_FILES): prototypes.h
+#else
+$(X_O_FILES): fn_decls.h
+#endif
+
+# getx11 - read RLE file to X11 display
+getx11.out: $(X_O_FILES) 
+	${CC} $(CFLAGS) $(X_O_FILES) $(LIBS) -o getx11.new
+	mv getx11.new getx11.out
+
+# Make prototypes.h and fn_decls.h.  Only happens if HAVE_CPROTO is defined.
+# Also assumes that the C preprocessor is /lib/cpp.
+# The substitution in the sed line below removes ^L characters,
+#ifdef HAVE_CPROTO
+prototypes.h: $(X_C_FILES)
+	for f in $(X_C_FILES) ; do \
+		/lib/cpp $(IFLAGS) $(DIRFLAGS) $$f | \
+		sed -e 's///' | \
+		cproto1 -ge ; \
+	done >prototypes.h
+
+make-fns: $(X_C_FILES)
+	@echo Checking for new function declarations
+	@for f in $(X_C_FILES) ; do \
+		/lib/cpp $(IFLAGS) $(DIRFLAGS) $$f | \
+		sed -e 's///' | \
+		cproto1 -ge -p0 ; \
+	done >xxx.h ;
+	@if cmp -s xxx.h fn_decls.h ; then \
+		rm xxx.h ;\
+	else \
+		echo Making new fn_decls.h ;\
+		mv xxx.h fn_decls.h ;\
+	fi ;\
+	touch make-fns
+#endif
+
+# Incremental install, copies executable to DEST dir.
+install: default install-pgm
+	touch install
+
+# Clean up binaries
+clean:	clean-pgm
+
+# Clean up installed code
+pristine: pristine-pgm

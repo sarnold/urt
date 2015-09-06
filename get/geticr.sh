@@ -1,0 +1,1 @@
+rlequant   $* | rletoppm | ppmtoicr

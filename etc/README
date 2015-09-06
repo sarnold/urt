@@ -1,0 +1,12 @@
+This directory contains some random stuff that you may find useful.
+
+colobar.sh - a shell script to generate colorbars.  The rlescale
+program may do this better.
+
+lw.map - a "gamma correction" color map for the Apple laserwriter
+plus.  This was empirically determined using a reflection
+densitometer.  To use it, 
+	rleldmap -t .../etc/lw.map file.rle | rletops
+
+rlesize - a script that extracts the image size from the output of
+rlehdr.

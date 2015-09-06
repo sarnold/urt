@@ -1,0 +1,37 @@
+# Makefile for abekas A62 conversion routines.
+
+default		:	all
+
+#set	DEST	CNV_DEST	Where to install it
+DEST	=	../../bin
+
+# Extra libraries for this directory.
+DIRLIBS = -lm
+
+PGMS = rletoabA62.out
+
+all		:	$(PGMS)
+
+# Executables.  The .out will be stripped off in the install action.
+
+rletoabA62.out	:	rletoabA62.o rle.o
+			$(CC) $(CFLAGS) -o rletoabA62.new \
+			  rletoabA62.o rle.o $(LIBS)
+			mv rletoabA62.new rletoabA62.out
+
+# Incremental install, copies executable to DEST dir.
+install		:	default install-pgm
+			touch install
+
+# Clean up installed binaries
+pristine	:	pristine-pgm
+
+# Clean up binaries
+clean		:	clean-pgm
+
+lint		:
+			lint $(RI) rletoabA62.c rle.c sig.c
+
+# Dependencies
+rletoabA62.o:	$(RI)/rle_config.h
+rle.o:		$(RI)/rle.h $(RI)/rle_config.h

@@ -1,0 +1,52 @@
+# Makefile for dvi to RLE conversion program(s)
+
+#set	DEST	TOOLS_DEST
+DEST = ../bin
+
+DIRLIBS =  $(LIBMCTEX)
+DIRFLAGS = -I$(INCMCTEX)
+DIRMFLAGS = CONFFILE=${CONFFILE}
+
+# If the McTeX library directory is in this directory, make it first.
+#ifadd	DVIRLE_LIBSUBDIR	DIRS	lib
+#emit DIRS
+DIRS =
+
+# Executable programs
+PGMS= dvirle1.out dvirle2.out
+SCRIPTS= dvirle.sh topcrop.sh 
+
+SRCS=	dvirle1.c dvirle2.c
+
+default: all
+
+all:	subdirs $(PGMS)
+
+# Clean up installed stuff and binaries
+pristine: pristine-pgm
+	for pgm in $(SCRIPTS); do rm -f $(DEST)/`basename $$pgm .sh`; done
+	-rm -f install-scripts
+
+# Clean up binaries
+clean: clean-pgm
+
+# Everything depends on the rle header and libraries.
+# Also depend on the .h files in $(INCMCTEX) (This may break your make)
+$(PGMS): $(RI)/rle.h $(RI)/rle_config.h $(INCMCTEX)/*.h
+
+install: default install-pgm install-scripts
+	touch install
+
+install-scripts: $(SCRIPTS)
+	for pgm in $?; do d=$(DEST)/`basename $$pgm .sh`; \
+		cp $$pgm $$d; chmod +x $$d; done
+	touch install-scripts
+
+# Default rule for making a program from its .c file.
+# The mv will not be done if there is an error, so a broken program
+# will not be left around.
+.SUFFIXES:
+.SUFFIXES: .out .c
+.c.out:
+	$(CC) $(CFLAGS) $< $(LIBS) -lm -o $*.new
+	mv $*.new $@

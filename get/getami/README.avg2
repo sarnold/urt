@@ -1,0 +1,8 @@
+If you need to view a, say 640x400, picture in HAM mode, you will need to scale
+it down to 320x400, as you cannot get HAM in high resolution. To do this, you
+can either use fant (too slow), or something like rlezoom 1 2 | avg4 (requires
+too much memory, more than I have in my 3MB Amiga).
+
+Since I found I wanted to do this kind of scaling very often, I modified avg4.c
+to produce avg2.c, which does exactly that. The context diffs are in file
+DIFF_avg4_avg2.

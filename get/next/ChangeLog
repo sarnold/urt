@@ -1,0 +1,57 @@
+Fri Aug  9 18:36:47 1991  Vince DeMarco  (vince at whatnext)
+
+	* The GraphicsLand Raster File viewer finally works thanks to
+	Thomas Orth (orth@cpsc.ucalgary.ca).  I knew I shouldn't have used
+	the code from the GraphicsLand Library.
+
+Wed Aug  7 00:17:28 1991  Vince DeMarco  (vince at whatnext)
+
+	* The program will now allow you to select if you want to save the
+	rle file as a tiff or as a encapsulated postscript file though an
+	accessory view in the save panel object.  (this program is getting
+	real big isn't it).  Only bug left is the bug dealing with .rasf
+	files 
+
+Mon Aug  5 01:14:33 1991  Vince DeMarco  (vince at whatnext)
+
+	* All bugs seem to be fixed now, only the opening of .rasf files
+	seems to be messed up.
+
+	* Now when you iconify a window, an icon representing the file
+	type is displayed in the miniWindow 
+
+Sun Aug  4 14:52:49 1991  Vince DeMarco  (vince at whatnext)
+
+	* Added a print option and a save option.  There is a bug in the
+	save option when saving RLE files, the resulting file is upside
+	down i'm not sure how to fix this.  (Boy this program is getting
+	big can we say creaping featurism?????)
+
+	* Added an Edit option in the main menu so you could cut stuff out
+	of the help panel.  Also the text in the help panel is now no
+	longer editable.  Made the RLE and RASF objects subclasses of the
+	Image class which is a subclass of View.  The RLE and RASF objects
+	now only implement a openFile: method, after the data has been
+	read in the displayImage method from the Image Class is called and
+	a window is put up on the screen.
+
+	* Version 2.1.  Fixed up how the alpha channel is handled in
+	images.  The alpha channel is now properly handled in utah raster
+	files that contain the alpha channel. (The GraphicsLand Raster
+	File viewer portion of the program still has some bugs in it.  If
+	i knew what the bugs were i might be able to fix them)
+
+Sun Jul 28 00:53:18 1991  Vince DeMarco  (vince at whatnext)
+
+	* Version 2.0
+	Added the Ability to view GraphicsLand Raster Files (.rasf)
+
+Tue Jun  4 23:39:29 1991  Vince DeMarco  (vince at whatnext)
+
+	* Changes Since version 1.0.  
+	The program will no longer crash when a rle file has less than 3
+	colors in the color table.  the program will no assume an error
+	has occured tell the user about it, and assume that 3 colors are
+	supposed to be present in the file.
+
+

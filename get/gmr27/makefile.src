@@ -1,0 +1,41 @@
+# Makefile for get/gmr27 directory
+#
+
+default: all
+
+#set	DEST	GET_DEST	Where to install it
+DEST = ../../bin
+
+DIRLIBS = $(LIBGRINNELL)
+
+PGMS = getgmr.out
+
+# Executables.  The .out will be stripped off in the install action.
+
+G_C_FILES =\
+	getgmr.c\
+	XtndRunget.c\
+	bread.c
+
+G_O_FILES =\
+	getgmr.o\
+	XtndRunget.o\
+	bread.o
+
+all: $(PGMS)
+
+$(G_O_FILES): $(RI)/rle_config.h
+
+# getgmr - read RLE file to Grinnell GMR27
+getgmr.out: $(G_O_FILES) 
+	${CC} $(CFLAGS) $(G_O_FILES) $(LIBS) -o getgmr.new
+	mv getgmr.new getgmr.out
+
+# Incremental install, copies executable to DEST dir.
+install: default install-pgm
+
+# Clean up installed stuff and binaries
+pristine: pristine-pgm
+
+# Clean up binaries
+clean: clean-pgm

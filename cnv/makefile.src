@@ -1,0 +1,179 @@
+# Description file for rle conversion programs.
+
+
+#set	DEST	CNV_DEST	Where to install the tools
+DEST = ../bin
+
+# Executables.  The .out will be stripped off in the install action.
+#ifadd	ABEKASA60	PGMS		rletoabA60.out
+#ifadd	ABEKASA62	DIRS		rletoabA62
+#ifadd	ALIAS		PGMS		rletoalias.out aliastorle.out
+#ifadd	CGM		PGMS		rletocgm.out
+#ifadd	CUBICOMP	PGMS		cubitorle.out
+#ifadd	DVIRLE		DIRS		tex
+#ifadd	GIF		DIRS		rletogif
+#ifadd	GIF		PGMS		giftorle.out
+#ifadd	GRAYFILES	PGMS		graytorle.out
+#ifadd	GRAYFILES	PGMS		rletogray.out
+#ifadd	MACPAINT	PGMS		painttorle.out
+#ifadd	MACPAINT	PGMS		rletopaint.out
+#ifadd	PBMPLUS		PGMS		pgmtorle.out ppmtorle.out rletoppm.out
+#ifadd	POSTSCRIPT	PGMS		rletops.out
+#ifadd	TARGA		PGMS		rletotarga.out targatorle.out
+#ifadd	TIFF		PGMS		rletotiff.out tifftorle.out
+#ifadd	SGICONV		PGMS		iristorle.out rletoiris.out
+#ifadd  SUNRASTER	PGMS		rastorle.out rletorast.out
+#ifadd  WASATCH		PGMS		wasatchrle.out
+#ifadd	WAVEFRONT	PGMS		rlatorle.out rletorla.out
+#ifnadd	NO_TOOLS	PGMS		rawtorle.out rletoraw.out
+#ifnadd	NO_TOOLS	PGMS		rletoascii.out
+#ifnadd	NO_TOOLS	PGMS		xbmtorle.out
+
+#emit PGMS
+PGMS =  
+
+#emit DIRS
+DIRS =  
+
+# ALLDIRS is all subdirectories, regardless of whether they are active
+ALLDIRS = rletoabA62 rletogif tex
+
+# Default is what is to be made if nothing is specified.
+default: $(PGMS) subdirs
+
+# Everything depends on the rle header and libraries.
+# keep_make_happy keeps make happy if $PGMS is empty
+$(PGMS) keep_make_happy: $(RI)/rle.h $(RI)/rle_config.h
+
+# Programs that need specific make rules (presumably all of them)
+
+#ifdef ABEKASA60
+# rletoabA60 - RLE to Abekas A60.
+# Will build with the default rule.
+#endif ABEKASA60
+
+#ifdef CUBICOMP
+# cubitorle - Cubicomp to RLE.
+# Will build with the default rule.
+#endif CUBICOMP
+
+#ifdef GRAYFILES
+# graytorle - Combine gray scale images into RLE file.
+# rletogray - Split RLE file into gray scale images.
+# Will build with the default rule.
+#endif GRAYFILES
+
+#ifdef MACPAINT
+# painttorle - MacPaint to RLE.
+# rletopaint - RLE to MacPaint.
+# Will build with the default rule.
+#endif MACPAINT
+
+#ifdef PBMPLUS
+#emit PBMDIR
+PBMDIR = 
+# pgmtorle - pgm format to RLE
+# ppmtorle - ppm format to RLE
+# rletoppm - RLE to ppm format
+pgmtorle.out: pgmtorle.c
+	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
+	mv $*.new $@
+ppmtorle.out: ppmtorle.c
+	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
+	mv $*.new $@
+rletoppm.out: rletoppm.c
+	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
+	mv $*.new $@
+#endif
+
+#ifdef POSTSCRIPT
+# rletops - RLE to postscript.
+# Will build with the default rule.
+#endif POSTSCRIPT
+
+#ifdef SGICONV
+# iristorle/rletoiris - Convert between RLE and SGI image format.
+#
+iristorle.out: iristorle.c
+	$(CC) $(CFLAGS) -I/usr/include/gl $*.c $(LIBS) -limage -o $*.new
+	mv $*.new $@
+rletoiris.out: rletoiris.c
+	$(CC) $(CFLAGS) -I/usr/include/gl $*.c $(LIBS) -limage -o $*.new
+	mv $*.new $@
+#endif
+
+#ifdef TIFF
+#emit TIFFDIR
+TIFFDIR =
+# tifftorle - Convert TIFF images to RLE
+# rletotiff - Convert RLE images to TIFF
+rletotiff.out: rletotiff.c
+	$(CC) $(CFLAGS) $(INCTIFF) $*.c $(LIBS) $(LIBTIFF) -lm -o $*.new
+	mv $*.new $@
+tifftorle.out: tifftorle.c
+	$(CC) $(CFLAGS) $(INCTIFF) $*.c $(LIBS) $(LIBTIFF) -lm -o $*.new
+	mv $*.new $@
+#endif
+
+#ifdef WASATCH
+# wasatchrle - Wasatch Paintbox to RLE.
+# Will build with the default rule.
+#endif WASATCH
+
+#ifdef WAVEFRONT
+# rlatorle - Wavefront RLA to RLE
+# Will build with the default rule.
+# rletorla - RLE to Wavefront RLA
+rletorla.out: rletorla.c
+	$(CC) $(CFLAGS) $*.c $(LIBS) $(LIBWAVEFRONT) -lm -o $*.new
+	mv $*.new $@
+#endif WAVEFRONT
+
+# Install stuff
+install: default install-pgm install-subdirs
+
+# Clean up binaries.
+clean: clean-pgm
+
+# Clean up installed binaries
+pristine: pristine-pgm
+
+# Default rule for making a program from its .c file.
+# The mv will not be done if there is an error, so a broken program
+# will not be left around.
+.SUFFIXES:
+.SUFFIXES: .out .c
+.c.out:
+	$(CC) $(CFLAGS) $*.c $(LIBS) -lm -o $*.new
+	mv $*.new $@
+
+# Dependency lines.  Make sure to #ifdef them.
+# DO NOT DELETE THIS LINE
+
+#ifdef CUBICOMP
+cubitorle.o: ${RI}/rle.h
+#endif CUBICOMP
+#ifdef MACPAINT
+painttorle.o: ${RI}/rle.h
+rletopaint.o: ${RI}/rle.h
+#endif MACPAINT
+#ifdef SUNRASTER
+rastorle.o: ${RI}/rle.h
+rletorast.o: ${RI}/rle.h
+#endif SUNRASTER
+#ifdef ABEKASA60
+rletoabA60.o: ${RI}/rle.h
+#endif ABEKASA60
+#ifdef POSTSCRIPT
+rletops.o: ${RI}/rle.h
+#endif POSTSCRIPT
+#ifdef TARGA
+targatorle.o: ${RI}/rle.h
+#endif TARGA
+#ifdef WASATCH
+wasatchrle.o: ${RI}/rle.h
+#endif WASATCH
+#ifdef GRAYFILES
+graytorle.o: ${RI}/rle.h
+rletogray.o: ${RI}/rle.h
+#endif GRAYFILES

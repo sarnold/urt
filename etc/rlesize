@@ -1,0 +1,6 @@
+#! /bin/csh -f
+# This plucks the size information from the output of the rlehdr program
+# and prints it in program readable format.  Useful for:
+#	rlebg 255 255 255 -s `rlesize < foo.rle`
+# It should probably be an option to rlebox.
+rlehdr | sed -n -e "s/^.*size (\([0-9][0-9]*\), \([0-9][0-9]*\))/\1 \2/p"

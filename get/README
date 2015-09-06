@@ -1,0 +1,34 @@
+
+This directory contains sources for programs to read RLE files and
+display them on various sorts of displays.  Since most sites will not
+have all the different displays, or we may not have written a "get"
+program for your favorite display, this file contains a few words on
+rolling your own.
+
+The simplest way to write a "get" program for your display device is
+to use rle_getrow to read successive scanlines, and send them to the
+display using a "pixel put" routine.  If you need to dither the pixel
+values, you can steal the dithering code from getX11.c (or tools/to8.c,
+but that code is not as general).  Be sure to be careful about files
+with other than straight RGB images.
+
+If your display supports 24 bits of color, and can be written to one
+channel at a time, you can use the raw interface and interpret the
+opcodes directly into operations on your display.  Some output
+buffering usually helps to make this fast.  The program 'gmr27/getfb'
+uses this philosophy, but it reads the RLE file directly (it precedes
+the 'raw' interface).
+
+If you do write a program for a display device that is not supported
+in this distribution, please send it to us, so we can add it to the
+distribution, and others will not have to duplicate your hard work.
+Similarly, if you are thinking of writing a display driver, you might
+send us a note and see if anyone else has already done one.
+
+Spencer W. Thomas
+Rod G. Bogart
+University of Michigan
+July, 1990
+
+spencer@eecs.umich.edu
+rgb@caen.engin.umich.edu

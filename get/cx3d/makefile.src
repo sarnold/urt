@@ -1,0 +1,37 @@
+# Makefile for Chromatics CX3d RLE get program
+
+default: all
+
+#set	DEST	GET_DEST	Where to install it
+DEST	=	../../../bin
+
+DIRLIBS =	$(LIBCX3D) -lm
+
+PGMS = 		getcx3d.out
+
+all		:	$(PGMS)
+
+# Executables.  The .out will be stripped off in the install action.
+
+getcx3d.out	:	getcx3d.o gamma.o sig.o
+			cc $(CFLAGS) -o getcx3d.new \
+				getcx3d.o gamma.o sig.o $(LIBS)
+			mv getcx3d.new getcx3d.out
+
+# Incremental install, copies executable to DEST dir.
+install		:	default install-pgm
+			touch install
+
+# Clean up installed binaries
+pristine	:	pristine-pgm
+
+# Clean up binaries
+clean		:	clean-pgm
+
+lint		:
+			lint $(RI) getcx3d.c gamma.c sig.c
+
+# Dependencies
+gamma.o:	round.h
+getcx3d.o:	$(CX3DI)/cx3d_types.h $(CX3DI)/cx3d_solid.h
+getcx3d.o:	$(RI)/rle.h $(RI)/rle_config.h gamma.h sig.h

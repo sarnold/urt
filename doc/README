@@ -1,0 +1,41 @@
+****************************************************************
+Note for version 3.0: Some of the descriptions in these papers no
+longer reflect reality in their details.  The substance is correct,
+but some of the functions and commands have changed their names and/or
+arguments and calling sequences.  In particular, the functions named
+'sv_xxx' are now called 'rle_xxx' (except sv_setup, which changed to
+rle_put_setup, and lost an argument).  The 'comp' program, used
+heavily in the 'toolkit' paper is now called 'rlecomp', and the
+command syntax has changed slightly.  The arguments to the 'fant'
+program have changed, too.  See the man pages.
+****************************************************************
+
+This is the non-man-page documentation for the Raster Toolkit.  They are
+formatted with the Scribe document processing system (tm Unilogic, Inc.).
+
+In the likely event that you don't have Scribe running on your system,
+two forms of scribe output are provided.  The ".ps" files contain PostScript
+descriptions, for devices like the Apple LaserWriter.  The ".doc" files
+are vanilla text output, without the PostScript figures.
+
+The files are:
+
+rle.mss		- "The Design of the Utah RLE Format"
+rle.doc		- Text version of the above
+rle.ps		- PostScript version of the above (figures included).
+rle_head.ps	- PostScript figures used in the above paper.
+rleops.ps
+
+toolkit.mss	- "The Utah Raster Toolkit"  Read comments at the top for
+		  hints on Scribing it.
+toolkit.bib	- Bibliography for the above
+toolkit.doc	- Text version
+toolkit.ps	- PostScript version, without the figures.
+pics/		- PostScript versions of the images used in the paper.
+
+Because the toolkit paper takes a long time (> 30 min) to print if the
+figures are included, they are left out of the .ps file.  They can be
+printed individually by doing something like:
+
+	echo showpage | cat pics/dart_shadow_and_monkey.ps - | lpr -Plw
+

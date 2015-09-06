@@ -1,0 +1,26 @@
+Getami requires the qsort routine. If you are using Lattice C, be warned that
+Lattice's qsort is poorly written, requiring tremendous amounts of stack. (To
+run getami, you need a stack somewhere between 300000 and 350000 bytes!) I would
+therefore recommend that you use a different qsort, like the Berkeley one,
+available from uunet. I notified Lattice about the problem, but they did not fix
+it in release 5.10b. Hopefully, they will do so in the next one.
+
+Getami also requires getopt to parse its arguments. (I don't speak scanargs!)
+You can use any of the various versions floating around, like the GNU (requires
+alloca), or the Berkeley version.
+
+Finally, if you want to save pictures rendered with getami as IFF files, you
+will need a copy of Christian Weber's iff.library, available on one of the
+Fred Fish disks. If you don't have this library, to compile getami, add
+-dNOIFFLIB to CFLAGS.
+
+The current version of getami was developed using Lattice C. The original
+program was developed using Aztec C, and an attempt has been made to ensure
+that the program compiles in both environments. However, as I only have
+Lattice C, I cannot be absolutely certain about this claim. Let me know of
+any changes required to make getami compile using Aztec C.
+
+Report all bugs/enhancements to Kriton Kyrimis:
+	kyrimis%theseas@csi.forth.gr	(internet)
+or	uunet!mcsun!ariadne!theseas!kriton!kyrimis	(UUCP, from the US)
+or	mcsun!ariadne!theseas!kriton!kyrimis	(UUCP, from Europe)

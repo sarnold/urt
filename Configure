@@ -1,0 +1,24 @@
+#! /bin/sh
+
+CONFIG=${1-config/urt}
+DEPTH=${2-}
+TOP=${2-./}
+HERE=${3-}
+MFLAGS=${4-}
+
+# If no makefile.src, give up.
+if test ! -r makefile.src ; then 
+	echo "No makefile.src in $HERE"
+	exit 0
+fi
+
+( 	echo DEPTH = ${DEPTH} ;
+	echo CONFIG = ${CONFIG} ;
+	echo HERE = ${HERE} ;
+	cat ${CONFIG} ${DEPTH}makefile.hdr makefile.src ${DEPTH}makefile.tlr
+) | awk -f ${TOP}makedef.awk >makefile
+
+make post-config
+make config-subdirs DEPTH=../${DEPTH} CONFIG=../${CONFIG} HERE=${HERE} \
+		MFLAGS=${MFLAGS}
+

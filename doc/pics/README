@@ -1,0 +1,4 @@
+The postscript files in this directory are compressed (using the
+"compress" program).  If you don't have compress (distributed widely
+over the Usenet, and with BSD4.3 Unix), you can retrieve uncompressed
+versions from utah-cs:~anon/dist/rle-postsc.tar.

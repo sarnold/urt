@@ -1,0 +1,107 @@
+# Description file for rle tool programs. 
+
+#set	DEST	TOOLS_DEST	Where to install the tools
+DEST = ../bin
+
+# Executables.  The .out will be stripped off in the install action.
+PGMS = 	applymap.out \
+	avg4.out \
+	crop.out \
+	fant.out \
+	into.out \
+	mcut.out \
+	mergechan.out \
+	pyrmask.out \
+	repos.out \
+	rleClock.out \
+	rleaddcom.out \
+	rlebg.out \
+	rlebox.out \
+	rlecat.out \
+	rlecomp.out \
+	rleccube.out \
+	rledither.out \
+	rleflip.out \
+	rlegrid.out \
+	rlehdr.out \
+	rlehisto.out \
+	rleldmap.out \
+	rlemandl.out \
+	rlenoise.out \
+	rlepatch.out \
+	rleprint.out \
+	rlequant.out \
+	rlescale.out \
+	rleselect.out \
+	rlesetbg.out \
+	rlespiff.out \
+	rlesplice.out \
+	rlesplit.out \
+	rlestereo.out \
+	rleswap.out \
+	rlezoom.out \
+	smush.out \
+	to8.out \
+	tobw.out \
+	unexp.out \
+	unslice.out
+
+ALLDIRS = clock
+
+# Default is what is to be made if nothing is specified.
+default: $(PGMS)
+
+# Everything depends on the rle headers and libraries.
+$(PGMS): $(RI)/rle.h $(RI)/rle_config.h
+
+# A couple programs also depend on the getraw definitions.
+applymap.out rlebg.out: $(RI)/rle_raw.h
+
+# Pyrmask comes in pieces, must be built special.
+
+pyrlib.o: pyrlib.c $(RI)/pyramid.h $(RI)/rle.h $(RI)/rle_config.h
+	$(CC) $(CFLAGS) pyrlib.c -c
+pyrmask.out: pyrlib.o pyrmask.c $(RI)/pyramid.h
+	$(CC) $(CFLAGS) -I$(RI) pyrmask.c pyrlib.o $(LIBS) -lm -o pyrmask.new
+	mv pyrmask.new pyrmask.out
+
+fant.out: fant.o mallocNd.o
+	$(CC) $(CFLAGS) -I$(RI) fant.o mallocNd.o $(LIBS) -lm -o fant.new
+	mv fant.new fant.out
+	
+# rlebox and crop use some common code.
+rle_box.o: $(RI)/rle.h $(RI)/rle_config.h $(RI)/rle_raw.h
+
+crop.out: crop.c rle_box.o
+	${CC} ${CFLAGS} crop.c rle_box.o ${LIBS} -o crop.new
+	mv crop.new crop.out
+rlebox.out: rlebox.c rle_box.o
+	${CC} ${CFLAGS} rlebox.c rle_box.o ${LIBS} -o rlebox.new
+	mv rlebox.new rlebox.out
+
+# rleClock has it's own directory, must be built special
+
+rleClock.out: clock/font.c clock/font.h clock/font.src clock/rleClock.c
+	(cd clock ; make)
+
+# Incremental install, copies everything ("$?") since last install to DEST dir.
+install: $(PGMS) install-pgm
+	touch install
+
+# Clean up installed stuff and binaries
+pristine: pristine-pgm
+
+# Clean up binaries.
+clean:	clean-pgm
+
+# Default rule for making a program from its .c file.
+# The mv will not be done if there is an error, so a broken program
+# will not be left around.
+.SUFFIXES:
+.SUFFIXES: .out .c .o
+.c.out:
+	$(CC) $(CFLAGS) $< $(LIBS) -lm -o $*.new
+	mv $*.new $@
+
+.c.o:
+	$(CC) -c $(CFLAGS) $<

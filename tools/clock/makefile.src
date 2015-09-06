@@ -1,0 +1,25 @@
+# Makefile for rleClock
+
+default: install
+
+install: rleClock
+	mv rleClock ../rleClock.out
+
+rleClock:rleClock.o font.o
+	${CC} ${CFLAGS} rleClock.o font.o -lm ${LIBS} -o rleClock
+
+font.c:font.src makeFont
+	chmod +x makeFont
+	makeFont font.src > font.c
+
+lint:
+	lint -I$(RI) rleClock.c
+
+# Clean up installed stuff and binaries
+pristine: clean
+# installed version removed from parent dir
+
+clean:	clean-pgm
+
+# Dependencies.
+rleClock.o font.o:$(RI)/rle_config.h

@@ -1,0 +1,42 @@
+C-TeX code from Chris Torek, and before him, from others.  The
+attributions in this code are few and far between.  Anyway, the dirs
+should be:
+
+dev:	.dvi to RLE conversion program
+** The next two directories are part of McTeX and are not included in the
+** raster toolkit distribution.
+h:  	Header files for the following.
+lib:	C functions to handle .dvi files and fonts
+
+You need to get the C-TeX distribution from U of Maryland in order to
+use this code.  As of this writing, the latest version is available by
+anonymous ftp to cs.umd.edu, in the file tex/mctex.beta.1dec89.Z This
+is a compressed tar file, so be sure to use BINARY mode when
+retrieving it.
+
+You need a "fontdesc" file.  The default location is
+/usr/local/lib/tex/fontdesc.  You can change this in the makefile, or
+override it with a TEXFONTDESC environment variable.  Here is a
+sample:
+
+#
+# Sample C-TeX font configuration file.
+#
+# N.B.: choose only one of `box' or `blank' TFM fonts.
+
+# current directory always searched first
+#	TYPE	SPEC	SLOP	PATH
+font	gf	*	3	%f.%mgf
+font	pxl	*	3	%f.%mpxl
+font	pk	*	3	%f.%mpk
+# this is not pretty
+font	blank	*	1	i/%f.tfm
+font	box	*	1	%f.tfm
+
+#	TYPE	SPEC	SLOP	PATH
+font	gf	*	3	/usr/local/lib/tex/fonts/%f/%f.%mgf
+font	pxl	*	3	/usr/local/lib/tex/fonts/%f/%f.%mpxl
+font	pk	*	3	/usr/local/lib/tex/fonts/%f/%f.%mpk
+# SLiTeX invisible fonts can be done with links:
+font	blank	*	1	/usr/local/lib/tex/slitexfonts/%f.tfm
+font	box	*	1	/usr/local/lib/tex/fonts/%f.tfm

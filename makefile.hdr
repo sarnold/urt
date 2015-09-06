@@ -1,0 +1,61 @@
+################ Beginning of makefile.hdr ################
+# Stuff that goes at the beginning of all the makefiles, but is not
+# configuration parameters should be in this file.  It is included
+# after the configuration file, and before the makefile.src.
+
+# Where the C header files live (RI) and where the library lives (RL)
+
+#emit RI
+RI = ../include
+#emit RL
+RL = ../lib
+
+# Note -- DEST is not emitted here, it is emitted with a #set in the 
+# individual makefiles.  This allows each makefile to override DEST with
+# a subdirectory-specific value (from, e.g., GET_DEST).
+
+# Reset these here because GNU make exports make variables when
+# make recurses.  These should be local.
+DIRS =
+ALLDIRS =
+PGMS =
+
+# Machine dependent libraries
+#ifadd CRAY2CC		ExtraLIBS	-lm -lnet
+#ifadd IRIS4DCC		ExtraLIBS	-lbsd
+#ifadd IRIS4DCC		ExtraLIBS	-lmalloc
+#ifadd 386IXCC		ExtraLIBS	-linet
+#emit ExtraLIBS
+ExtraLIBS = 
+
+#ifdef USE_L_FLAG
+LIBS = -L$(RL) -lrle $(DIRLIBS) $(ExtraLIBS)
+#else
+LIBS = $(RL)/librle.a $(DIRLIBS)  ${ExtraLIBS}
+#endif
+
+# Machine dependent compiler flags
+#ifadd	CONVEXCC	MachFLAGS	-tm c1 -fn
+#ifadd	CRAY2CC		MachFLAGS	-h opt
+#ifadd	SUNCC		MachFLAGS	-f68881
+#ifadd	IRIS4DCC	MachFLAGS	-G 4 -Olimit 600
+#ifadd	HPUX300CC	MachFLAGS	-Dhpux -W c,-Nd2000,-Ns4000 -lBSD
+#ifadd	HPUX800CC	MachFLAGS	-Dhpux
+#ifadd	IBMR6000CC	MachFLAGS	-Dunix
+#emit MachFLAGS
+MachFLAGS =
+
+CFLAGS = -O $(DFLAGS) $(DIRFLAGS) $(ExtraCFLAGS) $(IFLAGS) $(MachFLAGS) 
+IFLAGS = -I. -I$(RI)
+
+#ifdef GCC
+CC=gcc
+#endif
+
+
+# System V make pays attention to the SHELL environment variable. Override it.
+SHELL = /bin/sh
+
+################ End of makefile.hdr ################
+
+#quiet off

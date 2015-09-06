@@ -1,0 +1,38 @@
+# Makefile for get/qcr directory
+#
+# Probably only compiles on an HP-UX machine
+#
+
+default: all
+
+#set	DEST	GET_DEST	Where to install it
+DEST = ../../bin
+
+DIRLIBS = $(LIBHPQCR)
+
+PGMS = getqcr.out bright.out qcrldmap.out wedge.out
+
+all: $(PGMS)
+
+getqcr.out: qcr.o getqcr.o
+	cc -o getqcr.out qcr.o getqcr.o $(LIBS)
+
+bright.out: bright.o qcr.o
+	cc -o bright.out bright.o qcr.o -ldvio
+
+qcrldmap.out: qcrldmap.o qcr.o
+	cc -o qcrldmap.out qcrldmap.o qcr.o $(LIBS)
+
+wedge.out: wedge.o qcr.o
+	cc -o wedge.out wedge.o qcr.o -ldvio
+
+# Incremental install, copies executable to DEST dir.
+install: default install-pgm
+	touch install
+
+pristine: pristine-pgm
+
+clean: clean-pgm
+
+# All .o files depend on rle_config.h
+qcr.o getqcr.o bright.o qcrldmap.o wedge.o: $(RI)/rle_config.h

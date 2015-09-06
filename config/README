@@ -1,0 +1,383 @@
+ -*- Text -*-
+Here is some more information on the configuration process.
+
+The configuration symbols defined in config/urt are
+
+AMIGA	Define this if you have an Amiga and want display programs.
+	The programs getami and show3 will be compiled.  See the
+	README file in get/getami.  The Makefile in this directory
+	is not configured by the Configure script.
+
+APOLLO	Define this if you want a display program for Apollo
+	workstations.  The program getap will be compiled.
+
+BOBCAT	Define this if you want display programs for an HP 9000 series
+	workstation.  The programs getbob, getren, and read98721 will
+	be compiled.  See also LIBBOBCAT (you probably don't have all
+	the libraries in the default list).  If you are running BSD, the
+	toolkit must be compiled in HPUX compatibility mode to use
+	these programs.  The easiest thing to do is to use the 'hpux'
+	configuration file and add a line
+	CC = hpux cc
+
+CX3D	Define this if you have a Chromatics CX1536 running CX3D.
+	This program has not been compiled or tested in quite a while,
+	as we don't have one of these beasts any longer.
+
+FB	Define this if you have the BRL (Ballistic Research Lab) 
+	extended frame buffer library.  See also the definition of the
+	variable LIBFB.  The display program 'getfb' will be compiled
+	if this symbol is defined.
+
+GETICR	Installs a simple script for displaying images with NCSA
+	Telnet (on the Mac) versions 2.3 or higher.  Requires PBMPLUS
+	and that pbmplus tools be installed.  Some day we'll make it a
+	real program.
+
+GRINNELL	Define this if you have a Grinnell GMR-27, and the U
+	of Utah library for it.  The display program 'getgmr' will be
+	compiled if this symbol is defined.  See also the variable
+	LIBGRINNELL.
+
+HPQCR	Define this if you want a program to drive a Matrix QCR-Z
+	camera attached to a HP workstation.  The programs getqcr,
+	bright, qcrldmap, and wedge will be compiled.  These programs
+	are not highly debugged or refined.
+
+IRIS	Define this if you want display programs for a Silicon
+	Graphics IRIS 2400 or 3000.  The programs getmex and getiris
+	will be compiled.  See also the variable LIBIRIS.  The getmex
+	program is also useful on 4D displays with fewer than 24
+	bits/pixel.
+
+IRIS4D	Define this if you want a display program for a Silicon
+	Graphics IRIS 4D.  The program get4d will be compiled.  See
+	the variable LIBIRIS4D.
+
+NEXT	Define this if you want a display program for a NeXT.  The
+	get/next directory needs some work before you can compile.
+	See get/next/README.  The Makefile is not configured.
+
+ORION	Define this to get a display program for a "High-Level
+	Hardware" Orion display.  This program has not been tested
+	recently, as we don't have one.
+
+SUNTOOLS	Define this if you want a (somewhat good) display
+	program for Sun workstations running SunTools (or NeWS).  The
+	program getsun will be compiled.  See the definition of the
+	make variable LIBSUNTOOLS_COM.
+
+TAAC1	Define this if you have a Sun with a TAAC-1 board and want a
+	display program for it.  See the defintion of the make
+	variables LIBSUNTOOLS_COM and LIBTAAC1.
+
+X10	Define this if you want a display program for the X
+	Window System version 10 (getx10).  See also the variables
+	LIBX10 and INCX10 (which should be of the form -Idir, or blank).
+
+X11	Define this if you want a display program for the X Window
+	System version 11 (getx11).  See also the variable LIBX11 and
+	the symbol XLIBINT_H.  The variable INCX11 defines the "root"
+	of the X11 include tree.  This is usually /usr/include (and
+	can be left blank if so).  The value of INCX11 should be in
+	the form -Idir, or blank.
+
+ABEKASA60	Define this to get "rletoabA60", a program that
+	converts RLE files into Abekas A60 digital video disk format.
+
+ABEKASA62	Define this to get "rletoabA62", a program that
+	converts RLE files into Abekas A62 digital video disk format.
+
+ALIAS	Define this to get "rletoalias" and "aliastorle", for converting
+	between RLE and Alias image files.
+
+CGM	Define this to get "rletocgm", a program that converts an RLE
+	image to a CGM (Computer Graphics Metafile) file.  Requires
+	the Drawcgm package from Pittsburgh Supercomputer Center (ftp
+	to ftp.psc.edu, get files from pub/gplot directory).  See the
+	make variables INCCGM and LIBCGM.
+
+CUBICOMP	If defined, compiles "cubitorle" to convert Cubicomp image
+	files to RLE format.
+
+DVIRLE	Define this if you want a program to convert from ".dvi" files
+	(TeX output) to RLE images.  You need to have the Maryland
+	MC-TeX library to do this.  See the README in the cnv/tex
+	directory for more information.  This compiles the programs
+	dvirle and dviselect.  See also DVIRLE_LIBSUBDIR, LIBMCTEX,
+	INCMCTEX, and CONFFILE.
+
+GIF	Define this to get "giftorle" and "rletogif" conversion
+	between GIF and RLE formats.
+
+GRAYFILES	Define this to get "graytorle" and "rletogray"
+	conversion between a simple raw data format and RLE.
+
+SGICONV	Compiles "iristorle" and "rletoiris", that convert between RLE
+	and SGI image format.  Can only be compiled on a SGI machine,
+	unless you copy the "image.h" file from one.
+
+MACPAINT	Define this to get "painttorle" and "rletopaint" to
+	convert from and to MacPaint format.  Conversion to MacPaint
+	performs a simple dithering into black & white.
+
+PBMPLUS	Define this to get "ppmtorle" and "pgmtorle" conversion from
+	PBMPLUS ppm and pgm formats to RLE, and "rletoppm" conversion
+	from RLE to ppm format.  See also the variables LIBPBMPLUS and
+	INCPBMPLUS.
+
+POSTSCRIPT	Define this to get "rletops" conversion from RLE to
+	black&white or color PostScript.
+
+SUNRASTER	Define this to get "rastorle" and "rletorast"
+	conversions between RLE and Sun Raster files.  See the make
+	variable LIBSUNTOOLS_COM.
+
+TARGA	Define this to get "rletotarga" and "targatorle" conversion
+	between TARGA format and RLE.
+
+TIFF	Define this to get "tifftorle" and "rletotiff" conversions
+	between RLE and TIFF formats.  Requires Sam Leffler's libtiff
+	package, available by anonymous FTP from sgi.com.  The
+	make variables LIBTIFF and INCTIFF tell where to find the tiff
+	library and include files, respectively.
+	INCTIFF should be empty or in the form "-Idir".
+
+TIFF2p4	If you have libtiff version earlier than 2.4, undefine this.
+
+VICAR	Define this to get "vcrtorle" and "rletovcr", programs to
+	convert between VICAR format (as well as we understand it,
+	which is not very well) and RLE.  Works fine for the images
+	NASA puts out.
+
+WASATCH	Define this to get "wasatchtorle" conversion from Wasatch
+	Paintbox format to RLE.
+
+WAVEFRONT	Define this to get "rlatorle" and "rletorla"
+	conversions between RLE and Wavefront's RLA and RLB formats.
+
+APOLLOCC	Adds C compiler flags for an Apollo workstation.   At
+	the moment, this is a no-op.
+
+CRAY2CC	Adds C compiler flags for a Cray 2 running UNICOS.
+
+GCC	Redefines CC=gcc.
+
+HPUX300CC	Adds C compiler flags for HP-UX on a 300 series machine.
+
+HPUX800CC	Adds C compiler flags for HP-UX on a 800 series machine.
+
+IBMR6000CC	Adds C compiler flags for the IBM RS6000.
+	Specifically, -Dunix.
+
+IRIS4DCC	Adds C compiler flags for SGI 4D.  Specifically, you
+	get -G 4 -Olimit 600.
+
+IRISCC	Adds C compiler flags for SGI 2400/3000.  At the moment, does
+	nothing.
+
+SUNCC	Adds C compiler flags for a Sun-3 workstation.  Specifically,
+	you get -f68881.
+
+386IXCC	Adds compiler flags for the Interactive systems 386/ix.
+
+ExtraCFLAGS	A Make variable that can be used to supply extra flags
+	to the C compiler.  This might be used to refer to another
+	system include directory, or to give flags like '-ansi' to the
+	Gnu C compiler.  Ideally, instead of using this variable, you
+	would add another '#define xxxCC' symbol and add the
+	appropriate flags to makefile.hdr with '#ifadd xxxCC MachFLAGS ...'
+
+ABEKAS_PAL	Define this to generate PAL format files for the
+	Abekas A60.
+
+ALL_MAN	Normally, only the manual pages corresponding to configured
+	tools will be printed or installed.  If this symbol is
+	defined, all man pages will be printed or installed.
+
+CONST_DECL	Define this symbol if your compiler understands the
+	'const' storage class.  This modifies the prototype
+	declarations in `rle.h' so that string arguments which are not
+	modified are declared `const char *'.
+
+FILE_NAME_14_CHARS	Define this symbol if your system limits file
+	names to 14 characters (many System V based Unix systems do).
+	If you define this, and you want to use the manual pages for
+	the online 'man' command, then you MUST install the manual
+	pages in another directory by defining MAN_DEST (file name
+	truncation is only performed during the manual page
+	installation process.)
+
+NEED_BSTRING	If your C library does not have the functions bzero
+	and bcopy, you need to define this symbol.  (One way to find
+	out is to try to make the toolkit and see if these symbols
+	turn up missing.)
+
+NEED_GETOPT	This compiles a public domain replacement for the
+	System V getopt() function.  Most Unix systems seem to have
+	getopt() these days, so you can probably ignore this symbol.
+
+NEED_SETLINEBUF	If you have a System V Unix, you probably need this.
+	This defines the BSD setlinebuf() function in terms that
+	System V understands.
+
+NO_MAKE_MAKEFILE	If you don't want a 'makefile' action in the
+	makefiles, define this.  This is a good thing to define if you
+	are using the GNU make program, as it insists on remaking the
+	makefile every time you run make.  This is annoying at best.
+
+NO_OPEN_PIPES	On Unix systems, the file "names" "|..." and "*.Z" are
+	special.  The first form will invoke "..." as a command and
+	read its output (for input files) or will write the output of
+	the tool to the command (for output files).  The second form
+	will invoke the "compress" program to decompress (for input)
+	or compress (for output) files.  This will not work on systems
+	(such as the Macintosh) that do not have a "popen" call.
+	Define this symbol for such systems.
+
+NO_RANLIB	If your system doesn't have the ranlib command, define
+	this.  This is true of most System V systems.
+
+NO_ITIMER	If your system doesn't have the function setitimer(),
+	define this (only system we've found where you need this is
+	Cray 2).  This affects the getx11 program movie mode display.
+
+NO_TOOLS	If you define this symbol, the tools, get, and cnv
+	directories will not be made.
+
+STDIO_NEEDS_BINARY	If you are on a non-unix machine that requires
+	you to specify things like "rb" and "wb" in the fopen() call
+	in order to successfully read or write a binary file, then you
+	need this flag.  (E.g., MS-DOS.)  (Of course, it's not clear
+	the configuration process will work on such a machine, but at
+	least you have some idea of a starting point.)
+
+USE_TIME_H	The typedef time_t is in /usr/include/time.h instead
+	of /usr/include/sys/types.h.  This is usually the case on Sys
+	V systems.
+
+SYS_V_SETPGRP	Define this if your system has the System V setpgrp()
+	call instead of the BSD version.
+
+USE_L_FLAG	The toolkit makefiles will refer to the RLE library by
+	the syntax "-Llibdir -lrle" instead of "libdir/librle.a" if
+	this is defined.  You may want to do this if, for example, you
+	compile a shared version of the library.
+
+USE_PROTOTYPES	If your C compiler understands ANSI C function
+	prototypes, define this symbol.
+
+USE_RANDOM	If you have the BSD random() function, define this.
+
+USE_STDARG	Defining this causes the 'scanargs' routine to use the
+	'stdarg' interface instead of 'varargs'.  'stdarg' is the ANSI
+	way of passing variable numbers of arguments to functions.
+
+USE_STDLIB_H	If you have "stdlib.h" in your /usr/include directory,
+	define this.  Generally, you will also define USE_STRING_H,
+	USE_PROTOTYPES, and VOID_STAR along with this one.
+
+USE_STRING_H	If your /usr/include directory has "string.h" but not
+	"strings.h" you need this symbol.
+
+VOID_STAR	If your C compiler understands the 'void *' type,
+	define this symbol.  This is definitely true if you have an
+	ANSI compiler.  If you get compile errors from the declaration
+	of the 'malloc' function in a few programs, you will probably
+	need to define this.
+
+USE_XLIBINT_H	If you have the file "Xlibint.h" in your X11 include
+	directory (usually /usr/include/X11), define this.
+
+Some path and make variables are also defined here.  Paths that start
+with a / are considered absolute paths and are used unchanged.
+Otherwise, the path is treated as relative to the "root" of the URT
+source tree.  You can use make variables as part of a path, but they
+will NOT be expanded to see if the initial character is a /.
+
+DEST	Where to put the compiled tools.  This may be overridden by
+	the directory-specific paths below.
+
+RI	Where the toolkit compilation will find the header files.
+	This defaults to "include" and should not be changed.
+
+RL	Where the toolkit compilation will find the RLE library.
+	This defaults to "lib".  If it is changed, see README for
+	toolkit compilation instructions.
+
+The following will override DEST if defined.
+ 
+MAN_DEST	Where to put manual pages.  If not defined, manual
+	pages will not be installed anywhere.
+
+LIB_DEST	Where to put the RLE library.  If not defined, the
+	library will not be installed anywhere (i.e., it will be left
+	on the lib subdirectory), and the 'clean' action on the lib
+	subdirectory will not remove the compiled library.
+
+GET_DEST	Where to put "get" programs.
+
+CNV_DEST	Where to put conversion programs (from the cnv subdirectory.)
+
+TOOLS_DEST	Where to put programs from the tools (and tex) subdirectory.
+
+INC_DEST	If defined, the header files will be installed in this
+	directory.
+
+Some make variables are also defined in this file.  These are
+
+ROFF	What program to use to format the man pages.
+
+ROFFOPT	The options to supply to this program.
+
+ROFFPIPE	A pipeline to send the output of ROFF to in order to
+	print it.
+
+OTHERJUNK	Files that will be removed whenever you 'make clean'.
+
+****************************************************************
+The configuration process takes the files config/urt (or your own, if
+you specify one), makefile.hdr, dir/makefile.src, and makefile.tlr,
+concatenates them together and runs them through an awk program
+'makedef.awk'.  The awk program interprets the various configuration
+commands and produces a makefile on the output.  This is placed in the
+file dir/makefile.  Then Configure runs 'make post-config' to do any
+directory-specific configuration (for example, on the include
+directory, this creates the file rle_config.h).  Finally Configure
+runs 'make config-subdirs' to configure any subdirectories.
+
+You should probably not need to edit any of the makefile.{hdr,src,tlr}
+files unless you modify the toolkit.  Here are guidelines for what
+goes where:
+
+config file:	The configuration file contains ONLY configuration
+	symbols and variables that need to be edited by the user.
+	ALL symbols #defined in this file will be added to the file
+	include/rle_config.h.
+
+makefile.hdr:	Make variable definitions that are used in all
+	makefiles.  The user should not have to edit this file.
+
+makefile.tlr:	Make rules used in all makefiles.  The user should not
+	have to edit this file.  If you add rules or edit existing
+	rules in this file, be careful that they will work in ALL the
+	existing makefiles.
+
+*/makefile.src:	The directory-specific makefile contents.  This should
+	define the variables PGMS, DIRS, and ALLDIRS, if it will use
+	any of the rules in makefile.tlr.  The variable DIRLIBS can be
+	set to include more libraries in the default LIBS variable.
+	The value of DIRFLAGS is added to the CFLAGS variable.  The
+	value of DIRMFLAGS is added to the make line for subdirectory
+	makes ('make subdirs' and 'make install-subdirs').
+
+include/rle_config.tlr:  This file is concatenated to the end of the
+	file rle_config.h when it is created.  If a symbol that is
+	#defined in the config file should have a value in C code,
+	this is the place to change it.  See the definition of
+	CONST_DECL in this file, for example.  This is also the place
+	to define symbols that depend on others (see XLIBINT_H).
+
+Local Variables:
+fill-prefix: "\t"
+End:
