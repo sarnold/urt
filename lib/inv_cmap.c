@@ -42,7 +42,7 @@ static long gdist, rdist, cdist;
 static long cbinc, cginc, crinc;
 static unsigned long *gdp, *rdp, *cdp;
 static unsigned char *grgbp, *rrgbp, *crgbp;
-static gstride, rstride;
+static long gstride, rstride;
 static long x, xsqr, colormax;
 static int cindex;
 #ifdef INSTRUMENT_IT

@@ -76,7 +76,7 @@ rle_hdr rle_dflt_hdr = {
     8,				/* cmaplen (log2 of length of color map) */
     NULL,			/* pointer to color map */
     NULL,			/* pointer to comment strings */
-    stdout,			/* output file */
+    NULL,			/* output file -- must be set dynamically */
     { 7 },			/* RGB channels only */
     0L,				/* Can't free name and file fields. */
     "Urt",			/* Default "program name". */

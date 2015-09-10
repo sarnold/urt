@@ -9,7 +9,11 @@
  */
 
 #include "rle_config.h"
+#define _XOPEN_SOURCE  /* Make sure fdopen() is in stdio.h */
+
 #include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 #ifndef NO_OPEN_PIPES
 /* Need to have a SIGCLD signal catcher. */
@@ -256,7 +260,6 @@ int *pid;
     int pipefd[2];
     int i;
     char *argv[4];
-    extern int errno;
 
     /* Check args. */
     if ( *mode != 'r' && *mode != 'w' )

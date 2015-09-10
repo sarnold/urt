@@ -269,6 +269,9 @@ rle_hdr *the_hdr;
 {
     rle_hdr *ret_hdr;
 
+    rle_dflt_hdr.rle_file = stdout;
+    /* The rest of rle_dflt_hdr is set by the loader's data initialization */
+
     if ( the_hdr == &rle_dflt_hdr )
 	return the_hdr;
 

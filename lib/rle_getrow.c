@@ -351,7 +351,7 @@ rle_pixel *scanline[];
 	    bzero( (char *)scanline[-1] + the_hdr->xmin,
 		   the_hdr->xmax - the_hdr->xmin + 1 );
 	for ( nc = 0; nc < the_hdr->ncolors; nc++ )
-	    if ( RLE_BIT( *the_hdr, nc ) )
+	    if ( RLE_BIT( *the_hdr, nc ) ) {
 		/* Unless bg color given explicitly, use 0. */
 		if ( the_hdr->background != 2 || the_hdr->bg_color[nc] == 0 )
 		    bzero( (char *)scanline[nc] + the_hdr->xmin,
@@ -360,6 +360,7 @@ rle_pixel *scanline[];
 		    bfill( (char *)scanline[nc] + the_hdr->xmin,
 			   the_hdr->xmax - the_hdr->xmin + 1,
 			   the_hdr->bg_color[nc] );
+	    }
     }
 
     /* If skipping, then just return */
@@ -367,7 +368,7 @@ rle_pixel *scanline[];
     {
 	the_hdr->priv.get.vert_skip--;
 	the_hdr->priv.get.scan_y++;
-	if ( the_hdr->priv.get.vert_skip > 0 )
+	if ( the_hdr->priv.get.vert_skip > 0 ) {
 	    if ( the_hdr->priv.get.scan_y >= the_hdr->ymax )
 	    {
 		int y = the_hdr->priv.get.scan_y;
@@ -377,6 +378,7 @@ rle_pixel *scanline[];
 	    }
 	    else
 		return the_hdr->priv.get.scan_y;
+	}
     }
 
     /* If EOF has been encountered, return also */
@@ -457,11 +459,12 @@ rle_pixel *scanline[];
 	    else
 		nc = DATUM(inst);
 	    nc++;
-	    if ( debug_f )
+	    if ( debug_f ) {
 		if ( RLE_BIT( *the_hdr, channel ) )
 		    fprintf( stderr, "Pixel data %d (to %d):", nc, scan_x+nc );
 		else
 		    fprintf( stderr, "Pixel data %d (to %d)\n", nc, scan_x+nc);
+	    }
 	    if ( RLE_BIT( *the_hdr, channel ) )
 	    {
 		/* Don't fill past end of scanline! */

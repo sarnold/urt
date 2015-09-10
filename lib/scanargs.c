@@ -128,10 +128,10 @@ CONST_DECL char   *format;
 va_list argl;
 {
 
-    register    check;			/* check counter to be sure all argvs
+    int    check;			/* check counter to be sure all argvs
 					   are processed */
     register CONST_DECL char  *cp;
-    register    cnt;
+    int    cnt;
     int	    optarg = 0;			/* where optional args start */
     int	    nopt = 0;
     char    tmpflg,			/* temp flag */
@@ -375,11 +375,12 @@ reswitch:				/* after finding '*' or ',' */
 				if ( optarg > 0 ) /* end optional args? */
 				{
 				    /* Eat the arg, too, if necessary */
-				    if ( list_cnt == 0 )
+				    if ( list_cnt == 0 ) {
 					if ( typchr == 's' )
 					    (void)va_arg( argl, char * );
 					else
 					    (void)va_arg( argl, ptr );
+                    }
 				    break;
 				}
 				else
@@ -567,7 +568,7 @@ reswitch:				/* after finding '*' or ',' */
 				     * Do conversion for n and N types
 				     */
 				    tmpflg = typchr;
-				    if (typchr == 'n' || typchr == 'N' )
+				    if (typchr == 'n' || typchr == 'N' ) {
 					if (*argp != '0')
 					    tmpflg = 'd';
 					else if (*(argp+1) == 'x' ||
@@ -578,6 +579,7 @@ reswitch:				/* after finding '*' or ',' */
 					}
 					else
 					    tmpflg = 'o';
+                    }
 				    if (typchr == 'N')
 					tmpflg = toupper( tmpflg );
 

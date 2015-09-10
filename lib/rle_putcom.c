@@ -53,11 +53,12 @@ register char *v;
 {
     for ( ; *n != '\0' && *n != '=' && *n == *v; n++, v++ )
 	;
-    if (*n == '\0' || *n == '=')
+    if (*n == '\0' || *n == '=') {
 	if ( *v == '\0' )
 	    return v;
 	else if ( *v == '=' )
 	    return ++v;
+    }
 
     return NULL;
 }
