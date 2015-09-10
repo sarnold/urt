@@ -15,7 +15,7 @@ all		:	$(PGMS)
 # Executables.  The .out will be stripped off in the install action.
 
 rletoabA62.out	:	rletoabA62.o rle.o
-			$(CC) $(CFLAGS) -o rletoabA62.new \
+			$(CC) $(CFLAGS) $(LDFLAGS) -o rletoabA62.new \
 			  rletoabA62.o rle.o $(LIBS)
 			mv rletoabA62.new rletoabA62.out
 

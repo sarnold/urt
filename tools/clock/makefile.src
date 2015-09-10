@@ -6,7 +6,7 @@ install: rleClock
 	mv rleClock ../rleClock.out
 
 rleClock:rleClock.o font.o
-	${CC} ${CFLAGS} rleClock.o font.o -lm ${LIBS} -o rleClock
+	${CC} ${CFLAGS} ${LDFLAGS} rleClock.o font.o ${LIBS} -o rleClock -lm
 
 font.c:font.src makeFont
 	chmod +x makeFont

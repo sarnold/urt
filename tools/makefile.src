@@ -62,21 +62,21 @@ applymap.out rlebg.out: $(RI)/rle_raw.h
 pyrlib.o: pyrlib.c $(RI)/pyramid.h $(RI)/rle.h $(RI)/rle_config.h
 	$(CC) $(CFLAGS) pyrlib.c -c
 pyrmask.out: pyrlib.o pyrmask.c $(RI)/pyramid.h
-	$(CC) $(CFLAGS) -I$(RI) pyrmask.c pyrlib.o $(LIBS) -lm -o pyrmask.new
+	$(CC) $(LDFLAGS) $(CFLAGS) -I$(RI) pyrmask.c pyrlib.o $(LIBS) -lm -o pyrmask.new
 	mv pyrmask.new pyrmask.out
 
 fant.out: fant.o mallocNd.o
-	$(CC) $(CFLAGS) -I$(RI) fant.o mallocNd.o $(LIBS) -lm -o fant.new
+	$(CC) $(LDFLAGS) $(CFLAGS) -I$(RI) fant.o mallocNd.o $(LIBS) -lm -o fant.new
 	mv fant.new fant.out
 	
 # rlebox and crop use some common code.
 rle_box.o: $(RI)/rle.h $(RI)/rle_config.h $(RI)/rle_raw.h
 
 crop.out: crop.c rle_box.o
-	${CC} ${CFLAGS} crop.c rle_box.o ${LIBS} -o crop.new
+	${CC} ${LDFLAGS} ${CFLAGS} crop.c rle_box.o ${LIBS} -o crop.new -lm
 	mv crop.new crop.out
 rlebox.out: rlebox.c rle_box.o
-	${CC} ${CFLAGS} rlebox.c rle_box.o ${LIBS} -o rlebox.new
+	${CC} ${LDFLAGS} ${CFLAGS} rlebox.c rle_box.o ${LIBS} -o rlebox.new -lm
 	mv rlebox.new rlebox.out
 
 # rleClock has it's own directory, must be built special
@@ -100,7 +100,7 @@ clean:	clean-pgm
 .SUFFIXES:
 .SUFFIXES: .out .c .o
 .c.out:
-	$(CC) $(CFLAGS) $< $(LIBS) -lm -o $*.new
+	$(CC) $(LDFLAGS) $(CFLAGS) $< $(LIBS) -lm -o $*.new
 	mv $*.new $@
 
 .c.o:

@@ -76,13 +76,13 @@ PBMDIR =
 # ppmtorle - ppm format to RLE
 # rletoppm - RLE to ppm format
 pgmtorle.out: pgmtorle.c
-	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
 	mv $*.new $@
 ppmtorle.out: ppmtorle.c
-	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
 	mv $*.new $@
 rletoppm.out: rletoppm.c
-	$(CC) $(CFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) $(INCPBMPLUS) $*.c $(LIBS) $(LIBPBMPLUS) -o $*.new
 	mv $*.new $@
 #endif
 
@@ -95,10 +95,10 @@ rletoppm.out: rletoppm.c
 # iristorle/rletoiris - Convert between RLE and SGI image format.
 #
 iristorle.out: iristorle.c
-	$(CC) $(CFLAGS) -I/usr/include/gl $*.c $(LIBS) -limage -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) -I/usr/include/gl $*.c $(LIBS) -limage -o $*.new
 	mv $*.new $@
 rletoiris.out: rletoiris.c
-	$(CC) $(CFLAGS) -I/usr/include/gl $*.c $(LIBS) -limage -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) -I/usr/include/gl $*.c $(LIBS) -limage -o $*.new
 	mv $*.new $@
 #endif
 
@@ -108,10 +108,10 @@ TIFFDIR =
 # tifftorle - Convert TIFF images to RLE
 # rletotiff - Convert RLE images to TIFF
 rletotiff.out: rletotiff.c
-	$(CC) $(CFLAGS) $(INCTIFF) $*.c $(LIBS) $(LIBTIFF) -lm -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) $(INCTIFF) $*.c $(LIBS) $(LIBTIFF) -lm -o $*.new
 	mv $*.new $@
 tifftorle.out: tifftorle.c
-	$(CC) $(CFLAGS) $(INCTIFF) $*.c $(LIBS) $(LIBTIFF) -lm -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) $(INCTIFF) $*.c $(LIBS) $(LIBTIFF) -lm -o $*.new
 	mv $*.new $@
 #endif
 
@@ -125,7 +125,7 @@ tifftorle.out: tifftorle.c
 # Will build with the default rule.
 # rletorla - RLE to Wavefront RLA
 rletorla.out: rletorla.c
-	$(CC) $(CFLAGS) $*.c $(LIBS) $(LIBWAVEFRONT) -lm -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) $*.c $(LIBS) $(LIBWAVEFRONT) -lm -o $*.new
 	mv $*.new $@
 #endif WAVEFRONT
 
@@ -144,7 +144,7 @@ pristine: pristine-pgm
 .SUFFIXES:
 .SUFFIXES: .out .c
 .c.out:
-	$(CC) $(CFLAGS) $*.c $(LIBS) -lm -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) $*.c $(LIBS) -lm -o $*.new
 	mv $*.new $@
 
 # Dependency lines.  Make sure to #ifdef them.
