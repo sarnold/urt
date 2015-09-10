@@ -1,14 +1,21 @@
--*- Text -*-
-This is the Utah Raster Toolkit distribution version 3.0 of June, 1990.
-The Utah Raster Toolkit is now distributed from the University of
-Michigan and the University of Utah.
+This is the Utah Raster Toolkit distribution version 3.0 of June, 1990, 
+plus build "modernization" and code fixes.  Next release will be a bug-fix 
+and build update maintenance release.
+
+Changes since version 3.0 include:
+
+* Updates for compiler and make/build fixes
+* Fixed type conflict with OS/X stack_t type
+* Added PIC and shared library to the default build
+* Includes all Gentoo patches applied to 3.1b-r1
 
 Major changes from version 2.0 are detailed (as much as possible) in the
 CHANGES file.  One change to be aware of, if you have toolkit programs
 of your own is that many function and data structure names have
 changed.  See CHANGES for details.
 
-The source-only distribution contains the following subdirectories
+The source-only distribution contains the following subdirectories::
+
 	cnv:		File conversion directory.  A collection of
 			utilities for converting to and from the Utah
 			RLE format.
@@ -36,7 +43,8 @@ The source-only distribution contains the following subdirectories
 	img:		Contains a couple of uuencoded (use uudecode
 			to get them back) RLE files.
 
-The FTP distribution contains the following directories, as well.
+The FTP distribution contains the following directories, as well::
+
 			The following two directories are in urt-doc.tar.Z.
 	doc:		Contains long narrative descriptions of
 			the RLE file format and the Toolkit.
@@ -51,7 +59,8 @@ The FTP distribution contains the following directories, as well.
 	img:		Includes some interesting RLE image files.
 			Distributed as urt-img.tar.Z.
 
-To make and install the toolkit, you should:
+To make and install the toolkit, you should::
+
 	0. If you got the source-only distribution, remove all the
 	   urt.kit?? and kit*isdone files:
 		rm urt.kit?? kit*isdone
@@ -91,7 +100,8 @@ To make and install the toolkit, you should:
 
 This version of the toolkit has been successfully compiled on the
 following machines (with the corresponding configuration file
-indicated in parentheses):
+indicated in parentheses)::
+
 	Sun 3 (SunOS 4) with cc (config/sun3) and gcc
 	Sun 4 (SunOS 4) (config/sun4)
 	DEC 3100 (Ultrix 3.1) (config/dec)
@@ -113,9 +123,11 @@ files for input and output, for processing multiple images per file,
 error checking, etc.
 
 Our thanks to some beta testers (and contributors): 
+
 	Eric Haines, 3D Eye
 	Gregg Townsend, CS Dept., U of Arizona
 	John Peterson, Apple Computer
+
 And to all of you who submitted new programs or ideas for new
 features, especially Craig Kolb (Yale), whose 'rayshade' program provided
 (indirectly) the incentive for this release.
