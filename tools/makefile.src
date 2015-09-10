@@ -82,7 +82,7 @@ rlebox.out: rlebox.c rle_box.o
 # rleClock has it's own directory, must be built special
 
 rleClock.out: clock/font.c clock/font.h clock/font.src clock/rleClock.c
-	(cd clock ; make)
+	(cd clock ; $(MAKE))
 
 # Incremental install, copies everything ("$?") since last install to DEST dir.
 install: $(PGMS) install-pgm
