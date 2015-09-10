@@ -42,6 +42,7 @@
 #ifdef X_SHARED_MEMORY
 #include <sys/errno.h>
 #endif
+#include <errno.h>
 
 #include "circle.bitmap"
 #include "circle_mask.bitmap"
