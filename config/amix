@@ -101,7 +101,7 @@
 
 # You can put any system dependent flags here.
 ExtraCFLAGS =
-CC = gcc
+CC ?= gcc
 
 # System specific or configuration parameters.  Define according to your
 # environment and desires.

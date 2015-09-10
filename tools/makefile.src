@@ -100,8 +100,8 @@ clean:	clean-pgm
 .SUFFIXES:
 .SUFFIXES: .out .c .o
 .c.out:
-	$(CC) $(LDFLAGS) $(CFLAGS) $< $(LIBS) -lm -o $*.new
+	$(CC) $(CFLAGS) $(LDFLAGS) $< $(LIBS) -lm -o $*.new
 	mv $*.new $@
 
 .c.o:
-	$(CC) -c $(CFLAGS) $<
+	$(CC) -c $(CFLAGS) -fPIC $<
