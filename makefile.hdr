@@ -45,7 +45,7 @@ LIBS = $(RL)/librle.a $(DIRLIBS)  ${ExtraLIBS}
 #emit MachFLAGS
 MachFLAGS =
 
-CFLAGS = $(DFLAGS) $(DIRFLAGS) $(ExtraCFLAGS) $(IFLAGS) $(MachFLAGS) 
+CFLAGS = -O2 -pipe $(DFLAGS) $(DIRFLAGS) $(ExtraCFLAGS) $(IFLAGS) $(MachFLAGS) 
 IFLAGS = -I. -I$(RI)
 
 #ifdef GCC
