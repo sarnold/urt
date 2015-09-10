@@ -32,7 +32,6 @@
 #include <errno.h>
 #include "rle.h"
 
-extern int errno;
 
 /* "short" in our world is 16 bits.  Beware of swyte-bopping. */
 

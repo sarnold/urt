@@ -1,5 +1,4 @@
 #ifndef XLIBINT_H_NOT_AVAILABLE
-#include <X11/copyright.h>
 
 /* $XConsortium: XGetHClrs.c,v 11.10 88/09/06 16:07:50 martin Exp $ */
 /* Copyright    Massachusetts Institute of Technology    1986	*/

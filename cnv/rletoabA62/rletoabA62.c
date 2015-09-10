@@ -157,7 +157,7 @@ char **argv;
 	exit(1);
     }
     if (optind < argc) {
-	if ((file = open(argv[optind], 0)) == NULL) {
+	if ((file = open(argv[optind], 0)) == -1) {
 	    perror(argv[optind]);
 	    exit(1);
 	}

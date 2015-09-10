@@ -67,7 +67,7 @@
 
 /* Imports */
 #include <stdio.h>
-extern char *malloc();
+#include <string.h>
 
 /* Forward declarations */
 char *BuildIndirectionTable();

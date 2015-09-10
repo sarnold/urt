@@ -24,6 +24,7 @@ WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  * Send bug fixes and improvements to:  ksp@maxwell.nde.swri.edu
  */
 
+#include <errno.h>
 #include <stdio.h>
 #include <strings.h>
 #include <signal.h>
@@ -459,7 +460,6 @@ char    *template;
      char    nonUnique;
      char    twiddleUserCompletion;
 
-     extern  int         errno;
      struct  direct     *nameEntry;
      DIR                *dirChan;
      struct  passwd     *pwdEntry;

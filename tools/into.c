@@ -40,8 +40,8 @@ static char temp[] = "intoXXXXXXXX";
 static char buf[MAXPATHLEN+1];
 short forceflg;				/* overwrite an unwritable file? */
 
-extern int errno;
-extern char *sys_errlist[];
+#include <errno.h>
+#include <string.h>
 
 void
 main(argc, argv)
@@ -103,7 +103,7 @@ char **argv;
     if (ferror(outf))
     {
 	fprintf(stderr, "into: %s, \"%s\" not modified\n",
-	    sys_errlist[errno], argv[1]);
+	    strerror(errno), argv[1]);
 	unlink(buf);
 	exit(1);
     }

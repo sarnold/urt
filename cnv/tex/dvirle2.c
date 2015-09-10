@@ -55,7 +55,6 @@ void ReadFonts(), FormFeed(), ReadInput(), VWriteChar(), VWriteRule();
 void DumpTopOfBand(), MoveDown(), WriteBuf(), WriteBlanks();
 
 char	*ProgName;
-extern int errno;
 extern char *optarg;
 extern int optind;
 

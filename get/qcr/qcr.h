@@ -6,8 +6,6 @@
 #define GREEN 1
 #define BLUE 2
 
-extern int errno;
-
 /* Command defs for QCR-Z Film Recorder */
 
 /* These are for 8 bit Look Up Tables */

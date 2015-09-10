@@ -155,7 +155,6 @@ Boolean share;
 			IPC_CREAT|0777 );
 	    if ( img->shm_img.shmid < 0 )
 	    {
-		extern int errno;
 		if ( errno == ENOSPC )
 		{
 		    if ( !no_shared_space )
@@ -361,7 +360,6 @@ Boolean reallocate;
 	    XDestroyImage( image );
 	    if ( img->shm_pix.shmid < 0 )
 	    {
-		extern int errno;
 		if ( errno == ENOSPC )
 		{
 		    if ( !no_shared_space )
