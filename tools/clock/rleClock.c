@@ -909,14 +909,14 @@ drawText()
 typedef struct {
     short x, y;
     int dir;
-} stack_t;
+} _urt_stack;
 
 #define NORTH 0
 #define WEST 1
 #define SOUTH 2
 #define EAST 3
 struct {
-	stack_t *s;
+	_urt_stack *s;
 	int	top;
 	int allocked;
 } Stack;
@@ -929,9 +929,9 @@ areaFlood(firstX, firstY, mask, match, value)
 int firstX, firstY;
 int mask, match, value;
 {
-    register stack_t *sp;
+    register _urt_stack *sp;
 
-    Stack.s = (stack_t *) calloc(256, sizeof(stack_t));
+    Stack.s = (_urt_stack *) calloc(256, sizeof(_urt_stack));
     Stack.allocked = 256;
     Stack.top = -1;
     stackPush(firstX, firstY, NORTH);
@@ -964,7 +964,7 @@ int x, y, dir;
 {
     if (++Stack.top >= Stack.allocked) {
 	    Stack.allocked += 256;
-	    Stack.s = (stack_t *) realloc(Stack.s, Stack.allocked * sizeof(stack_t));
+	    Stack.s = (_urt_stack *) realloc(Stack.s, Stack.allocked * sizeof(_urt_stack));
 if(Debug)fprintf(stderr, "Stack growing to %d\n", Stack.allocked);
     }
 	Stack.s[Stack.top].x = x;
