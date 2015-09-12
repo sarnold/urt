@@ -58,7 +58,7 @@ prototypes.h: $(X_C_FILES)
 	for f in $(X_C_FILES) ; do \
 		/lib/cpp $(IFLAGS) $(DIRFLAGS) $$f | \
 		sed -e 's///' | \
-		cproto1 -ge ; \
+		cproto -ge ; \
 	done >prototypes.h
 
 make-fns: $(X_C_FILES)
@@ -66,7 +66,7 @@ make-fns: $(X_C_FILES)
 	@for f in $(X_C_FILES) ; do \
 		/lib/cpp $(IFLAGS) $(DIRFLAGS) $$f | \
 		sed -e 's///' | \
-		cproto1 -ge -p0 ; \
+		cproto -ge -p0 ; \
 	done >xxx.h ;
 	@if cmp -s xxx.h fn_decls.h ; then \
 		rm xxx.h ;\
