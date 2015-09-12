@@ -21,6 +21,9 @@ DIRFLAGS = $(INCX11)
 # -lX11 is X11 support library
 DIRLIBS = $(LIBX11) $(LIBEXT) -lm -ldl -lrt
 
+# define preprocessor for cproto
+CPP ?= cpp
+
 # Executables.  The .out will be stripped off in the install action.
 
 X_C_FILES =\
@@ -56,17 +59,17 @@ getx11.out: $(X_O_FILES)
 #ifdef HAVE_CPROTO
 prototypes.h: $(X_C_FILES)
 	for f in $(X_C_FILES) ; do \
-		/lib/cpp $(IFLAGS) $(DIRFLAGS) $$f | \
+		$(CPP) $(IFLAGS) $(DIRFLAGS) $$f | \
 		sed -e 's///' | \
-		cproto -ge ; \
+		cproto -le ; \
 	done >prototypes.h
 
 make-fns: $(X_C_FILES)
 	@echo Checking for new function declarations
 	@for f in $(X_C_FILES) ; do \
-		/lib/cpp $(IFLAGS) $(DIRFLAGS) $$f | \
+		$(CPP) $(IFLAGS) $(DIRFLAGS) $$f | \
 		sed -e 's///' | \
-		cproto -ge -p0 ; \
+		cproto -le -f3 ; \
 	done >xxx.h ;
 	@if cmp -s xxx.h fn_decls.h ; then \
 		rm xxx.h ;\
