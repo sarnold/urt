@@ -2,7 +2,7 @@
  * This software is copyrighted as noted below.  It may be freely copied,
  * modified, and redistributed, provided that the copyright notice is 
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
@@ -22,10 +22,11 @@
 static char rcsid[] = "$Header: /l/spencer/src/urt/get/getx11/RCS/timer.c,v 3.0.1.3 1992/03/04 19:31:40 spencer Exp $";
 #endif
 
-#include "rle_config.h"
-#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <signal.h>
 #include <sys/time.h>
+#include "rle_config.h"
 
 #define USPS    1000000         /* number of microseconds in a second */
 #define TICK    10000           /* system clock resolution in microseconds */
@@ -33,7 +34,7 @@ static char rcsid[] = "$Header: /l/spencer/src/urt/get/getx11/RCS/timer.c,v 3.0.
 #ifndef NO_ITIMER
 static int ringring;
 static void (*ofunc)();
-    
+
 static void
 sleepx()
 {

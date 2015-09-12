@@ -1,6 +1,6 @@
-/* 
+/*
  * rlecat.c - Concatenate RLE files.
- * 
+ *
  * Author:	Spencer W. Thomas
  * 		EECS Dept.
  * 		University of Michigan
@@ -14,6 +14,7 @@ static char rcsid[] = "$Header: /l/spencer/src/urt/tools/RCS/rlecat.c,v 3.0.1.4 
 rlecat()		Make a tag.
 */
 
+#include <unistd.h>
 #include <stdio.h>
 #include "rle.h"
 #include "rle_raw.h"

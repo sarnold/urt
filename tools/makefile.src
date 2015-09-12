@@ -104,4 +104,4 @@ clean:	clean-pgm
 	mv $*.new $@
 
 .c.o:
-	$(CC) -c $(CFLAGS) -fPIC $<
+	$(CC) -c $(CFLAGS) -std=gnu99 -fPIC $<

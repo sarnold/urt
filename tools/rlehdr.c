@@ -2,7 +2,7 @@
  * This software is copyrighted as noted below.  It may be freely copied,
  * modified, and redistributed, provided that the copyright notice is 
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
@@ -15,9 +15,9 @@
  * name of the person performing the modification, the date of modification,
  * and the reason for such modification.
  */
-/* 
+/*
  * rlehdr.c - Print header from an RLE file.
- * 
+ *
  * Author:	Spencer W. Thomas
  * 		Computer Science Dept.
  * 		University of Utah
@@ -32,6 +32,7 @@ rlehdr()			Tag the file.
 */
 
 #include <stdio.h>
+#include <stdint.h>
 #include "rle.h"
 #include "../patchlevel.h"
 
@@ -42,7 +43,7 @@ void print_hdr(), print_map(), print_codes(), print_brief_hdr();
 
 /*****************************************************************
  * TAG( main )
- * 
+ *
  * Read and print in human readable form the header of an RLE file.
  *
  * Usage:
@@ -73,15 +74,15 @@ char **argv;
     CONST_DECL char ** fname = NULL;
     CONST_DECL char *stdname = "-";
     char **comment_names = NULL;
-    int     	brief = 0, 
-		cflag = 0,
-    		hflag = 0,
-    		num_hdr = 1,
-		mflag = 0,
-    		suppress = 0,
-		dbg_flag = 0,
-		nfname = 0,
-		version = 0;
+    int brief = 0,
+	cflag = 0,
+    	hflag = 0,
+    	num_hdr = 1,
+	mflag = 0,
+    	suppress = 0,
+	dbg_flag = 0,
+	nfname = 0,
+	version = 0;
     int rle_err = 0, rle_cnt;
     rle_hdr in_hdr;
 
@@ -169,7 +170,7 @@ char **argv;
 
 /*****************************************************************
  * TAG( print_hdr )
- * 
+ *
  * Print the RLE header information given.
  *
  * Inputs:
@@ -227,7 +228,7 @@ rle_hdr *the_hdr;
 
 /*****************************************************************
  * TAG( print_brief_hdr )
- * 
+ *
  * Print the RLE header information on one line.
  *
  * Inputs:
@@ -306,7 +307,7 @@ char **comment_names;
 
 /*****************************************************************
  * TAG( print_map )
- * 
+ *
  * Print the color map from a the_hdr structure.
  * Inputs:
  * 	the_hdr:	Sv_hdr structure containing color map.

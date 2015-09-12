@@ -2,7 +2,7 @@
  * This software is copyrighted as noted below.  It may be freely copied,
  * modified, and redistributed, provided that the copyright notices are 
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
@@ -15,23 +15,23 @@
  * name of the person performing the modification, the date of modification,
  * and the reason for such modification.
  */
-
-/* 
+
+/*
  * getx11.c - Put RLE images on X display.
- * 
+ *
  * Author:	Spencer W. Thomas  (x10)
  * 		Computer Science Dept.
  * 		University of Utah
  * Date:	Thu Feb 20 1986
  * Copyright (c) 1986, University of Utah
- * 
+ *
  * Modified:	Andrew F. Vesper (x 11)
  *		High Performance Workstations
  *		Digital Equipment Corp
  * Date:	Fri, Aug 7, 1987
  *		Thu, Jan 14, 1988
  * Copyright (c) 1987,1988, Digital Equipment Corporation
- * 
+ *
  * Modified:	Martin R. Friedmann (better X11, flipbook, mag, pix_info)
  * 		Dept of Electrical Engineering and Computer Science
  *		University of Michigan
@@ -39,6 +39,7 @@
  * Copyright (c) 1989, University of Michigan
  */
 
+#include <unistd.h>
 #include "getx11.h"
 
 /* Make Sys V macros map to BSD macros */

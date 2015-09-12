@@ -2,7 +2,7 @@
  * This software is copyrighted as noted below.  It may be freely copied,
  * modified, and redistributed, provided that the copyright notice is 
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
@@ -15,7 +15,7 @@
  * name of the person performing the modification, the date of modification,
  * and the reason for such modification.
  */
-/* 
+/*
  * rle_addcom.c - Add comment[s] to an RLE file.
  * 
  * Author:	Spencer W. Thomas
@@ -25,6 +25,7 @@
  * Copyright (c) 1987, University of Utah
  */
 
+#include <unistd.h>
 #include <stdio.h>
 #include "rle.h"
 #include <sys/types.h>

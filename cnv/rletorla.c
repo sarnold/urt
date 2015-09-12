@@ -28,6 +28,7 @@
 /*-----------------------------------------------------------------------------
  * System includes.
  */
+#include <unistd.h>
 #include <stdio.h>
 #include "rlb_header.h"
 #include "rle.h"

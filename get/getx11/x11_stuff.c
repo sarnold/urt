@@ -2,7 +2,7 @@
  * This software is copyrighted as noted below.  It may be freely copied,
  * modified, and redistributed, provided that the copyright notices are 
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
@@ -15,16 +15,16 @@
  * name of the person performing the modification, the date of modification,
  * and the reason for such modification.
  */
-
-/* 
+
+/*
  * x11_stuff.c - Do colormaps, visuals, pix_info window...
- * 
+ *
  * Author:	Spencer W. Thomas  (x10)
  * 		Computer Science Dept.
  * 		University of Utah
  * Date:	Thu Feb 20 1986
  * Copyright (c) 1986, University of Utah
- * 
+ *
  * Modified:	Andrew F. Vesper (x 11)
  *		High Performance Workstations
  *		Digital Equipment Corp
@@ -39,6 +39,7 @@
  * Copyright (c) 1989, University of Michigan
  */
 #include "getx11.h"
+
 #ifdef X_SHARED_MEMORY
 #include <sys/errno.h>
 #endif
@@ -60,21 +61,21 @@ static int specified_screen = -1;	/* No specific screen. */
 static image_information *wait_img = NULL;
 
 void set_watch_cursor( window )
-Window window;    
+Window window;
 {
     XDefineCursor( dpy, window, watch_cursor );
     XFlush(dpy);
 }
 
 void set_circle_cursor( window )
-Window window;    
+Window window;
 {
     XDefineCursor( dpy, window, circle_cursor );
     XFlush(dpy);
 }
 
 void set_left_ptr_cursor( window )
-Window window;    
+Window window;
 {
     XDefineCursor( dpy, window, left_ptr_cursor );
     XFlush(dpy);
@@ -85,7 +86,7 @@ Window window;
 {
     if (circle_cursor == NULL)
 	circle_cursor = XCreateFontCursor (dpy, XC_circle);
-    
+
     if (watch_cursor == NULL)
 	watch_cursor = XCreateFontCursor (dpy, XC_watch);
 
@@ -97,32 +98,32 @@ Window window;
 	Pixmap	mask;
 	XColor	color_1;
 	XColor	color_2;
-	
+
 	source = XCreateBitmapFromData(dpy, window, circle_bits,
 				       circle_width, circle_height);
-	
+
 	mask = XCreateBitmapFromData(dpy, window, circle_mask_bits,
 				     circle_width, circle_height);
-	
+
 	color_1.pixel = WhitePixel (dpy, screen);
 	color_1.red   = 0xffff;
 	color_1.green = 0xffff;
 	color_1.blue  = 0xffff;
 	color_1.flags = DoRed | DoGreen | DoBlue;
-	
+
 	color_1.pixel = BlackPixel (dpy, screen);
 	color_2.red   = 0;
 	color_2.green = 0;
 	color_2.blue  = 0;
 	color_2.flags = DoRed | DoGreen | DoBlue;
-	
+
 	circle_cursor = XCreatePixmapCursor (dpy, source, mask,
 					     &color_1, &color_2,
 					     circle_x_hot, circle_y_hot);
 	XFreePixmap (dpy, source);
 	XFreePixmap (dpy, mask);
     }
-    
+
     if (watch_cursor == NULL)
 	watch_cursor = circle_cursor;
 
@@ -219,7 +220,7 @@ Boolean share;
 			       (img->binary_img ? 1 : img->dpy_depth), 
 			       (img->binary_img ? XYBitmap : ZPixmap), 
 			       0, NULL, width, height, 32, 0);
-    
+
 	if (image != NULL) {
 	    image->data = (char *)malloc ( image->bytes_per_line * height );
 	    if ( image->data == NULL) {
@@ -260,7 +261,7 @@ static int handle_x_errors( dpy, event)
 {
     XID xid = event->resourceid;
     image_information *img = wait_img;
-    
+
     switch ( event->error_code ) {
     case BadAlloc:
 	if ( img ) {
@@ -269,7 +270,7 @@ static int handle_x_errors( dpy, event)
 		img->pixmap = NULL;
 		img->pixmap_failed = True;
 	    } else
-	    if ( xid == img->icn_pixmap ){ 
+	    if ( xid == img->icn_pixmap ){
 		DPRINTF(stderr, "img->icn_pixmap allocation failed\n");
 		img->icn_pixmap = NULL;
 		img->pixmap_failed = True;
@@ -282,7 +283,6 @@ static int handle_x_errors( dpy, event)
     case BadMatch:
 	_XDefaultError( dpy, event );
 	break;
-	
     default:
 	_XDefaultError( dpy, event );
 	break;
@@ -301,10 +301,10 @@ image_information *img;
 int allocate_ximage( img, reallocate )
 image_information *img;
 Boolean reallocate;
-{    
+{
     int iw = img->w * img->mag_fact;
     int ih = img->h * img->mag_fact;
-    
+
     if ( img->image != NULL &&
 	( reallocate || (img->image->width < iw || img->image->height < ih))) {
 	destroy_X_image( img, img->image );
@@ -330,13 +330,13 @@ Boolean reallocate;
 
     int iw = img->w * img->mag_fact;
     int ih = img->h * img->mag_fact;
-    
+
     if (( img->pixmap != NULL && reallocate ) ||
 	( img->pixmap != NULL && (img->pix_w < iw || img->pix_h < ih ))){
 	free_X_pixmap( dpy, img->pixmap );
 	img->pixmap = NULL;
     }
-    
+
     /* reallocate it: use the Min of the winsize and (pic * mag) */
     if ( !img->pixmap && !img->pixmap_failed && !stingy_flag) {
 	img->pix_w = Min( iw, img->win_w );
@@ -347,7 +347,7 @@ Boolean reallocate;
 	{
 	    XImage *image;
 	    XShmSegmentInfo shminfo;
-	    
+
 	    /* Allocate an image structure to get bytes_per_line. */
 	    image = XShmCreateImage( dpy, img->dpy_visual,
 				     img->dpy_depth, ZPixmap, 
@@ -404,7 +404,7 @@ Boolean reallocate;
 		}
 	    }
 	}
-	
+
 	/* If not sharing, or sharing failed, then try to do it normally. */
 	if ( img->shm_pix.shmid < 0 )
 #endif /* X_SHARED_MEMORY */
@@ -478,16 +478,16 @@ int *icon_width, *icon_height, *icon_factor;
      * First, make sure that is OK with the window manager.
      * Then figure out the icon scaling factor.
      */
-    
+
 #define DESIRED_ICON_WIDTH	48
 #define DESIRED_ICON_HEIGHT	48
 
     width = DESIRED_ICON_WIDTH;
     height = DESIRED_ICON_HEIGHT;
-    
+
     if (XGetIconSizes (dpy, root_window, &icon_sizes, &icon_size_count) 
 	&& icon_size_count >= 1) {
-	
+
 	for (i = 0; i < icon_size_count; i++) {
 	    if (icon_sizes[i].min_width <= DESIRED_ICON_WIDTH
 		&& icon_sizes[i].max_width >= DESIRED_ICON_WIDTH
@@ -501,15 +501,15 @@ int *icon_width, *icon_height, *icon_factor;
 	    width = icon_sizes[0].max_width;
 	    height = icon_sizes[0].max_height;
 	}
-	
+
     }
-    
+
     factor = image_width / width;
     if (factor < image_height / height) 
 	factor = image_height / height;
     if ( factor == 0 )
 	factor = 1;
-    
+
     *icon_width = 1 + (image_width / factor);
     *icon_height = 1 + (image_height / factor);
     *icon_factor = factor;
@@ -527,7 +527,7 @@ image_information *img;
 	VPRINTF(stderr, "created colormap for visual type %s\n",
 		visual_class_to_string(img->visual_class));
     }
-}    
+}
 
 void open_x_display( display_name )
 char *display_name;
@@ -547,7 +547,7 @@ char *display_name;
 	display_name = getenv("DISPLAY");
 
     dpy = XOpenDisplay(display_name);
-    
+
     if (dpy == NULL) {
 	fprintf(stderr, "%s: Cant open display %s\n", progname,
 		(display_name == NULL) ? "" : display_name);
@@ -560,15 +560,15 @@ char *display_name;
 	Status sh_status;
 	int sh_major, sh_minor;
 	Boolean sh_pixmaps = False;
-	    
+
 	sh_status = XShmQueryVersion( dpy, &sh_major, &sh_minor, &sh_pixmaps );
 	use_shared_pixmaps = (Boolean)(sh_status && sh_pixmaps);
     }
-#endif    
+#endif
     /* Work around bug in X11/NeWS server colormap allocation. */
     if (strcmp("X11/NeWS - Sun Microsystems Inc.", ServerVendor(dpy)) == 0 &&
 	VendorRelease(dpy) == 2000)
-	no_color_ref_counts = True; 
+	no_color_ref_counts = True;
 
 }
 
@@ -580,7 +580,7 @@ image_information *img;
     img->xo = Max (0, img->xo);
     img->yo = Max (0, img->yo);
 }
-/* 
+/*
  * Create a window with no help from user.
  */
 void
@@ -603,23 +603,23 @@ register image_information *img;
     Boolean 		new_window;
     int icn_alloc = False;
     Boolean		new_pixmaps;
-    
-    /* 
+
+    /*
      * Now, make the window.
      */
-    
+
     new_window = (img->window == NULL && img->icn_window == NULL);
     new_pixmaps = ((img->pixmap == NULL || img->icn_pixmap == NULL) &&
 		   !img->pixmap_failed && !stingy_flag);
-    
+
     if ( !img->window )
     {
 	sprintf( default_geometry, "=%dx%d", img->w, img->h );
-    
+
 	mask = XGeometry(dpy, screen, window_geometry, default_geometry, 
 			 IMAGE_BORDERWIDTH, 1, 1, 0, 0,
 			 &x, &y, &width, &height );
-	
+
 	size_hints.flags = 0;
 
 	if ( mask & (XValue | YValue) ) {
@@ -631,7 +631,7 @@ register image_information *img;
 	    size_hints.x = x = (DisplayWidth(dpy, screen) - width)/2;
 	    size_hints.y = y = (DisplayHeight(dpy, screen) - height)/2;
 	}
-	
+
 	if ( mask & (WidthValue | HeightValue) ) {
 	    size_hints.flags |=	USSize;
 	    size_hints.width = width;
@@ -640,7 +640,7 @@ register image_information *img;
 
 	VPRINTF (stderr, "window at (%d, %d) %dx%d\n", 
 		 x, y, width, height);
-    
+
 	xswa_mask = CWBackPixel | CWEventMask | CWBorderPixel;
 	xswa.background_pixel = BlackPixel (dpy, screen);
 	xswa.border_pixel = WhitePixel (dpy, screen);
@@ -651,17 +651,17 @@ register image_information *img;
 	    xswa.colormap = img->colormap;
 	    xswa_mask |= CWColormap;
 	}
-	
+
 	img->window = XCreateWindow ( dpy, root_window, x, y, 
 				      width, height, 
 				      IMAGE_BORDERWIDTH, img->dpy_depth,
 				      InputOutput, img->dpy_visual,
 				      xswa_mask, &xswa);
-    
+
 	img->win_w = width;
 	img->win_h = height;
 	calc_view_origin ( img );
-		   
+
 	XSetNormalHints (dpy, img->window, &size_hints);
 	XSetClassHint(dpy, img->window, &class_hint);
 	XSetIconName (dpy, img->window, img->title);
@@ -677,24 +677,24 @@ register image_information *img;
 	xswa_mask = CWBackPixel | CWBorderPixel;
 	xswa.background_pixel = BlackPixel (dpy, screen);
 	xswa.border_pixel = WhitePixel (dpy, screen);
-	
+
 	if (img->colormap) {
 	    xswa.colormap = img->colormap;
 	    xswa_mask |= CWColormap;
 	}
-	
+
 	img->icn_window = XCreateWindow (dpy, root_window, 0, 0,
 					 img->icn_w, img->icn_h, 
 					 0, img->dpy_depth,
 					 InputOutput, img->dpy_visual,
 					 xswa_mask, &xswa);
-	
+
 	size_hints.flags = PMinSize | PMaxSize;
 	size_hints.min_width = img->icn_w;
 	size_hints.max_width = img->icn_w;
 	size_hints.min_height = img->icn_h;
 	size_hints.max_height = img->icn_h;
-	
+
 	XSetNormalHints(dpy, img->icn_window, &size_hints);
 	XStoreName(dpy, img->icn_window, img->title);
     }
@@ -709,7 +709,7 @@ register image_information *img;
 	gc_values.background = img->black_pixel; gc_mask |= GCBackground;
 
 	gc_values.graphics_exposures = False;	gc_mask |= GCGraphicsExposures;
-    
+
 	img->gc = XCreateGC (dpy, img->window, gc_mask, &gc_values);
     }
 
@@ -717,14 +717,14 @@ register image_information *img;
     {
 	img->icn_pixmap = XCreatePixmap(dpy, img->icn_window, img->icn_w,
 					img->icn_h, img->dpy_depth );
-	
+
 	img->icn_gc = XCreateGC(dpy, img->icn_window, gc_mask, &gc_values);
 	icn_alloc = True;
-    }	
-    
+    }
+
     if ( new_pixmaps || icn_alloc )
 	check_pixmap_allocation( img );
-    
+
     if ( new_window )
     {
 	if ( img->icn_pixmap && img->icn_window ) {
@@ -735,18 +735,18 @@ register image_information *img;
 	    wm_hints.icon_window = img->icn_window;
 	    wm_hints.icon_mask = img->icn_pixmap;
 	    wm_hints.input = True;
-	
+
 	    XSetWMHints (dpy, img->window, &wm_hints);
 	}
-	
+
 	XSetWindowBackgroundPixmap(dpy, img->icn_window, img->icn_pixmap);
-	
+
 	XMapWindow( dpy, img->window );
 	XClearWindow( dpy, img->window );
 
 	get_cursors( img->window );
     }
-    
+
     XFlush( dpy );
 }
 
@@ -816,7 +816,7 @@ image_information *img;
 	img->white_pixel =
 	    SHIFT_MASK_PIXEL(img->lvls - 1,img->lvls - 1,img->lvls - 1);
     }
-}    
+}
 
 
 /* this is a relic */
@@ -847,19 +847,19 @@ register image_information *img;
 {
     register int	type;
     Boolean	done = False, try_ro = True;
-    
+
     while ( ! done ) {
 	DPRINTF (stderr, "Cmap type: binary %d, mono %d, read/write %d\n",
 		 img->binary_img, img->mono_img, img->rw_cmap );
-	    
+
 	type = ((( img->binary_img ) ? IS_BINARY : NOT_BINARY ) |
 		(( img->mono_img ) ? IS_MONO : NOT_MONO ) | 
 		((( img->rw_cmap && img->sep_colors ) ||
 		  ( img->rw_cmap && !try_ro)) ?
 		 WANT_READ_WRITE : WANT_READ_ONLY ));
-	
+
 	switch ( type ) {
-	    
+
 	case NOT_BINARY | NOT_MONO | WANT_READ_WRITE:
 	    done = (( img->sep_colors ) ?
 		    init_separate_color_rw( img ) :
@@ -872,7 +872,7 @@ register image_information *img;
 		img->dpy_channels = 1;
 	    }
 	    break;
-	    
+
 	case NOT_BINARY | NOT_MONO | WANT_READ_ONLY:
 	    done = (( img->sep_colors ) ?
 		    init_separate_color_ro( img, try_ro ) :
@@ -885,7 +885,7 @@ register image_information *img;
 		img->dpy_channels = 1;
 	    }
 	    break;
-	    
+
 	case NOT_BINARY | IS_MONO | WANT_READ_WRITE:
 	    done = (img->sep_colors ?
 		    init_separate_color_rw( img ) : init_mono_rw( img ));
@@ -898,7 +898,7 @@ register image_information *img;
 		    init_mono_ro( img, try_ro ));
 	    if ( !done & !try_ro ) img->binary_img = True;
 	    break;
-	    
+
 	case IS_BINARY | IS_MONO | WANT_READ_ONLY:
 	    /* make the magic square */
 	    get_dither_arrays( img );
@@ -906,9 +906,9 @@ register image_information *img;
 
 	    img->lvls = 2;
 	    img->lvls_squared = 4;
-	    done = True;    
+	    done = True;
 	    break;
-	    
+
 	default:
 	    fprintf (stderr, "Unknown type in init_colors: %d\n", type);
 	    exit (1);
@@ -920,7 +920,7 @@ register image_information *img;
 	    }
 	}
     }
-    
+
     /* If not dithering, center the quantization intervals. */
     if ( !img->dither_img )
     {
@@ -935,11 +935,11 @@ register image_information *img;
     }
 
     VPRINTF (stderr, "Created color map with %d entries", img->lvls);
-    
+
     if (! img->mono_img ) {
 	VPRINTF (stderr, " per color, %d total\n", img->lvls * img->lvls * img->lvls);}
     else VPRINTF (stderr, "\n");
-    
+
     set_white_black_pixel( img );
 }
 
@@ -960,29 +960,29 @@ image_information *img;
      * use XAllocColorPlanes to allocate all the cells we need --
      * this makes it simple for me.
      */
-    
+
     img->pixel_table = NULL;
     map = NULL;
     color_defs = NULL;
-    
-    for (log2_num_lvls = log2_levels; 
-	 log2_num_lvls >= 1; 
+
+    for (log2_num_lvls = log2_levels;
+	 log2_num_lvls >= 1;
 	 log2_num_lvls-- ) {
-	
+
 	num_lvls = 1 << log2_num_lvls;
 	total_levels =  1 << (log2_num_lvls * 3);
-	
+
 	if (map == NULL) {
 	    map = (int *) malloc (num_lvls * sizeof (int) );
 	    if (map == NULL) continue;
 	}
-	
+
 	if (color_defs == NULL) {
 	    color_defs = (XColor *) malloc ( num_lvls * sizeof (XColor) );
 	    if (color_defs == NULL)
 		continue;
 	}
-	
+
 	if ( XAllocColorPlanes (dpy, img->colormap, 1, &cmap_i.pixel_base, 1,
 				log2_num_lvls, log2_num_lvls,
 				log2_num_lvls,
@@ -990,33 +990,33 @@ image_information *img;
 				&cmap_i.green_mask,
 				&cmap_i.blue_mask) == 0)
 	    continue;
-	
+
 	if (log2_num_lvls == 8) img->dither_img = False;
-	
+
 	get_dither_arrays( img );
 	bwdithermap ( num_lvls, display_gamma, map,
 		      img->divN, img->modN, img->dm16 );
-	
+
 	cmap_i.red_shift   = shift_match_right(cmap_i.red_mask);
 	cmap_i.green_shift = shift_match_right(cmap_i.green_mask);
 	cmap_i.blue_shift  = shift_match_right(cmap_i.blue_mask);
 	img->x_cmap = cmap_i;
-	
-	/* 
+
+	/*
 	 * Set up the color map entries.
 	 */
-	
+
 	for (i = 0; i < num_lvls; i++)
 	{
 	    color_defs[i].pixel = SHIFT_MASK_PIXEL(i, i, i);
-	    
+
 	    color_defs[i].red   = map[i] << 8;
 	    color_defs[i].green = map[i] << 8;
 	    color_defs[i].blue  = map[i] << 8;
-	    
+
 	    color_defs[i].flags = DoRed | DoGreen | DoBlue;
 	}
-	
+
 	XStoreColors (dpy, img->colormap, color_defs, num_lvls);
 
 	if (img->lvls != num_lvls) {
@@ -1024,7 +1024,7 @@ image_information *img;
 	    img->lvls_squared = num_lvls * num_lvls;
 	    log2_levels = log2_num_lvls;
 	}
-	
+
 	/* pack into a pixel the pre shifted and masked pixel values */
 	if ( img->mono_color ) {
 	    int shift = 8 - log2_num_lvls;
@@ -1039,9 +1039,9 @@ image_information *img;
 
 	free (map);
 	free (color_defs);
-	
+
 	return (True);
-	
+
     }
 
     return (False);
@@ -1066,9 +1066,9 @@ image_information *img;
     int	i, j;
     int free_pixels = 0, shift, cmap_size;
     Pixel *pixels;
-    
+
     DPRINTF(stderr, "In init_color_rw\n");
-    
+
     /* get free pixels from the default colormap */
     cmap_size = (1 << img->dpy_depth);
 
@@ -1102,7 +1102,7 @@ image_information *img;
     }
     if ( !num_lvls )
 	return (False);
-    
+
     if (img->lvls > num_lvls) {
 	img->lvls = num_lvls;
 	img->lvls_squared = num_lvls * num_lvls;
@@ -1110,19 +1110,19 @@ image_information *img;
 	    /* do nothing */
 	}
     }
-    
+
     if ( num_lvls == 256 )
 	img->dither_img = False;
-    
+
     if (! img->pixel_table )
 	img->pixel_table = (Pixel *) malloc (total_levels * sizeof (Pixel) );
 
     map = (int *) malloc (num_lvls * sizeof (int) );
-    
+
     get_dither_arrays( img );
     bwdithermap ( num_lvls, display_gamma, map,
 		  img->divN, img->modN, img->dm16 );
-    
+
     /*
      * Use the top free_pixels NOT the bottom ones.  This makes it right for
      * 99% of the DISPLAYs out there which begin using colors at the bottom.
@@ -1136,29 +1136,29 @@ image_information *img;
 
     for (i = 0; i < shift; i++)
 	color_defs[i].pixel = pixels[i];
-    
+
     XQueryColors( dpy, DefaultColormap(dpy, screen),
 		  color_defs, shift );
 
-    /* 
+    /*
      * Set up the color map entries.
      */
-    
+
     color = &color_defs[shift];
 
     red_index = 0;
     green_index = 0;
     blue_index = 0;
-	
+
     for (i = 0; i < total_levels; i++) {
 	color->pixel = img->pixel_table[i];
 	color->red   = map[red_index] << 8;
 	color->green = map[green_index] << 8;
 	color->blue  = map[blue_index] << 8;
-	
+
 	color->flags = DoRed | DoGreen | DoBlue;
 	color++;
-	
+
 	if (++red_index >= num_lvls) {
 	    if (++green_index >= num_lvls) {
 		++blue_index;
@@ -1166,11 +1166,11 @@ image_information *img;
 	    }
 	    red_index = 0;
 	}
-	    
+
     }
-	
+
     XStoreColors (dpy, img->colormap, color_defs, free_pixels);
-    
+
     free (map);
     free (color_defs);
     free (pixels);
@@ -1191,42 +1191,42 @@ int try_ro;
 
     cmap_i = img->x_cmap;
     DPRINTF(stderr, "In init_separate_color_ro\n");
-    
-    for (log2_num_lvls = log2_levels; 
-	 log2_num_lvls >= 1; 
+
+    for (log2_num_lvls = log2_levels;
+	 log2_num_lvls >= 1;
 	 log2_num_lvls-- ) {
-	
+
 	num_lvls = 1 << log2_num_lvls;
-	
+
 	if (map == NULL) {
 	    map = (int *) malloc (num_lvls * sizeof (int) );
 	    if (map == NULL) continue;
 	}
-	
+
 	if (num_lvls == 256) img->dither_img = False;
-	
+
 	DPRINTF (stderr, "num_lvls = %d\n", num_lvls);
 
 	get_dither_arrays( img );
 	bwdithermap( num_lvls, display_gamma, map,
 		    img->divN, img->modN, img->dm16 );
-	
+
 	cmap_i.red_mask   = img->dpy_visual->red_mask;
 	cmap_i.green_mask = img->dpy_visual->green_mask;
 	cmap_i.blue_mask  = img->dpy_visual->blue_mask;
-	
+
 	cmap_i.red_shift   = shift_match_left(cmap_i.red_mask, log2_num_lvls);
 	cmap_i.green_shift = shift_match_left(cmap_i.green_mask, log2_num_lvls);
 	cmap_i.blue_shift  = shift_match_left(cmap_i.blue_mask, log2_num_lvls);
 
 	img->x_cmap = cmap_i;
-	
+
 	if (img->lvls > num_lvls) {
 	    img->lvls = num_lvls;
 	    img->lvls_squared = num_lvls * num_lvls;
 	    log2_levels = log2_num_lvls;
 	}
-	
+
 	/* pack into a pixel the pre shifted and masked pixel values */
 	if ( img->mono_color ) {
 	    int shift = 8 - log2_num_lvls;
@@ -1241,13 +1241,13 @@ int try_ro;
 
 	if ( map )
 	    free (map);
-	
+
 	return (True);
-	
+
     }
-    
+
     return (False);
-    
+
 }
 
 static int pixcompare(pixel1, pixel2 )
@@ -1259,10 +1259,10 @@ Pixel *pixel1, *pixel2;
 void free_unique_colors( img, pixels, npixels )
 image_information *img;
 Pixel *pixels;
-int npixels;    
+int npixels;
 {
     Pixel *p;
-    int i, nunique;	
+    int i, nunique;
 
     if ( no_color_ref_counts )
     {
@@ -1311,55 +1311,55 @@ int try_ro;
     register int	j;
 #endif
     int first = True;
-    
+
     DPRINTF(stderr, "In init_color_ro\n");
-    
+
     for (num_lvls = img->lvls; num_lvls >= 2; num_lvls -- ) {
-	
+
 	if (try_ro && !first && specified_levels) break;
 	else first = False;
-	
+
 	total_levels = num_lvls * num_lvls * num_lvls;
-	
+
 	if ( !img->pixel_table ) {
 	    img->pixel_table = (Pixel *)malloc(total_levels * sizeof (Pixel) );
 	    if ( !img->pixel_table ) continue;
 	}
-	
+
 	if ( map == NULL ) {
 	    map = (int *) malloc (num_lvls * sizeof (int) );
 	    if (map == NULL) continue;
 	}
-	
+
 	if (num_lvls == 256) img->dither_img = False;
-	
+
 	get_dither_arrays( img );
 	bwdithermap( num_lvls, display_gamma, map,
 		    img->divN, img->modN, img->dm16 );
 
 	/* try to get a color map entry for each color. */
 	red_index = green_index = blue_index = 0;
-	
+
 #ifdef XLIBINT_H_NOT_AVAILABLE
 	for ( i = 0; i < total_levels; i++ ) {
 	    color_def.red   = map[red_index] << 8;
 	    color_def.green = map[green_index] << 8;
 	    color_def.blue  = map[blue_index] << 8;
-	    
+
 	    if ( XAllocColor (dpy, img->colormap, &color_def ) == 0 ) {
 		break;
 	    }
-	    
+
 	    if (++red_index >= num_lvls) {
 		if (++green_index >= num_lvls) {
 		    ++blue_index; green_index = 0;
 		}
 		red_index = 0;
 	    }
-	    
+
 	    img->pixel_table[i] = color_def.pixel;
 	}
-	
+
 	/* Check if the colors are available */
 	if ( i < total_levels ) { 	/* Free the colors already obtained */
 	    free_unique_colors (img, img->pixel_table, i );
@@ -1383,7 +1383,7 @@ int try_ro;
 		red_index = 0;
 	    }
 	}
-	    
+
 	if (XAllocColors(dpy, img->colormap, color_defs, total_levels, status)== 0)
 	{
 	    for ( i = 0, j = 0; i < total_levels; i++ )
@@ -1393,12 +1393,12 @@ int try_ro;
 	    continue;
 	} else
 	    for ( i = 0; i < total_levels; i++ )
-		img->pixel_table[i] = color_defs[i].pixel;		
-	
-#endif	
+		img->pixel_table[i] = color_defs[i].pixel;
+
+#endif
 	img->lvls = num_lvls;
 	img->lvls_squared = num_lvls * num_lvls;
-	
+
 	for (log2_levels = 1, i = 2; i < img->lvls; i <<= 1, log2_levels++) {
 	    /* do nothing */
 	}
@@ -1428,9 +1428,9 @@ image_information *img;
     int	i, j;
     int free_pixels = 0, shift, cmap_size;
     Pixel *pixels;
-    
+
     DPRINTF(stderr, "In init_mono_rw\n");
-    
+
     /* get free pixels from the default colormap */
     cmap_size = (1 << img->dpy_depth);
 
@@ -1469,7 +1469,7 @@ image_information *img;
     for (log2_levels = 1, i = 2; i < img->lvls; i <<= 1, log2_levels++) {
 	/* do nothing */
     }
-    
+
     if ( num_lvls == 256 && img->mono_color )
 	img->dither_img = False;
 
@@ -1483,10 +1483,10 @@ image_information *img;
 	return False;
     }
 
-    get_dither_arrays( img ); 
+    get_dither_arrays( img );
     bwdithermap(num_lvls, display_gamma, map,
 		img->divN, img->modN, img->dm16 );
-    
+
     /*
      * Use the top free_pixels NOT the bottom ones.  This makes it right for
      * 99% of the DISPLAYs out there which begin using colors at the bottom.
@@ -1500,10 +1500,10 @@ image_information *img;
 
     for (i = 0; i < shift; i++)
 	color_defs[i].pixel = pixels[i];
-    
+
     XQueryColors( dpy, DefaultColormap(dpy, screen), color_defs, shift );
 
-    /* 
+    /*
      * Set up the color map entries.
      */
 
@@ -1555,43 +1555,43 @@ int try_ro;
     register int		j;
 #endif
     int first = True;
-    
+
     DPRINTF(stderr, "In init_mono_ro");
     if ( try_ro ) {
 	DPRINTF(stderr, " trying read/only\n");
     } else {
 	DPRINTF(stderr, "\n");
     }
-    
-    if ( img->mono_color ) 
+
+    if ( img->mono_color )
 	img->lvls = img->cmlen;
 
-    for (num_lvls = img->lvls; num_lvls >= 2; 
+    for (num_lvls = img->lvls; num_lvls >= 2;
 	 num_lvls = (num_lvls > 16) ? num_lvls / 2 : num_lvls - 1 ) {
-	
+
 	if ( try_ro && !first && specified_levels ) break;
 	else if ( !first && img->mono_color ) break;
 	else first = False;
-	
+
 	if (img->pixel_table == NULL) {
 	    img->pixel_table = (Pixel *) malloc (num_lvls * sizeof (Pixel) );
 	    if (img->pixel_table == NULL) continue;
 	}
-	
+
 	if (map == NULL) {
 	    map = (int *) malloc (num_lvls * sizeof (int) );
 	    if (map == NULL) continue;
 	}
-	
+
 	if (num_lvls == 256 || img->mono_color)
 	    img->dither_img = False;
-	
+
 	get_dither_arrays( img );
 	bwdithermap(num_lvls, display_gamma, map,
 		    img->divN, img->modN, img->dm16 );
-	
+
 	/* try to get a color map entry for each color.  */
-	
+
 #ifdef XLIBINT_H_NOT_AVAILABLE
 	for ( i = 0; i < num_lvls; i++ ) {
 	    if ( img->mono_color ) {
@@ -1603,18 +1603,18 @@ int try_ro;
 		color_def.green = map[i] << 8;
 		color_def.blue  = map[i] << 8;
 	    }
-	    
-	    if ( XAllocColor (dpy, img->colormap, &color_def ) == 0 ){ 
+
+	    if ( XAllocColor (dpy, img->colormap, &color_def ) == 0 ){
 		break;
 	    }
 	    img->pixel_table[i] = color_def.pixel;
 	}
-	
+
 	/* Check if the colors are available */
-	
+
 	if ( i < num_lvls) {
 	    /* Free the colors already obtained */
-	    
+
 	    free_unique_colors (img, img->pixel_table, i );
 	    continue;		/* adjust level & repeat */
 	}
@@ -1637,7 +1637,7 @@ int try_ro;
 		color_defs[i].blue  = map[i] << 8;
 	    }
 	}
-	    
+
 	if (XAllocColors(dpy, img->colormap, color_defs, num_lvls, status)== 0)
 	{
 	    for ( i = 0, j = 0; i < num_lvls; i++ )
@@ -1647,12 +1647,12 @@ int try_ro;
 	    continue;
 	} else
 	    for ( i = 0; i < num_lvls; i++ )
-		img->pixel_table[i] = color_defs[i].pixel;		
-	
+		img->pixel_table[i] = color_defs[i].pixel;
+
 #endif
 	img->lvls = num_lvls;
 	img->lvls_squared = num_lvls * num_lvls;
-	
+
 	for (log2_levels = 1, i = 2; i < img->lvls; i <<= 1, log2_levels++);
 	/* do nothing */
 
@@ -1662,7 +1662,7 @@ int try_ro;
 	if (color_defs) free (color_defs);
 #endif
 	return (True);
-	
+
     }
     if (img->pixel_table)
 	free (img->pixel_table);
@@ -1733,26 +1733,26 @@ register image_information *img;
     int 			deepest_visual;
     int				depth_delta;
     register int		i;
-    
+
     DPRINTF(stderr, "In find_appropriate_visual(%d)\n", img->img_channels);
-    
+
     if (visual_info == NULL) {
 	visual_info = XGetVisualInfo (dpy, VisualNoMask, NULL, &num_visuals);
 	if (visual_info == NULL || num_visuals == 0) {
 	    fprintf (stderr, "XGetVisualInfo failed\n");
 	    exit (1);
-	}	    
+	}
     }
-    
+
     desired_depth = 1;
-    
+
     for (i = 2; i < img->lvls; i <<= 1) {
 	desired_depth++;
     }
-    
+
     if ( img->mono_img && img->lvls == 2 )
 	img->binary_img = True;
-    
+
     if ( img->binary_img ) {
 	desired_class = BINARY_TABLE_INDEX;
 	desired_depth = 1;
@@ -1767,10 +1767,10 @@ register image_information *img;
 	desired_depth *= 3;		/* needed if separate colors	*/
 	depth_delta = 3;
     }
-    
+
     VPRINTF (stderr, "Searching for %s visual with desired depth >= %d\n", 
 	     visual_class_to_string(img->visual_class), desired_depth);
-    
+
     /*
      * find visual such that:
      *
@@ -1785,27 +1785,27 @@ register image_information *img;
      *  4. If specified_screen is >=0, visual must be on that screen.
      *  5. Prefer visuals on default screen.
      */
-    
+
     found_vi = NULL;
-    
+
     def_visual_id = DefaultVisual(dpy, def_scrn)->visualid ;
     deepest_visual = 0;
-    
+
     for (i = 0; i < num_visuals; i++)
     {
 	if ( deepest_visual < visual_info[i].depth )
 	    deepest_visual = visual_info[i].depth;
-	
+
 	if ( def_visual_id == visual_info[i].visualid &&
 	     def_scrn == visual_info[i].screen )
 	    def_visual_index = i;
     }
-    
+
     /* Take the Default Visual if it's cool enough... */
     if ( visual_info[def_visual_index].depth >= desired_depth ||
 	 visual_info[def_visual_index].depth == deepest_visual )
 	found_vi = &visual_info[def_visual_index];
-    
+
     /* if we were told to look for a specific type first, do it */
     if ( img->visual_class >= 0 ) {
 	int depth;
@@ -1815,14 +1815,14 @@ register image_information *img;
 		    (specified_screen < 0 || vi->screen == specified_screen) )
 		{
 		    found_vi = vi;
-		    
+
 		    if (found_vi->depth == depth) break;
 		}
 	    if (found_vi != NULL && found_vi->class == img->visual_class)
 		break;
 	}
     }
-    
+
     /* Werent told to get any type of Visual, or didn't find one, wingit */
     if ( img->visual_class < 0 ) {
 	int depth;
@@ -1831,10 +1831,10 @@ register image_information *img;
 		break;
 	    for (i = 0; i < 6; i++) {
 		int vt;
-		
+
 		/* search for class and depth */
 		vt = desired_class_table[desired_class][i];
-		
+
 		for (vi = visual_info; vi < visual_info+num_visuals; vi++)
 		    if (vi->class == vt && vi->depth >= depth) {
 			if (found_vi==NULL || found_vi->depth > vi->depth)
@@ -1845,13 +1845,13 @@ register image_information *img;
 	    }
 	}
     }
-    
+
     if (found_vi == NULL) {
 	fprintf (stderr, "%s: Could not find appropriate visual type - %s\n",
 		 progname, visual_class_to_string(img->visual_class));
 	exit (1);
     }
-    
+
     /* Now, if screen not explicitly specified, try to find this visual on
      * the default screen.
      */
@@ -1879,7 +1879,7 @@ register image_information *img;
 	img->colormap = DefaultColormap( dpy, screen );
     else
 	get_x_colormap( img );
-    
+
     if ( img->dpy_depth == 1 || img->binary_img ) {
 	img->binary_img = True;
 	img->mono_img = True;
@@ -1887,24 +1887,24 @@ register image_information *img;
 	img->dpy_channels = 1;
 	img->sep_colors = False;
 	img->rw_cmap = False;
-	
+
 	img->lvls = 2;
 	img->lvls_squared = 4;
 	log2_levels = 1;
     }
     else {
 	int class = img->visual_class;
-	
+
 	if ( class == GrayScale || class == StaticGray ) {
 	    img->mono_img = True;
 	    img->color_dpy = False;
 	    img->dpy_channels = 1;
 	    depth_delta = 1;
 	}
-	
+
 	img->rw_cmap = class == PseudoColor || class == GrayScale ||
 	    class == DirectColor;
-	
+
 	if ( class == DirectColor || class == TrueColor ||
 	    (class == StaticColor &&
 	     (!img->dither_img || img->dpy_depth > 8) &&
@@ -1921,16 +1921,16 @@ register image_information *img;
 	     */
 
 	    img->sep_colors = True;
-	    
+
 	    i = 1 << (img->dpy_depth / depth_delta);
-	    
+
 	    if ( img->lvls > i) {
 		img->lvls = i;
 		img->lvls_squared = i * i;
 	    }
 	} else {
 	    img->sep_colors = False;
-	    
+
 	    /* Image is monochrome??? */
 	    if (depth_delta == 1) {
 		i = found_vi->colormap_size;
@@ -1939,20 +1939,20 @@ register image_information *img;
 		for (i = 1; i * i * i < found_vi->colormap_size; i++) {}
 		i--;
 	    }
-	    
+
 	    if (img->lvls > i) {
 		img->lvls = i;
 		img->lvls_squared = i * i;
 	    }
 	}
-	
+
 	for (log2_levels = 1, i = 2; i < img->lvls; i <<= 1, log2_levels++);
 	/* do nothing */
     }
 
-    VPRINTF(stderr, "Visual type %s, depth %d, screen %d\n", 
+    VPRINTF(stderr, "Visual type %s, depth %d, screen %d\n",
 	    visual_class_to_string(img->visual_class), img->dpy_depth, screen);
-    
+
     VPRINTF(stderr, "levels: %d, log(2) levels: %d\n", img->lvls, log2_levels);
 }
 
@@ -1987,7 +1987,7 @@ int use_top;
 	    dpy, img->window, 0, y, w, font_height, 0, None,
 	    img->black_pixel );
     }
-    else 
+    else
 	XMoveResizeWindow ( dpy, img->pix_info_window, 0, y, w, font_height );
 
     XMapWindow ( dpy, img->pix_info_window );
@@ -2002,7 +2002,7 @@ int x, y;
     unsigned char *r, *g, *b;
 
     r = SAVED_RLE_ROW( img, y ) + x;
-    
+
     switch ( img->dpy_channels ) {
     case 1:
 	if ( img->mono_color && img->in_cmap ) {
@@ -2064,10 +2064,10 @@ image_information *img;
 int s;
 {
     char str[256];
-    
-    if ( s > 0 ) 
+
+    if ( s > 0 )
 	sprintf( str, "%s%d Frames/Second", (s > 0) ? "": "1/", (s>0)?s:-s );
-    else 
+    else
 	sprintf( str, "As fast as possible" );
 
     XClearWindow ( dpy, img->pix_info_window );

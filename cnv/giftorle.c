@@ -2,7 +2,7 @@
  * This software is copyrighted as noted below.  It may be freely copied,
  * modified, and redistributed, provided that the copyright notice is 
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
@@ -21,8 +21,9 @@
 /* |   don't try to make money off it, or pretend that you wrote it.  | */
 /* +------------------------------------------------------------------+ */
 
-#include	<stdio.h>
-#include	"rle.h"
+#include <unistd.h>
+#include <stdio.h>
+#include "rle.h"
 
 #ifndef lint
 static char rcsid[] = "$Id: giftorle.c,v 3.0.1.4 1992/04/30 13:56:24 spencer Exp spencer $";

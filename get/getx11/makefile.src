@@ -19,7 +19,7 @@ LIBEXT = -lXext
 DIRFLAGS = $(INCX11)
 
 # -lX11 is X11 support library
-DIRLIBS = $(LIBX11) $(LIBEXT) -lm
+DIRLIBS = $(LIBX11) $(LIBEXT) -lm -ldl -lrt
 
 # Executables.  The .out will be stripped off in the install action.
 
@@ -47,7 +47,7 @@ $(X_O_FILES): fn_decls.h
 
 # getx11 - read RLE file to X11 display
 getx11.out: $(X_O_FILES) 
-	${CC} $(CFLAGS) $(X_O_FILES) $(LIBS) -o getx11.new
+	${CC} $(CFLAGS) $(X_O_FILES) -o getx11.new $(LIBS)
 	mv getx11.new getx11.out
 
 # Make prototypes.h and fn_decls.h.  Only happens if HAVE_CPROTO is defined.

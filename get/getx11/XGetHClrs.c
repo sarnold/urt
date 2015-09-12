@@ -10,7 +10,7 @@
 #include <X11/Xlibint.h>
 
 static int counter;
-static Status *st;    
+static Status *st;
 static Status status;
 
 static int dummy_handle_x_errors( dpy, event)
@@ -37,7 +37,7 @@ Status *statuses;
     Status return_status;
 
     XSync(dpy, False);
-    
+
     function = XSetErrorHandler( dummy_handle_x_errors );
     st = statuses;
 
@@ -46,7 +46,7 @@ Status *statuses;
     for (i = 0; i < ndefs; i++)
     {
 	GetReq(AllocColor, req);
-	
+
 	req->cmap = cmap;
 	req->red = defs[i].red;
 	req->green = defs[i].green;

@@ -1,6 +1,6 @@
-/* 
+/*
  * rlenoise.c - Add random (uniform) noise to an image.
- * 
+ *
  * Copyright 1988
  * Center for Information Technology Integration (CITI)
  * Information Technology Division
@@ -20,6 +20,7 @@
  */
 
 #include <stdio.h>
+#include <time.h>
 #include "rle.h"
 
 /* Change this according the value on your system.  This is a crock. */

@@ -1,25 +1,25 @@
 /*
  * This software is copyrighted as noted below.  It may be freely copied,
- * modified, and redistributed, provided that the copyright notices are 
+ * modified, and redistributed, provided that the copyright notices are
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
  *
  * You may not include this software in a program or other software product
- * without supplying the source, or without informing the end-user that the 
+ * without supplying the source, or without informing the end-user that the
  * source is available for no extra charge.
  *
  * If you modify this software, you should include a notice giving the
  * name of the person performing the modification, the date of modification,
  * and the reason for such modification.
  */
-
-/* 
+
+/*
  * getx11.h - Declaration for image_information structure...  (tote a global)
- * 
- * Author:	Martin R. Friedmann 
+ *
+ * Author:	Martin R. Friedmann
  * 		Dept of Electrical Engineering and Computer Science
  *		University of Michigan
  * Date:	Tue, Dec 10, 1989
@@ -30,9 +30,10 @@
 #include <math.h>
 #include <ctype.h>
 #include <X11/X.h>
-#include <X11/Xlib.h>
+#include <X11/Xlibint.h>
 #include <X11/Xutil.h>
 #include <X11/cursorfont.h>
+
 #include "rle.h"
 #ifdef X_SHARED_MEMORY
 #include <sys/ipc.h>
@@ -71,7 +72,7 @@ typedef unsigned long Pixel;
 #define Min(x,y) (((x) < (y)) ? (x) : (y))
 #define Max(x,y) (((x) > (y)) ? (x) : (y))
 
-typedef void VOID_FUNCTION(); 
+typedef void VOID_FUNCTION();
 typedef int array16[16];
 
 extern double		display_gamma;
@@ -101,8 +102,8 @@ extern Boolean		no_shared_space;
 /* X11/NeWS server bug workaround. */
 extern int no_color_ref_counts;
 
-/* 
- * Color map, gamma correction map, and lookup tables 
+/*
+ * Color map, gamma correction map, and lookup tables
  */
 
 typedef struct _cmap_info_struct
@@ -140,7 +141,7 @@ typedef struct _image_info_struct
     VOID_FUNCTION *MAG_scanline;	/* MAG_scanline routine to use       */
     float gamma;
     float dpy_gamma;
-    
+
     int x, y;				/* Original origin of image	     */
     int xo, yo;				/* Origin of image in X11 window (-y)*/
     int w, h;				/* width and height of image         */
@@ -155,7 +156,7 @@ typedef struct _image_info_struct
     int save_pan_x, save_pan_y;
     int save_pan_w, save_pan_h;
     int save_win_w, save_win_h;		/* wdth and hgt of window when saved */
-    
+
     Boolean binary_img;			/* will we make it 2 color? (-W)     */
     Boolean mono_img;			/* do we make it grey scale? (-w)    */
     Boolean dither_img;			/* do we dither it? (-a)             */
@@ -170,7 +171,7 @@ typedef struct _image_info_struct
 
     int *modN;				/* dither arrays, all of them */
     int *divN;
-    array16 *dm16;			
+    array16 *dm16;
     cmap_info x_cmap;
     Pixel *pixel_table;
     Pixel white_pixel, black_pixel;
