@@ -1,6 +1,6 @@
 /*
  * This software is copyrighted as noted below.  It may be freely copied,
- * modified, and redistributed, provided that the copyright notice is 
+ * modified, and redistributed, provided that the copyright notice is
  * preserved on all copies.
  *
  * There is no warranty or other guarantee of fitness for this software,
@@ -8,7 +8,7 @@
  * to the author, who may or may not act on them as he desires.
  *
  * You may not include this software in a program or other software product
- * without supplying the source, or without informing the end-user that the 
+ * without supplying the source, or without informing the end-user that the
  * source is available for no extra charge.
  *
  * If you modify this software, you should include a notice giving the
@@ -75,9 +75,9 @@ main(argc,argv)
 int	argc;
 char	**argv;
 {
-    int		oflag = 0, 
+    int		oflag = 0,
     nfname = 0;
-    char	       *outfname = NULL, 
+    char	       *outfname = NULL,
     **infname = NULL;
 
     MY_NAME = cmd_name( argv );
@@ -133,7 +133,7 @@ char	*filename;
     while (1) {
 	if (! ReadOK(fd,&c,1))
 	    EasyFail("No image data -- EOF\n",TRUE);
-	if (c == ';') 
+	if (c == ';')
 	    return FALSE;
 	if (c == '!') {
 	    if (! ReadOK(fd,&c,1))
@@ -204,7 +204,7 @@ FILE	*fd;
 	    EasyFail("EOF in extention\n",TRUE);
 	if (c == 0)
 	    return FALSE;
-	if (read(fd,buf,(int) c)!=(int) c) 
+	if (read(fd,buf,(int) c)!=(int) c)
 	    EasyFail("EOF in extention\n",TRUE);
     }
 }
@@ -247,7 +247,7 @@ int		flag;
     }
 
     ret = 0;
-    for( i = curbit, j = 0; j < code_size; i++, j++ ) 
+    for( i = curbit, j = 0; j < code_size; i++, j++ )
 	ret |= ((buf[ i / 8 ] & (1 << (i % 8))) != 0) << j;
 
     curbit += code_size;
@@ -256,7 +256,7 @@ int		flag;
 }
 
 int
-LWZReadByte(fd,flag,input_code_size)
+WZReadByte(fd,flag,input_code_size)
 FILE	*fd;
 int		flag;
 int		input_code_size;
@@ -280,7 +280,7 @@ int		input_code_size;
 	max_code = clear_code+2;
 
 	GetCode(fd,NULL,TRUE);
-		
+
 	fresh=TRUE;
 
 	for (i=0;i<clear_code;i++) {
@@ -302,7 +302,7 @@ int		input_code_size;
 	return firstcode;
     }
 
-    if (sp > stack) 
+    if (sp > stack)
 	return *--sp;
 
     while ((code=GetCode(fd,code_size,FALSE))>=0) {
@@ -316,7 +316,7 @@ int		input_code_size;
 	    code_size = set_code_size+1;
 	    max_code_size = 2*clear_code;
 	    max_code = clear_code+2;
-	    sp=stack; 
+	    sp=stack;
 	    firstcode=oldcode=
 		GetCode(fd,code_size,FALSE);
 	    return firstcode;
@@ -351,7 +351,7 @@ int		input_code_size;
 	    table[0][code] = oldcode;
 	    table[1][code] = firstcode;
 	    max_code++;
-	    if ((max_code >= max_code_size) && 
+	    if ((max_code >= max_code_size) &&
 		(max_code_size < (1<<MAX_LWZ_BITS))) {
 		max_code_size *= 2;
 		code_size++;
@@ -360,7 +360,7 @@ int		input_code_size;
 
 	oldcode = incode;
 
-	if (sp > stack) 
+	if (sp > stack)
 	    return *--sp;
     }
     return code;
@@ -373,7 +373,7 @@ FILE	*fd;
 int		len,height;
 char	cmap[3][MAXCOLORMAPSIZE];
 {
-    unsigned char	c;	
+    unsigned char	c;
     int			v;
     int			xpos=0;
     rle_pixel	      **scanline[3];
@@ -489,7 +489,7 @@ char	cmap[3][MAXCOLORMAPSIZE];
     }
     free(scanline[0]);
     if (! output_colormap) {
-	free(scanline[1]); 
+	free(scanline[1]);
 	free(scanline[2]);
     }
 
