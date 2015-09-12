@@ -1,37 +1,37 @@
 /*
  * This software is copyrighted as noted below.  It may be freely copied,
- * modified, and redistributed, provided that the copyright notices are 
+ * modified, and redistributed, provided that the copyright notices are
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
  *
  * You may not include this software in a program or other software product
- * without supplying the source, or without informing the end-user that the 
+ * without supplying the source, or without informing the end-user that the
  * source is available for no extra charge.
  *
  * If you modify this software, you should include a notice giving the
  * name of the person performing the modification, the date of modification,
  * and the reason for such modification.
  */
-
-/* 
+
+/*
  * map_scan.c - Put RLE images on X display.
- * 
+ *
  * Author:	Spencer W. Thomas  (x10)
  * 		Computer Science Dept.
  * 		University of Utah
  * Date:	Thu Feb 20 1986
  * Copyright (c) 1986, University of Utah
- * 
+ *
  * Modified:	Andrew F. Vesper (x 11)
  *		High Performance Workstations
  *		Digital Equipment Corp
  * Date:	Fri, Aug 7, 1987
  *		Thu, Jan 14, 1988
  * Copyright (c) 1987,1988, Digital Equipment Corporation
- * 
+ *
  * Modified:	Martin R. Friedmann (better X11, flipbook, MAG, info)
  * 		Dept of Electrical Engineering and Computer Science
  *		University of Michigan
@@ -72,7 +72,7 @@ static unsigned char MSBMask[9] = { 0x00, 0x80, 0xc0, 0xe0,
 #endif
 
 /*
- * Figure out which scan line routine to use.  
+ * Figure out which scan line routine to use.
  */
 void choose_scanline_converter( img )
 image_information *img;
@@ -88,9 +88,9 @@ image_information *img;
 	void	(*mag_routine)();
     } map_scanline_table[] =
     {
-	
+
 	/* 1 color, dithr, Table, b/p, routine ptr */
-	
+
     {  True, True, False, 1, map_1_dither_notable_1,   MAG_1_dither_notable_1},
     {  True, True, True, 8, map_1_dither_table_8,      MAG_1_dither_table_8},
     {  True, False,True, 8, map_1_nodither_table_8,    MAG_1_nodither_table_8},
@@ -129,18 +129,18 @@ image_information *img;
 		map_scanline_table[i].bpp == img->image->bits_per_pixel) {
 		img->map_scanline = map_scanline_table[i].routine;
 		img->MAG_scanline = map_scanline_table[i].mag_routine;
-		
+
 		if ( verbose_flag ) {
 		    fprintf ( stderr, "Special map_scanline routine used: map_");
-		    
+
 		    if ( img->mono_img )
 			fputs ( "1_", stderr );
 		    else fputs ( "2or3_", stderr );
-		    
+
 		    if ( !img->dither_img )
 			fputs ( "no", stderr );
 		    fputs ( "dither_", stderr );
-		    
+
 		    if (! table_present ) fputs ( "no", stderr );
 		    fprintf ( stderr, "table_%d (index %d)\n",
 			      img->image->bits_per_pixel, i );
@@ -149,7 +149,7 @@ image_information *img;
 	    }
 	}
 }
-
+
 /*
  * Map a scanline through the dither matrix.
  * 
@@ -181,7 +181,7 @@ image_information *img;
 /* Note! This must go at the end of the declarations section. */
 #define X_CMAP_SETUP( img ) cmap_info cmap_i; cmap_i = img->x_cmap;
 
-
+
 static void
 map_scanline_generic (img, rgb, ncolors, given_width, stride, y, image)
 image_information *img;
@@ -202,57 +202,57 @@ XImage		*image;
     register long	pixel;
     register int	width = given_width;
     X_CMAP_SETUP( img );
-    
+
     row = y % 16;
     col = 0;
     r = rgb[0];
-    
+
     if (ncolors == 1) {
-	
+
 	if ( img->dither_img ) {
-	    for (x = 0; 
-		 --width >= 0; 
+	    for (x = 0;
+		 --width >= 0;
 		 r += stride, col = ((col + 1) & 15), x ++) {
 		pixel = DMAP(*r, col, row);
-		pixel = ((pixel_table != NULL) ? pixel_table[pixel] : 
+		pixel = ((pixel_table != NULL) ? pixel_table[pixel] :
 			 SHIFT_MASK_PIXEL( pixel, pixel, pixel ));
 		XPutPixel (image, x, y, pixel);
 	    }
 	}
-	
+
 	else {
-	    if (img->mono_color) 
-		for (x = 0; --width >= 0; 
+	    if (img->mono_color)
+		for (x = 0; --width >= 0;
 		     r += stride, x ++) {
 		    pixel = pixel_table[*r];
 		    XPutPixel (image, x, y, pixel);
 		}
 	    else
-		for (x = 0; --width >= 0; 
+		for (x = 0; --width >= 0;
 		     r += stride, x ++) {
 		    pixel = NDMAP(*r);
-		    pixel = ((pixel_table != NULL) ? pixel_table[pixel] : 
+		    pixel = ((pixel_table != NULL) ? pixel_table[pixel] :
 			     SHIFT_MASK_PIXEL( pixel, pixel, pixel ));
 		    XPutPixel (image, x, y, pixel);
 		}
 	}
-	
-	
+
+
     }
-    
+
     else {
 	register unsigned char *g;
 	register unsigned char *b;
-	
-	g = b = rgb[1]; 
+
+	g = b = rgb[1];
 	if (ncolors >= 3) b = rgb[2];
-	
+
 	if ( img->dither_img ) {
-	    for (x = 0; --width >= 0; 
-		 r += stride, g += stride, b += stride, 
+	    for (x = 0; --width >= 0;
+		 r += stride, g += stride, b += stride,
 		 col = ((col + 1) & 15), x ++ )
 	    {
-		if (pixel_table != NULL) 
+		if (pixel_table != NULL)
 		    pixel = pixel_table
 			[DMAP(*r, col, row) +
 			 DMAP(*g, col, row) * levels +
@@ -264,12 +264,12 @@ XImage		*image;
 
 		XPutPixel (image, x, y, pixel);
 	    }
-	    
+
 	}
-	
+
 	else {
-	    
-	    for (x = 0; --width >= 0; 
+
+	    for (x = 0; --width >= 0;
 		 r += stride, g += stride, b += stride, x++ ) {
 		if ( pixel_table != NULL) {
 		    pixel = pixel_table
@@ -283,7 +283,7 @@ XImage		*image;
 		XPutPixel (image, x, y, pixel);
 	    }
 	}
-    }	
+    }
 }
 
 static void
@@ -319,68 +319,68 @@ XImage		*image;
 	col = x_mod_16;
 	r = rgb_line;
 	mag_x = mag_size;
-	
+
 	if ( img->dpy_channels == 1 ) {
-	    
+
 	    if ( img->dither_img )
-		while (--w >= 0) 
+		while (--w >= 0)
 		{
 		    pixel = DMAP(*r, col++, row);
-		    pixel = ((pixel_table != NULL) ? pixel_table[pixel] : 
+		    pixel = ((pixel_table != NULL) ? pixel_table[pixel] :
 			     SHIFT_MASK_PIXEL( pixel, pixel, pixel ));
 		    XPutPixel (image, x, y, pixel);
 		    if ( --mag_x == 0 )
 		    {
-			r++; 
+			r++;
 			mag_x = mag_size;
 		    }
-		    col &=15; x++; 
+		    col &=15; x++;
 		}
 	    else 
-		if (img->mono_color) 
+		if (img->mono_color)
 		    while (--w >= 0)
 		    {
 			pixel = pixel_table[*r];
 			XPutPixel (image, x, y, pixel);
 			if ( --mag_x == 0 )
 			{
-			    r++; 
+			    r++;
 			    mag_x = mag_size;
 			}
-			x++;		    
+			x++;
 		    }
 		else
 		    while (--w >= 0)
 		    {
 			pixel = NDMAP(*r);
-			pixel = ((pixel_table != NULL) ? pixel_table[pixel] : 
+			pixel = ((pixel_table != NULL) ? pixel_table[pixel] :
 				 SHIFT_MASK_PIXEL( pixel, pixel, pixel ));
 			XPutPixel (image, x, y, pixel);
 			if ( --mag_x == 0 )
 			{
-			    r++; 
+			    r++;
 			    mag_x = mag_size;
 			}
-			x++; 
+			x++;
 		    }
 	}
-	
+
 	else {
 	    register unsigned char *g;
 	    register unsigned char *b;
-	    
-	    g = b = r + img->w; 
+
+	    g = b = r + img->w;
 	    if (img->dpy_channels >= 3) b += img->w;
-	    
-	    if ( img->dither_img ) 
-		while (--w >= 0) 
+
+	    if ( img->dither_img )
+		while (--w >= 0)
 		{
-		    if ( pixel_table != NULL) 
+		    if ( pixel_table != NULL)
 			pixel = pixel_table
 			    [DMAP(*r, col, row) +
 			     DMAP(*g, col, row) * levels +
 			     DMAP(*b, col, row) * levels_squared];
-		    
+
 		    else pixel =
 			SHIFT_MASK_PIXEL (DMAP(*r, col, row),
 					  DMAP(*g, col, row),
@@ -388,16 +388,16 @@ XImage		*image;
 		    XPutPixel (image, x++, y, pixel);
 		    if ( --mag_x == 0 )
 		    {
-			r++, g++, b++; 
+			r++, g++, b++;
 			mag_x = mag_size;
 		    }
 		    col++;
 		    col &= 15;
 		}
-	    else 
-		while (--w >= 0) 
+	    else
+		while (--w >= 0)
 		{
-		    if ( pixel_table != NULL) 
+		    if ( pixel_table != NULL)
 			pixel = pixel_table
 			    [NDMAP(*r) +
 			     NDMAP(*g) * levels +
@@ -405,11 +405,11 @@ XImage		*image;
 		    else pixel = SHIFT_MASK_PIXEL (NDMAP(*r),
 						   NDMAP(*g),
 						   NDMAP(*b));
-		
+
 		    XPutPixel (image, x++, y, pixel);
 		    if ( --mag_x == 0 )
 		    {
-			r++, g++, b++; 
+			r++, g++, b++;
 			mag_x = mag_size;
 		    }
 		}
@@ -420,12 +420,12 @@ XImage		*image;
 	    mag_y = mag_size;
 	}
 	y++;
-    }	
+    }
 }
-
+
 /*
  * map_1_dither_table_8
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -453,16 +453,16 @@ XImage		*image;
     register unsigned char *r;
     register unsigned char *pixel_ptr;
     register int width = given_width;
-    
+
     row = y % 16;
     col = 0;
     r = rgb[0];
-    
+
     pixel_ptr = ((unsigned char *) image->data) + y * image->bytes_per_line;
-    
+
     while (--width >= 0) {
 	*pixel_ptr++ = pixel_table [ DMAP(*r, col, row) ];
-	
+
 	r += stride;
 	col = ((col + 1) & 15);
     }
@@ -491,7 +491,7 @@ XImage		*image;
     unsigned char 	*line_ptr;
     unsigned char	*rgb_line = SAVED_RLE_ROW( img, rle_y ) + rle_x;
     int			rgb_line_stride = img->w * img->dpy_channels;
-    
+
     line_ptr = ((unsigned char *) image->data)+(y * image->bytes_per_line) + x;
 
     while (--height >= 0) {
@@ -501,7 +501,7 @@ XImage		*image;
 	col = x_mod_16;
 	r = rgb_line;
 	mag_x = mag_size;
-	
+
 	while (--w >= 0) {
 	    *pixel_ptr++ = pixel_table [DMAP(*r, col++, row) ];
 	    col &= 15;
@@ -519,13 +519,13 @@ XImage		*image;
 	}
     }
 }
-
+
 /*
  * map_2or3_dither_table_8
  *
  * Dither three colors into an eight bit table...  This is faster than the
  * map_scanline_generic routine.
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -545,7 +545,7 @@ int		given_width;
 int		stride;
 int		y;
 XImage		*image;
-    
+
 {
     register Pixel *pixel_table = img->pixel_table;
     DMAP_SETUP( img );
@@ -555,15 +555,15 @@ XImage		*image;
     register unsigned char *r, *g, *b;
     register unsigned char *pixel_ptr;
     register int width = given_width;
-    
+
     row = y % 16;
     col = 0;
     r = rgb[0];
-    g = b = rgb[1]; 
+    g = b = rgb[1];
     if (ncolors >= 3) b = rgb[2];
 
     pixel_ptr = ((unsigned char *) image->data) + y * image->bytes_per_line;
-    
+
     while (--width >= 0) {
 	*pixel_ptr++ = pixel_table [DMAP(*r, col, row) +
 				    DMAP(*g, col, row) * levels +
@@ -583,7 +583,7 @@ int		width, height;
 int		mag_size;
 int		x, y;
 XImage		*image;
-    
+
 {
     register Pixel *pixel_table = img->pixel_table;
     DMAP_SETUP( img );
@@ -599,7 +599,7 @@ XImage		*image;
     unsigned char 	*line_ptr;
     unsigned char	*rgb_line = SAVED_RLE_ROW( img, rle_y ) + rle_x;
     int			rgb_line_stride = img->w * img->dpy_channels;
-    
+
     line_ptr = ((unsigned char *) image->data)+(y * image->bytes_per_line) + x;
 
     while (--height >= 0) {
@@ -610,9 +610,9 @@ XImage		*image;
 	mag_x = mag_size;
 
 	r = rgb_line;
-	g = b = r + img->w; 
+	g = b = r + img->w;
 	if (img->dpy_channels >= 3) b += img->w;
-	
+
 	while (--w >= 0) {
 	    *pixel_ptr++ = pixel_table [DMAP(*r, col, row) +
 					DMAP(*g, col, row) * levels +
@@ -633,12 +633,12 @@ XImage		*image;
 	}
     }
 }
-
+
 /*
  * map_1_dither_notable_1
  *
  * Dither a 1 channel image into a 1 bit image.
- * 
+ *
  * Inputs:
  * 	rgb:		Pointer to buffer containing gray scale information.
  *	n:		Length of row.
@@ -656,7 +656,7 @@ int		given_width;
 register int	stride;
 int		y;
 XImage		*image;
-    
+
 {
     DMAP_SETUP( img );
     register int col;
@@ -687,7 +687,7 @@ XImage		*image;
 	    if ( bit )
 
 		pixel_ptr++, col &= 15;
-	    
+
 	    while ((width -= 8) >= 0) {
 		*pixel_ptr = 0;
 		if ( DMAP(*r, col++, row) )
@@ -717,7 +717,7 @@ XImage		*image;
 		col &= 15;
 		pixel_ptr++;
 	    }
-	    
+
 	    /* if w is non-zero then we have to finish up... */
 	    width = 8 + width;
 	    if ( width )
@@ -726,7 +726,7 @@ XImage		*image;
 
 		savebits = *pixel_ptr & LSBMask[8-width];
 		bit = width;
-		
+
 		while (--width >= 0) {
 		    *pixel_ptr <<= 1;
 		    if ( DMAP(*r, col++, row) )
@@ -741,7 +741,7 @@ XImage		*image;
 	while (--width >= 0) {
 	    *pixel_ptr = (unsigned char)(*pixel_ptr >> 1) | (unsigned char)
 		((DMAP(*r, col, row)!= 0) ? 0x80: 0);
-	    
+
 	    r += stride;
 	    col = ((col + 1) & 15);
 	    bit = ((bit + 1) & 7);
@@ -847,7 +847,7 @@ XImage		*image;
 
 		savebits = *pixel_ptr & LSBMask[8-w];
 		bit = w;
-		
+
 		while (--w >= 0) {
 		    *pixel_ptr <<= 1;
 		    *pixel_ptr |= (unsigned char)
@@ -905,13 +905,13 @@ XImage		*image;
 
 	    /* if w is negative then we have to finish up... */
 	    w = 0 - w;
-	    
+
 	    if ( w )
 	    {
 		unsigned char savebits = (unsigned char )(*pixel_ptr >> 8 - w);
 		savebits <<= (unsigned char)8 - w;
 		bit = w;
-		
+
 		while (--w >= 0) {
 		    *pixel_ptr >>= 1;
 		    if (DMAP(*r, col++, row))
@@ -930,13 +930,13 @@ XImage		*image;
 	}
     }
 }
-
+
 /*
  * map_2or3_nodither_table_8
  *
  * Dither three colors into an eight bit table...  This is faster than the
  * map_scanline_generic routine.
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -956,7 +956,7 @@ int		given_width;
 int		stride;
 int		y;
 XImage		*image;
-    
+
 {
     register Pixel *pixel_table = img->pixel_table;
     NDMAP_SETUP( img );
@@ -964,13 +964,13 @@ XImage		*image;
     register unsigned char *r, *g, *b;
     register unsigned char *pixel_ptr;
     register int width = given_width;
-    
+
     r = rgb[0];
-    g = b = rgb[1]; 
+    g = b = rgb[1];
     if (ncolors >= 3) b = rgb[2];
 
     pixel_ptr = ((unsigned char *) image->data) + y * image->bytes_per_line;
-    
+
     while (--width >= 0) {
 	*pixel_ptr++ = pixel_table [  NDMAP(*r)
 				    + NDMAP(*g) * levels
@@ -989,7 +989,7 @@ int		width, height;
 int		mag_size;
 int		x, y;
 XImage		*image;
-   
+
 {
     register Pixel *pixel_table = img->pixel_table;
     NDMAP_SETUP( img );
@@ -1005,10 +1005,10 @@ XImage		*image;
     int			rgb_line_stride = img->w * img->dpy_channels;
 
     rgb_line = last_rgb = SAVED_RLE_ROW( img, rle_y ) + rle_x;
-    
+
     last_line = line_ptr =
 	((unsigned char *) image->data)+(y * image->bytes_per_line) + x;
-    
+
     while (--height >= 0) {
 	if ( rgb_line == last_rgb && last_line != line_ptr )
 	    memcpy( line_ptr, last_line, width );
@@ -1018,10 +1018,10 @@ XImage		*image;
 	    w = width;
 	    r = rgb_line;
 	    mag_x = mag_size;
-	    
-	    g = b = r + img->w; 
+
+	    g = b = r + img->w;
 	    if (img->dpy_channels >= 3) b += img->w;
-	    
+
 	    table_value = pixel_table [  NDMAP(*r)
 				       + NDMAP(*g) * levels
 				       + NDMAP(*b) * levels_squared];
@@ -1049,10 +1049,10 @@ XImage		*image;
 	}
     }
 }
-
+
 /*
  * map_1_nodither_table_8
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -1078,16 +1078,16 @@ XImage		*image;
     register unsigned char 	* r;
     register unsigned char	* pixel_ptr;
     register int	width = given_width;
-    
+
     r = rgb[0];
-    
+
     pixel_ptr = ((unsigned char *) image->data) + y * image->bytes_per_line;
-    
+
     while (--width >= 0) {
 	*pixel_ptr++ = pixel_table [ NDMAP(*r) ];
 	r += stride;
     }
-    
+
 }
 static void
 MAG_1_nodither_table_8(img, rle_x, rle_y, mag_size, x, y, width, height, image)
@@ -1109,9 +1109,9 @@ XImage		*image;
     unsigned char 	*line_ptr, *last_line;
     unsigned char	*rgb_line, *last_rgb;
     int			rgb_line_stride = img->w * img->dpy_channels;
-    
+
     rgb_line = last_rgb = SAVED_RLE_ROW( img, rle_y ) + rle_x;
-    
+
     last_line = line_ptr =
 	((unsigned char *) image->data)+(y * image->bytes_per_line) + x;
 
@@ -1124,7 +1124,7 @@ XImage		*image;
 	    w = width;
 	    r = rgb_line;
 	    mag_x = mag_size;
-	    
+
 	    table_value = pixel_table [ NDMAP(*r) ];
 	    while (--w >= 0) {
 		*pixel_ptr++ = table_value;
@@ -1149,7 +1149,7 @@ XImage		*image;
 }
 /*
  * map_1_mono_color_8
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -1174,16 +1174,16 @@ XImage		*image;
     register unsigned char 	* r;
     register unsigned char	* pixel_ptr;
     register int width = given_width;
-    
+
     r = rgb[0];
-    
+
     pixel_ptr = ((unsigned char *) image->data) + y * image->bytes_per_line;
-    
+
     while (--width >= 0) {
 	*pixel_ptr++ = pixel_table [ *r ];
 	r += stride;
     }
-    
+
 }
 static void
 MAG_1_mono_color_8 (img, rle_x, rle_y, mag_size, x, y, width, height, image )
@@ -1204,9 +1204,9 @@ XImage		*image;
     unsigned char 	*line_ptr, *last_line;
     unsigned char	*rgb_line, *last_rgb;
     int			rgb_line_stride = img->w * img->dpy_channels;
-    
+
     rgb_line = last_rgb = SAVED_RLE_ROW( img, rle_y ) + rle_x;
-    
+
     last_line = line_ptr =
 	((unsigned char *) image->data)+(y * image->bytes_per_line) + x;
 
@@ -1218,7 +1218,7 @@ XImage		*image;
 	    w = width;
 	    r = rgb_line;
 	    mag_x = mag_size;
-	    
+
 	    table_value = pixel_table [ *r ];
 	    while (--w >= 0) {
 		*pixel_ptr++ = table_value;
@@ -1241,10 +1241,10 @@ XImage		*image;
 	}
     }
 }
-
+
 /*
  * map_2or3_dither_table_32
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -1279,18 +1279,18 @@ XImage		*image;
     register unsigned char * pixel_ptr;
     register int width = given_width;
     int byte_order = ImageByteOrder( dpy );
-    
+
     row = y % 16;
     col = 0;
     r = rgb[0];
-    
-    g = b = rgb[1]; 
+
+    g = b = rgb[1];
     if (ncolors >= 3) b = rgb[2];
-    
+
     pixel_ptr = (unsigned char *)image->data + y * image->bytes_per_line;
-    
+
     while (--width >= 0) {
-	
+
 	pixval = pixel_table [DMAP(*r, col, row) +
 				    DMAP(*g, col, row) * levels +
 				    DMAP(*b, col, row) * levels_squared];
@@ -1320,9 +1320,9 @@ XImage		*image;
 	g += stride;
 	b += stride;
 	col = ((col + 1) & 15);
-	
+
     }
-    
+
 }
 #endif
 
@@ -1355,7 +1355,7 @@ XImage		*image;
     unsigned char	*rgb_line = SAVED_RLE_ROW( img, rle_y ) + rle_x;
     int			rgb_line_stride = img->w * img->dpy_channels;
     int byte_order = ImageByteOrder( dpy );
-    
+
     line_ptr = (unsigned char *)
 	((image->data) + (y * image->bytes_per_line)) + 4 * x;
 
@@ -1369,7 +1369,7 @@ XImage		*image;
 
 	g = b = r + img->w; 
 	if (img->dpy_channels >= 3) b += img->w;
-	    
+
 	while (--w >= 0) {
 	    pixval = pixel_table [DMAP(*r, col, row) +
 					DMAP(*g, col, row) * levels +
@@ -1413,10 +1413,10 @@ XImage		*image;
     }
 }
 #endif
-
+
 /*
  * map_2or3_dither_notable_32
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -1447,18 +1447,18 @@ XImage		*image;
     register int	width = given_width;
     int byte_order = ImageByteOrder( dpy );
     X_CMAP_SETUP( img );
-    
+
     row = y % 16;
     col = 0;
     r = rgb[0];
-    g = rgb[1]; 
+    g = rgb[1];
     if (ncolors >= 3) b = rgb[2];
     else b = rgb[1];
-    
+
     pixel_ptr = (unsigned char *) ( image->data + y * image->bytes_per_line );
-    
+
     while (--width >= 0) {
-	
+
 	pixval = SHIFT_MASK_PIXEL (DMAP(*r, col, row),
 				   DMAP(*g, col, row),
 				   DMAP(*b, col, row));
@@ -1525,10 +1525,10 @@ XImage		*image;
 	col = x_mod_16;
 	r = rgb_line;
 	mag_x = mag_size;
-	
-	g = b = r + img->w; 
+
+	g = b = r + img->w;
 	if (img->dpy_channels >= 3) b += img->w;
-	
+
 	while (--w >= 0) {
 	    pixval = SHIFT_MASK_PIXEL(DMAP(*r, col, row),
 				      DMAP(*g, col, row),
@@ -1572,10 +1572,10 @@ XImage		*image;
     }
 }
 
-
+
 /*
  * map_2or3_nodither_notable_32
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -1606,16 +1606,16 @@ XImage		*image;
     register int width = given_width;
     int byte_order = ImageByteOrder( dpy );
     X_CMAP_SETUP( img );
-    
+
     r = rgb[0];
-    g = rgb[1]; 
+    g = rgb[1];
     if (ncolors >= 3) b = rgb[2];
     else b = rgb[1];
 
     pixel_ptr = (unsigned char *) ( image->data + y * image->bytes_per_line );
-    
+
     while (--width >= 0) {
-	
+
 	pixval = SHIFT_MASK_PIXEL_32(NDMAP(*r), NDMAP(*g), NDMAP(*b));
 	if ( byte_order == MSBFirst )
 	{
@@ -1643,9 +1643,9 @@ XImage		*image;
 	r += stride;
 	g += stride;
 	b += stride;
-	
+
     }
-    
+
 }
 static
 void
@@ -1673,7 +1673,7 @@ XImage		*image;
     X_CMAP_SETUP( img );
 
     rgb_line = last_rgb = SAVED_RLE_ROW( img, rle_y ) + rle_x;
-    
+
     last_line = line_ptr = (unsigned char *)
 	(image->data + (y * image->bytes_per_line)) + 4 * x;
 
@@ -1686,12 +1686,12 @@ XImage		*image;
 	    w = width;
 	    r = rgb_line;
 	    mag_x = mag_size;
-	    
-	    g = b = r + img->w; 
+
+	    g = b = r + img->w;
 	    if (img->dpy_channels >= 3) b += img->w;
-	    
+
 	    pixel_value = SHIFT_MASK_PIXEL_32(NDMAP(*r), NDMAP(*g), NDMAP(*b));
-    
+
 	    while (--w >= 0) {
 		pixval = pixel_value;
 		if ( byte_order == MSBFirst )
@@ -1718,7 +1718,7 @@ XImage		*image;
 		}
 		if ( --mag_x == 0 )
 		{
-		    r++, g++, b++; 
+		    r++, g++, b++;
 		    mag_x = mag_size;
 		    pixel_value = SHIFT_MASK_PIXEL_32(NDMAP(*r),
 						      NDMAP(*g), NDMAP(*b));
@@ -1736,10 +1736,10 @@ XImage		*image;
 	}
     }
 }
-
+
 /*
  * map_1_nodither_notable_32
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -1768,14 +1768,14 @@ XImage		*image;
     register int width = given_width;
     int byte_order = ImageByteOrder( dpy );
     X_CMAP_SETUP( img );
-    
+
     r = rgb[0];
 
     pixel_ptr = (unsigned char *) ( image->data + y * image->bytes_per_line );
-    
+
     while (--width >= 0) {
 	register int bw_value = NDMAP(*r);
-	
+
 	pixval = SHIFT_MASK_PIXEL_32( bw_value, bw_value, bw_value );
 	if ( byte_order == MSBFirst )
 	{
@@ -1802,7 +1802,7 @@ XImage		*image;
 
 	r += stride;
     }
-    
+
 }
 static
 void
@@ -1831,7 +1831,7 @@ XImage		*image;
     X_CMAP_SETUP( img );
 
     rgb_line = last_rgb = SAVED_RLE_ROW( img, rle_y ) + rle_x;
-    
+
     last_line = line_ptr = (unsigned char *)
 	(image->data + (y * image->bytes_per_line)) + 4 * x;
 
@@ -1844,10 +1844,10 @@ XImage		*image;
 	    w = width;
 	    r = rgb_line;
 	    mag_x = mag_size;
-	    
+
 	    bw_value = NDMAP(*r);
 	    pixel_value = SHIFT_MASK_PIXEL_32(bw_value, bw_value, bw_value );
-    
+
 	    while (--w >= 0) {
 		pixval = pixel_value;
 		if ( byte_order == MSBFirst )
@@ -1874,9 +1874,9 @@ XImage		*image;
 		}
 		if ( --mag_x == 0 )
 		{
-		    r++; 
+		    r++;
 		    mag_x = mag_size;
-		    
+
 		    bw_value = NDMAP(*r);
 		    pixel_value =
 			SHIFT_MASK_PIXEL_32(bw_value, bw_value, bw_value );
@@ -1896,7 +1896,7 @@ XImage		*image;
 }
 /*
  * map_1_mono_color_32
- * 
+ *
  * Inputs:
  * 	rgb:		Pointers to buffers containing the red, green,
  *			and blue color rows.
@@ -1922,11 +1922,11 @@ XImage		*image;
     register unsigned char *pixel_ptr;
     register int width = given_width;
     int byte_order = ImageByteOrder( dpy );
-    
+
     r = rgb[0];
 
     pixel_ptr = (unsigned char *) ( image->data + y * image->bytes_per_line );
-    
+
     while (--width >= 0) {
 	pixval = img->pixel_table[ *r ];
 	if ( byte_order == MSBFirst )
@@ -1953,7 +1953,7 @@ XImage		*image;
 	}
 	r += stride;
     }
-    
+
 }
 static
 void
@@ -1979,7 +1979,7 @@ XImage		*image;
     int byte_order = ImageByteOrder( dpy );
 
     rgb_line = last_rgb = SAVED_RLE_ROW( img, rle_y ) + rle_x;
-    
+
     last_line = line_ptr = (unsigned char *)
 	(image->data + (y * image->bytes_per_line)) + 4 * x;
 
@@ -1992,9 +1992,9 @@ XImage		*image;
 	    w = width;
 	    r = rgb_line;
 	    mag_x = mag_size;
-	    
+
 	    pixel_value = img->pixel_table[ *r ];
-    
+
 	    while (--w >= 0) {
 		pixval = pixel_value;
 		if ( byte_order == MSBFirst )
@@ -2021,9 +2021,9 @@ XImage		*image;
 		}
 		if ( --mag_x == 0 )
 		{
-		    r++; 
+		    r++;
 		    mag_x = mag_size;
-		    
+
 		    pixel_value = img->pixel_table[ *r ];
 		}
 	    }
@@ -2039,10 +2039,10 @@ XImage		*image;
 	}
     }
 }
-
+
 /*****************************************************************
  * TAG( map_rgb_to_bw )
- * 
+ *
  * Convert RGB to black and white through NTSC transform, but map
  * RGB through a color map first.
  * Inputs:
@@ -2074,15 +2074,15 @@ register rle_pixel     *bw_row;
     map = img->in_cmap;
     ncolors = img->img_channels;
     rowlen = img->w;
-    
+
     if (ncolors < 1) {
-	fprintf (stderr, "%s: map_rgb_to_bw given %d colors\n", 
+	fprintf (stderr, "%s: map_rgb_to_bw given %d colors\n",
 		 progname, ncolors);
 	exit (1);
     }
-    
+
     switch (ncolors) {
-	
+
     case 1:
 	red = rows[0];
 	if ( !map || img->mono_color )
@@ -2092,7 +2092,7 @@ register rle_pixel     *bw_row;
 	    duff8( rowlen, *bw_row++ = cmap[*red++])
 	}
 	break;
-	
+
     case 2:
 	red = rows[0];
 	green = rows[1];
@@ -2104,7 +2104,7 @@ register rle_pixel     *bw_row;
 					50 * cmap[1][*green++]) /100)
 	}
 	break;
-	
+
     default:
     case 3:
 	red = rows[0];
@@ -2122,10 +2122,10 @@ register rle_pixel     *bw_row;
 	break;
     }
 }
-
+
 /*****************************************************************
  * TAG( map_rgb_to_rgb )
- * 
+ *
  * Convert RGB to RGB through a colormap
  * Inputs:
  * 	in_rows:	Given RGB pixel data.
@@ -2145,18 +2145,18 @@ rle_pixel 	**in_rows, **out_rows;
     rle_pixel **map;
     int	ncolors;
     int	rowlen;
-    
+
     map = img->in_cmap;
     ncolors = img->img_channels;
     rowlen = img->w;
 
     if ( ncolors < 1 )
     {
-	fprintf (stderr, "%s: map_rgb_to_rgb given %d colors\n", 
+	fprintf (stderr, "%s: map_rgb_to_rgb given %d colors\n",
 		 progname, ncolors);
 	exit (1);
-    }	
-    
+    }
+
     if ( map )
 	while ( --ncolors >= 0 )
 	{
@@ -2164,14 +2164,14 @@ rle_pixel 	**in_rows, **out_rows;
 	    out = out_rows[0];
 	    cmap = map[0];
 	    w = rowlen;
-	    
+
 	    duff8( w, *out++ = cmap[*in++] );
-	    
+
 	    in_rows++;
 	    out_rows++;
 	    map++;
 	}
-    else 
+    else
 	while ( --ncolors >= 0 )
 	{
 	    if ( in_rows[0] != out_rows[0] )
@@ -2192,10 +2192,10 @@ register image_information *img;
 	img->modN = (int *) malloc ( 256 * sizeof(int) );
     if (!img->dm16)
 	img->dm16 = (array16 *) malloc ( 16 * 16 * sizeof(int) );
-    
+
     if (!img->divN || !img->modN || !img->dm16 )
     {
-	fprintf( stderr, "%s: malloc error getting dither arrays\n");
+	fprintf( stderr, "malloc error getting dither arrays\n");
 	exit (1);
     }
 }
@@ -2210,17 +2210,15 @@ int	high_bit_index;
 {
     register int	shift;
     register Pixel	high_bit;
-    
+
     if (mask == 0) return (0);
-    
+
     high_bit = 0x80000000;
-    
+
     for (shift = (32 - high_bit_index); (high_bit & mask) == 0; shift--) {
 	high_bit >>= 1;
     }
-    
     return (shift);
-    
 }
 
 
@@ -2231,15 +2229,13 @@ Pixel	mask;
 {
     register int	shift;
     register Pixel	low_bit;
-    
+
     if (mask == 0) return (0);
-    
+
     low_bit = 1;
-    
+
     for (shift = 0; (low_bit & mask) == 0; shift++) {
 	low_bit <<= 1;
     }
-    
     return (shift);
-    
 }

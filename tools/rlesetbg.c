@@ -2,7 +2,7 @@
  * This software is copyrighted as noted below.  It may be freely copied,
  * modified, and redistributed, provided that the copyright notice is 
  * preserved on all copies.
- * 
+ *
  * There is no warranty or other guarantee of fitness for this software,
  * it is provided solely "as is".  Bug reports or fixes may be sent
  * to the author, who may or may not act on them as he desires.
@@ -15,15 +15,15 @@
  * name of the person performing the modification, the date of modification,
  * and the reason for such modification.
  */
-/* 
+/*
  * rlesetbg.c - set the background color (based on repos)
- * 
+ *
  * Author:	John W. Peterson & Rod Bogart
  * 		Computer Science Dept.
  * 		University of Utah
  * Date:	Sat Jun 21 1986
  * Copyright (c) 1986, University of Utah
- * 
+ *
  */
 #ifndef lint
 static char rcs_ident[] = "$Id: rlesetbg.c,v 3.0.1.1 1992/01/23 20:44:32 spencer Exp $";
@@ -73,7 +73,7 @@ char	*argv[];
     {
 	if ( backcolor_flag && nback < in_hdr.ncolors )
 	{
-	    fprintf( stderr, "%s: Need %d colors, only %d supplied.\n",
+	    fprintf( stderr, "Need %d colors, only %d supplied.\n",
 		     in_hdr.ncolors, nback );
 	    exit(-1);
 	}
