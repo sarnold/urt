@@ -69,7 +69,7 @@ make-fns: $(X_C_FILES)
 	@for f in $(X_C_FILES) ; do \
 		$(CPP) $(IFLAGS) $(DIRFLAGS) $$f | \
 		sed -e 's///' | \
-		cproto -le -f3 ; \
+		cproto -f 3 -le ; \
 	done >xxx.h ;
 	@if cmp -s xxx.h fn_decls.h ; then \
 		rm xxx.h ;\

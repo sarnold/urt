@@ -34,10 +34,11 @@ rletoppm()			/* Tag. */
 /*-----------------------------------------------------------------------------
  * System includes.
  */
-#include <stdio.h>
-#define NO_DECLARE_MALLOC
+
+#define NO_DECLARE_MALLOC       /* ppm.h does it */
 #include "rle.h"
-#include <ppm.h>
+#include "ppm.h"
+#include <stdio.h>
 
 #define VPRINTF if (verbose || header) fprintf
 #define GRAYSCALE   001	/* 8 bits, no colormap */

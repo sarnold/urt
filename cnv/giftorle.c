@@ -21,8 +21,9 @@
 /* |   don't try to make money off it, or pretend that you wrote it.  | */
 /* +------------------------------------------------------------------+ */
 
-#include <unistd.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 #include "rle.h"
 
 #ifndef lint
@@ -51,7 +52,7 @@ giftorle()		Tag the file.
 
 int ReadGIF();
 int ReadColorMap(), IgnoreExtention(), GetCode(), LWZReadByte();
-int ReadInterlaced(), ReadRaster();
+int ReadRaster();
 
 static rle_map out_map[3*(1<<8)];
 
@@ -75,17 +76,15 @@ main(argc,argv)
 int	argc;
 char	**argv;
 {
-    int		oflag = 0,
-    nfname = 0;
-    char	       *outfname = NULL,
-    **infname = NULL;
+    int	oflag = 0, nfname = 0;
+    char *outfname = NULL, **infname = NULL;
 
     MY_NAME = cmd_name( argv );
 
     if ( scanargs( argc, argv, "% c%- o%-outfile.rle!s infile.gif%*s",
 		   &output_colormap, &oflag, &outfname,
 		   &nfname, &infname ) == 0 )
-	exit( 1 );
+		   exit( 1 );
 
     outfile = rle_open_f( MY_NAME, outfname, "w" );
     /* Questionable practice.  Modifies default values for headers. */
@@ -256,20 +255,20 @@ int		flag;
 }
 
 int
-WZReadByte(fd,flag,input_code_size)
+LWZReadByte(fd,flag,input_code_size)
 FILE	*fd;
-int		flag;
-int		input_code_size;
+int	flag;
+int	input_code_size;
 {
-    static int		fresh=FALSE;
-    int				code,incode;
-    static int		code_size,set_code_size;
-    static int		max_code,max_code_size;
-    static int		firstcode,oldcode;
-    static int		clear_code,end_code;
-    static int		table[2][(1<< MAX_LWZ_BITS)];
-    static int		stack[(1<<(MAX_LWZ_BITS))*2],*sp;
-    register int	i;
+    static int	fresh=FALSE;
+    int		code,incode;
+    static int	code_size,set_code_size;
+    static int	max_code,max_code_size;
+    static int	firstcode,oldcode;
+    static int	clear_code,end_code;
+    static int	table[2][(1<< MAX_LWZ_BITS)];
+    static int	stack[(1<<(MAX_LWZ_BITS))*2],*sp;
+    register int i;
 
     if (flag) {
 	set_code_size = input_code_size;
@@ -370,7 +369,7 @@ int
 ReadRaster(interlace,fd,len,height,cmap)
 int interlace;
 FILE	*fd;
-int		len,height;
+int	len,height;
 char	cmap[3][MAXCOLORMAPSIZE];
 {
     unsigned char	c;
@@ -440,7 +439,7 @@ char	cmap[3][MAXCOLORMAPSIZE];
 	if (xpos==len) {
 	    xpos = 0;
 	    switch (pass) {
-	    case 0: 
+	    case 0:
 	    case 1:
 		ypos += 8; break;
 	    case 2:
