@@ -31,7 +31,7 @@
  * Date:	Fri, Aug 7, 1987
  *		Thu, Jan 14, 1988
  * Copyright (c) 1987,1988, Digital Equipment Corporation
- * 
+ *
  * Modified:	Martin R. Friedmann (better X11, flipbook, mag, pix_info)
  * 		Dept of Electrical Engineering and Computer Science
  *		University of Michigan

@@ -41,3 +41,4 @@ extern void check_mono_color(image_information *img, rle_hdr *img_hdr);
 extern void get_dither_colors(register image_information *img, rle_hdr *img_hdr);
 extern int eq_cmap(register rle_pixel **cm1, int len1, register rle_pixel **cm2, int len2);
 extern int XCopyImage(XImage *image, int src_x, int src_y, int width, int height, int dst_x, int dst_y);
+extern Status XAllocColors(register Display *dpy, Colormap cmap, XColor *defs, int ndefs, Status *statuses);

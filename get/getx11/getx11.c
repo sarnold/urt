@@ -57,7 +57,7 @@
 static int get_pic ();
 static void update_pic();
 
-/* 
+/*
  * Global variables
  */
 

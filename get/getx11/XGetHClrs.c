@@ -72,7 +72,7 @@ Status *statuses;
     SyncHandle();
 
     XSetErrorHandler( function );
-    
+
     return(return_status);
 }
 #endif /* !XLIBINT_H_NOT_AVAILABLE */

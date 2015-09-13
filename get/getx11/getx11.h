@@ -30,7 +30,10 @@
 #include <math.h>
 #include <ctype.h>
 #include <X11/X.h>
+#include <X11/Xlib.h>
+#ifndef XLIBINT_H_NOT_AVAILABLE
 #include <X11/Xlibint.h>
+#endif
 #include <X11/Xutil.h>
 #include <X11/cursorfont.h>
 
@@ -187,7 +190,7 @@ typedef struct _image_info_struct
 /* rle_getrow by adding 1 to y.  We waste the first line of this array  */
 /* SAVED_RLE_ROW(img, -1) == img->scan_data, and is never used...       */
 #define SAVED_RLE_ROW( img, y ) \
-    ((img)->scan_data + (((y) + 1) * (img)->w * (img)->dpy_channels)) 
+    ((img)->scan_data + (((y) + 1) * (img)->w * (img)->dpy_channels))
 
 
 #define duff8(counter, block) {\
@@ -213,6 +216,10 @@ typedef struct _image_info_struct
      case 0:    counter = 0;\
      }\
 }
+
+/* add missing prototype (moved to prototypes.h)
+ * extern Status XAllocColors(register Display *dpy, Colormap cmap, XColor *defs, int ndefs, Status *statuses);
+*/
 
 #ifdef USE_PROTOTYPES
 /* Prototypes.h contains prototypes for all global functions.  It is
