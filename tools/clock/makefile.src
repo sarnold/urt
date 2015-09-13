@@ -1,12 +1,14 @@
 # Makefile for rleClock
 
+OBJS = rleClock.o font.o
+
 default: install
 
 install: rleClock
 	mv rleClock ../rleClock.out
 
-rleClock:rleClock.o font.o
-	${CC} ${CFLAGS} ${LDFLAGS} rleClock.o font.o ${LIBS} -o rleClock -lm
+rleClock: $(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) -o rleClock $(LIBS) -lm
 
 font.c:font.src makeFont
 	chmod +x makeFont
