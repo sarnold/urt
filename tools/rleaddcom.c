@@ -25,6 +25,11 @@
  * Copyright (c) 1987, University of Utah
  */
 
+#include "rle.h"
+#ifndef _XOPEN_SOURCE
+#define _XOPEN_SOURCE  /* For mkstemp */
+#endif /* !_XOPEN_SOURCE */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -32,7 +37,6 @@
 #include <sys/types.h>
 #include <sys/param.h>			/* for MAXPATHLEN */
 #include <sys/stat.h>
-#include "rle.h"
 
 #ifndef MAXPATHLEN
 # define MAXPATHLEN BUFSIZ

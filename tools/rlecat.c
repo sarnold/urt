@@ -14,10 +14,14 @@ static char rcsid[] = "$Header: /l/spencer/src/urt/tools/RCS/rlecat.c,v 3.0.1.4 
 rlecat()		Make a tag.
 */
 
+#include "rle.h"
+#ifndef _XOPEN_SOURCE
+#define _XOPEN_SOURCE  /* For mkstemp */
+#endif /* !_XOPEN_SOURCE */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "rle.h"
 #include "rle_raw.h"
 
 #ifdef USE_PROTOTYPES
