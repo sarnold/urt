@@ -17,7 +17,7 @@
  */
 /*
  * into.c - Put output into a file without destroying it.
- * 
+ *
  * Author:	Spencer W. Thomas
  * 		Computer Science Dept.
  * 		University of Utah
@@ -25,8 +25,9 @@
  * Copyright (c) 1983 Spencer W. Thomas
  */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/param.h>			/* for MAXPATHLEN */
@@ -37,11 +38,10 @@
 # define MAXPATHLEN BUFSIZ
 #endif
 
-static char temp[] = "intoXXXXXXXX";
+static char temp[] = "intoXXXXXX";
 static char buf[MAXPATHLEN+1];
 short forceflg;				/* overwrite an unwritable file? */
 
-#include <errno.h>
 #include <string.h>
 
 void
@@ -83,6 +83,7 @@ char **argv;
     }
     else
 	strcpy( buf, temp );
+
     mkstemp( buf );
 
     if ( (outf = fopen( buf, "w" )) == NULL )

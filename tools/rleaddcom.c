@@ -1,6 +1,6 @@
 /*
  * This software is copyrighted as noted below.  It may be freely copied,
- * modified, and redistributed, provided that the copyright notice is 
+ * modified, and redistributed, provided that the copyright notice is
  * preserved on all copies.
  *
  * There is no warranty or other guarantee of fitness for this software,
@@ -8,7 +8,7 @@
  * to the author, who may or may not act on them as he desires.
  *
  * You may not include this software in a program or other software product
- * without supplying the source, or without informing the end-user that the 
+ * without supplying the source, or without informing the end-user that the
  * source is available for no extra charge.
  *
  * If you modify this software, you should include a notice giving the
@@ -17,7 +17,7 @@
  */
 /*
  * rle_addcom.c - Add comment[s] to an RLE file.
- * 
+ *
  * Author:	Spencer W. Thomas
  * 		Computer Science Dept.
  * 		University of Utah
@@ -25,23 +25,27 @@
  * Copyright (c) 1987, University of Utah
  */
 
-#include <unistd.h>
 #include <stdio.h>
-#include "rle.h"
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
 #include <sys/types.h>
 #include <sys/param.h>			/* for MAXPATHLEN */
 #include <sys/stat.h>
+#include "rle.h"
 
 #ifndef MAXPATHLEN
 # define MAXPATHLEN BUFSIZ
 #endif
 
-static char temp[] = "intoXXXXXXXX";
+static char temp[] = "rleaddcomXXXXXX";
 static char buf[MAXPATHLEN+1];
+
+#include <string.h>
 
 /*****************************************************************
  * TAG( main )
- * 
+ *
  * Add one or more comments to an RLE file.
  *
  * Usage:
@@ -119,7 +123,8 @@ char **argv;
 	}
 	else
 	    strcpy( buf, temp );
-	mktemp( buf );
+	mkstemp( buf );
+
 #ifndef NO_OPEN_PIPES
 	/* Compressed file special case. */
 	cp = i_fname + strlen( i_fname ) - 2;

@@ -14,8 +14,9 @@ static char rcsid[] = "$Header: /l/spencer/src/urt/tools/RCS/rlecat.c,v 3.0.1.4 
 rlecat()		Make a tag.
 */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "rle.h"
 #include "rle_raw.h"
 
@@ -36,7 +37,7 @@ static void rep_file();
  *  	-c: 	"Collated"  Multiple input images will be repeated
  *  	    	(see -n) in sequence 1 2 3 ... 1 2 3 ...  The default
  *  	    	is uncolllated, 1 1 ... 2 2 ... 3 3 ...
- * 
+ *
  *  	-n repeat-count:
  *  	    	Repeat each input image 'repeat-count' times.  The -c
  *  	    	flag controls the ordering of the repeats.  Repeating
@@ -71,7 +72,7 @@ char **argv;
     CONST_DECL char **infname = NULL,
     	       *outfname = NULL;
     CONST_DECL char *dash = "-";	/* Used to fake a request for stdin. */
-    static char temp[] = "/tmp/rlecatXXXXXXXX";
+    static char temp[] = "rlecatXXXXXX";
     int 	cflag = 0,
     	    	nflag = 0,
     	    	rep_cnt = 0,
@@ -85,7 +86,7 @@ char **argv;
     char    	buf[BUFSIZ];	/* For building title comment. */
     rle_op    **rows;		/* Storage for input data. */
     int	       *n_op;		/* Number of ops per row. */
-    
+
     in_hdr = *rle_hdr_init( NULL );
     out_hdr = *rle_hdr_init( NULL );
 
@@ -103,7 +104,7 @@ char **argv;
 
     /* Open the output file now, to make sure we can. */
     outfile = rle_open_f_noexit( cmd_name( argv ), outfname, "w" );
-    
+
     /* If requesting repeats, create temp file. */
     if ( nflag )
     {
