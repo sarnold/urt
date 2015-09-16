@@ -22,7 +22,7 @@ DIRFLAGS = $(INCX11)
 DIRLIBS = $(LIBX11) $(LIBEXT) -lm -ldl -lrt
 
 # define preprocessor for cproto
-CPP ?= cpp
+CPP ?= cpp -E
 
 # Executables.  The .out will be stripped off in the install action.
 
@@ -54,23 +54,22 @@ getx11.out: $(X_O_FILES)
 	mv getx11.new getx11.out
 
 # Make prototypes.h and fn_decls.h.  Only happens if HAVE_CPROTO is defined.
-# Also assumes that the C preprocessor is /lib/cpp.
 # The substitution in the sed line below removes ^L characters,
 #ifdef HAVE_CPROTO
 prototypes.h: $(X_C_FILES)
 	for f in $(X_C_FILES) ; do \
-		$(CPP) $(IFLAGS) $(DIRFLAGS) $$f | \
+		$(CPP) $(IFLAGS) $$f | \
 		sed -e 's///' | \
-		cproto -le ; \
-	done >prototypes.h
+		cproto -qe ; \
+	done > prototypes.h
 
 make-fns: $(X_C_FILES)
 	@echo Checking for new function declarations
 	@for f in $(X_C_FILES) ; do \
-		$(CPP) $(IFLAGS) $(DIRFLAGS) $$f | \
+		$(CPP) $(IFLAGS) $$f | \
 		sed -e 's///' | \
-		cproto -f 3 -le ; \
-	done >xxx.h ;
+		cproto -f 3 -qe ; \
+	done > xxx.h ;
 	@if cmp -s xxx.h fn_decls.h ; then \
 		rm xxx.h ;\
 	else \
@@ -89,3 +88,7 @@ clean:	clean-pgm
 
 # Clean up installed code
 pristine: pristine-pgm
+
+# Clean prototypes.h
+clean-proto: clean
+	rm prototypes.h
