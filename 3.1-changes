@@ -1,5 +1,7 @@
 -*- Text -*-
-Utah Raster Toolkit 3.1 alpha distribution.
+Utah Raster Toolkit 3.2 RC1 distribution.
+Patched with current patches and build issues/QA warnings fixed.
+2015/09/15 Stephen L. Arnold <stehphen.arnold42 At gmail.com>
 -----------------------------------
 
 Changed configuration variable SYS_TIME_H to USE_TIME_H.  The sense is
