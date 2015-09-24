@@ -1,0 +1,9 @@
+<map id="write_data" name="write_data">
+<area shape="rect" id="node2" href="$d8/d32/qcr_8c.html#ab203a14bb2545e56ab088e6f1ab171e8" title="send_pixel_image" alt="" coords="141,5,277,32"/>
+<area shape="rect" id="node4" href="$d8/d32/qcr_8c.html#a98781104105a9cde9e694bf83b7b1308" title="send_3pass_rle" alt="" coords="148,56,271,83"/>
+<area shape="rect" id="node5" href="$d8/d32/qcr_8c.html#a9ba2c39c0c04e87fb4c355c4362be6d8" title="qcr_ld_lut12" alt="" coords="160,107,259,133"/>
+<area shape="rect" id="node7" href="$d8/d32/qcr_8c.html#a1955c7178ed4c8eaecb6bcb8c0b07036" title="qcr_load_i_luts" alt="" coords="151,157,268,184"/>
+<area shape="rect" id="node8" href="$d5/dd9/rleClock_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="183,208,235,235"/>
+<area shape="rect" id="node3" href="$d3/d22/getqcr_8c.html#a5ea466849f21e6c2be4ef9b2eb8868d3" title="main" alt="" coords="325,5,377,32"/>
+<area shape="rect" id="node6" href="$d8/d32/qcrldmap_8c.html#a5ea466849f21e6c2be4ef9b2eb8868d3" title="main" alt="" coords="325,132,377,159"/>
+</map>

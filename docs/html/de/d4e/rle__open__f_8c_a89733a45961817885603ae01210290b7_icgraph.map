@@ -1,0 +1,11 @@
+<map id="rle_open_f" name="rle_open_f">
+<area shape="rect" id="node2" href="$dd/dc5/prototypes_8h.html#a70db8bd1d499619f7ff9c1ca2ff3c8df" title="main" alt="" coords="169,5,221,32"/>
+<area shape="rect" id="node3" href="$d6/de6/gifencod_8c.html#a55f5152af2c1b50961405efdc844c5b8" title="GIFEncode" alt="" coords="148,56,241,83"/>
+<area shape="rect" id="node4" href="$d1/dad/giftorle_8c.html#a6fb0f50af9c697efbab2c74b8919760d" title="ReadGIF" alt="" coords="155,107,234,133"/>
+<area shape="rect" id="node5" href="$d7/d7d/rleldmap_8c.html#a15a93d3e423e21c7d212870525a98592" title="filemap" alt="" coords="161,157,228,184"/>
+<area shape="rect" id="node6" href="$d7/d7d/rleldmap_8c.html#ad9fec2c62836213e6eaa08c40a2bd653" title="mfilemap" alt="" coords="155,208,234,235"/>
+<area shape="rect" id="node7" href="$d7/d7d/rleldmap_8c.html#a46c3c4a1e84c992d331d569094ab0cf2" title="get_rle_map" alt="" coords="144,259,245,285"/>
+<area shape="rect" id="node8" href="$d1/d70/smush_8c.html#ae22f338bd00e39e5d88b945931097a70" title="read_mask" alt="" coords="149,309,241,336"/>
+<area shape="rect" id="node10" href="$df/dfb/unslice_8c.html#a7090aec632931a42b5d606b6db234b9d" title="do_slice" alt="" coords="157,360,232,387"/>
+<area shape="rect" id="node9" href="$d1/d70/smush_8c.html#ade521a0600ded19f1720b6f6df59b480" title="main" alt="" coords="293,309,345,336"/>
+</map>

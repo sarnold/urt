@@ -1,0 +1,12 @@
+<map id="read_alias" name="read_alias">
+<area shape="rect" id="node2" href="$dc/d7b/aliastorle_8c.html#ac2c29217831f208a3b22bae552c5124f" title="error" alt="" coords="185,5,239,32"/>
+<area shape="rect" id="node3" href="$dc/d7b/aliastorle_8c.html#a8274f02e7a62caa541e232f73c7a9393" title="read_file" alt="" coords="173,56,251,83"/>
+<area shape="rect" id="node4" href="$dc/d7b/aliastorle_8c.html#acbefa4040b3c901c13682193af830070" title="read_alias_header" alt="" coords="141,107,283,133"/>
+<area shape="rect" id="node5" href="$dc/d7b/aliastorle_8c.html#aebf7c8907c7157b430ee288f22563a9d" title="Malloc" alt="" coords="181,157,243,184"/>
+<area shape="rect" id="node6" href="$dc/d7b/aliastorle_8c.html#a436a6224e03e9d07212639e92c6db20d" title="create_alias_cmap" alt="" coords="141,208,283,235"/>
+<area shape="rect" id="node7" href="$dc/d7b/aliastorle_8c.html#aa46a1e023b0476481fbefd6b763af638" title="uncode_alias24" alt="" coords="151,259,273,285"/>
+<area shape="rect" id="node8" href="$dc/d7b/aliastorle_8c.html#aae1b401f0b6fb8d096300bc6d41dec99" title="uncode_alias" alt="" coords="159,309,265,336"/>
+<area shape="rect" id="node9" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="189,360,235,387"/>
+<area shape="rect" id="node10" href="$dc/d7b/aliastorle_8c.html#ab93f387e92d58014f819bb362f887606" title="read_line_alias24" alt="" coords="145,411,279,437"/>
+<area shape="rect" id="node11" href="$dc/d7b/aliastorle_8c.html#aa4e8463877c452ecf28ca77a8d23e059" title="read_line_alias" alt="" coords="153,461,271,488"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="allocate_pixmap" name="allocate_pixmap">
+<area shape="rect" id="node2" href="$dd/d17/x11__stuff_8c.html#a5514147cc2e2519281b7930a56c39dde" title="free_X_pixmap" alt="" coords="209,5,326,32"/>
+<area shape="rect" id="node3" href="$dd/d17/x11__stuff_8c.html#ad518b27a85450f7cb1930f799f78716f" title="check_pixmap_allocation" alt="" coords="177,56,357,83"/>
+<area shape="rect" id="node4" href="$dd/d17/x11__stuff_8c.html#af5943022edd547455fead4fb49e0eeb0" title="handle_x_errors" alt="" coords="405,56,532,83"/>
+</map>

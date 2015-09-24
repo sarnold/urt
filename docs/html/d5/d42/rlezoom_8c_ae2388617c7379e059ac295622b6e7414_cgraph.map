@@ -1,0 +1,12 @@
+<map id="float_zoom" name="float_zoom">
+<area shape="rect" id="node2" href="$da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b" title="rle_row_alloc" alt="" coords="144,56,251,83"/>
+<area shape="rect" id="node4" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="311,132,358,159"/>
+<area shape="rect" id="node5" href="$d5/d42/rlezoom_8c.html#ad8be084bb75a2f387cb761fc46556d17" title="advance_fp" alt="" coords="149,259,245,285"/>
+<area shape="rect" id="node6" href="$d5/d42/rlezoom_8c.html#a0e5323ee1ed801abb8f211ee360f3f92" title="build_row" alt="" coords="157,309,238,336"/>
+<area shape="rect" id="node7" href="$d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72" title="rle_putrow" alt="" coords="153,5,241,32"/>
+<area shape="rect" id="node9" href="$d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b" title="rle_puteof" alt="" coords="155,157,240,184"/>
+<area shape="rect" id="node10" href="$d8/d7c/rle__getskip_8c.html#af6b1e1dc0867e9340f90668591c7c5b3" title="rle_getskip" alt="" coords="152,360,243,387"/>
+<area shape="rect" id="node11" href="$da/dbc/rle__row__alc_8c.html#a4fa936a985e542d42e91d272f9f6092d" title="rle_row_free" alt="" coords="146,208,249,235"/>
+<area shape="rect" id="node3" href="$d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d" title="malloc" alt="" coords="303,56,366,83"/>
+<area shape="rect" id="node8" href="$d9/d2a/rle__putrow_8c.html#aaa4133bf4a6cbf287444448497631f26" title="findruns" alt="" coords="299,5,371,32"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="mag_pan" name="mag_pan">
+<area shape="rect" id="node2" href="$d7/dd0/fn__decls_8h.html#a750e37688aa062ebb21c1e38ebee5845" title="allocate_ximage" alt="" coords="139,5,263,32"/>
+<area shape="rect" id="node3" href="$d7/dd0/fn__decls_8h.html#ace8a9cbad01abe8ce603602fae7c500b" title="allocate_pixmap" alt="" coords="139,56,263,83"/>
+<area shape="rect" id="node4" href="$d7/dd0/fn__decls_8h.html#a979234879b917c0b6db4dd6b7ca62df1" title="calc_view_origin" alt="" coords="138,107,265,133"/>
+<area shape="rect" id="node5" href="$d7/dd0/fn__decls_8h.html#a90475046e2b91f556574189093f310cf" title="set_watch_cursor" alt="" coords="135,157,268,184"/>
+<area shape="rect" id="node6" href="$d7/dd0/fn__decls_8h.html#a27dca554b48dde6ba1f31aff18e6db48" title="XCopyImage" alt="" coords="150,208,253,235"/>
+<area shape="rect" id="node7" href="$d7/dd0/fn__decls_8h.html#aa865a828176f9dd02f835f9b7063691d" title="put_X_image" alt="" coords="316,284,420,311"/>
+<area shape="rect" id="node8" href="$db/d50/getx11_8c.html#a84e1814bcc6f83ad5491f930d01545c3" title="handle_exposure" alt="" coords="136,309,267,336"/>
+<area shape="rect" id="node9" href="$d7/dd0/fn__decls_8h.html#adfe9a8a1503f46391d94cad3e2181cb6" title="set_circle_cursor" alt="" coords="137,360,266,387"/>
+</map>

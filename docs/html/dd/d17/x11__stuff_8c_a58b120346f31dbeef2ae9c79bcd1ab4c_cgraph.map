@@ -1,0 +1,10 @@
+<map id="init_mono_ro" name="init_mono_ro">
+<area shape="rect" id="node2" href="$d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d" title="malloc" alt="" coords="197,5,260,32"/>
+<area shape="rect" id="node3" href="$d7/dd0/fn__decls_8h.html#a69c92608417ec9462b3a40fa311a159c" title="get_dither_arrays" alt="" coords="161,56,296,83"/>
+<area shape="rect" id="node4" href="$d9/dbb/dither_8c.html#afad378428af71918afb13247f60d0594" title="bwdithermap" alt="" coords="177,107,280,133"/>
+<area shape="rect" id="node6" href="$dd/d17/x11__stuff_8c.html#aa6d7baaa44f57d152d419987db6d2a47" title="free_unique_colors" alt="" coords="157,157,300,184"/>
+<area shape="rect" id="node8" href="$dd/dc5/prototypes_8h.html#aab6bbef313b1959c216efae47afe009c" title="XAllocColors" alt="" coords="177,208,280,235"/>
+<area shape="rect" id="node9" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="205,259,252,285"/>
+<area shape="rect" id="node5" href="$d9/dbb/dither_8c.html#a7ff23fcd77b62deab9304ffd3d684f47" title="make_square" alt="" coords="348,107,455,133"/>
+<area shape="rect" id="node7" href="$dd/d17/x11__stuff_8c.html#ae124246124fb51f2cf5c9fdd6412ac27" title="pixcompare" alt="" coords="354,157,449,184"/>
+</map>

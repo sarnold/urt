@@ -1,0 +1,6 @@
+<map id="set_timer" name="set_timer">
+<area shape="rect" id="node2" href="$dd/dc5/prototypes_8h.html#abf9e83a3bd78c3da1914a25f6755936c" title="action_flip_forward" alt="" coords="139,5,282,32"/>
+<area shape="rect" id="node5" href="$dd/dc5/prototypes_8h.html#a4251686895d72cff93ebcf2f4f57f02a" title="action_flip_backward" alt="" coords="133,56,288,83"/>
+<area shape="rect" id="node3" href="$dd/dc5/prototypes_8h.html#a881a8dc113b79054ba77b23f68504be1" title="action_flip_book_cycle" alt="" coords="336,31,500,57"/>
+<area shape="rect" id="node4" href="$db/d50/getx11_8c.html#afd87900bb416432f303847ae3e35c2c6" title="update_pic" alt="" coords="548,31,639,57"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="rle_getcom" name="rle_getcom">
+<area shape="rect" id="node2" href="$df/dcf/buildmap_8c.html#a0683647be765d65564fe36af29edea5c" title="buildmap" alt="" coords="178,5,255,32"/>
+<area shape="rect" id="node3" href="$dc/d11/getami_8c.html#aa654afe741816fa93d1cd7e49ef583ec" title="find_most_used" alt="" coords="156,56,277,83"/>
+<area shape="rect" id="node5" href="$dc/d11/getami_8c.html#a3a79557c0de5078d1ea9206ce5eb3e77" title="display_rle" alt="" coords="171,107,262,133"/>
+<area shape="rect" id="node6" href="$dd/dce/getsun_8c.html#af37dbffd297affdb588f6ae01659399a" title="get_pic" alt="" coords="183,157,251,184"/>
+<area shape="rect" id="node7" href="$d1/dea/getx10_8c.html#a3a4aae99912503bf4aecbbc4d0ebf6fb" title="load_x_map" alt="" coords="167,208,266,235"/>
+<area shape="rect" id="node10" href="$dd/dc5/prototypes_8h.html#ae1128d04403165fcac7d44eb924e04ff" title="check_mono_color" alt="" coords="146,259,287,285"/>
+<area shape="rect" id="node11" href="$d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3" title="rle_addhist" alt="" coords="171,309,263,336"/>
+<area shape="rect" id="node16" href="$d6/d6b/rlecat_8c.html#a70db8bd1d499619f7ff9c1ca2ff3c8df" title="main" alt="" coords="191,360,243,387"/>
+<area shape="rect" id="node17" href="$d1/d2c/rlehdr_8c.html#a95ac9307244439a0e7fe8b4a2cd2ecf9" title="print_brief_hdr" alt="" coords="159,411,274,437"/>
+<area shape="rect" id="node18" href="$d1/d2c/rlehdr_8c.html#aa90eb89b08e14e162fe83a140fa0cd6f" title="print_map" alt="" coords="174,461,259,488"/>
+<area shape="rect" id="node19" href="$d4/d8c/rleinterp_8c.html#a05488d575c89d6d2abe7874791b7dd89" title="comp_hdr" alt="" coords="174,512,259,539"/>
+<area shape="rect" id="node20" href="$dc/d21/rletocgm_8c.html#a03091eb1bcb91a053a4122b381aed501" title="handle_color_table" alt="" coords="145,563,288,589"/>
+<area shape="rect" id="node4" href="$dc/d11/getami_8c.html#a7be6d508b8d11374d4aef0a66817d9f0" title="main" alt="" coords="387,81,439,108"/>
+<area shape="rect" id="node8" href="$d1/dea/getx10_8c.html#a867bbe68ed06015d6e2bcaf9c1119f17" title="get_pic" alt="" coords="379,208,447,235"/>
+<area shape="rect" id="node9" href="$d1/dea/getx10_8c.html#a2e1c56207484e456874379d624fc0e67" title="main" alt="" coords="598,208,650,235"/>
+<area shape="rect" id="node12" href="$d7/def/applymap_8c.html#a70db8bd1d499619f7ff9c1ca2ff3c8df" title="main" alt="" coords="387,259,439,285"/>
+<area shape="rect" id="node13" href="$d5/dd9/rleClock_8c.html#a029cc0b8bfeacc031dd11bd48caf3a2d" title="rasterWrite" alt="" coords="367,309,459,336"/>
+<area shape="rect" id="node14" href="$dc/d5c/rlequant_8c.html#a2d0b301e0b946a4cc922dbd1e2d49ccf" title="copy_hdr" alt="" coords="373,360,454,387"/>
+<area shape="rect" id="node15" href="$df/dfb/unslice_8c.html#a7090aec632931a42b5d606b6db234b9d" title="do_slice" alt="" coords="376,411,451,437"/>
+<area shape="rect" id="node21" href="$dc/d21/rletocgm_8c.html#add2c9fcd5032fc850935ccd2d9d9ec87" title="begin_indexed_page" alt="" coords="336,563,491,589"/>
+<area shape="rect" id="node22" href="$dc/d21/rletocgm_8c.html#a243dc5135972069e1dc4456356c8b498" title="process_indexed_page" alt="" coords="539,563,709,589"/>
+<area shape="rect" id="node23" href="$dc/d21/rletocgm_8c.html#a5ea466849f21e6c2be4ef9b2eb8868d3" title="main" alt="" coords="757,563,809,589"/>
+</map>

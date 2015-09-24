@@ -1,0 +1,8 @@
+<map id="create_windows" name="create_windows">
+<area shape="rect" id="node2" href="$dd/d17/x11__stuff_8c.html#a40ee19712a07ceb0943b118bb2f8dbac" title="calc_view_origin" alt="" coords="177,5,304,32"/>
+<area shape="rect" id="node3" href="$dd/d17/x11__stuff_8c.html#af24be8f2bac3ae1ebf14c06245b3b6d2" title="allocate_pixmap" alt="" coords="179,56,303,83"/>
+<area shape="rect" id="node5" href="$dd/d17/x11__stuff_8c.html#ad518b27a85450f7cb1930f799f78716f" title="check_pixmap_allocation" alt="" coords="352,107,532,133"/>
+<area shape="rect" id="node7" href="$dd/d17/x11__stuff_8c.html#a35801a4fe05d922b54726c810c9d13fb" title="get_cursors" alt="" coords="193,157,289,184"/>
+<area shape="rect" id="node4" href="$dd/d17/x11__stuff_8c.html#a5514147cc2e2519281b7930a56c39dde" title="free_X_pixmap" alt="" coords="383,56,501,83"/>
+<area shape="rect" id="node6" href="$dd/d17/x11__stuff_8c.html#af5943022edd547455fead4fb49e0eeb0" title="handle_x_errors" alt="" coords="580,107,707,133"/>
+</map>

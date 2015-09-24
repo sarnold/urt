@@ -1,0 +1,6 @@
+<map id="direct_setup" name="direct_setup">
+<area shape="rect" id="node2" href="$d2/db1/getbob_8c.html#a4898e27b51e0508f6a97e66486f2874d" title="init_8_bit_color_map" alt="" coords="178,5,330,32"/>
+<area shape="rect" id="node4" href="$d2/db1/getbob_8c.html#acc91059355405a502043fd800e2109bd" title="init_monochrome_color_map" alt="" coords="152,56,356,83"/>
+<area shape="rect" id="node5" href="$d2/db1/getbob_8c.html#abd70f74ee3e607c62c085727c48be5ed" title="write_color_map" alt="" coords="191,107,317,133"/>
+<area shape="rect" id="node3" href="$d9/dbb/dither_8c.html#a7ff23fcd77b62deab9304ffd3d684f47" title="make_square" alt="" coords="404,31,511,57"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="send_rle_image" name="send_rle_image">
+<area shape="rect" id="node2" href="$d8/d32/qcr_8c.html#a2a438a836aea68e6d1d03876f915fd34" title="write_qcr_cmd" alt="" coords="176,5,291,32"/>
+<area shape="rect" id="node3" href="$d8/d32/qcr_8c.html#ad653841390566b3e838ac4d414cf7b80" title="qcr_wait_srq" alt="" coords="182,56,285,83"/>
+</map>

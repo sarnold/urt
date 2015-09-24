@@ -1,0 +1,8 @@
+<map id="action_flip_book_cycle" name="action_flip_book_cycle">
+<area shape="rect" id="node2" href="$db/d50/getx11_8c.html#abf9e83a3bd78c3da1914a25f6755936c" title="action_flip_forward" alt="" coords="223,31,366,57"/>
+<area shape="rect" id="node7" href="$db/d50/getx11_8c.html#a4251686895d72cff93ebcf2f4f57f02a" title="action_flip_backward" alt="" coords="217,81,372,108"/>
+<area shape="rect" id="node3" href="$d7/dd0/fn__decls_8h.html#af2a9f1fee798207986fcdd6a51543e42" title="set_timer" alt="" coords="445,5,525,32"/>
+<area shape="rect" id="node4" href="$db/d50/getx11_8c.html#a84e1814bcc6f83ad5491f930d01545c3" title="handle_exposure" alt="" coords="420,56,551,83"/>
+<area shape="rect" id="node6" href="$d7/dd0/fn__decls_8h.html#a775d833c85eb59a7b5f094ab1b344c95" title="wait_timer" alt="" coords="442,107,529,133"/>
+<area shape="rect" id="node5" href="$d7/dd0/fn__decls_8h.html#aa865a828176f9dd02f835f9b7063691d" title="put_X_image" alt="" coords="599,56,703,83"/>
+</map>

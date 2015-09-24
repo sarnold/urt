@@ -1,0 +1,24 @@
+<map id="make_square" name="make_square">
+<area shape="rect" id="node2" href="$d9/dbb/dither_8c.html#af497d70ad3165f9bd58878047ba22f03" title="dithermap" alt="" coords="219,81,305,108"/>
+<area shape="rect" id="node5" href="$d7/dd0/fn__decls_8h.html#a51d89958ef25e77db8bf275fb290258c" title="init_color" alt="" coords="478,31,557,57"/>
+<area shape="rect" id="node8" href="$d9/dbb/dither_8c.html#afad378428af71918afb13247f60d0594" title="bwdithermap" alt="" coords="211,309,313,336"/>
+<area shape="rect" id="node10" href="$da/d92/getap_8c.html#afed4e945848223d47bf479a910ce4a50" title="window_color_map" alt="" coords="446,487,589,513"/>
+<area shape="rect" id="node18" href="$d2/db1/getbob_8c.html#a4898e27b51e0508f6a97e66486f2874d" title="init_8_bit_color_map" alt="" coords="186,537,338,564"/>
+<area shape="rect" id="node21" href="$d2/db1/getbob_8c.html#acc91059355405a502043fd800e2109bd" title="init_monochrome_color_map" alt="" coords="160,487,364,513"/>
+<area shape="rect" id="node22" href="$dc/d7d/getmex_8c.html#a65d706afedf271a79f1abe21252a1698" title="init_dither" alt="" coords="220,588,304,615"/>
+<area shape="rect" id="node3" href="$d9/d3b/get__orion_8c.html#a406deb1e377243ebdf719c427deba5d3" title="init_8_bit_colour_map" alt="" coords="438,81,597,108"/>
+<area shape="rect" id="node4" href="$d9/d3b/get__orion_8c.html#a0708a0954f39ecdc7aa901286295ad01" title="main" alt="" coords="679,196,731,223"/>
+<area shape="rect" id="node6" href="$dd/dce/getsun_8c.html#af37dbffd297affdb588f6ae01659399a" title="get_pic" alt="" coords="671,56,739,83"/>
+<area shape="rect" id="node7" href="$d8/db3/to8_8c.html#a70db8bd1d499619f7ff9c1ca2ff3c8df" title="main" alt="" coords="679,5,731,32"/>
+<area shape="rect" id="node9" href="$d9/d3b/get__orion_8c.html#a08786fe2a42c0696925051109f0f60d4" title="init_monochrome_colour_map" alt="" coords="412,284,623,311"/>
+<area shape="rect" id="node12" href="$dd/d17/x11__stuff_8c.html#abdff2750647853dba9cc67373d9c9d0c" title="init_separate_color_rw" alt="" coords="434,233,601,260"/>
+<area shape="rect" id="node13" href="$dd/d17/x11__stuff_8c.html#a81944846c1fed64eee7b11566ffce0cc" title="init_color_rw" alt="" coords="466,335,569,361"/>
+<area shape="rect" id="node14" href="$dd/d17/x11__stuff_8c.html#adf61523675f79528c0b09be8e46bea3f" title="init_separate_color_ro" alt="" coords="435,385,599,412"/>
+<area shape="rect" id="node15" href="$dd/d17/x11__stuff_8c.html#aa2536bbb4df94156f9acb28c302208a2" title="init_color_ro" alt="" coords="467,436,567,463"/>
+<area shape="rect" id="node16" href="$dd/d17/x11__stuff_8c.html#a61dbe43c8c55c80734ca3a480c556eef" title="init_mono_rw" alt="" coords="464,132,571,159"/>
+<area shape="rect" id="node17" href="$dd/d17/x11__stuff_8c.html#a58b120346f31dbeef2ae9c79bcd1ab4c" title="init_mono_ro" alt="" coords="465,183,569,209"/>
+<area shape="rect" id="node11" href="$da/d92/getap_8c.html#a5ea466849f21e6c2be4ef9b2eb8868d3" title="main" alt="" coords="679,487,731,513"/>
+<area shape="rect" id="node19" href="$d2/db1/getbob_8c.html#a57256e4ad6aa2bbbb64b4e50a4a89c16" title="direct_setup" alt="" coords="468,537,567,564"/>
+<area shape="rect" id="node20" href="$d2/db1/getbob_8c.html#a0708a0954f39ecdc7aa901286295ad01" title="main" alt="" coords="679,537,731,564"/>
+<area shape="rect" id="node23" href="$dc/d7d/getmex_8c.html#a2e1c56207484e456874379d624fc0e67" title="main" alt="" coords="491,588,543,615"/>
+</map>
