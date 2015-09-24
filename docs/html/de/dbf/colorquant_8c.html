@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: colorquant.c File Reference</title>
+<title>Utah Raster Toolkit: lib/colorquant.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -97,12 +98,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;rle_config.h&quot;</code><br />
-<code>#include &quot;colorquant.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dad/rle__config_8h_source.html">rle_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/dfd/colorquant_8h_source.html">colorquant.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for colorquant.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/deb/colorquant_8c__incl.svg" width="404" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/deb/colorquant_8c__incl.svg" width="404" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -115,13 +116,11 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a5f3d17bf39f78da3422ca52e475d7724"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbf/colorquant_8c.html#a5f3d17bf39f78da3422ca52e475d7724">HUGE</a>&#160;&#160;&#160;MAXFLOAT</td></tr>
-<tr class="separator:a5f3d17bf39f78da3422ca52e475d7724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a653a781f54d9d640c5dc8eb5360892a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbf/colorquant_8c.html#a653a781f54d9d640c5dc8eb5360892a9">MAXCOLORS</a>&#160;&#160;&#160;256</td></tr>
 <tr class="separator:a653a781f54d9d640c5dc8eb5360892a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d20028c64ec0bf870806892cb25b072"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbf/colorquant_8c.html#a5d20028c64ec0bf870806892cb25b072">FULLINTENSITY</a>&#160;&#160;&#160;255</td></tr>
 <tr class="separator:a5d20028c64ec0bf870806892cb25b072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbf/colorquant_8c.html#aacc3ee1a7f283f8ef65cea31f4436a95">MAX</a>(<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>,  <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &gt; (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td></tr>
+<tr class="memitem:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbf/colorquant_8c.html#aacc3ee1a7f283f8ef65cea31f4436a95">MAX</a>(<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>,  <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &gt; (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td></tr>
 <tr class="separator:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70ed43d600e03efb656c1e368400b125"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbf/colorquant_8c.html#a70ed43d600e03efb656c1e368400b125">REDI</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a70ed43d600e03efb656c1e368400b125"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,20 +256,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5f3d17bf39f78da3422ca52e475d7724"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define HUGE&#160;&#160;&#160;MAXFLOAT</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/dbf/colorquant_8c_source.html#l00098">98</a> of file <a class="el" href="../../de/dbf/colorquant_8c_source.html">colorquant.c</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a108773105e49880b8e21c4bf6e3f2ebe"></a>
 <div class="memitem">
 <div class="memproto">
@@ -299,12 +284,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &gt; (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td>
+          <td></td><td>&#160;&#160;&#160;((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &gt; (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -404,14 +389,6 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a5f86702dc6eea46af2b1b9eae5e0f0ba_icgraph.svg" width="239" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -566,7 +543,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">if</span> (! accum_hist || accum_hist == <a class="code" href="../../de/dbf/colorquant_8c.html#a108773105e49880b8e21c4bf6e3f2ebe">INIT_HIST</a>) {</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="../../de/dbf/colorquant_8c.html#ae3c18e5d4f433f683c78c5f6e0459f85">Histogram</a> = (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> *)calloc(<a class="code" href="../../de/dbf/colorquant_8c.html#a733d4525ddca6f6384792a1a45627b5c">ColormaxI</a>*<a class="code" href="../../de/dbf/colorquant_8c.html#a733d4525ddca6f6384792a1a45627b5c">ColormaxI</a>*<a class="code" href="../../de/dbf/colorquant_8c.html#a733d4525ddca6f6384792a1a45627b5c">ColormaxI</a>, </div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        <span class="keyword">sizeof</span>(<span class="keywordtype">long</span>));</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a> = (<a class="code" href="../../d8/db3/structBox.html">Box</a> *)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>(colors * <span class="keyword">sizeof</span>(<a class="code" href="../../d8/db3/structBox.html">Box</a>));</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a> = (<a class="code" href="../../d8/db3/structBox.html">Box</a> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>(colors * <span class="keyword">sizeof</span>(<a class="code" href="../../d8/db3/structBox.html">Box</a>));</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment">     * Zero-out the projected frequency arrays of the largest box.</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">     */</span></div>
@@ -579,7 +556,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="../../de/dbf/colorquant_8c.html#a431becef38ac7c7e23ecfeaaf92008d4">SumPixels</a> += <a class="code" href="../../de/dbf/colorquant_8c.html#aab55eacd13688ab5b1fc1051013151d6">NPixels</a>;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">if</span> ( accum_hist != PROCESS_HIST ) </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="../../de/dbf/colorquant_8c.html#a1b278b5575a6dd444c2d8bfd1c3273df">QuantHistogram</a>(<a class="code" href="../../d8/d81/rastorle_8c.html#a7e8431919252d0bbc587fa5a4662688d">red</a>, <a class="code" href="../../d8/d81/rastorle_8c.html#af92262e3b436a331266e8b98f7b6f396">green</a>, <a class="code" href="../../d8/d81/rastorle_8c.html#a0634593f518eb3f7f2997dda37402959">blue</a>, &amp;<a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a>[0], flags&amp;CQ_QUANTIZE);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="../../de/dbf/colorquant_8c.html#a1b278b5575a6dd444c2d8bfd1c3273df">QuantHistogram</a>(<a class="code" href="../../d8/d81/rastorle_8c.html#a7e8431919252d0bbc587fa5a4662688d">red</a>, <a class="code" href="../../d8/d81/rastorle_8c.html#af92262e3b436a331266e8b98f7b6f396">green</a>, <a class="code" href="../../d8/d81/rastorle_8c.html#a0634593f518eb3f7f2997dda37402959">blue</a>, &amp;<a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a>[0], flags&amp;<a class="code" href="../../d4/dfd/colorquant_8h.html#add941cc8b4eb47022a016b9a1f86efde">CQ_QUANTIZE</a>);</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">if</span> ( !accum_hist || accum_hist == PROCESS_HIST) {</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    OutColors = <a class="code" href="../../de/dbf/colorquant_8c.html#a8d4d713b29edf0061f02f75826cbb616">CutBoxes</a>(<a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a>, colors);</div>
@@ -598,12 +575,12 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        (<span class="keywordtype">unsigned</span> char)(<a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a>[i].mean[<a class="code" href="../../de/dbf/colorquant_8c.html#a33612f9adee7a92f79ca7849a0571b58">BLUEI</a>] * Cfactor + 0.5);</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> ( !(flags &amp; CQ_NO_RGBMAP) )</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> ( !(flags &amp; <a class="code" href="../../d4/dfd/colorquant_8h.html#a937c01fc82177559e68a0ef7ddf0b959">CQ_NO_RGBMAP</a>) )</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <a class="code" href="../../de/dbf/colorquant_8c.html#a0233005d5a3719522750cc8e091ec3d1">ComputeRGBMap</a>(<a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a>, OutColors, rgbmap, bits, <a class="code" href="../../d1/d55/rletoppm_8c.html#a31975a8f08500fa792b611c7e5afb5d9">colormap</a>,</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;              flags&amp;CQ_FAST);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;              flags&amp;<a class="code" href="../../d4/dfd/colorquant_8h.html#a7026873717ad8938ce12e512e5247852">CQ_FAST</a>);</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>((<span class="keywordtype">char</span> *)<a class="code" href="../../de/dbf/colorquant_8c.html#ae3c18e5d4f433f683c78c5f6e0459f85">Histogram</a>);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>((<span class="keywordtype">char</span> *)<a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a>);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    free((<span class="keywordtype">char</span> *)<a class="code" href="../../de/dbf/colorquant_8c.html#ae3c18e5d4f433f683c78c5f6e0459f85">Histogram</a>);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    free((<span class="keywordtype">char</span> *)<a class="code" href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a>);</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">return</span> OutColors;   <span class="comment">/* Return # of colormap entries */</span></div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span> 0;</div>
@@ -614,11 +591,10 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="colorquant_8c_html_a150b2b177fb0a4346556c5f45d37c2bc"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a150b2b177fb0a4346556c5f45d37c2bc">PROCESS_HIST</a></div><div class="ttdeci">#define PROCESS_HIST</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00240">colorquant.c:240</a></div></div>
 <div class="ttc" id="structBox_html_aa5aefe1e19dc4a9bf0fe9e0549d9e815"><div class="ttname"><a href="../../d8/db3/structBox.html#aa5aefe1e19dc4a9bf0fe9e0549d9e815">Box::freq</a></div><div class="ttdeci">unsigned long freq[3][256]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00171">colorquant.c:171</a></div></div>
 <div class="ttc" id="colorquant_8c_html_a733d4525ddca6f6384792a1a45627b5c"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a733d4525ddca6f6384792a1a45627b5c">ColormaxI</a></div><div class="ttdeci">static unsigned int ColormaxI</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00179">colorquant.c:179</a></div></div>
+<div class="ttc" id="colorquant_8h_html_a7026873717ad8938ce12e512e5247852"><div class="ttname"><a href="../../d4/dfd/colorquant_8h.html#a7026873717ad8938ce12e512e5247852">CQ_FAST</a></div><div class="ttdeci">#define CQ_FAST</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfd/colorquant_8h_source.html#l00057">colorquant.h:57</a></div></div>
 <div class="ttc" id="colorquant_8c_html_aab55eacd13688ab5b1fc1051013151d6"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#aab55eacd13688ab5b1fc1051013151d6">NPixels</a></div><div class="ttdeci">static unsigned long NPixels</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00176">colorquant.c:176</a></div></div>
 <div class="ttc" id="rletoppm_8c_html_a31975a8f08500fa792b611c7e5afb5d9"><div class="ttname"><a href="../../d1/d55/rletoppm_8c.html#a31975a8f08500fa792b611c7e5afb5d9">colormap</a></div><div class="ttdeci">rle_map * colormap</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d55/rletoppm_8c_source.html#l00056">rletoppm.c:56</a></div></div>
 <div class="ttc" id="colorquant_8c_html_a33612f9adee7a92f79ca7849a0571b58"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a33612f9adee7a92f79ca7849a0571b58">BLUEI</a></div><div class="ttdeci">#define BLUEI</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00164">colorquant.c:164</a></div></div>
-<div class="ttc" id="rletorla_8c_html_aafde19f7d36ca163a143579c1b125b6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a></div><div class="ttdeci">void free()</div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
 <div class="ttc" id="colorquant_8c_html_ac0cad8f78fe82178874bb28cf930e7a5"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#ac0cad8f78fe82178874bb28cf930e7a5">Bits</a></div><div class="ttdeci">static unsigned int Bits</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00179">colorquant.c:179</a></div></div>
 <div class="ttc" id="rastorle_8c_html_af92262e3b436a331266e8b98f7b6f396"><div class="ttname"><a href="../../d8/d81/rastorle_8c.html#af92262e3b436a331266e8b98f7b6f396">green</a></div><div class="ttdeci">static unsigned char green[256]</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/rastorle_8c_source.html#l00071">rastorle.c:71</a></div></div>
 <div class="ttc" id="colorquant_8c_html_a6c830c04bbfbc2280d55c31fa4a4404c"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a6c830c04bbfbc2280d55c31fa4a4404c">Boxes</a></div><div class="ttdeci">static Box * Boxes</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00181">colorquant.c:181</a></div></div>
@@ -626,29 +602,16 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="colorquant_8c_html_a70ed43d600e03efb656c1e368400b125"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a70ed43d600e03efb656c1e368400b125">REDI</a></div><div class="ttdeci">#define REDI</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00162">colorquant.c:162</a></div></div>
 <div class="ttc" id="colorquant_8c_html_a431becef38ac7c7e23ecfeaaf92008d4"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a431becef38ac7c7e23ecfeaaf92008d4">SumPixels</a></div><div class="ttdeci">static unsigned long SumPixels</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00176">colorquant.c:176</a></div></div>
 <div class="ttc" id="colorquant_8c_html_ae3c18e5d4f433f683c78c5f6e0459f85"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#ae3c18e5d4f433f683c78c5f6e0459f85">Histogram</a></div><div class="ttdeci">static unsigned long * Histogram</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00176">colorquant.c:176</a></div></div>
+<div class="ttc" id="colorquant_8h_html_a937c01fc82177559e68a0ef7ddf0b959"><div class="ttname"><a href="../../d4/dfd/colorquant_8h.html#a937c01fc82177559e68a0ef7ddf0b959">CQ_NO_RGBMAP</a></div><div class="ttdeci">#define CQ_NO_RGBMAP</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfd/colorquant_8h_source.html#l00059">colorquant.h:59</a></div></div>
 <div class="ttc" id="colorquant_8c_html_a1b278b5575a6dd444c2d8bfd1c3273df"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a1b278b5575a6dd444c2d8bfd1c3273df">QuantHistogram</a></div><div class="ttdeci">static void QuantHistogram()</div></div>
 <div class="ttc" id="colorquant_8c_html_ad47b7eaa5510f446dc16193ccc2d8479"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#ad47b7eaa5510f446dc16193ccc2d8479">GREENI</a></div><div class="ttdeci">#define GREENI</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00163">colorquant.c:163</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
+<div class="ttc" id="colorquant_8h_html_add941cc8b4eb47022a016b9a1f86efde"><div class="ttname"><a href="../../d4/dfd/colorquant_8h.html#add941cc8b4eb47022a016b9a1f86efde">CQ_QUANTIZE</a></div><div class="ttdeci">#define CQ_QUANTIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfd/colorquant_8h_source.html#l00058">colorquant.h:58</a></div></div>
 <div class="ttc" id="structBox_html"><div class="ttname"><a href="../../d8/db3/structBox.html">Box</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00168">colorquant.c:168</a></div></div>
 <div class="ttc" id="colorquant_8c_html_a8d4d713b29edf0061f02f75826cbb616"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a8d4d713b29edf0061f02f75826cbb616">CutBoxes</a></div><div class="ttdeci">static int CutBoxes()</div></div>
 <div class="ttc" id="rastorle_8c_html_a7e8431919252d0bbc587fa5a4662688d"><div class="ttname"><a href="../../d8/d81/rastorle_8c.html#a7e8431919252d0bbc587fa5a4662688d">red</a></div><div class="ttdeci">static unsigned char red[256]</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/rastorle_8c_source.html#l00071">rastorle.c:71</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_af7e23053060bba6342204f086e5bdd13_cgraph.svg" width="283" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_af7e23053060bba6342204f086e5bdd13_icgraph.svg" width="199" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a0233005d5a3719522750cc8e091ec3d1"></a>
@@ -671,14 +634,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a0233005d5a3719522750cc8e091ec3d1_icgraph.svg" width="383" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -766,14 +721,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="colorquant_8c_html_ae3c18e5d4f433f683c78c5f6e0459f85"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#ae3c18e5d4f433f683c78c5f6e0459f85">Histogram</a></div><div class="ttdeci">static unsigned long * Histogram</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00176">colorquant.c:176</a></div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a50d1e75c924f4c67ecd2a46712616205_cgraph.svg" width="295" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a07b341501ae1f28252a6d01e006965f6"></a>
@@ -796,14 +743,6 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a07b341501ae1f28252a6d01e006965f6_icgraph.svg" width="208" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -862,7 +801,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            totalvar[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = newboxes[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>][0].<a class="code" href="../../d8/db3/structBox.html#a913600fa38ef47be42aa4c12a32adc64">weightedvar</a> +</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                newboxes[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>][1].<a class="code" href="../../d8/db3/structBox.html#a913600fa38ef47be42aa4c12a32adc64">weightedvar</a>;</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            totalvar[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code" href="../../de/dbf/colorquant_8c.html#a5f3d17bf39f78da3422ca52e475d7724">HUGE</a>;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            totalvar[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = HUGE;</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    }</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="comment">/*</span></div>
@@ -892,18 +831,9 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="structBox_html_a913600fa38ef47be42aa4c12a32adc64"><div class="ttname"><a href="../../d8/db3/structBox.html#a913600fa38ef47be42aa4c12a32adc64">Box::weightedvar</a></div><div class="ttdeci">double weightedvar</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00169">colorquant.c:169</a></div></div>
 <div class="ttc" id="colorquant_8c_html_ad47b7eaa5510f446dc16193ccc2d8479"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#ad47b7eaa5510f446dc16193ccc2d8479">GREENI</a></div><div class="ttdeci">#define GREENI</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00163">colorquant.c:163</a></div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
-<div class="ttc" id="colorquant_8c_html_a5f3d17bf39f78da3422ca52e475d7724"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#a5f3d17bf39f78da3422ca52e475d7724">HUGE</a></div><div class="ttdeci">#define HUGE</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00098">colorquant.c:98</a></div></div>
 <div class="ttc" id="structBox_html"><div class="ttname"><a href="../../d8/db3/structBox.html">Box</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00168">colorquant.c:168</a></div></div>
 <div class="ttc" id="colorquant_8c_html_abbb824847d2fb531d12f81dbc21eafe7"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#abbb824847d2fb531d12f81dbc21eafe7">FindCutpoint</a></div><div class="ttdeci">static int FindCutpoint()</div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a37894123cfbf367319e430f2eef20fb0_cgraph.svg" width="227" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a8d4d713b29edf0061f02f75826cbb616"></a>
@@ -926,14 +856,6 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a8d4d713b29edf0061f02f75826cbb616_icgraph.svg" width="330" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -1001,14 +923,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="colorquant_8c_html_afe6870dfbcc09d42be959ed97dae552d"><div class="ttname"><a href="../../de/dbf/colorquant_8c.html#afe6870dfbcc09d42be959ed97dae552d">GreatestVariance</a></div><div class="ttdeci">static int GreatestVariance()</div></div>
 <div class="ttc" id="structBox_html_a1f7f00e2f1f500f0645e525828540e61"><div class="ttname"><a href="../../d8/db3/structBox.html#a1f7f00e2f1f500f0645e525828540e61">Box::low</a></div><div class="ttdeci">int low[3]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00173">colorquant.c:173</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a713ddf9dda38dace6bb5caedc25f0327_cgraph.svg" width="275" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="abbb824847d2fb531d12f81dbc21eafe7"></a>
@@ -1031,14 +945,6 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_abbb824847d2fb531d12f81dbc21eafe7_icgraph.svg" width="227" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -1143,14 +1049,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="structBox_html_ac3c99dff2bbc0d7b867286bc297b9efc"><div class="ttname"><a href="../../d8/db3/structBox.html#ac3c99dff2bbc0d7b867286bc297b9efc">Box::high</a></div><div class="ttdeci">int high[3]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00173">colorquant.c:173</a></div></div>
 <div class="ttc" id="structBox_html_a1f7f00e2f1f500f0645e525828540e61"><div class="ttname"><a href="../../d8/db3/structBox.html#a1f7f00e2f1f500f0645e525828540e61">Box::low</a></div><div class="ttdeci">int low[3]</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dbf/colorquant_8c_source.html#l00173">colorquant.c:173</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_ae891311b62c3608dd5e398aeb8a72cdd_cgraph.svg" width="306" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="afe6870dfbcc09d42be959ed97dae552d"></a>
@@ -1173,14 +1071,6 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_afe6870dfbcc09d42be959ed97dae552d_icgraph.svg" width="275" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -1248,14 +1138,6 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_ae5a3402dd91ddff893ffac062ddb7996_icgraph.svg" width="278" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a1b278b5575a6dd444c2d8bfd1c3273df"></a>
@@ -1278,14 +1160,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a1b278b5575a6dd444c2d8bfd1c3273df_icgraph.svg" width="371" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -1408,14 +1282,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a57bfeebe95de44eb3992f81122bf69e4_icgraph.svg" width="295" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a31cfe8c8ebfe10301e33197a1edfc243"></a>
@@ -1504,14 +1370,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dbf/colorquant_8c_a9429c7871c9d4d031128d52c7bc61788_icgraph.svg" width="306" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -1745,7 +1603,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:07 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

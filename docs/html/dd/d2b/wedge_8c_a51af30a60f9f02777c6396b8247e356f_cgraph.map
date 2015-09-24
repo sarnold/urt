@@ -1,9 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="node2" href="$d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d" title="malloc" alt="" coords="125,5,188,32"/>
-<area shape="rect" id="node3" href="$d8/d32/qcr_8c.html#a73416334b60b1feae3f95c0622d3ca5f" title="init_qcr" alt="" coords="277,56,345,83"/>
-<area shape="rect" id="node4" href="$d8/d32/qcr_8c.html#a2a438a836aea68e6d1d03876f915fd34" title="write_qcr_cmd" alt="" coords="415,132,529,159"/>
-<area shape="rect" id="node5" href="$d8/d32/qcr_8c.html#a2b2ff927916d4377498b463521638ce0" title="set_up_qcr" alt="" coords="111,157,203,184"/>
-<area shape="rect" id="node7" href="$d8/d32/qcr_8c.html#a3f79487ca7f975f79879b953f719e20d" title="write_data" alt="" coords="113,208,201,235"/>
-<area shape="rect" id="node8" href="$d8/d32/qcr_8c.html#ad653841390566b3e838ac4d414cf7b80" title="qcr_wait_srq" alt="" coords="105,259,208,285"/>
-<area shape="rect" id="node6" href="$d8/d32/qcr_8c.html#abea42a43ce2ab8e6ae64cf47c8f278a6" title="set_resolution" alt="" coords="256,208,367,235"/>
-</map>

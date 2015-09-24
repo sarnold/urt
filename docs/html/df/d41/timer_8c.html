@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: timer.c File Reference</title>
+<title>Utah Raster Toolkit: get/getx11/timer.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -98,11 +99,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;signal.h&gt;</code><br />
 <code>#include &lt;sys/time.h&gt;</code><br />
-<code>#include &quot;rle_config.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../df/dad/rle__config_8h_source.html">rle_config.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for timer.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d56/timer_8c__incl.svg" width="490" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d56/timer_8c__incl.svg" width="355" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -114,8 +115,6 @@ Macros</h2></td></tr>
 <tr class="separator:ad58e4e30abda02d3ce1aca21d98d1025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d5ee1cc1e801872efa1ea7486189019"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d41/timer_8c.html#a7d5ee1cc1e801872efa1ea7486189019">TICK</a>&#160;&#160;&#160;10000           /* system clock resolution in microseconds */</td></tr>
 <tr class="separator:a7d5ee1cc1e801872efa1ea7486189019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a157a7f1c3a7e588ec741bd1c8534a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d41/timer_8c.html#a0a157a7f1c3a7e588ec741bd1c8534a8">sigmask</a>(m)&#160;&#160;&#160;(1 &lt;&lt; ((m)-1))</td></tr>
-<tr class="separator:a0a157a7f1c3a7e588ec741bd1c8534a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -136,24 +135,6 @@ Variables</h2></td></tr>
 <tr class="separator:a0eeaba618fe8a437c63ce83545ac71ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a0a157a7f1c3a7e588ec741bd1c8534a8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define sigmask</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">m</td><td>)</td>
-          <td>&#160;&#160;&#160;(1 &lt;&lt; ((m)-1))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../df/d41/timer_8c_source.html#l00068">68</a> of file <a class="el" href="../../df/d41/timer_8c_source.html">timer.c</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a7d5ee1cc1e801872efa1ea7486189019"></a>
 <div class="memitem">
 <div class="memproto">
@@ -221,14 +202,6 @@ Variables</h2></td></tr>
 <div class="ttc" id="timer_8c_html_a1a7d2d7c8c6068d4b9571feb436f5386"><div class="ttname"><a href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a></div><div class="ttdeci">static int ringring</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00035">timer.c:35</a></div></div>
 <div class="ttc" id="timer_8c_html_a7c224121707c65a458b608e581d5004f"><div class="ttname"><a href="../../df/d41/timer_8c.html#a7c224121707c65a458b608e581d5004f">sleepx</a></div><div class="ttdeci">static void sleepx()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00039">timer.c:39</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d41/timer_8c_a1b7eb5dea2ff1ad88802c03861cf532e_cgraph.svg" width="202" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a7c224121707c65a458b608e581d5004f"></a>
@@ -253,19 +226,13 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../df/d41/timer_8c_source.html#l00039">39</a> of file <a class="el" href="../../df/d41/timer_8c_source.html">timer.c</a>.</p>
+
+<p>References <a class="el" href="../../df/d41/timer_8c_source.html#l00035">ringring</a>.</p>
 <div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a> = 1;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="ttc" id="timer_8c_html_a1a7d2d7c8c6068d4b9571feb436f5386"><div class="ttname"><a href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a></div><div class="ttdeci">static int ringring</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00035">timer.c:35</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d41/timer_8c_a7c224121707c65a458b608e581d5004f_icgraph.svg" width="202" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a775d833c85eb59a7b5f094ab1b344c95"></a>
@@ -283,25 +250,18 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../df/d41/timer_8c_source.html#l00072">72</a> of file <a class="el" href="../../df/d41/timer_8c_source.html">timer.c</a>.</p>
+
+<p>References <a class="el" href="../../df/d41/timer_8c_source.html#l00036">ofunc</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00035">ringring</a>.</p>
 <div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#ifndef NO_ITIMER</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a>)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    sigpause( ~<a class="code" href="../../df/d41/timer_8c.html#a0a157a7f1c3a7e588ec741bd1c8534a8">sigmask</a>(SIGALRM));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    sigpause( ~sigmask(SIGALRM));</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    signal(SIGALRM, <a class="code" href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">ofunc</a>);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="ttc" id="timer_8c_html_a0eeaba618fe8a437c63ce83545ac71ef"><div class="ttname"><a href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">ofunc</a></div><div class="ttdeci">static void(* ofunc)()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00036">timer.c:36</a></div></div>
-<div class="ttc" id="timer_8c_html_a0a157a7f1c3a7e588ec741bd1c8534a8"><div class="ttname"><a href="../../df/d41/timer_8c.html#a0a157a7f1c3a7e588ec741bd1c8534a8">sigmask</a></div><div class="ttdeci">#define sigmask(m)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00068">timer.c:68</a></div></div>
 <div class="ttc" id="timer_8c_html_a1a7d2d7c8c6068d4b9571feb436f5386"><div class="ttname"><a href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a></div><div class="ttdeci">static int ringring</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00035">timer.c:35</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d41/timer_8c_a775d833c85eb59a7b5f094ab1b344c95_icgraph.svg" width="651" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -324,6 +284,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../df/d41/timer_8c_source.html#l00036">36</a> of file <a class="el" href="../../df/d41/timer_8c_source.html">timer.c</a>.</p>
+
+<p>Referenced by <a class="el" href="../../df/d41/timer_8c_source.html#l00072">wait_timer()</a>.</p>
 
 </div>
 </div>
@@ -369,12 +331,14 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../df/d41/timer_8c_source.html#l00035">35</a> of file <a class="el" href="../../df/d41/timer_8c_source.html">timer.c</a>.</p>
 
+<p>Referenced by <a class="el" href="../../df/d41/timer_8c_source.html#l00039">sleepx()</a>, and <a class="el" href="../../df/d41/timer_8c_source.html#l00072">wait_timer()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:06 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

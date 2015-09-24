@@ -1,7 +1,0 @@
-<map id="rle_get_setup" name="rle_get_setup">
-<area shape="rect" id="node2" href="$d2/df3/rle__hdr_8c.html#a16c4da6201b3b8cf55127b9ca968d253" title="rle_hdr_clear" alt="" coords="161,5,268,32"/>
-<area shape="rect" id="node3" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="324,56,371,83"/>
-<area shape="rect" id="node4" href="$d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5" title="rle_names" alt="" coords="171,107,259,133"/>
-<area shape="rect" id="node5" href="$d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d" title="malloc" alt="" coords="316,132,379,159"/>
-<area shape="rect" id="node6" href="$db/d53/rle__getrow_8c.html#a0ea68aa2ebeef9d4cade7282553b03d6" title="vax_gshort" alt="" coords="169,208,261,235"/>
-</map>

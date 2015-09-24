@@ -1,8 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="node2" href="$d8/d32/qcr_8c.html#a73416334b60b1feae3f95c0622d3ca5f" title="init_qcr" alt="" coords="133,5,201,32"/>
-<area shape="rect" id="node4" href="$d8/d32/qcr_8c.html#a2f347ff842b6a79960bb73c4417a2746" title="print_qcr_status" alt="" coords="105,56,228,83"/>
-<area shape="rect" id="node5" href="$d8/d32/qcr_8c.html#a7c498f004827c84e0e5ec17984a30f10" title="qcr_rd_brt_tbl" alt="" coords="112,107,221,133"/>
-<area shape="rect" id="node6" href="$d8/d32/qcr_8c.html#a9e9a2a6a54565a4d798b27e896ac5107" title="qcr_rd_brt_lvl" alt="" coords="113,157,221,184"/>
-<area shape="rect" id="node7" href="$d8/d32/qcr_8c.html#aa6a28e0637090281eff82dad432ed3c3" title="qcr_rd_lut12" alt="" coords="116,208,217,235"/>
-<area shape="rect" id="node3" href="$d8/d32/qcr_8c.html#a2a438a836aea68e6d1d03876f915fd34" title="write_qcr_cmd" alt="" coords="276,107,391,133"/>
-</map>

@@ -1,0 +1,6 @@
+<map id="make_square" name="make_square">
+<area shape="rect" id="node2" href="$d2/db1/getbob_8c.html#a4898e27b51e0508f6a97e66486f2874d" title="init_8_bit_color_map" alt="" coords="160,5,312,32"/>
+<area shape="rect" id="node3" href="$dd/dce/getsun_8c.html#a51d89958ef25e77db8bf275fb290258c" title="init_color" alt="" coords="197,56,275,83"/>
+<area shape="rect" id="node4" href="$dc/d7d/getmex_8c.html#a65d706afedf271a79f1abe21252a1698" title="init_dither" alt="" coords="194,107,278,133"/>
+<area shape="rect" id="node5" href="$da/d92/getap_8c.html#afed4e945848223d47bf479a910ce4a50" title="window_color_map" alt="" coords="165,157,307,184"/>
+</map>

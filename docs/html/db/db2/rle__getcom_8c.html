@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: rle_getcom.c File Reference</title>
+<title>Utah Raster Toolkit: lib/rle_getcom.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -93,11 +94,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rle_getcom.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/da6/rle__getcom_8c__incl.svg" width="147" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/da6/rle__getcom_8c__incl.svg" width="224" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -107,8 +108,8 @@ Include dependency graph for rle_getcom.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a7502c8b599724ce86fee5df1311a2337"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a> (char *n, char *v)</td></tr>
 <tr class="separator:a7502c8b599724ce86fee5df1311a2337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cefd612c381bf82c9cdf1f3a3b12dd6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db2/rle__getcom_8c.html#a9cefd612c381bf82c9cdf1f3a3b12dd6">rle_getcom</a> (char *name, rle_hdr *<a class="el" href="../../df/db4/tifftorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>)</td></tr>
-<tr class="separator:a9cefd612c381bf82c9cdf1f3a3b12dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27b5b87bd79d94a914627210674c7b6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/db2/rle__getcom_8c.html#aa27b5b87bd79d94a914627210674c7b6">rle_getcom</a> (char *name, <a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *<a class="el" href="../../df/db4/tifftorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>) const</td></tr>
+<tr class="separator:aa27b5b87bd79d94a914627210674c7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a7502c8b599724ce86fee5df1311a2337"></a>
@@ -157,17 +158,9 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/db2/rle__getcom_8c_a7502c8b599724ce86fee5df1311a2337_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a9cefd612c381bf82c9cdf1f3a3b12dd6"></a>
+<a class="anchor" id="aa27b5b87bd79d94a914627210674c7b6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -180,46 +173,41 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rle_hdr *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *&#160;</td>
           <td class="paramname"><em>the_hdr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../db/db2/rle__getcom_8c_source.html#l00081">81</a> of file <a class="el" href="../../db/db2/rle__getcom_8c_source.html">rle_getcom.c</a>.</p>
+
+<p>Referenced by <a class="el" href="../../dc/d11/getami_8c_source.html#l00695">display_rle()</a>, <a class="el" href="../../dc/d11/getami_8c_source.html#l00540">find_most_used()</a>, and <a class="el" href="../../d1/dea/getx10_8c_source.html#l01100">load_x_map()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    CONST_DECL <span class="keywordtype">char</span> ** cp;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> ** cp;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">char</span> * v;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments == NULL )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> ( the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a> == NULL )</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> ( cp = <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments; *cp; cp++ )</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> ( cp = the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>; *cp; cp++ )</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> ( (v = <a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a>( name, *cp )) != NULL )</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> v;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="ttc" id="aliastorle_8c_html_a5489ae7bb45df0aad19a081a786538e1"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a></div><div class="ttdeci">rle_hdr the_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00100">aliastorle.c:100</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a0a69b3269580c81e05fcc6bd334389ee"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">rle_hdr::comments</a></div><div class="ttdeci">const char ** comments</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00113">rle.h:113</a></div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="rle__getcom_8c_html_a7502c8b599724ce86fee5df1311a2337"><div class="ttname"><a href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a></div><div class="ttdeci">static char * match(char *n, char *v)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/rle__getcom_8c_source.html#l00050">rle_getcom.c:50</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/db2/rle__getcom_8c_a9cefd612c381bf82c9cdf1f3a3b12dd6_cgraph.svg" width="211" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-<p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/db2/rle__getcom_8c_a9cefd612c381bf82c9cdf1f3a3b12dd6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/db2/rle__getcom_8c_aa27b5b87bd79d94a914627210674c7b6_icgraph.svg" width="272" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -229,7 +217,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:07 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

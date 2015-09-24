@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: RLE.h Source File</title>
+<title>Utah Raster Toolkit: get/next/RLE.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -90,8 +91,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">RLE.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d8/d0f/RLE_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="../../d8/d0f/Image_8h.html">Image.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#import &lt;rle.h&gt;</span></div>
+<a href="../../d8/d0f/RLE_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <a class="code" href="../../d8/d0f/Image_8h.html">&quot;Image.h&quot;</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">rle</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// RLE.h</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// </span></div>
@@ -102,23 +103,23 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// program please let me know</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d4/dc6/interfaceRLE.html">   13</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="../../d4/dc6/interfaceRLE.html">RLE</a>:<a class="code" href="../../d2/d41/interfaceImage.html">Image</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d4/dc6/interfaceRLE.html">   13</a></span>&#160;@<span class="keyword">interface</span> <a class="code" href="../../d4/dc6/interfaceRLE.html">RLE</a>:<a class="code" href="../../d8/d00/classImage.html">Image</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d4/dc6/interfaceRLE.html#a659cb64f987286496de4a0c055083e9b">   15</a></span>&#160;    <span class="keyword">struct </span>rle_hdr <a class="code" href="../../d4/dc6/interfaceRLE.html#a659cb64f987286496de4a0c055083e9b">rle_file_hdr</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d4/dc6/interfaceRLE.html#a659cb64f987286496de4a0c055083e9b">   15</a></span>&#160;    <span class="keyword">struct</span> <a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> <a class="code" href="../../d4/dc6/interfaceRLE.html#a659cb64f987286496de4a0c055083e9b">rle_file_hdr</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- <a class="code" href="../../d2/d80/painttorle_8c.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;- open:(<span class="keywordtype">char</span> *)filename;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- <a class="code" href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">init</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;- <a class="code" href="../../d4/dc6/interfaceRLE.html#a151be2ba0debedc4c36f7305a74354ec">open</a>:(<span class="keywordtype">char</span> *)filename;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;@<span class="keyword">end</span></div>
 <div class="ttc" id="interfaceRLE_html_a659cb64f987286496de4a0c055083e9b"><div class="ttname"><a href="../../d4/dc6/interfaceRLE.html#a659cb64f987286496de4a0c055083e9b">RLE::rle_file_hdr</a></div><div class="ttdeci">struct rle_hdr rle_file_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0f/RLE_8h_source.html#l00015">RLE.h:15</a></div></div>
-<div class="ttc" id="Image_8h_html"><div class="ttname"><a href="../../d8/d0f/Image_8h.html">Image.h</a></div></div>
+<div class="ttc" id="interfaceRLE_html_aece73bb4f7686d4971f664f546d7439b"><div class="ttname"><a href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">-[RLE init]</a></div><div class="ttdeci">id init()</div></div>
+<div class="ttc" id="structrle__hdr_html"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html">rle_hdr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00096">rle.h:96</a></div></div>
 <div class="ttc" id="interfaceRLE_html"><div class="ttname"><a href="../../d4/dc6/interfaceRLE.html">RLE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0f/RLE_8h_source.html#l00013">RLE.h:13</a></div></div>
-<div class="ttc" id="interfaceImage_html"><div class="ttname"><a href="../../d2/d41/interfaceImage.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0f/Image_8h_source.html#l00014">Image.h:14</a></div></div>
-<div class="ttc" id="painttorle_8c_html_a02fd73d861ef2e4aabb38c0c9ff82947"><div class="ttname"><a href="../../d2/d80/painttorle_8c.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/painttorle_8c_source.html#l00177">painttorle.c:177</a></div></div>
+<div class="ttc" id="classImage_html"><div class="ttname"><a href="../../d8/d00/classImage.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d45/Image_8m_source.html#l00026">Image.m:26</a></div></div>
+<div class="ttc" id="interfaceRLE_html_a151be2ba0debedc4c36f7305a74354ec"><div class="ttname"><a href="../../d4/dc6/interfaceRLE.html#a151be2ba0debedc4c36f7305a74354ec">-[RLE open:]</a></div><div class="ttdeci">id open:(char *filename)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/db3/RLE_8m_source.html#l00031">RLE.m:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:03 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

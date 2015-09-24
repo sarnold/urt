@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: into.c File Reference</title>
+<title>Utah Raster Toolkit: tools/into.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -94,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">into.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;rle_config.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../df/dad/rle__config_8h_source.html">rle_config.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
@@ -106,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for into.c:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/df6/into_8c__incl.svg" width="100%" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/df6/into_8c__incl.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div>
@@ -116,8 +117,6 @@ Include dependency graph for into.c:</div>
 Macros</h2></td></tr>
 <tr class="memitem:a78c99ffd76a7bb3c8c74db76207e9ab4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd5/into_8c.html#a78c99ffd76a7bb3c8c74db76207e9ab4">_XOPEN_SOURCE</a>&#160;&#160;&#160;/* For mkstemp */</td></tr>
 <tr class="separator:a78c99ffd76a7bb3c8c74db76207e9ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addfa831c1473e710d2b71b72fd7fcfa5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd5/into_8c.html#addfa831c1473e710d2b71b72fd7fcfa5">MAXPATHLEN</a>&#160;&#160;&#160;BUFSIZ</td></tr>
-<tr class="separator:addfa831c1473e710d2b71b72fd7fcfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -128,8 +127,8 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a7b621116a1a2d3e4bd91437e8f62cb09"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a> [] = &quot;intoXXXXXX&quot;</td></tr>
 <tr class="separator:a7b621116a1a2d3e4bd91437e8f62cb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14af58745eae96da73c46abfb269ec67"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a> [BUFSIZ+1]</td></tr>
-<tr class="separator:a14af58745eae96da73c46abfb269ec67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc8eca937a3533dfcc1eca53c250cc2"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a> [4096   +1]</td></tr>
+<tr class="separator:a1bc8eca937a3533dfcc1eca53c250cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21ec1ded01d3ba6f92fcc9207fc552dd"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd5/into_8c.html#a21ec1ded01d3ba6f92fcc9207fc552dd">forceflg</a></td></tr>
 <tr class="separator:a21ec1ded01d3ba6f92fcc9207fc552dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -145,20 +144,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../d3/dd5/into_8c_source.html#l00030">30</a> of file <a class="el" href="../../d3/dd5/into_8c_source.html">into.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="addfa831c1473e710d2b71b72fd7fcfa5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAXPATHLEN&#160;&#160;&#160;BUFSIZ</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dd5/into_8c_source.html#l00042">42</a> of file <a class="el" href="../../d3/dd5/into_8c_source.html">into.c</a>.</p>
 
 </div>
 </div>
@@ -213,22 +198,22 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    exit(1);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> ( (cp = rindex( argv[1], <span class="charliteral">&#39;/&#39;</span> )) != NULL )</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> ( (cp = <a class="code" href="../../df/dad/rle__config_8h.html#a8c35ae4e83034731f6aecfb34c883ecf">rindex</a>( argv[1], <span class="charliteral">&#39;/&#39;</span> )) != NULL )</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    c = *++cp;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    *cp = 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    strcpy( <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>, argv[1] );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    strcpy( <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>, argv[1] );</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    *cp = c;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    strcat( <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>, <a class="code" href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a> );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    strcat( <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>, <a class="code" href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a> );</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    strcpy( <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>, <a class="code" href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a> );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    strcpy( <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>, <a class="code" href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a> );</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    mkstemp( <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a> );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    mkstemp( <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a> );</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> ( (outf = fopen( <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>, <span class="stringliteral">&quot;w&quot;</span> )) == NULL )</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> ( (outf = fopen( <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>, <span class="stringliteral">&quot;w&quot;</span> )) == NULL )</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    perror(<a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    perror(<a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    exit(1);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
@@ -238,7 +223,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> ( !<a class="code" href="../../d3/dd5/into_8c.html#a21ec1ded01d3ba6f92fcc9207fc552dd">forceflg</a> &amp;&amp; ftell(outf) == 0L )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    fprintf( stderr, <span class="stringliteral">&quot;into: empty output, \&quot;%s\&quot; not modified\n&quot;</span>, argv[1]);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    unlink( <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a> );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    unlink( <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a> );</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    exit(1);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    fflush(outf);</div>
@@ -246,27 +231,28 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;into: %s, \&quot;%s\&quot; not modified\n&quot;</span>,</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        strerror(errno), argv[1]);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    unlink(<a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    unlink(<a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    exit(1);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    fclose( outf );</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> ( rename( <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>, argv[1] ) &lt; 0 )</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> ( rename( <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>, argv[1] ) &lt; 0 )</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;into: rename(%s, %s): &quot;</span>, <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>, argv[1]);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;into: rename(%s, %s): &quot;</span>, <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>, argv[1]);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    perror(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    exit( 0 );</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="ttc" id="rle__config_8h_html_a8c35ae4e83034731f6aecfb34c883ecf"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#a8c35ae4e83034731f6aecfb34c883ecf">rindex</a></div><div class="ttdeci">#define rindex</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00097">rle_config.h:97</a></div></div>
 <div class="ttc" id="into_8c_html_a21ec1ded01d3ba6f92fcc9207fc552dd"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a21ec1ded01d3ba6f92fcc9207fc552dd">forceflg</a></div><div class="ttdeci">short forceflg</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00047">into.c:47</a></div></div>
 <div class="ttc" id="into_8c_html_a7b621116a1a2d3e4bd91437e8f62cb09"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a></div><div class="ttdeci">static char temp[]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00045">into.c:45</a></div></div>
-<div class="ttc" id="into_8c_html_a14af58745eae96da73c46abfb269ec67"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a></div><div class="ttdeci">static char buf[BUFSIZ+1]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00046">into.c:46</a></div></div>
+<div class="ttc" id="into_8c_html_a1bc8eca937a3533dfcc1eca53c250cc2"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a></div><div class="ttdeci">static char buf[4096   +1]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00046">into.c:46</a></div></div>
 <div class="ttc" id="getap_8c_html_a6e8eb34cc6e823242ad6153bfb28be74"><div class="ttname"><a href="../../da/d92/getap_8c.html#a6e8eb34cc6e823242ad6153bfb28be74">size</a></div><div class="ttdeci">gpr_ $offset_t size</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/getap_8c_source.html#l00096">getap.c:96</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a14af58745eae96da73c46abfb269ec67"></a>
+<a class="anchor" id="a1bc8eca937a3533dfcc1eca53c250cc2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -274,7 +260,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char buf[BUFSIZ+1]</td>
+          <td class="memname">char buf[ 4096   +1]</td>
         </tr>
       </table>
   </td>
@@ -327,7 +313,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:07 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

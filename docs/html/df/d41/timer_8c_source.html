@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: timer.c Source File</title>
+<title>Utah Raster Toolkit: get/getx11/timer.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -110,37 +111,37 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/* Copyright 1990,1992 The Regents of the University of Michigan */</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef lint</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">lint</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#af1b3bff1622925d03c9cd14c5f1a51bf">   22</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="../../df/d41/timer_8c.html#af1b3bff1622925d03c9cd14c5f1a51bf">rcsid</a>[] = <span class="stringliteral">&quot;$Header: /l/spencer/src/urt/get/getx11/RCS/timer.c,v 3.0.1.3 1992/03/04 19:31:40 spencer Exp $&quot;</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;signal.h&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;rle_config.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdlib</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">signal</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">sys</span><span class="preprocessor">/</span><span class="preprocessor">time</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="../../df/dad/rle__config_8h.html">&quot;rle_config.h&quot;</a></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#ad58e4e30abda02d3ce1aca21d98d1025">   31</a></span>&#160;<span class="preprocessor">#define USPS    1000000         </span><span class="comment">/* number of microseconds in a second */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a7d5ee1cc1e801872efa1ea7486189019">   32</a></span>&#160;<span class="preprocessor">#define TICK    10000           </span><span class="comment">/* system clock resolution in microseconds */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#ad58e4e30abda02d3ce1aca21d98d1025">   31</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">USPS</span>    1000000         <span class="comment">/* number of microseconds in a second */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a7d5ee1cc1e801872efa1ea7486189019">   32</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">TICK</span>    10000           <span class="comment">/* system clock resolution in microseconds */</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifndef NO_ITIMER</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NO_ITIMER</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">   35</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">   36</a></span>&#160;<span class="keyword">static</span> void (*<a class="code" href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">ofunc</a>)();</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">   36</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> (*<a class="code" href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">ofunc</a>)();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a7c224121707c65a458b608e581d5004f">   39</a></span>&#160;<a class="code" href="../../df/d41/timer_8c.html#a7c224121707c65a458b608e581d5004f">sleepx</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a7c224121707c65a458b608e581d5004f">   39</a></span>&#160;sleepx()</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a> = 1;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a1b7eb5dea2ff1ad88802c03861cf532e">   46</a></span>&#160;<a class="code" href="../../df/d41/timer_8c.html#a1b7eb5dea2ff1ad88802c03861cf532e">set_timer</a>(n)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;unsigned n;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dd/dc5/prototypes_8h.html#a1b7eb5dea2ff1ad88802c03861cf532e">   46</a></span>&#160;<a class="code" href="../../dd/dc5/prototypes_8h.html#a1b7eb5dea2ff1ad88802c03861cf532e">set_timer</a>(<a class="code" href="../../dd/dc5/prototypes_8h.html#a1b7eb5dea2ff1ad88802c03861cf532e">n</a>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">unsigned</span> n;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#ifndef NO_ITIMER</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">struct </span>itimerval itv;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">register</span> <span class="keyword">struct </span>itimerval *itp = &amp;itv;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NO_ITIMER</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">struct</span> itimerval itv;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">register</span> <span class="keyword">struct</span> itimerval *itp = &amp;itv;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (n == 0)</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a> = 1;</div>
@@ -149,38 +150,36 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    timerclear(&amp;itp-&gt;it_interval);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    itp-&gt;it_value.tv_sec = n / <a class="code" href="../../df/d41/timer_8c.html#ad58e4e30abda02d3ce1aca21d98d1025">USPS</a>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    itp-&gt;it_value.tv_usec = n % <a class="code" href="../../df/d41/timer_8c.html#ad58e4e30abda02d3ce1aca21d98d1025">USPS</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">ofunc</a> = (void (*)())signal(SIGALRM, <a class="code" href="../../df/d41/timer_8c.html#a7c224121707c65a458b608e581d5004f">sleepx</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">ofunc</a> = (<span class="keywordtype">void</span> (*)())signal(SIGALRM, sleepx);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a> = 0;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    (void) setitimer(ITIMER_REAL, itp, (<span class="keyword">struct</span> itimerval *)0);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    (<span class="keywordtype">void</span>) setitimer(ITIMER_REAL, itp, (<span class="keyword">struct</span> itimerval *)0);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifndef sigmask</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a0a157a7f1c3a7e588ec741bd1c8534a8">   68</a></span>&#160;<span class="preprocessor">#define sigmask(m)  (1 &lt;&lt; ((m)-1))</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> sigmask</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">sigmask</span><span class="preprocessor">(</span><span class="preprocessor">m</span><span class="preprocessor">)</span>  <span class="preprocessor">(</span>1 <span class="preprocessor">&lt;&lt;</span> <span class="preprocessor">(</span><span class="preprocessor">(</span><span class="preprocessor">m</span><span class="preprocessor">)</span><span class="preprocessor">-</span>1<span class="preprocessor">)</span><span class="preprocessor">)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../df/d41/timer_8c.html#a775d833c85eb59a7b5f094ab1b344c95">   72</a></span>&#160;<a class="code" href="../../df/d41/timer_8c.html#a775d833c85eb59a7b5f094ab1b344c95">wait_timer</a>()</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../dd/dc5/prototypes_8h.html#a3bebe8602c8d0315b9c71b3574ab84b4">   72</a></span>&#160;<a class="code" href="../../dd/dc5/prototypes_8h.html#a3bebe8602c8d0315b9c71b3574ab84b4">wait_timer</a>()</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#ifndef NO_ITIMER</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">NO_ITIMER</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a>)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    sigpause( ~<a class="code" href="../../df/d41/timer_8c.html#a0a157a7f1c3a7e588ec741bd1c8534a8">sigmask</a>(SIGALRM));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    sigpause( ~sigmask(SIGALRM));</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    signal(SIGALRM, <a class="code" href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">ofunc</a>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="ttc" id="timer_8c_html_a0eeaba618fe8a437c63ce83545ac71ef"><div class="ttname"><a href="../../df/d41/timer_8c.html#a0eeaba618fe8a437c63ce83545ac71ef">ofunc</a></div><div class="ttdeci">static void(* ofunc)()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00036">timer.c:36</a></div></div>
-<div class="ttc" id="timer_8c_html_a0a157a7f1c3a7e588ec741bd1c8534a8"><div class="ttname"><a href="../../df/d41/timer_8c.html#a0a157a7f1c3a7e588ec741bd1c8534a8">sigmask</a></div><div class="ttdeci">#define sigmask(m)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00068">timer.c:68</a></div></div>
-<div class="ttc" id="timer_8c_html_a775d833c85eb59a7b5f094ab1b344c95"><div class="ttname"><a href="../../df/d41/timer_8c.html#a775d833c85eb59a7b5f094ab1b344c95">wait_timer</a></div><div class="ttdeci">void wait_timer()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00072">timer.c:72</a></div></div>
 <div class="ttc" id="timer_8c_html_af1b3bff1622925d03c9cd14c5f1a51bf"><div class="ttname"><a href="../../df/d41/timer_8c.html#af1b3bff1622925d03c9cd14c5f1a51bf">rcsid</a></div><div class="ttdeci">static char rcsid[]</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00022">timer.c:22</a></div></div>
-<div class="ttc" id="timer_8c_html_a1b7eb5dea2ff1ad88802c03861cf532e"><div class="ttname"><a href="../../df/d41/timer_8c.html#a1b7eb5dea2ff1ad88802c03861cf532e">set_timer</a></div><div class="ttdeci">void set_timer(unsigned n)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00046">timer.c:46</a></div></div>
 <div class="ttc" id="timer_8c_html_ad58e4e30abda02d3ce1aca21d98d1025"><div class="ttname"><a href="../../df/d41/timer_8c.html#ad58e4e30abda02d3ce1aca21d98d1025">USPS</a></div><div class="ttdeci">#define USPS</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00031">timer.c:31</a></div></div>
+<div class="ttc" id="prototypes_8h_html_a3bebe8602c8d0315b9c71b3574ab84b4"><div class="ttname"><a href="../../dd/dc5/prototypes_8h.html#a3bebe8602c8d0315b9c71b3574ab84b4">wait_timer</a></div><div class="ttdeci">void wait_timer(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00072">timer.c:72</a></div></div>
+<div class="ttc" id="prototypes_8h_html_a1b7eb5dea2ff1ad88802c03861cf532e"><div class="ttname"><a href="../../dd/dc5/prototypes_8h.html#a1b7eb5dea2ff1ad88802c03861cf532e">set_timer</a></div><div class="ttdeci">void set_timer(unsigned n)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00046">timer.c:46</a></div></div>
 <div class="ttc" id="timer_8c_html_a1a7d2d7c8c6068d4b9571feb436f5386"><div class="ttname"><a href="../../df/d41/timer_8c.html#a1a7d2d7c8c6068d4b9571feb436f5386">ringring</a></div><div class="ttdeci">static int ringring</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00035">timer.c:35</a></div></div>
-<div class="ttc" id="timer_8c_html_a7c224121707c65a458b608e581d5004f"><div class="ttname"><a href="../../df/d41/timer_8c.html#a7c224121707c65a458b608e581d5004f">sleepx</a></div><div class="ttdeci">static void sleepx()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d41/timer_8c_source.html#l00039">timer.c:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

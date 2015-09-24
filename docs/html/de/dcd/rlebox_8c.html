@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: rlebox.c File Reference</title>
+<title>Utah Raster Toolkit: tools/rlebox.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -94,12 +95,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
-<code>#include &quot;rle_raw.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d5d/rle__raw_8h_source.html">rle_raw.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rlebox.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/ddc/rlebox_8c__incl.svg" width="252" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/ddc/rlebox_8c__incl.svg" width="306" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -143,23 +144,23 @@ Variables</h2></td></tr>
 <p>Definition at line <a class="el" href="../../de/dcd/rlebox_8c_source.html#l00044">44</a> of file <a class="el" href="../../de/dcd/rlebox_8c_source.html">rlebox.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/dd8/crop_8c.html#a13d964c4fab47cd713db04de75605b00">rle_box</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    rle_hdr <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">char</span> * rlefname = NULL;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> vflag = 0, <a class="code" href="../../d0/d2c/getgmr_8c.html#afbb9b1dda8ad9915e753c7a84be13489">cflag</a> = 0, margin = 0;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> xmin, xmax, ymin, ymax;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> rle_cnt, rle_err;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a>( argc, argv, <span class="stringliteral">&quot;% v%- c%- m%-margin!d infile%s&quot;</span>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a>( argc, argv, <span class="stringliteral">&quot;% v%- c%- m%-margin!d infile%s&quot;</span>,</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;           &amp;vflag, &amp;<a class="code" href="../../d0/d2c/getgmr_8c.html#afbb9b1dda8ad9915e753c7a84be13489">cflag</a>, &amp;margin, &amp;margin,</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;           &amp;rlefname ) == 0 )</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    exit( 1 );</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    the_hdr = *<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( (rle_hdr *)NULL );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;the_hdr, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), rlefname, 0 );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    the_hdr.rle_file = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>(the_hdr.cmd, rlefname, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    the_hdr = *<a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( (<a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *)NULL );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;the_hdr, <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), rlefname, 0 );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    the_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>(the_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, rlefname, <span class="stringliteral">&quot;r&quot;</span>);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span> ( rle_cnt = 0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      (rle_err = <a class="code" href="../../db/d53/rle__getrow_8c.html#a619b27463c26e0a4a3d9648a9869ee52">rle_get_setup</a>( &amp;the_hdr )) == RLE_SUCCESS;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      (rle_err = <a class="code" href="../../d7/d27/rle_8h.html#a619b27463c26e0a4a3d9648a9869ee52">rle_get_setup</a>( &amp;the_hdr )) == <a class="code" href="../../d7/d27/rle_8h.html#af8151a769dcd3909e10aca29bdbd525f">RLE_SUCCESS</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      rle_cnt++ )</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
@@ -191,30 +192,28 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">/* Check for an error.  EOF or EMPTY is ok if at least one image</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">     * has been read.  Otherwise, print an error message.</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> ( rle_cnt == 0 || (rle_err != RLE_EOF &amp;&amp; rle_err != RLE_EMPTY) )</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../d7/d24/rle__error_8c.html#af931d686cf3ca715c9b900527f0961c0">rle_get_error</a>( rle_err, the_hdr.cmd, rlefname );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> ( rle_cnt == 0 || (rle_err != <a class="code" href="../../d7/d27/rle_8h.html#ab9eb0d97af30e88650c1ef2a3e4b257d">RLE_EOF</a> &amp;&amp; rle_err != <a class="code" href="../../d7/d27/rle_8h.html#afd905274e1716b1f6477f78bf49cef1e">RLE_EMPTY</a>) )</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a6e3f20815a16949894bab1820c97fe1d">rle_get_error</a>( rle_err, the_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, rlefname );</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    exit( 0 );</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="ttc" id="rle__open__f_8c_html_a89733a45961817885603ae01210290b7"><div class="ttname"><a href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(char *prog_name, char *file_name, char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/rle__open__f_8c_source.html#l00216">rle_open_f.c:216</a></div></div>
 <div class="ttc" id="aliastorle_8c_html_a5489ae7bb45df0aad19a081a786538e1"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a></div><div class="ttdeci">rle_hdr the_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00100">aliastorle.c:100</a></div></div>
-<div class="ttc" id="rle__error_8c_html_af931d686cf3ca715c9b900527f0961c0"><div class="ttname"><a href="../../d7/d24/rle__error_8c.html#af931d686cf3ca715c9b900527f0961c0">rle_get_error</a></div><div class="ttdeci">int rle_get_error(int code, char *pgmname, char *fname)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d24/rle__error_8c_source.html#l00076">rle_error.c:76</a></div></div>
-<div class="ttc" id="cmd__name_8c_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
-<div class="ttc" id="rle__getrow_8c_html_a619b27463c26e0a4a3d9648a9869ee52"><div class="ttname"><a href="../../db/d53/rle__getrow_8c.html#a619b27463c26e0a4a3d9648a9869ee52">rle_get_setup</a></div><div class="ttdeci">int rle_get_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d53/rle__getrow_8c_source.html#l00074">rle_getrow.c:74</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a82e79385f2d45cc3b80ce0f4f369eae5"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, char *pgmname, char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
+<div class="ttc" id="rle_8h_html_a7827333daec9d306aff4729fbd61b031"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a></div><div class="ttdeci">int scanargs(int argc, char **argv, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs.c:94</a></div></div>
+<div class="ttc" id="rle_8h_html_afd905274e1716b1f6477f78bf49cef1e"><div class="ttname"><a href="../../d7/d27/rle_8h.html#afd905274e1716b1f6477f78bf49cef1e">RLE_EMPTY</a></div><div class="ttdeci">#define RLE_EMPTY</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00073">rle.h:73</a></div></div>
+<div class="ttc" id="rle_8h_html_af8151a769dcd3909e10aca29bdbd525f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#af8151a769dcd3909e10aca29bdbd525f">RLE_SUCCESS</a></div><div class="ttdeci">#define RLE_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00070">rle.h:70</a></div></div>
+<div class="ttc" id="rle_8h_html_ab89ecb548e22ac958f24c71fba852464"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, const char *pgmname, const char *fname, int img_num)</div></div>
+<div class="ttc" id="structrle__hdr_html_a56fc353295f9b9b62cd48ea02347116f"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">rle_hdr::cmd</a></div><div class="ttdeci">const char * cmd</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00133">rle.h:133</a></div></div>
+<div class="ttc" id="rle_8h_html_a619b27463c26e0a4a3d9648a9869ee52"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a619b27463c26e0a4a3d9648a9869ee52">rle_get_setup</a></div><div class="ttdeci">int rle_get_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d53/rle__getrow_8c_source.html#l00074">rle_getrow.c:74</a></div></div>
+<div class="ttc" id="structrle__hdr_html"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html">rle_hdr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00096">rle.h:96</a></div></div>
+<div class="ttc" id="rle_8h_html_a6e3f20815a16949894bab1820c97fe1d"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a6e3f20815a16949894bab1820c97fe1d">rle_get_error</a></div><div class="ttdeci">int rle_get_error(int code, const char *pgmname, const char *fname)</div></div>
+<div class="ttc" id="rle_8h_html_ab9eb0d97af30e88650c1ef2a3e4b257d"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab9eb0d97af30e88650c1ef2a3e4b257d">RLE_EOF</a></div><div class="ttdeci">#define RLE_EOF</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00074">rle.h:74</a></div></div>
+<div class="ttc" id="rle_8h_html_a76eefa2808915342600d65f36f77eb26"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(const char *prog_name, const char *f_name, const char *mode)</div></div>
 <div class="ttc" id="getgmr_8c_html_afbb9b1dda8ad9915e753c7a84be13489"><div class="ttname"><a href="../../d0/d2c/getgmr_8c.html#afbb9b1dda8ad9915e753c7a84be13489">cflag</a></div><div class="ttdeci">int cflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00019">getgmr.c:19</a></div></div>
+<div class="ttc" id="rle_8h_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
 <div class="ttc" id="crop_8c_html_a13d964c4fab47cd713db04de75605b00"><div class="ttname"><a href="../../d3/dd8/crop_8c.html#a13d964c4fab47cd713db04de75605b00">rle_box</a></div><div class="ttdeci">void rle_box()</div></div>
-<div class="ttc" id="rle__hdr_8c_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ea6d702c0484056c8504d6ce7fede08"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a></div><div class="ttdeci">int scanargs(va_alist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00091">scanargs.c:91</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a73983779ca206439513fb17db9df1f88"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_hdr::rle_file</a></div><div class="ttdeci">FILE * rle_file</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00114">rle.h:114</a></div></div>
+<div class="ttc" id="rle_8h_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../de/dcd/rlebox_8c_a70db8bd1d499619f7ff9c1ca2ff3c8df_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -243,7 +242,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:08 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

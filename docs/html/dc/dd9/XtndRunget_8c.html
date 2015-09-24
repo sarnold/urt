@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: XtndRunget.c File Reference</title>
+<title>Utah Raster Toolkit: get/gmr27/XtndRunget.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -94,15 +95,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">XtndRunget.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;rle_config.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../df/dad/rle__config_8h_source.html">rle_config.h</a>&quot;</code><br />
 <code>#include &quot;stdio.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/d60/getfb_8h_source.html">getfb.h</a>&quot;</code><br />
-<code>#include &quot;rle_code.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d8d/rle__code_8h_source.html">rle_code.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="../../dc/d25/fb_8h_source.html">fb.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for XtndRunget.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d78/XtndRunget_8c__incl.svg" width="462" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d78/XtndRunget_8c__incl.svg" width="492" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -110,11 +111,11 @@ Include dependency graph for XtndRunget.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a00ca3e4c1136d8352c0de97ac83e7569"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#a00ca3e4c1136d8352c0de97ac83e7569">BREAD</a>(<a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a>,  var,  len)</td></tr>
+<tr class="memitem:a00ca3e4c1136d8352c0de97ac83e7569"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#a00ca3e4c1136d8352c0de97ac83e7569">BREAD</a>(<a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a>,  var,  len)</td></tr>
 <tr class="separator:a00ca3e4c1136d8352c0de97ac83e7569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98e2df68ad9672eda5125c42d9182f2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#a98e2df68ad9672eda5125c42d9182f2f">OPCODE</a>(inst)&#160;&#160;&#160;(inst.opcode &amp; ~LONG)</td></tr>
+<tr class="memitem:a98e2df68ad9672eda5125c42d9182f2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#a98e2df68ad9672eda5125c42d9182f2f">OPCODE</a>(inst)&#160;&#160;&#160;(inst.opcode &amp; ~<a class="el" href="../../da/d8d/rle__code_8h.html#acaa7b8a7167a8214f499c71c413ddcca">LONG</a>)</td></tr>
 <tr class="separator:a98e2df68ad9672eda5125c42d9182f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a12601e799abd605d01b4d59bfeb65a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#a4a12601e799abd605d01b4d59bfeb65a">LONGP</a>(inst)&#160;&#160;&#160;(inst.opcode &amp; LONG)</td></tr>
+<tr class="memitem:a4a12601e799abd605d01b4d59bfeb65a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#a4a12601e799abd605d01b4d59bfeb65a">LONGP</a>(inst)&#160;&#160;&#160;(inst.opcode &amp; <a class="el" href="../../da/d8d/rle__code_8h.html#acaa7b8a7167a8214f499c71c413ddcca">LONG</a>)</td></tr>
 <tr class="separator:a4a12601e799abd605d01b4d59bfeb65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48dacc37367fa271dd080a1db051923d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#a48dacc37367fa271dd080a1db051923d">DATUM</a>(inst)&#160;&#160;&#160;(0x00ff &amp; inst.datum)</td></tr>
 <tr class="separator:a48dacc37367fa271dd080a1db051923d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,8 +124,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab7e36af3707843f77cc5b4e831c2fa6d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a> ()</td></tr>
-<tr class="separator:ab7e36af3707843f77cc5b4e831c2fa6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21fad24622996b74839deccf1202f29"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a> ()</td></tr>
+<tr class="separator:aa21fad24622996b74839deccf1202f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53094ca52d4ba6e2fcad76ee780d9ac5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd9/XtndRunget_8c.html#a53094ca52d4ba6e2fcad76ee780d9ac5">XtndRunGet</a> (short magic)</td></tr>
 <tr class="separator:a53094ca52d4ba6e2fcad76ee780d9ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -146,7 +147,7 @@ Variables</h2></td></tr>
           <td class="memname">#define BREAD</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a>, </td>
+          <td class="paramname"><a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -209,7 +210,7 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">inst</td><td>)</td>
-          <td>&#160;&#160;&#160;(inst.opcode &amp; LONG)</td>
+          <td>&#160;&#160;&#160;(inst.opcode &amp; <a class="el" href="../../da/d8d/rle__code_8h.html#acaa7b8a7167a8214f499c71c413ddcca">LONG</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -227,7 +228,7 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">inst</td><td>)</td>
-          <td>&#160;&#160;&#160;(inst.opcode &amp; ~LONG)</td>
+          <td>&#160;&#160;&#160;(inst.opcode &amp; ~<a class="el" href="../../da/d8d/rle__code_8h.html#acaa7b8a7167a8214f499c71c413ddcca">LONG</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -255,26 +256,18 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ab7e36af3707843f77cc5b4e831c2fa6d"></a>
+<a class="anchor" id="aa21fad24622996b74839deccf1202f29"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* malloc </td>
+          <td class="memname">void* malloc </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/dd9/XtndRunget_8c_ab7e36af3707843f77cc5b4e831c2fa6d_icgraph.svg" width="320" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -294,7 +287,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../dc/dd9/XtndRunget_8c_source.html#l00098">98</a> of file <a class="el" href="../../dc/dd9/XtndRunget_8c_source.html">XtndRunget.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">struct </span>XtndRsetup   setup;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">struct </span><a class="code" href="../../dc/d11/structXtndRsetup.html">XtndRsetup</a>   setup;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> * <a class="code" href="../../d5/dd1/rle__global_8c.html#a5a8bf8e23c5aebaa3e7ab34bc3709748">bg_color</a>;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">register</span> <span class="keywordtype">short</span> * fbptr;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">register</span> <span class="keyword">struct </span><a class="code" href="../../db/d2d/structfd__file.html">fd_file</a> * fbbuf =</div>
@@ -311,7 +304,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">char</span> * comment_buf, ** <a class="code" href="../../d4/dd6/read98721_8c.html#af5594a6df054b64cbdedfe740f67deef">comments</a>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> ( fbbufsize &gt; 2048 ) fbbufsize = 2048;   <span class="comment">/* make it look faster */</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../db/d67/bread_8c.html#ad33b8456f68670d375377ba55da937ff">bread</a> ((<span class="keywordtype">char</span> *)&amp;setup, SETUPSIZE, <a class="code" href="../../dc/d60/getfb_8h.html#a600b792d6d2ff2e71096dfa60d97a3b0">fd</a>) &lt; 1)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../db/d67/bread_8c.html#ad33b8456f68670d375377ba55da937ff">bread</a> ((<span class="keywordtype">char</span> *)&amp;setup, <a class="code" href="../../da/d8d/rle__code_8h.html#ae28bf6bf74dd0dab140996647437db53">SETUPSIZE</a>, <a class="code" href="../../dc/d60/getfb_8h.html#a600b792d6d2ff2e71096dfa60d97a3b0">fd</a>) &lt; 1)</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    fprintf (stderr, <span class="stringliteral">&quot;getgmr: Couldn&#39;t read setup information\n&quot;</span>);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    exit (1);</div>
@@ -328,9 +321,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">/* </span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">     * Get background colors if present.</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">if</span> ( !(setup.h_flags &amp; H_NO_BACKGROUND) )</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">if</span> ( !(setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#a16997ed356912479aee7e1731ff250f9">H_NO_BACKGROUND</a>) )</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    bg_color = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( 1 + (setup.h_ncolors/2) * 2 );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    bg_color = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( 1 + (setup.h_ncolors/2) * 2 );</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="../../db/d67/bread_8c.html#ad33b8456f68670d375377ba55da937ff">bread</a>( (<span class="keywordtype">char</span> *)bg_color, 1 + (setup.h_ncolors/2) * 2, <a class="code" href="../../dc/d60/getfb_8h.html#a600b792d6d2ff2e71096dfa60d97a3b0">fd</a> );</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">else</span></div>
@@ -369,7 +362,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">     * Read comments if present</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; H_COMMENT )</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#a9aa78dded96e49539f773fdaebd40f8d">H_COMMENT</a> )</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">short</span> comlen, evenlen;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">register</span> <span class="keywordtype">char</span> * cp;</div>
@@ -378,7 +371,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a00ca3e4c1136d8352c0de97ac83e7569">BREAD</a>( <span class="keywordtype">short</span>, comlen, <span class="keyword">sizeof</span> comlen );  <span class="comment">/* get comment length */</span></div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a770be6833528debb8c22e952ad303fa2">SWAB</a>( comlen );</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    evenlen = (comlen + 1) &amp; ~1;    <span class="comment">/* make it even */</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    comment_buf = (<span class="keywordtype">char</span> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( (<span class="keywordtype">unsigned</span>) evenlen );</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    comment_buf = (<span class="keywordtype">char</span> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( (<span class="keywordtype">unsigned</span>) evenlen );</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> ( comment_buf == NULL )</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    {</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        fprintf( stderr,</div>
@@ -393,7 +386,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        i++;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    i++;            <span class="comment">/* extra for NULL pointer at end */</span></div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">/* Get space to put pointers to comments */</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    comments = (<span class="keywordtype">char</span> **)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( (<span class="keywordtype">unsigned</span>)(i * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *)) );</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    comments = (<span class="keywordtype">char</span> **)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( (<span class="keywordtype">unsigned</span>)(i * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *)) );</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span> ( comments == NULL )</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    {</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        fprintf( stderr,</div>
@@ -409,20 +402,20 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#a82d236e8dfeb028cdb044701c43f064f">query</a>)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#a82d236e8dfeb028cdb044701c43f064f">query</a>)</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    {</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">if</span> ( setup.h_ncolors != 3 )</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        fprintf( stderr, <span class="stringliteral">&quot;%d color channels were saved.\n&quot;</span>,</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            setup.h_ncolors);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; H_ALPHA )</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#a27f6d05dd30c3d18ce10335ab1553e87">H_ALPHA</a> )</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        fprintf( stderr, <span class="stringliteral">&quot;Alpha channel was saved.\n&quot;</span> );</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    fprintf (stderr, <span class="stringliteral">&quot;Originally positioned at (%d, %d), size (%d %d)\n&quot;</span>,</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        setup.h_xpos, setup.h_ypos, setup.h_xlen, setup.h_ylen);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; H_CLEARFIRST )</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#aadde902c2a7c73bb46570ca4fb353cad">H_CLEARFIRST</a> )</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        fprintf( stderr, <span class="stringliteral">&quot;Screen will be cleared to &quot;</span> );</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !(setup.h_flags &amp; H_NO_BACKGROUND) )</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !(setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#a16997ed356912479aee7e1731ff250f9">H_NO_BACKGROUND</a>) )</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        fprintf( stderr, <span class="stringliteral">&quot;Saved in overlay mode with original &quot;</span> );</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; H_NO_BACKGROUND )</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#a16997ed356912479aee7e1731ff250f9">H_NO_BACKGROUND</a> )</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        fprintf( stderr, <span class="stringliteral">&quot;No background color was saved.\n&quot;</span> );</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    {</div>
@@ -439,7 +432,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;             setup.h_ncmap, 1 &lt;&lt; setup.h_cmaplen );</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; H_COMMENT )</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> ( setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#a9aa78dded96e49539f773fdaebd40f8d">H_COMMENT</a> )</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    {</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        fprintf( stderr, <span class="stringliteral">&quot;Comments:\n&quot;</span> );</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">for</span> ( i = 0; comments[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] != NULL; i++ )</div>
@@ -472,7 +465,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <a class="code" href="../../dc/dd9/XtndRunget_8c.html#ac97143cb2c5285327cd570ce602e7961">getchan</a>, setup.h_ncolors );</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        exit( 1 );</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#ac97143cb2c5285327cd570ce602e7961">getchan</a> &lt; 0 &amp;&amp; (setup.h_flags &amp; H_ALPHA) == 0 )</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#ac97143cb2c5285327cd570ce602e7961">getchan</a> &lt; 0 &amp;&amp; (setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#a27f6d05dd30c3d18ce10335ab1553e87">H_ALPHA</a>) == 0 )</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    {</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        fprintf( stderr, <span class="stringliteral">&quot;getgmr: No alpha channel in input file\n&quot;</span> );</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        exit( 1 );</div>
@@ -505,12 +498,12 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        setup.h_ypos = <a class="code" href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> &amp; 0777;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#adc27b6689a1e932f70c4cc706b723ea3">background</a> == 0)</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#adc27b6689a1e932f70c4cc706b723ea3">background</a> == 0)</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">if</span> (setup.h_flags &amp; H_CLEARFIRST)</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <a class="code" href="../../dc/d60/getfb_8h.html#adc27b6689a1e932f70c4cc706b723ea3">background</a> = 2;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">if</span> (setup.h_flags &amp; <a class="code" href="../../da/d8d/rle__code_8h.html#aadde902c2a7c73bb46570ca4fb353cad">H_CLEARFIRST</a>)</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <a class="code" href="../../d0/d2c/getgmr_8c.html#adc27b6689a1e932f70c4cc706b723ea3">background</a> = 2;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <a class="code" href="../../dc/d60/getfb_8h.html#adc27b6689a1e932f70c4cc706b723ea3">background</a> = 1;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <a class="code" href="../../d0/d2c/getgmr_8c.html#adc27b6689a1e932f70c4cc706b723ea3">background</a> = 1;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">if</span> ( setup.h_ncmap )</div>
@@ -518,7 +511,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    Fdstart(fbbuf, fbbufsize, 0);</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    <span class="comment">/* do some output buffering */</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#adc27b6689a1e932f70c4cc706b723ea3">background</a> == 2)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#adc27b6689a1e932f70c4cc706b723ea3">background</a> == 2)</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    {</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#afbb9b1dda8ad9915e753c7a84be13489">cflag</a> )</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    {</div>
@@ -543,24 +536,24 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">switch</span>( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a98e2df68ad9672eda5125c42d9182f2f">OPCODE</a>(inst) )</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    {</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">case</span> RSkipLinesOp:</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../da/d8d/rle__code_8h.html#a1bf5a14b43861b5a9c5f51095b7caf59">RSkipLinesOp</a>:</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a4a12601e799abd605d01b4d59bfeb65a">LONGP</a>(inst) )</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        {</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a00ca3e4c1136d8352c0de97ac83e7569">BREAD</a>( <span class="keywordtype">short</span>, long_data, <span class="keyword">sizeof</span> long_data );</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a770be6833528debb8c22e952ad303fa2">SWAB</a>( long_data );</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        fby += long_data;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;Skip Lines %d\n&quot;</span>, long_data);</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        }</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        {</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        fby += <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a48dacc37367fa271dd080a1db051923d">DATUM</a>(inst);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;Skip Lines %d\n&quot;</span>, inst.datum);</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        }</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">case</span> RSetColorOp:</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../da/d8d/rle__code_8h.html#add38179f3b53c58980d06565e61176e1">RSetColorOp</a>:</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#afbb9b1dda8ad9915e753c7a84be13489">cflag</a> )</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        {</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">if</span> ( (<a class="code" href="../../dc/dd9/XtndRunget_8c.html#ac97143cb2c5285327cd570ce602e7961">getchan</a>&amp;0xff) == <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a48dacc37367fa271dd080a1db051923d">DATUM</a>(inst) )</div>
@@ -576,28 +569,28 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            Fchn(1&lt;&lt;<a class="code" href="../../dc/dd9/XtndRunget_8c.html#a48dacc37367fa271dd080a1db051923d">DATUM</a>(inst));   <span class="comment">/* select color channel */</span></div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        }</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        fbx = setup.h_xpos;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;Set Color %d\n&quot;</span>, inst.datum);</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">case</span> RSkipPixelsOp:</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../da/d8d/rle__code_8h.html#a15a0014160712977a6ff37c9cf267e62">RSkipPixelsOp</a>:</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a4a12601e799abd605d01b4d59bfeb65a">LONGP</a>(inst) )</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        {</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a00ca3e4c1136d8352c0de97ac83e7569">BREAD</a>( <span class="keywordtype">short</span>, long_data, <span class="keyword">sizeof</span> long_data );</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a770be6833528debb8c22e952ad303fa2">SWAB</a>( long_data );</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        fbx += long_data;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;Skip Pixels %d\n&quot;</span>, long_data);</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        }</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        {</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        fbx += <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a48dacc37367fa271dd080a1db051923d">DATUM</a>(inst);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot;Skip Pixels %d\n&quot;</span>, <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a48dacc37367fa271dd080a1db051923d">DATUM</a>(inst));</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        }</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">case</span> RByteDataOp:</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../da/d8d/rle__code_8h.html#aed1b902998ae7df81c72d71415f2de8c">RByteDataOp</a>:</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a4a12601e799abd605d01b4d59bfeb65a">LONGP</a>(inst) )</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        {</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a00ca3e4c1136d8352c0de97ac83e7569">BREAD</a>( <span class="keywordtype">short</span>, long_data, <span class="keyword">sizeof</span> long_data );</div>
@@ -610,7 +603,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        }</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="comment">/*      Fbvput( fbx, fbx+n, fby, fby, buffer ); */</span></div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        n++;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;Byte Data, length %d\n&quot;</span>, n);</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">do</span> {</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        len = n &lt;= 510 ? n : 510;   <span class="comment">/* blasted byteunpacker */</span></div>
@@ -631,7 +624,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        } <span class="keywordflow">while</span> ( n &gt; 0 );</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">case</span> RRunDataOp:</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../da/d8d/rle__code_8h.html#a2014431c0bcadc170c83c2b388119f4a">RRunDataOp</a>:</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a4a12601e799abd605d01b4d59bfeb65a">LONGP</a>(inst) )</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        {</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a00ca3e4c1136d8352c0de97ac83e7569">BREAD</a>( <span class="keywordtype">short</span>, long_data, <span class="keyword">sizeof</span> long_data );</div>
@@ -653,11 +646,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        *fbptr++ = <a class="code" href="../../dc/d25/fb_8h.html#a5fa3f7505f6035c336773c6ae1a238e2">LoadLB</a> | <a class="code" href="../../dc/d25/fb_8h.html#a2fc0678ff2f30afbe9df040161234076">GoWrite</a>;</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        fbbuf-&gt;<a class="code" href="../../db/d2d/structfd__file.html#a9255fa0d1f55fd099a91a41d5b634ddd">fd_len</a> = fbptr - fbbuf-&gt;<a class="code" href="../../db/d2d/structfd__file.html#ad7fba6997e2438d1c49b299a669398ca">fd_list</a>;</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        fbx += n+1;</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d60/getfb_8h.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d0/d2c/getgmr_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;Run, length %d, color %d\n&quot;</span>, n+1, word);</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordflow">case</span> REOFOp:</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../da/d8d/rle__code_8h.html#afe7b45c6328bea7209d4333c9f0b9646">REOFOp</a>:</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordflow">default</span>:</div>
@@ -666,30 +659,38 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        Fddraw(fbbuf);      <span class="comment">/* flush the buffer */</span></div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        exit(1);</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    }</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a98e2df68ad9672eda5125c42d9182f2f">OPCODE</a>( inst ) == REOFOp )</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/dd9/XtndRunget_8c.html#a98e2df68ad9672eda5125c42d9182f2f">OPCODE</a>( inst ) == <a class="code" href="../../da/d8d/rle__code_8h.html#afe7b45c6328bea7209d4333c9f0b9646">REOFOp</a> )</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordflow">break</span>;      <span class="comment">/* end of input here */</span></div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    }</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    Fdstop();</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    Fddraw(fbbuf);          <span class="comment">/* flush the buffer */</span></div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;}</div>
+<div class="ttc" id="rle__code_8h_html_add38179f3b53c58980d06565e61176e1"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#add38179f3b53c58980d06565e61176e1">RSetColorOp</a></div><div class="ttdeci">#define RSetColorOp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00038">rle_code.h:38</a></div></div>
+<div class="ttc" id="rle__code_8h_html_a2014431c0bcadc170c83c2b388119f4a"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#a2014431c0bcadc170c83c2b388119f4a">RRunDataOp</a></div><div class="ttdeci">#define RRunDataOp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00041">rle_code.h:41</a></div></div>
 <div class="ttc" id="XtndRunget_8c_html_afbb9b1dda8ad9915e753c7a84be13489"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#afbb9b1dda8ad9915e753c7a84be13489">cflag</a></div><div class="ttdeci">int cflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00019">getgmr.c:19</a></div></div>
 <div class="ttc" id="fb_8h_html_a7734d3b4035ee5797cdec7aa81b55634"><div class="ttname"><a href="../../dc/d25/fb_8h.html#a7734d3b4035ee5797cdec7aa81b55634">LoadEA</a></div><div class="ttdeci">#define LoadEA</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00100">fb.h:100</a></div></div>
+<div class="ttc" id="getgmr_8c_html_a82d236e8dfeb028cdb044701c43f064f"><div class="ttname"><a href="../../d0/d2c/getgmr_8c.html#a82d236e8dfeb028cdb044701c43f064f">query</a></div><div class="ttdeci">int query</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00018">getgmr.c:18</a></div></div>
+<div class="ttc" id="rle__code_8h_html_a9aa78dded96e49539f773fdaebd40f8d"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#a9aa78dded96e49539f773fdaebd40f8d">H_COMMENT</a></div><div class="ttdeci">#define H_COMMENT</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00047">rle_code.h:47</a></div></div>
 <div class="ttc" id="rletoppm_8c_html_a29dddcd6b1993a31acea83bc5c8f16f0"><div class="ttname"><a href="../../d1/d55/rletoppm_8c.html#a29dddcd6b1993a31acea83bc5c8f16f0">maplen</a></div><div class="ttdeci">int maplen</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d55/rletoppm_8c_source.html#l00061">rletoppm.c:61</a></div></div>
-<div class="ttc" id="getfb_8h_html_a82d236e8dfeb028cdb044701c43f064f"><div class="ttname"><a href="../../dc/d60/getfb_8h.html#a82d236e8dfeb028cdb044701c43f064f">query</a></div><div class="ttdeci">int query</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00018">getgmr.c:18</a></div></div>
+<div class="ttc" id="rle__code_8h_html_a1bf5a14b43861b5a9c5f51095b7caf59"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#a1bf5a14b43861b5a9c5f51095b7caf59">RSkipLinesOp</a></div><div class="ttdeci">#define RSkipLinesOp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00037">rle_code.h:37</a></div></div>
 <div class="ttc" id="XtndRunget_8c_html_a4a12601e799abd605d01b4d59bfeb65a"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#a4a12601e799abd605d01b4d59bfeb65a">LONGP</a></div><div class="ttdeci">#define LONGP(inst)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd9/XtndRunget_8c_source.html#l00085">XtndRunget.c:85</a></div></div>
 <div class="ttc" id="XtndRunget_8c_html_a770be6833528debb8c22e952ad303fa2"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#a770be6833528debb8c22e952ad303fa2">SWAB</a></div><div class="ttdeci">#define SWAB(shrt)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd9/XtndRunget_8c_source.html#l00091">XtndRunget.c:91</a></div></div>
+<div class="ttc" id="getgmr_8c_html_ac3e1795766a80ec63b157951b4b9a7d4"><div class="ttname"><a href="../../d0/d2c/getgmr_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a></div><div class="ttdeci">int debug</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00018">getgmr.c:18</a></div></div>
+<div class="ttc" id="rle__code_8h_html_a27f6d05dd30c3d18ce10335ab1553e87"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#a27f6d05dd30c3d18ce10335ab1553e87">H_ALPHA</a></div><div class="ttdeci">#define H_ALPHA</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00046">rle_code.h:46</a></div></div>
 <div class="ttc" id="structfd__file_html_a9255fa0d1f55fd099a91a41d5b634ddd"><div class="ttname"><a href="../../db/d2d/structfd__file.html#a9255fa0d1f55fd099a91a41d5b634ddd">fd_file::fd_len</a></div><div class="ttdeci">int fd_len</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00152">fb.h:152</a></div></div>
 <div class="ttc" id="getami_8c_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a></div><div class="ttdeci">static int y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
 <div class="ttc" id="get4d_8c_html_aa49ec765beb6263519194b874718848c"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aa49ec765beb6263519194b874718848c">posflag</a></div><div class="ttdeci">int posflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
-<div class="ttc" id="getfb_8h_html_ac3e1795766a80ec63b157951b4b9a7d4"><div class="ttname"><a href="../../dc/d60/getfb_8h.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a></div><div class="ttdeci">int debug</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00018">getgmr.c:18</a></div></div>
+<div class="ttc" id="rle__code_8h_html_afe7b45c6328bea7209d4333c9f0b9646"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#afe7b45c6328bea7209d4333c9f0b9646">REOFOp</a></div><div class="ttdeci">#define REOFOp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00042">rle_code.h:42</a></div></div>
+<div class="ttc" id="rle__code_8h_html_aadde902c2a7c73bb46570ca4fb353cad"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#aadde902c2a7c73bb46570ca4fb353cad">H_CLEARFIRST</a></div><div class="ttdeci">#define H_CLEARFIRST</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00044">rle_code.h:44</a></div></div>
 <div class="ttc" id="XtndRunget_8c_html_a4ce5c4de4dd00c003fa3e78401b28fbb"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#a4ce5c4de4dd00c003fa3e78401b28fbb">putchan</a></div><div class="ttdeci">int putchan</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00019">getgmr.c:19</a></div></div>
 <div class="ttc" id="rle__global_8c_html_a5a8bf8e23c5aebaa3e7ab34bc3709748"><div class="ttname"><a href="../../d5/dd1/rle__global_8c.html#a5a8bf8e23c5aebaa3e7ab34bc3709748">bg_color</a></div><div class="ttdeci">static int bg_color[3]</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dd1/rle__global_8c_source.html#l00064">rle_global.c:64</a></div></div>
 <div class="ttc" id="XtndRunget_8c_html_a00ca3e4c1136d8352c0de97ac83e7569"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#a00ca3e4c1136d8352c0de97ac83e7569">BREAD</a></div><div class="ttdeci">#define BREAD(type, var, len)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd9/XtndRunget_8c_source.html#l00074">XtndRunget.c:74</a></div></div>
 <div class="ttc" id="fb_8h_html_a48247e040fe4b06c9817311cad6f4a21"><div class="ttname"><a href="../../dc/d25/fb_8h.html#a48247e040fe4b06c9817311cad6f4a21">SelectPeripheralDevice</a></div><div class="ttdeci">#define SelectPeripheralDevice</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00108">fb.h:108</a></div></div>
 <div class="ttc" id="getami_8c_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">static int x</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
+<div class="ttc" id="structXtndRsetup_html"><div class="ttname"><a href="../../dc/d11/structXtndRsetup.html">XtndRsetup</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00049">rle_code.h:49</a></div></div>
 <div class="ttc" id="fb_8h_html_a812e5e2112c9ab273a8d9075b729ff93"><div class="ttname"><a href="../../dc/d25/fb_8h.html#a812e5e2112c9ab273a8d9075b729ff93">LoadSubchannelMask</a></div><div class="ttdeci">#define LoadSubchannelMask</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00064">fb.h:64</a></div></div>
+<div class="ttc" id="rle__code_8h_html_a15a0014160712977a6ff37c9cf267e62"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#a15a0014160712977a6ff37c9cf267e62">RSkipPixelsOp</a></div><div class="ttdeci">#define RSkipPixelsOp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00039">rle_code.h:39</a></div></div>
 <div class="ttc" id="fb_8h_html_a1916767f01591793cfc759ff3d35ffc2"><div class="ttname"><a href="../../dc/d25/fb_8h.html#a1916767f01591793cfc759ff3d35ffc2">LoadUpdateMode</a></div><div class="ttdeci">#define LoadUpdateMode</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00076">fb.h:76</a></div></div>
-<div class="ttc" id="XtndRunget_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
 <div class="ttc" id="XtndRunget_8c_html_ac97143cb2c5285327cd570ce602e7961"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#ac97143cb2c5285327cd570ce602e7961">getchan</a></div><div class="ttdeci">int getchan</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00019">getgmr.c:19</a></div></div>
 <div class="ttc" id="fb_8h_html_af39bc09156fd1ffe6e62437de6878a35"><div class="ttname"><a href="../../dc/d25/fb_8h.html#af39bc09156fd1ffe6e62437de6878a35">LoadPRegister</a></div><div class="ttdeci">#define LoadPRegister</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00132">fb.h:132</a></div></div>
 <div class="ttc" id="structfd__file_html_ad7fba6997e2438d1c49b299a669398ca"><div class="ttname"><a href="../../db/d2d/structfd__file.html#ad7fba6997e2438d1c49b299a669398ca">fd_file::fd_list</a></div><div class="ttdeci">short fd_list[1]</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00156">fb.h:156</a></div></div>
@@ -700,32 +701,20 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="getfb_8h_html_a600b792d6d2ff2e71096dfa60d97a3b0"><div class="ttname"><a href="../../dc/d60/getfb_8h.html#a600b792d6d2ff2e71096dfa60d97a3b0">fd</a></div><div class="ttdeci">FILE * fd</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d60/getfb_8h_source.html#l00018">getfb.h:18</a></div></div>
 <div class="ttc" id="fb_8h_html_a80437317613879913fa7396c8eae17fe"><div class="ttname"><a href="../../dc/d25/fb_8h.html#a80437317613879913fa7396c8eae17fe">A_AB</a></div><div class="ttdeci">#define A_AB</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00082">fb.h:82</a></div></div>
 <div class="ttc" id="read98721_8c_html_af5594a6df054b64cbdedfe740f67deef"><div class="ttname"><a href="../../d4/dd6/read98721_8c.html#af5594a6df054b64cbdedfe740f67deef">comments</a></div><div class="ttdeci">char ** comments</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd6/read98721_8c_source.html#l00074">read98721.c:74</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
 <div class="ttc" id="fb_8h_html_ad2ed79cbe02c70b5199e637c2e43f11f"><div class="ttname"><a href="../../dc/d25/fb_8h.html#ad2ed79cbe02c70b5199e637c2e43f11f">LoadLA</a></div><div class="ttdeci">#define LoadLA</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00104">fb.h:104</a></div></div>
+<div class="ttc" id="getgmr_8c_html_adc27b6689a1e932f70c4cc706b723ea3"><div class="ttname"><a href="../../d0/d2c/getgmr_8c.html#adc27b6689a1e932f70c4cc706b723ea3">background</a></div><div class="ttdeci">int background</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00018">getgmr.c:18</a></div></div>
 <div class="ttc" id="fb_8h_html_a873903c4c5c6e549deabd334eef9fba6"><div class="ttname"><a href="../../dc/d25/fb_8h.html#a873903c4c5c6e549deabd334eef9fba6">LoadEB</a></div><div class="ttdeci">#define LoadEB</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00101">fb.h:101</a></div></div>
+<div class="ttc" id="rle__code_8h_html_ae28bf6bf74dd0dab140996647437db53"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#ae28bf6bf74dd0dab140996647437db53">SETUPSIZE</a></div><div class="ttdeci">#define SETUPSIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00061">rle_code.h:61</a></div></div>
 <div class="ttc" id="structfd__file_html"><div class="ttname"><a href="../../db/d2d/structfd__file.html">fd_file</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00151">fb.h:151</a></div></div>
+<div class="ttc" id="rle__code_8h_html_a16997ed356912479aee7e1731ff250f9"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#a16997ed356912479aee7e1731ff250f9">H_NO_BACKGROUND</a></div><div class="ttdeci">#define H_NO_BACKGROUND</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00045">rle_code.h:45</a></div></div>
 <div class="ttc" id="XtndRunget_8c_html_a98e2df68ad9672eda5125c42d9182f2f"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#a98e2df68ad9672eda5125c42d9182f2f">OPCODE</a></div><div class="ttdeci">#define OPCODE(inst)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd9/XtndRunget_8c_source.html#l00084">XtndRunget.c:84</a></div></div>
 <div class="ttc" id="getsun_8c_html_a70e7ad2e1a45c8db5fba9ad4778bd400"><div class="ttname"><a href="../../dd/dce/getsun_8c.html#a70e7ad2e1a45c8db5fba9ad4778bd400">buffer</a></div><div class="ttdeci">unsigned char * buffer</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dce/getsun_8c_source.html#l00087">getsun.c:87</a></div></div>
 <div class="ttc" id="fb_8h_html_a5fa3f7505f6035c336773c6ae1a238e2"><div class="ttname"><a href="../../dc/d25/fb_8h.html#a5fa3f7505f6035c336773c6ae1a238e2">LoadLB</a></div><div class="ttdeci">#define LoadLB</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d25/fb_8h_source.html#l00105">fb.h:105</a></div></div>
 <div class="ttc" id="bread_8c_html_ad33b8456f68670d375377ba55da937ff"><div class="ttname"><a href="../../db/d67/bread_8c.html#ad33b8456f68670d375377ba55da937ff">bread</a></div><div class="ttdeci">bread(char *ptr, unsigned size, FILE *iop)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d67/bread_8c_source.html#l00026">bread.c:26</a></div></div>
-<div class="ttc" id="getfb_8h_html_adc27b6689a1e932f70c4cc706b723ea3"><div class="ttname"><a href="../../dc/d60/getfb_8h.html#adc27b6689a1e932f70c4cc706b723ea3">background</a></div><div class="ttdeci">int background</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d2c/getgmr_8c_source.html#l00018">getgmr.c:18</a></div></div>
+<div class="ttc" id="rle__code_8h_html_aed1b902998ae7df81c72d71415f2de8c"><div class="ttname"><a href="../../da/d8d/rle__code_8h.html#aed1b902998ae7df81c72d71415f2de8c">RByteDataOp</a></div><div class="ttdeci">#define RByteDataOp</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d8d/rle__code_8h_source.html#l00040">rle_code.h:40</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/dd9/XtndRunget_8c_a53094ca52d4ba6e2fcad76ee780d9ac5_cgraph.svg" width="220" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/dd9/XtndRunget_8c_a53094ca52d4ba6e2fcad76ee780d9ac5_icgraph.svg" width="210" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -774,7 +763,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:06 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

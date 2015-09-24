@@ -4,6 +4,7 @@ var searchData=
   ['mag_5ffact',['mag_fact',['../d1/d08/struct__image__info__struct.html#aba1ef063778449161d043797cb5e96d8',1,'_image_info_struct']]],
   ['mag_5fmode',['mag_mode',['../d1/d08/struct__image__info__struct.html#a6d3d5cdb80c53e4bda14ae5a1c4056cd',1,'_image_info_struct']]],
   ['mag_5fscanline',['MAG_scanline',['../d1/d08/struct__image__info__struct.html#adc20aed95d9fb323845b4ee23214747f',1,'_image_info_struct']]],
+  ['magic',['magic',['../dd/d78/structrle__dispatch__tab.html#af7be1b8630be92c2b19df7e63132e0a9',1,'rle_dispatch_tab']]],
   ['magic4x4',['magic4x4',['../d9/dbb/dither_8c.html#a4cf7ea450c46857d2cb6dfb0cac12881',1,'dither.c']]],
   ['magic_5fnumber',['magic_number',['../d3/d3a/structRLB__HEADER.html#a0733be76be9ebdeb40e1eda26cb66d4d',1,'RLB_HEADER']]],
   ['map',['map',['../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688',1,'map():&#160;getap.c'],['../d8/db3/to8_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688',1,'map():&#160;to8.c']]],
@@ -25,7 +26,7 @@ var searchData=
   ['mono_5fcolor',['mono_color',['../d1/d08/struct__image__info__struct.html#aef58d7d11770606a0539966cdea931af',1,'_image_info_struct']]],
   ['mono_5fimg',['mono_img',['../d1/d08/struct__image__info__struct.html#ab78d6ed1be664b958fc24e9744a73000',1,'_image_info_struct']]],
   ['moves',['Moves',['../da/d8c/font_8c.html#af07e26ea81bdbf00611de55915c5e540',1,'Moves():&#160;font.c'],['../d5/dd9/rleClock_8c.html#af07e26ea81bdbf00611de55915c5e540',1,'Moves():&#160;font.c']]],
-  ['my_5fname',['MY_NAME',['../d1/dad/giftorle_8c.html#abe7b44aaee159019812f9de8a9ef2e0c',1,'MY_NAME():&#160;giftorle.c'],['../d7/d4a/rletogif_8c.html#abe7b44aaee159019812f9de8a9ef2e0c',1,'MY_NAME():&#160;rletogif.c'],['../dc/d05/rletogif_8h.html#a127672c2ff9be9f2ed8cf1b00875dcf6',1,'MY_NAME():&#160;giftorle.c'],['../d6/d6c/xbmtorle_8c.html#abe7b44aaee159019812f9de8a9ef2e0c',1,'MY_NAME():&#160;xbmtorle.c'],['../dc/d5c/rlequant_8c.html#abe7b44aaee159019812f9de8a9ef2e0c',1,'MY_NAME():&#160;rlequant.c'],['../d6/d28/gettaac_8c.html#afaff1bf4dea446b7eddc3153f4233101',1,'my_name():&#160;gettaac.c'],['../df/db0/rleselect_8c.html#afaff1bf4dea446b7eddc3153f4233101',1,'my_name():&#160;rleselect.c']]],
+  ['my_5fname',['MY_NAME',['../d1/dad/giftorle_8c.html#ae0ee0d1deab936f374150070a3b0c01f',1,'MY_NAME():&#160;giftorle.c'],['../dc/d05/rletogif_8h.html#a127672c2ff9be9f2ed8cf1b00875dcf6',1,'MY_NAME():&#160;giftorle.c'],['../d7/d4a/rletogif_8c.html#ae0ee0d1deab936f374150070a3b0c01f',1,'MY_NAME():&#160;rletogif.c'],['../d6/d6c/xbmtorle_8c.html#abe7b44aaee159019812f9de8a9ef2e0c',1,'MY_NAME():&#160;xbmtorle.c'],['../dc/d5c/rlequant_8c.html#ae0ee0d1deab936f374150070a3b0c01f',1,'MY_NAME():&#160;rlequant.c'],['../d6/d28/gettaac_8c.html#afaff1bf4dea446b7eddc3153f4233101',1,'my_name():&#160;gettaac.c'],['../df/db0/rleselect_8c.html#a08e021216469780d74e97b3b6587e746',1,'my_name():&#160;rleselect.c']]],
   ['myevent',['myEvent',['../d9/d3b/get__orion_8c.html#aa090a2081ded6b0e65433fa9a317922a',1,'get_orion.c']]],
   ['mypt',['myPt',['../d9/d3b/get__orion_8c.html#a02846331d0dcba567f6ad05d2e6e04bf',1,'get_orion.c']]]
 ];

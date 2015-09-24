@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: sig.c Source File</title>
+<title>Utah Raster Toolkit: get/cx3d/sig.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -109,18 +110,18 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/* sig.c, 7/2/86, T. McCollough, UU */</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;signal.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">signal</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../da/d12/sig_8c.html#a7e0322bc0848d568cedd96d41c44706c">   22</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../da/d12/sig_8c.html#a7e0322bc0848d568cedd96d41c44706c">sig_handler</a> ( sig, code, scp )</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> sig, code;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;struct sigcontext *scp;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../da/d12/sig_8c.html#a7e0322bc0848d568cedd96d41c44706c">   22</a></span>&#160;<span class="keywordtype">int</span> sig_handler ( sig, code, scp )</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> sig, code;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">struct</span> sigcontext *scp;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    psignal( sig, <span class="stringliteral">&quot;getcx3d&quot;</span> );</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../d9/dea/getcx3d_8c.html#af4152c13a06d002f268af780c0433c3a">done</a>( );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    done( );</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../de/d62/sig_8h.html#a009d6e3ff0c93e9e7a7d4dcab40b8dad">   30</a></span>&#160;<a class="code" href="../../da/d12/sig_8c.html#a4e57ba0d8f9e34ae85eea25b23bb7c61">sig_setup</a> ( ) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct </span>sigvec vec = { <a class="code" href="../../da/d12/sig_8c.html#a7e0322bc0848d568cedd96d41c44706c">sig_handler</a>, 0xffffffff, 0 };</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../da/d12/sig_8c.html#a4e57ba0d8f9e34ae85eea25b23bb7c61">   30</a></span>&#160;sig_setup ( ) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct</span> sigvec vec = { sig_handler, 0xffffffff, 0 };</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    sigvec( SIGHUP, &amp; vec, 0 );</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    sigvec( SIGINT, &amp; vec, 0 );</div>
@@ -148,23 +149,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    sigvec( SIGWINCH, &amp; vec, 0 );</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../de/d62/sig_8h.html#abb5ec5e9289cd916a485e96dfa45e681">   59</a></span>&#160;<a class="code" href="../../da/d12/sig_8c.html#a876ea614f05be10012ec5531eadd304a">sig_unblock</a> ( ) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../da/d12/sig_8c.html#a876ea614f05be10012ec5531eadd304a">   59</a></span>&#160;sig_unblock ( ) {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    sigsetmask( 0 );</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../de/d62/sig_8h.html#a6602e483642bc8a5e3814aa01e85949a">   63</a></span>&#160;<a class="code" href="../../da/d12/sig_8c.html#aa189be24085654e9f5fa0718698ae248">sig_block</a> ( ) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../da/d12/sig_8c.html#aa189be24085654e9f5fa0718698ae248">   63</a></span>&#160;sig_block ( ) {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    sigsetmask( 0xffffffff );</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="ttc" id="sig_8c_html_aa189be24085654e9f5fa0718698ae248"><div class="ttname"><a href="../../da/d12/sig_8c.html#aa189be24085654e9f5fa0718698ae248">sig_block</a></div><div class="ttdeci">sig_block()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d12/sig_8c_source.html#l00063">sig.c:63</a></div></div>
-<div class="ttc" id="sig_8c_html_a4e57ba0d8f9e34ae85eea25b23bb7c61"><div class="ttname"><a href="../../da/d12/sig_8c.html#a4e57ba0d8f9e34ae85eea25b23bb7c61">sig_setup</a></div><div class="ttdeci">sig_setup()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d12/sig_8c_source.html#l00030">sig.c:30</a></div></div>
-<div class="ttc" id="sig_8c_html_a7e0322bc0848d568cedd96d41c44706c"><div class="ttname"><a href="../../da/d12/sig_8c.html#a7e0322bc0848d568cedd96d41c44706c">sig_handler</a></div><div class="ttdeci">int sig_handler(int sig, int code, struct sigcontext *scp)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d12/sig_8c_source.html#l00022">sig.c:22</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
-<div class="ttc" id="getcx3d_8c_html_af4152c13a06d002f268af780c0433c3a"><div class="ttname"><a href="../../d9/dea/getcx3d_8c.html#af4152c13a06d002f268af780c0433c3a">done</a></div><div class="ttdeci">done()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dea/getcx3d_8c_source.html#l00270">getcx3d.c:270</a></div></div>
-<div class="ttc" id="sig_8c_html_a876ea614f05be10012ec5531eadd304a"><div class="ttname"><a href="../../da/d12/sig_8c.html#a876ea614f05be10012ec5531eadd304a">sig_unblock</a></div><div class="ttdeci">sig_unblock()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d12/sig_8c_source.html#l00059">sig.c:59</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

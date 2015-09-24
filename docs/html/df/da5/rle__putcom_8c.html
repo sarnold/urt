@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: rle_putcom.c File Reference</title>
+<title>Utah Raster Toolkit: lib/rle_putcom.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -93,11 +94,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rle_putcom.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d97/rle__putcom_8c__incl.svg" width="147" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d97/rle__putcom_8c__incl.svg" width="224" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -107,10 +108,10 @@ Include dependency graph for rle_putcom.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a7502c8b599724ce86fee5df1311a2337"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da5/rle__putcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a> (char *n, char *v)</td></tr>
 <tr class="separator:a7502c8b599724ce86fee5df1311a2337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fa8528c32d14763efe2a534e409e321"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da5/rle__putcom_8c.html#a6fa8528c32d14763efe2a534e409e321">rle_putcom</a> (char *<a class="el" href="../../d5/dd9/rleClock_8c.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>, rle_hdr *<a class="el" href="../../df/db4/tifftorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>)</td></tr>
-<tr class="separator:a6fa8528c32d14763efe2a534e409e321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a436af4fe2b373da40f91fedb0fabb7fb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da5/rle__putcom_8c.html#a436af4fe2b373da40f91fedb0fabb7fb">rle_delcom</a> (char *name, <a class="el" href="../../df/db4/tifftorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>)</td></tr>
-<tr class="separator:a436af4fe2b373da40f91fedb0fabb7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b05ed59c704cfa641e337db63ee862"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da5/rle__putcom_8c.html#af9b05ed59c704cfa641e337db63ee862">rle_putcom</a> (char *<a class="el" href="../../d5/dd9/rleClock_8c.html#a8556878012feffc9e0beb86cd78f424d">value</a>, <a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *<a class="el" href="../../df/db4/tifftorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>) const</td></tr>
+<tr class="separator:af9b05ed59c704cfa641e337db63ee862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba59b911e05e2fdba95ee2873f51c34"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da5/rle__putcom_8c.html#a2ba59b911e05e2fdba95ee2873f51c34">rle_delcom</a> (char *name, <a class="el" href="../../df/db4/tifftorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>) const</td></tr>
+<tr class="separator:a2ba59b911e05e2fdba95ee2873f51c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a7502c8b599724ce86fee5df1311a2337"></a>
@@ -159,22 +160,14 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/da5/rle__putcom_8c_a7502c8b599724ce86fee5df1311a2337_icgraph.svg" width="662" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a436af4fe2b373da40f91fedb0fabb7fb"></a>
+<a class="anchor" id="a2ba59b911e05e2fdba95ee2873f51c34"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* rle_delcom </td>
+          <td class="memname">const char* rle_delcom </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -188,21 +181,21 @@ Here is the caller graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../df/da5/rle__putcom_8c_source.html#l00140">140</a> of file <a class="el" href="../../df/da5/rle__putcom_8c_source.html">rle_putcom.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span> ** cp;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    CONST_DECL <span class="keywordtype">char</span> * v = NULL;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> ** cp;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * v = NULL;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments == NULL )</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a> == NULL )</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">for</span> ( cp = <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments; *cp != NULL; cp++ )</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">for</span> ( cp = <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>; *cp != NULL; cp++ )</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../df/da5/rle__putcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a>( name, *cp ) != NULL )</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        v = *cp;</div>
@@ -213,38 +206,24 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">/* Not found */</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span> ( *<a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments == NULL )</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments = NULL;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span> ( *<a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a> == NULL )</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a> = NULL;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> v;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
 <div class="ttc" id="aliastorle_8c_html_a5489ae7bb45df0aad19a081a786538e1"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a></div><div class="ttdeci">rle_hdr the_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00100">aliastorle.c:100</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a0a69b3269580c81e05fcc6bd334389ee"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">rle_hdr::comments</a></div><div class="ttdeci">const char ** comments</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00113">rle.h:113</a></div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="rle__putcom_8c_html_a7502c8b599724ce86fee5df1311a2337"><div class="ttname"><a href="../../df/da5/rle__putcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a></div><div class="ttdeci">static char * match(char *n, char *v)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da5/rle__putcom_8c_source.html#l00050">rle_putcom.c:50</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/da5/rle__putcom_8c_a436af4fe2b373da40f91fedb0fabb7fb_cgraph.svg" width="210" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/da5/rle__putcom_8c_a436af4fe2b373da40f91fedb0fabb7fb_icgraph.svg" width="202" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a6fa8528c32d14763efe2a534e409e321"></a>
+<a class="anchor" id="af9b05ed59c704cfa641e337db63ee862"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* rle_putcom </td>
+          <td class="memname">const char* rle_putcom </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>value</em>, </td>
@@ -252,36 +231,38 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rle_hdr *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *&#160;</td>
           <td class="paramname"><em>the_hdr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../df/da5/rle__putcom_8c_source.html#l00082">82</a> of file <a class="el" href="../../df/da5/rle__putcom_8c_source.html">rle_putcom.c</a>.</p>
+
+<p>Referenced by <a class="el" href="../../dc/d11/getami_8c_source.html#l00540">find_most_used()</a>, and <a class="el" href="../../dd/dcd/rlatorle_8c_source.html#l00174">write_rle_header()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span> ** cp, ** old_comments;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    CONST_DECL <span class="keywordtype">char</span> * v;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> ** cp, ** old_comments;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * v;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments == NULL )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> ( the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a> == NULL )</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments = (CONST_DECL <span class="keywordtype">char</span> **)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( 2 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *) );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments[0] = <a class="code" href="../../d5/dd9/rleClock_8c.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments[1] = NULL;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a> = (<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> **)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( 2 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *) );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>[0] = <a class="code" href="../../d5/dd9/rleClock_8c.html#a8556878012feffc9e0beb86cd78f424d">value</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>[1] = NULL;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span> ( i = 2, cp = <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments; *cp != NULL; i++, cp++ )</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../df/da5/rle__putcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a>( <a class="code" href="../../d5/dd9/rleClock_8c.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>, *cp ) != NULL )</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span> ( i = 2, cp = the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>; *cp != NULL; i++, cp++ )</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../df/da5/rle__putcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a>( <a class="code" href="../../d5/dd9/rleClock_8c.html#a8556878012feffc9e0beb86cd78f424d">value</a>, *cp ) != NULL )</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        v = *cp;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        *cp = <a class="code" href="../../d5/dd9/rleClock_8c.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        *cp = <a class="code" href="../../d5/dd9/rleClock_8c.html#a8556878012feffc9e0beb86cd78f424d">value</a>;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> v;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">/* Not found */</span></div>
@@ -292,34 +273,27 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">     * This would work a lot better in C++, where hdr1 = hdr2</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">     * could copy the pointers, too.</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    old_comments = <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments = (CONST_DECL <span class="keywordtype">char</span> **)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>(i * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *) );</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments[--<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = NULL;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments[--<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code" href="../../d5/dd9/rleClock_8c.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    old_comments = the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a> = (<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> **)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>(i * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *) );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>[--<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = NULL;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>[--<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code" href="../../d5/dd9/rleClock_8c.html#a8556878012feffc9e0beb86cd78f424d">value</a>;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">for</span> ( i--; i &gt;= 0; i-- )</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;comments[i] = old_comments[i];</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>[i] = old_comments[i];</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="ttc" id="aliastorle_8c_html_a5489ae7bb45df0aad19a081a786538e1"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a></div><div class="ttdeci">rle_hdr the_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00100">aliastorle.c:100</a></div></div>
-<div class="ttc" id="rleClock_8c_html_a4e9aec275e566b978a3ccb4e043d8c61"><div class="ttname"><a href="../../d5/dd9/rleClock_8c.html#a4e9aec275e566b978a3ccb4e043d8c61">value</a></div><div class="ttdeci">char * value</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dd9/rleClock_8c_source.html#l00574">rleClock.c:574</a></div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
+<div class="ttc" id="structrle__hdr_html_a0a69b3269580c81e05fcc6bd334389ee"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">rle_hdr::comments</a></div><div class="ttdeci">const char ** comments</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00113">rle.h:113</a></div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="rle__putcom_8c_html_a7502c8b599724ce86fee5df1311a2337"><div class="ttname"><a href="../../df/da5/rle__putcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a></div><div class="ttdeci">static char * match(char *n, char *v)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/da5/rle__putcom_8c_source.html#l00050">rle_putcom.c:50</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
+<div class="ttc" id="rleClock_8c_html_a8556878012feffc9e0beb86cd78f424d"><div class="ttname"><a href="../../d5/dd9/rleClock_8c.html#a8556878012feffc9e0beb86cd78f424d">value</a></div><div class="ttdeci">const char * value</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dd9/rleClock_8c_source.html#l00574">rleClock.c:574</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/da5/rle__putcom_8c_a6fa8528c32d14763efe2a534e409e321_cgraph.svg" width="212" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/da5/rle__putcom_8c_a6fa8528c32d14763efe2a534e409e321_icgraph.svg" width="554" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/da5/rle__putcom_8c_af9b05ed59c704cfa641e337db63ee862_icgraph.svg" width="279" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -329,7 +303,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:07 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

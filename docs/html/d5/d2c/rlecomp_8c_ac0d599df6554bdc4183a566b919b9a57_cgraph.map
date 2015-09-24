@@ -1,8 +1,0 @@
-<map id="get_scanline" name="get_scanline">
-<area shape="rect" id="node2" href="$d9/d87/rle__rawrow_8c.html#a3f2afe7476d4e563999daf97822f7375" title="rle_rawtorow" alt="" coords="156,5,260,32"/>
-<area shape="rect" id="node3" href="$df/dce/rle__getraw_8c.html#ad4a764bcb2dc8e45f3f57171022dbf2b" title="rle_freeraw" alt="" coords="161,56,255,83"/>
-<area shape="rect" id="node5" href="$db/d53/rle__getrow_8c.html#a3602e1158189cba5e5b0f9b983cba776" title="rle_getrow" alt="" coords="163,107,253,133"/>
-<area shape="rect" id="node4" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="330,56,377,83"/>
-<area shape="rect" id="node6" href="$db/d53/rle__getrow_8c.html#a61ac0da96b0dd8bc3cbc98afcd9b5c44" title="bfill" alt="" coords="332,107,375,133"/>
-<area shape="rect" id="node7" href="$d8/d7c/rle__getskip_8c.html#af6b1e1dc0867e9340f90668591c7c5b3" title="rle_getskip" alt="" coords="308,157,399,184"/>
-</map>

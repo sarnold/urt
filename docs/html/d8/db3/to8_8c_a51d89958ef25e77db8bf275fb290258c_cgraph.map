@@ -1,5 +1,3 @@
 <map id="init_color" name="init_color">
-<area shape="rect" id="node2" href="$d9/dbb/dither_8c.html#af497d70ad3165f9bd58878047ba22f03" title="dithermap" alt="" coords="141,5,226,32"/>
-<area shape="rect" id="node3" href="$d9/dbb/dither_8c.html#a7ff23fcd77b62deab9304ffd3d684f47" title="make_square" alt="" coords="283,56,389,83"/>
-<area shape="rect" id="node4" href="$d9/dbb/dither_8c.html#afad378428af71918afb13247f60d0594" title="bwdithermap" alt="" coords="132,107,235,133"/>
+<area shape="rect" id="node2" href="$d9/dbb/dither_8c.html#af497d70ad3165f9bd58878047ba22f03" title="dithermap" alt="" coords="132,5,217,32"/>
 </map>

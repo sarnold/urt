@@ -1,9 +1,0 @@
-<map id="get_dither_arrays" name="get_dither_arrays">
-<area shape="rect" id="node2" href="$dd/d17/x11__stuff_8c.html#aa8509763c57678ec28bcda93fed61e59" title="init_color" alt="" coords="232,5,311,32"/>
-<area shape="rect" id="node3" href="$dd/d17/x11__stuff_8c.html#abdff2750647853dba9cc67373d9c9d0c" title="init_separate_color_rw" alt="" coords="188,56,355,83"/>
-<area shape="rect" id="node4" href="$dd/d17/x11__stuff_8c.html#a81944846c1fed64eee7b11566ffce0cc" title="init_color_rw" alt="" coords="220,107,323,133"/>
-<area shape="rect" id="node5" href="$dd/d17/x11__stuff_8c.html#adf61523675f79528c0b09be8e46bea3f" title="init_separate_color_ro" alt="" coords="189,157,353,184"/>
-<area shape="rect" id="node6" href="$dd/d17/x11__stuff_8c.html#aa2536bbb4df94156f9acb28c302208a2" title="init_color_ro" alt="" coords="221,208,321,235"/>
-<area shape="rect" id="node7" href="$dd/d17/x11__stuff_8c.html#a61dbe43c8c55c80734ca3a480c556eef" title="init_mono_rw" alt="" coords="218,259,325,285"/>
-<area shape="rect" id="node8" href="$dd/d17/x11__stuff_8c.html#a58b120346f31dbeef2ae9c79bcd1ab4c" title="init_mono_ro" alt="" coords="219,309,323,336"/>
-</map>

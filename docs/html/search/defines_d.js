@@ -7,6 +7,7 @@ var searchData=
   ['optwritepixel1',['OptWritePixel1',['../dc/d11/getami_8c.html#adec6f779fafd33635900d18330a8a858',1,'getami.c']]],
   ['optwritepixel2',['OptWritePixel2',['../dc/d11/getami_8c.html#abd109e6c8a2e0ae70b7c4b5f85282252',1,'getami.c']]],
   ['optwritepixel3',['OptWritePixel3',['../dc/d11/getami_8c.html#a068e1698310e890c31c6a18122e6fab3',1,'getami.c']]],
+  ['or',['or',['../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c',1,'pyramid.h']]],
   ['out',['OUT',['../d3/d42/rletoabA62_8c.html#a822fe485b915821d1ac48ee0719e3f75',1,'rletoabA62.c']]],
   ['out_5fop',['OUT_OP',['../d5/d2c/rlecomp_8c.html#a12a1b9dd4a39305029b35c214d99311b',1,'rlecomp.c']]],
   ['output',['OUTPUT',['../dc/d5c/rlequant_8c.html#a61a3c9a18380aafb6e430e79bf596557',1,'rlequant.c']]],

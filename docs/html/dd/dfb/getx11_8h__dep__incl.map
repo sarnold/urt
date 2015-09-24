@@ -1,7 +1,7 @@
-<map id="getx11.h" name="getx11.h">
-<area shape="rect" id="node2" href="$db/d50/getx11_8c.html" title="getx11.c" alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" href="$df/d1e/in__cmap_8c.html" title="in_cmap.c" alt="" coords="104,80,189,107"/>
-<area shape="rect" id="node4" href="$d9/d22/map__scan_8c.html" title="map_scan.c" alt="" coords="214,80,311,107"/>
-<area shape="rect" id="node5" href="$dd/d17/x11__stuff_8c.html" title="x11_stuff.c" alt="" coords="335,80,425,107"/>
-<area shape="rect" id="node6" href="$db/d8a/XCopyImg_8c.html" title="XCopyImg.c" alt="" coords="449,80,546,107"/>
+<map id="get/getx11/getx11.h" name="get/getx11/getx11.h">
+<area shape="rect" id="node2" href="$db/d50/getx11_8c.html" title="get/getx11/getx11.c" alt="" coords="5,80,152,107"/>
+<area shape="rect" id="node3" href="$df/d1e/in__cmap_8c.html" title="get/getx11/in_cmap.c" alt="" coords="177,80,333,107"/>
+<area shape="rect" id="node4" href="$d9/d22/map__scan_8c.html" title="get/getx11/map_scan.c" alt="" coords="357,80,525,107"/>
+<area shape="rect" id="node5" href="$dd/d17/x11__stuff_8c.html" title="get/getx11/x11_stuff.c" alt="" coords="549,80,709,107"/>
+<area shape="rect" id="node6" href="$db/d8a/XCopyImg_8c.html" title="get/getx11/XCopyImg.c" alt="" coords="733,80,901,107"/>
 </map>

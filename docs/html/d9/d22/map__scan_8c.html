@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: map_scan.c File Reference</title>
+<title>Utah Raster Toolkit: get/getx11/map_scan.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -98,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for map_scan.c:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/dfd/map__scan_8c__incl.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../da/dfd/map__scan_8c__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div>
@@ -106,7 +107,7 @@ Include dependency graph for map_scan.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a162816a4782852578084bc8e45f779fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a162816a4782852578084bc8e45f779fc">DMAP</a>(v,  <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>,  <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;(<a class="el" href="../../d8/db3/to8_8c.html#a8b70ed13fe6e7f3b7da1ae185ab04702">divN</a>[v] + (<a class="el" href="../../d8/db3/to8_8c.html#a1dd716d891049db38f8b7aca7d6d5680">modN</a>[v]&gt;<a class="el" href="../../d8/db3/to8_8c.html#a5679eb5c923312a93f5f1b72bf36e036">dm16</a>[<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>][<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>] ? 1 : 0) )</td></tr>
+<tr class="memitem:a162816a4782852578084bc8e45f779fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a162816a4782852578084bc8e45f779fc">DMAP</a>(v,  <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>,  <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;(<a class="el" href="../../d8/db3/to8_8c.html#a8b70ed13fe6e7f3b7da1ae185ab04702">divN</a>[v] + (<a class="el" href="../../d8/db3/to8_8c.html#a1dd716d891049db38f8b7aca7d6d5680">modN</a>[v]&gt;<a class="el" href="../../d8/db3/to8_8c.html#a5679eb5c923312a93f5f1b72bf36e036">dm16</a>[<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>][<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>] ? 1 : 0) )</td></tr>
 <tr class="separator:a162816a4782852578084bc8e45f779fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0ebb3ca9f72895dced1a16a40033ec7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ac0ebb3ca9f72895dced1a16a40033ec7">NDMAP</a>(v)&#160;&#160;&#160;(<a class="el" href="../../d8/db3/to8_8c.html#a8b70ed13fe6e7f3b7da1ae185ab04702">divN</a>[v])</td></tr>
 <tr class="separator:ac0ebb3ca9f72895dced1a16a40033ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,7 +115,7 @@ Macros</h2></td></tr>
 <tr class="separator:aed8d249a09f84056cd3d51922e3b13de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c858b83b17dab3efb19098f9b91411"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ab2c858b83b17dab3efb19098f9b91411">NDMAP_SETUP</a>(<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)&#160;&#160;&#160;register <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> *<a class="el" href="../../d8/db3/to8_8c.html#a8b70ed13fe6e7f3b7da1ae185ab04702">divN</a> = <a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>-&gt;<a class="el" href="../../d8/db3/to8_8c.html#a8b70ed13fe6e7f3b7da1ae185ab04702">divN</a></td></tr>
 <tr class="separator:ab2c858b83b17dab3efb19098f9b91411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cfefd25a6b28201fa8de5c54dbe4adb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a2cfefd25a6b28201fa8de5c54dbe4adb">IN_CMAP_SETUP</a>(<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)&#160;&#160;&#160;register rle_pixel **<a class="el" href="../../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2">in_cmap</a> = <a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>-&gt;<a class="el" href="../../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2">in_cmap</a></td></tr>
+<tr class="memitem:a2cfefd25a6b28201fa8de5c54dbe4adb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a2cfefd25a6b28201fa8de5c54dbe4adb">IN_CMAP_SETUP</a>(<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)&#160;&#160;&#160;register <a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **<a class="el" href="../../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2">in_cmap</a> = <a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>-&gt;<a class="el" href="../../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2">in_cmap</a></td></tr>
 <tr class="separator:a2cfefd25a6b28201fa8de5c54dbe4adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7433cbd287ea508b62b9976c487b689"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ab7433cbd287ea508b62b9976c487b689">LEVELS_SETUP</a>(<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)</td></tr>
 <tr class="separator:ab7433cbd287ea508b62b9976c487b689"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,53 +172,53 @@ Functions</h2></td></tr>
 <tr class="separator:ac9efe1bf0d6a53aa1b7f102f3fb36fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0abb053ae97a1aae0ad40d5a5f1743f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#aa0abb053ae97a1aae0ad40d5a5f1743f">choose_scanline_converter</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)</td></tr>
 <tr class="separator:aa0abb053ae97a1aae0ad40d5a5f1743f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6164dbe41e96332490e97af347712894"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a6164dbe41e96332490e97af347712894">map_scanline_generic</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a6164dbe41e96332490e97af347712894"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a6164dbe41e96332490e97af347712894">map_scanline_generic</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a6164dbe41e96332490e97af347712894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068593f250f093f4c06b3b8178900d95"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a068593f250f093f4c06b3b8178900d95">MAG_scanline_generic</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a068593f250f093f4c06b3b8178900d95"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a068593f250f093f4c06b3b8178900d95">MAG_scanline_generic</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a068593f250f093f4c06b3b8178900d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42df4744be259f8db1cc5ccd0e15d847"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a42df4744be259f8db1cc5ccd0e15d847">map_1_dither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a42df4744be259f8db1cc5ccd0e15d847"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a42df4744be259f8db1cc5ccd0e15d847">map_1_dither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a42df4744be259f8db1cc5ccd0e15d847"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21eca977d875471029c306e3b5fb9701"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a21eca977d875471029c306e3b5fb9701">MAG_1_dither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a21eca977d875471029c306e3b5fb9701"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a21eca977d875471029c306e3b5fb9701">MAG_1_dither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a21eca977d875471029c306e3b5fb9701"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada01a0f4f34fb718ab0c77924192b490"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ada01a0f4f34fb718ab0c77924192b490">map_2or3_dither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:ada01a0f4f34fb718ab0c77924192b490"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ada01a0f4f34fb718ab0c77924192b490">map_2or3_dither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:ada01a0f4f34fb718ab0c77924192b490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae39d906419a054eb7de2f792de4515be"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ae39d906419a054eb7de2f792de4515be">MAG_2or3_dither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:ae39d906419a054eb7de2f792de4515be"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ae39d906419a054eb7de2f792de4515be">MAG_2or3_dither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:ae39d906419a054eb7de2f792de4515be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6cd2ea5756ae900f630bfe73586cd6f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#af6cd2ea5756ae900f630bfe73586cd6f">map_1_dither_notable_1</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:af6cd2ea5756ae900f630bfe73586cd6f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#af6cd2ea5756ae900f630bfe73586cd6f">map_1_dither_notable_1</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:af6cd2ea5756ae900f630bfe73586cd6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1442ff959297c746e57ef54ba78d4c9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ab1442ff959297c746e57ef54ba78d4c9">MAG_1_dither_notable_1</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:ab1442ff959297c746e57ef54ba78d4c9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ab1442ff959297c746e57ef54ba78d4c9">MAG_1_dither_notable_1</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:ab1442ff959297c746e57ef54ba78d4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb31c135b3b5fc4834535721ad061116"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#abb31c135b3b5fc4834535721ad061116">map_2or3_nodither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:abb31c135b3b5fc4834535721ad061116"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#abb31c135b3b5fc4834535721ad061116">map_2or3_nodither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:abb31c135b3b5fc4834535721ad061116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92e1df108489a69460075e66670b519f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a92e1df108489a69460075e66670b519f">MAG_2or3_nodither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a92e1df108489a69460075e66670b519f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a92e1df108489a69460075e66670b519f">MAG_2or3_nodither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a92e1df108489a69460075e66670b519f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcfa7fb9eaf3811ee14c254c459f4700"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#adcfa7fb9eaf3811ee14c254c459f4700">map_1_nodither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:adcfa7fb9eaf3811ee14c254c459f4700"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#adcfa7fb9eaf3811ee14c254c459f4700">map_1_nodither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:adcfa7fb9eaf3811ee14c254c459f4700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fbb2a94b6f338f3374d726241d5132e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a1fbb2a94b6f338f3374d726241d5132e">MAG_1_nodither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a1fbb2a94b6f338f3374d726241d5132e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a1fbb2a94b6f338f3374d726241d5132e">MAG_1_nodither_table_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a1fbb2a94b6f338f3374d726241d5132e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae34fb14716d010d52134fb8df63a97b6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ae34fb14716d010d52134fb8df63a97b6">map_1_mono_color_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:ae34fb14716d010d52134fb8df63a97b6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ae34fb14716d010d52134fb8df63a97b6">map_1_mono_color_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:ae34fb14716d010d52134fb8df63a97b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9cd6c13458cbb653f8df11202dcfd7b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ad9cd6c13458cbb653f8df11202dcfd7b">MAG_1_mono_color_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:ad9cd6c13458cbb653f8df11202dcfd7b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ad9cd6c13458cbb653f8df11202dcfd7b">MAG_1_mono_color_8</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:ad9cd6c13458cbb653f8df11202dcfd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a177f162ffb9e6630686f5387593636be"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a177f162ffb9e6630686f5387593636be">map_2or3_dither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a177f162ffb9e6630686f5387593636be"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a177f162ffb9e6630686f5387593636be">map_2or3_dither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a177f162ffb9e6630686f5387593636be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a559bf4742043739bb2e3d216fe5cda80"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a559bf4742043739bb2e3d216fe5cda80">MAG_2or3_dither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a559bf4742043739bb2e3d216fe5cda80"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a559bf4742043739bb2e3d216fe5cda80">MAG_2or3_dither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a559bf4742043739bb2e3d216fe5cda80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebceb092a240adf1406f5f723b3bc094"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#aebceb092a240adf1406f5f723b3bc094">map_2or3_nodither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:aebceb092a240adf1406f5f723b3bc094"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#aebceb092a240adf1406f5f723b3bc094">map_2or3_nodither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:aebceb092a240adf1406f5f723b3bc094"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c8eed260f2394597c771a3339fdd8db"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a4c8eed260f2394597c771a3339fdd8db">MAG_2or3_nodither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a4c8eed260f2394597c771a3339fdd8db"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a4c8eed260f2394597c771a3339fdd8db">MAG_2or3_nodither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a4c8eed260f2394597c771a3339fdd8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab277d4ed1e5fa2fb8ae396e8856b933b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ab277d4ed1e5fa2fb8ae396e8856b933b">map_1_nodither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:ab277d4ed1e5fa2fb8ae396e8856b933b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ab277d4ed1e5fa2fb8ae396e8856b933b">map_1_nodither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:ab277d4ed1e5fa2fb8ae396e8856b933b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae689cf2638f5957901a25419b4985f61"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ae689cf2638f5957901a25419b4985f61">MAG_1_nodither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:ae689cf2638f5957901a25419b4985f61"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#ae689cf2638f5957901a25419b4985f61">MAG_1_nodither_notable_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:ae689cf2638f5957901a25419b4985f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15f2416fe6bd1d9c5797ca6fac3b0b84"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a15f2416fe6bd1d9c5797ca6fac3b0b84">map_1_mono_color_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a15f2416fe6bd1d9c5797ca6fac3b0b84"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a15f2416fe6bd1d9c5797ca6fac3b0b84">map_1_mono_color_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d4e/wasatchrle_8c.html#ae2b0192caf31ed55e918cca9d22a787a">rgb</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> ncolors, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> given_width, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> stride, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a15f2416fe6bd1d9c5797ca6fac3b0b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b6b512192fff63f1af302e4222bc252"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a9b6b512192fff63f1af302e4222bc252">MAG_1_mono_color_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
+<tr class="memitem:a9b6b512192fff63f1af302e4222bc252"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a9b6b512192fff63f1af302e4222bc252">MAG_1_mono_color_32</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_x, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> rle_y, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> mag_size, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="el" href="../../dc/d11/getami_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>, XImage *<a class="el" href="../../dc/d7d/getmex_8c.html#ab313fc024b7d63949cc735d73b591f97">image</a>)</td></tr>
 <tr class="separator:a9b6b512192fff63f1af302e4222bc252"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a442ca5656370dab8cfb2509020e11122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a442ca5656370dab8cfb2509020e11122">map_rgb_to_bw</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, rle_pixel                           **<a class="el" href="../../d2/db1/getbob_8c.html#ab4091b6b0e30c400a27f43442b84c6d4">rows</a>, rle_pixel                   *bw_row)</td></tr>
+<tr class="memitem:a442ca5656370dab8cfb2509020e11122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a442ca5656370dab8cfb2509020e11122">map_rgb_to_bw</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>                           **<a class="el" href="../../d2/db1/getbob_8c.html#ab4091b6b0e30c400a27f43442b84c6d4">rows</a>, <a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>                   *bw_row)</td></tr>
 <tr class="separator:a442ca5656370dab8cfb2509020e11122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fc2b766e8578707ce19d418d39f4c53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a6fc2b766e8578707ce19d418d39f4c53">map_rgb_to_rgb</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, rle_pixel **<a class="el" href="../../d7/d73/unexp_8c.html#a5b92a4af4aa48f7c9b8f116b09b5d85b">in_rows</a>, rle_pixel **<a class="el" href="../../d7/d73/unexp_8c.html#abaa990e6f50e634d8342d08a51d9276a">out_rows</a>)</td></tr>
+<tr class="memitem:a6fc2b766e8578707ce19d418d39f4c53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a6fc2b766e8578707ce19d418d39f4c53">map_rgb_to_rgb</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>, <a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **<a class="el" href="../../d7/d73/unexp_8c.html#a5b92a4af4aa48f7c9b8f116b09b5d85b">in_rows</a>, <a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **<a class="el" href="../../d7/d73/unexp_8c.html#abaa990e6f50e634d8342d08a51d9276a">out_rows</a>)</td></tr>
 <tr class="separator:a6fc2b766e8578707ce19d418d39f4c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9770188c5325894fa78eb7fc9833846f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d22/map__scan_8c.html#a9770188c5325894fa78eb7fc9833846f">get_dither_arrays</a> (<a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a> *<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)</td></tr>
 <tr class="separator:a9770188c5325894fa78eb7fc9833846f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,12 +253,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(<a class="el" href="../../d8/db3/to8_8c.html#a8b70ed13fe6e7f3b7da1ae185ab04702">divN</a>[v] + (<a class="el" href="../../d8/db3/to8_8c.html#a1dd716d891049db38f8b7aca7d6d5680">modN</a>[v]&gt;<a class="el" href="../../d8/db3/to8_8c.html#a5679eb5c923312a93f5f1b72bf36e036">dm16</a>[<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>][<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>] ? 1 : 0) )</td>
+          <td></td><td>&#160;&#160;&#160;(<a class="el" href="../../d8/db3/to8_8c.html#a8b70ed13fe6e7f3b7da1ae185ab04702">divN</a>[v] + (<a class="el" href="../../d8/db3/to8_8c.html#a1dd716d891049db38f8b7aca7d6d5680">modN</a>[v]&gt;<a class="el" href="../../d8/db3/to8_8c.html#a5679eb5c923312a93f5f1b72bf36e036">dm16</a>[<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>][<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>] ? 1 : 0) )</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -301,7 +302,7 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a></td><td>)</td>
-          <td>&#160;&#160;&#160;register rle_pixel **<a class="el" href="../../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2">in_cmap</a> = <a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>-&gt;<a class="el" href="../../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2">in_cmap</a></td>
+          <td>&#160;&#160;&#160;register <a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **<a class="el" href="../../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2">in_cmap</a> = <a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>-&gt;<a class="el" href="../../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2">in_cmap</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -528,14 +529,6 @@ Variables</h2></td></tr>
 <div class="ttc" id="map__scan_8c_html_ab59bbce08ca6cae4447b917e06deba90"><div class="ttname"><a href="../../d9/d22/map__scan_8c.html#ab59bbce08ca6cae4447b917e06deba90">map_scanline_generic</a></div><div class="ttdeci">static void map_scanline_generic()</div></div>
 <div class="ttc" id="map__scan_8c_html_a0001ca313320b1d423c425568c604121"><div class="ttname"><a href="../../d9/d22/map__scan_8c.html#a0001ca313320b1d423c425568c604121">MAG_1_nodither_notable_32</a></div><div class="ttdeci">static void MAG_1_nodither_notable_32()</div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_aa0abb053ae97a1aae0ad40d5a5f1743f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a9770188c5325894fa78eb7fc9833846f"></a>
@@ -555,11 +548,11 @@ Here is the call graph for this function:</div>
 <p>Definition at line <a class="el" href="../../d9/d22/map__scan_8c_source.html#l02186">2186</a> of file <a class="el" href="../../d9/d22/map__scan_8c_source.html">map_scan.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;{</div>
 <div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;    <span class="keywordflow">if</span> (!img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aad6315d662e7f0e2a780759b090951cd">divN</a>)</div>
-<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;    img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aad6315d662e7f0e2a780759b090951cd">divN</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a> ( 256 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
+<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;    img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aad6315d662e7f0e2a780759b090951cd">divN</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a> ( 256 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
 <div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;    <span class="keywordflow">if</span> (!img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#a12c42f19af1f41aab9529c62c928b411">modN</a>)</div>
-<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;    img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#a12c42f19af1f41aab9529c62c928b411">modN</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a> ( 256 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
+<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;    img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#a12c42f19af1f41aab9529c62c928b411">modN</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a> ( 256 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
 <div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;    <span class="keywordflow">if</span> (!img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aba0bbf99c3da7474678395d1bae1621a">dm16</a>)</div>
-<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;    img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aba0bbf99c3da7474678395d1bae1621a">dm16</a> = (<a class="code" href="../../da/d3e/getx11_8h.html#a7f669711dc69bd474e825e8871a8813c">array16</a> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a> ( 16 * 16 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
+<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;    img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aba0bbf99c3da7474678395d1bae1621a">dm16</a> = (<a class="code" href="../../da/d3e/getx11_8h.html#a7f669711dc69bd474e825e8871a8813c">array16</a> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a> ( 16 * 16 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
 <div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;</div>
 <div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;    <span class="keywordflow">if</span> (!img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aad6315d662e7f0e2a780759b090951cd">divN</a> || !img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#a12c42f19af1f41aab9529c62c928b411">modN</a> || !img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aba0bbf99c3da7474678395d1bae1621a">dm16</a> )</div>
 <div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;    {</div>
@@ -568,19 +561,11 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;    }</div>
 <div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;}</div>
 <div class="ttc" id="getx11_8h_html_a7f669711dc69bd474e825e8871a8813c"><div class="ttname"><a href="../../da/d3e/getx11_8h.html#a7f669711dc69bd474e825e8871a8813c">array16</a></div><div class="ttdeci">int array16[16]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00079">getx11.h:79</a></div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
 <div class="ttc" id="struct__image__info__struct_html_a12c42f19af1f41aab9529c62c928b411"><div class="ttname"><a href="../../d1/d08/struct__image__info__struct.html#a12c42f19af1f41aab9529c62c928b411">_image_info_struct::modN</a></div><div class="ttdeci">int * modN</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00175">getx11.h:175</a></div></div>
 <div class="ttc" id="struct__image__info__struct_html_aad6315d662e7f0e2a780759b090951cd"><div class="ttname"><a href="../../d1/d08/struct__image__info__struct.html#aad6315d662e7f0e2a780759b090951cd">_image_info_struct::divN</a></div><div class="ttdeci">int * divN</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00176">getx11.h:176</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
 <div class="ttc" id="struct__image__info__struct_html_aba0bbf99c3da7474678395d1bae1621a"><div class="ttname"><a href="../../d1/d08/struct__image__info__struct.html#aba0bbf99c3da7474678395d1bae1621a">_image_info_struct::dm16</a></div><div class="ttdeci">array16 * dm16</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00177">getx11.h:177</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a9770188c5325894fa78eb7fc9833846f_cgraph.svg" width="256" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a210148d5e8b034ab00f59e88e3ccd576"></a>
@@ -603,14 +588,6 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a210148d5e8b034ab00f59e88e3ccd576_icgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -901,14 +878,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_aa687e340b30bde6a2e6c5c63fdd0db56_icgraph.svg" width="423" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a21eca977d875471029c306e3b5fb9701"></a>
@@ -1065,14 +1034,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_ac9efe1bf0d6a53aa1b7f102f3fb36fdf_icgraph.svg" width="431" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -1260,14 +1221,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_ae1a2aa990f52a24eedf5be79e7aebd99_icgraph.svg" width="423" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="ad9cd6c13458cbb653f8df11202dcfd7b"></a>
@@ -1427,14 +1380,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a0001ca313320b1d423c425568c604121_icgraph.svg" width="463" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -1631,14 +1576,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_aa8d1d4e687ac71f68bc984c52e4f50ad_icgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a1fbb2a94b6f338f3374d726241d5132e"></a>
@@ -1802,14 +1739,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a182712968bbbf7ec96dda2848094191e_icgraph.svg" width="468" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -2002,14 +1931,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a88791ce123f89123c40d5a8ea8146fd8_icgraph.svg" width="444" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="ae39d906419a054eb7de2f792de4515be"></a>
@@ -2177,14 +2098,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a6a0ba71ddb39425c5aaccd0647080cd8_icgraph.svg" width="484" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -2382,14 +2295,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a6018b8a0c3209c69f5520806889ba5af_icgraph.svg" width="460" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a92e1df108489a69460075e66670b519f"></a>
@@ -2566,14 +2471,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a890f45581eab45001664585eb680236c_icgraph.svg" width="424" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -2826,14 +2723,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a30b7907c8c64da3c0ab2f2bd10581532_icgraph.svg" width="434" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="af6cd2ea5756ae900f630bfe73586cd6f"></a>
@@ -3025,14 +2914,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_ac5a97f5360e519af840e20e9d3aa3306_icgraph.svg" width="418" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a42df4744be259f8db1cc5ccd0e15d847"></a>
@@ -3153,14 +3034,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_af4ba022ac47e2440dcd75b8375296b09_icgraph.svg" width="426" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -3297,14 +3170,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a5213592efd5a5a9c4a2a4f6f0463131c_icgraph.svg" width="418" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="ae34fb14716d010d52134fb8df63a97b6"></a>
@@ -3416,14 +3281,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a401d410e8ebaae642cc47ff1c96a4595_icgraph.svg" width="458" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -3568,14 +3425,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_af0cd347b3b9ca759ff9bcb29e68a1ca1_icgraph.svg" width="434" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="adcfa7fb9eaf3811ee14c254c459f4700"></a>
@@ -3690,14 +3539,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a3362a9113360dc633974c2abf996a78b_icgraph.svg" width="463" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -3856,14 +3697,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_a42e3e39033ef9564f2f20eb8d5290f45_icgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="ada01a0f4f34fb718ab0c77924192b490"></a>
@@ -3994,14 +3827,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_ab6c095d5ed9236f04859b30418aa73c1_icgraph.svg" width="479" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -4155,14 +3980,6 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_ac1b2cdcd345c814962c507caee836b61_icgraph.svg" width="455" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="abb31c135b3b5fc4834535721ad061116"></a>
@@ -4280,13 +4097,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rle_pixel 	      **&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> 	      **&#160;</td>
           <td class="paramname"><em>rows</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rle_pixel     *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>     *&#160;</td>
           <td class="paramname"><em>bw_row</em>&#160;</td>
         </tr>
         <tr>
@@ -4299,11 +4116,11 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../d9/d22/map__scan_8c_source.html#l02060">2060</a> of file <a class="el" href="../../d9/d22/map__scan_8c_source.html">map_scan.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;{</div>
-<div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;    <span class="keyword">register</span> rle_pixel *<a class="code" href="../../d8/d81/rastorle_8c.html#a7e8431919252d0bbc587fa5a4662688d">red</a>;</div>
-<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;    <span class="keyword">register</span> rle_pixel *<a class="code" href="../../d8/d81/rastorle_8c.html#af92262e3b436a331266e8b98f7b6f396">green</a>;</div>
-<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;    <span class="keyword">register</span> rle_pixel *<a class="code" href="../../d8/d81/rastorle_8c.html#a0634593f518eb3f7f2997dda37402959">blue</a>;</div>
+<div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *<a class="code" href="../../d8/d81/rastorle_8c.html#a7e8431919252d0bbc587fa5a4662688d">red</a>;</div>
+<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *<a class="code" href="../../d8/d81/rastorle_8c.html#af92262e3b436a331266e8b98f7b6f396">green</a>;</div>
+<div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *<a class="code" href="../../d8/d81/rastorle_8c.html#a0634593f518eb3f7f2997dda37402959">blue</a>;</div>
 <div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160;</div>
-<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;    rle_pixel   **<a class="code" href="../../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688">map</a>;</div>
+<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>   **<a class="code" href="../../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688">map</a>;</div>
 <div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;    <span class="keywordtype">int</span>     ncolors;</div>
 <div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160;    <span class="keywordtype">int</span>     rowlen;</div>
 <div class="line"><a name="l02073"></a><span class="lineno"> 2073</span>&#160;</div>
@@ -4324,7 +4141,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l02088"></a><span class="lineno"> 2088</span>&#160;    <span class="keywordflow">if</span> ( !map || img-&gt;<a class="code" href="../../d1/d08/struct__image__info__struct.html#aef58d7d11770606a0539966cdea931af">mono_color</a> )</div>
 <div class="line"><a name="l02089"></a><span class="lineno"> 2089</span>&#160;        <a class="code" href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a>( rowlen, *bw_row++ = *red++)</div>
 <div class="line"><a name="l02090"></a><span class="lineno"> 2090</span>&#160;    else {</div>
-<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;        <span class="keyword">register</span> rle_pixel *<a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a> = map[0];</div>
+<div class="line"><a name="l02091"></a><span class="lineno"> 2091</span>&#160;        <span class="keyword">register</span> <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *<a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a> = map[0];</div>
 <div class="line"><a name="l02092"></a><span class="lineno"> 2092</span>&#160;        <a class="code" href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a>( rowlen, *bw_row++ = cmap[*red++])</div>
 <div class="line"><a name="l02093"></a><span class="lineno"> 2093</span>&#160;    }</div>
 <div class="line"><a name="l02094"></a><span class="lineno"> 2094</span>&#160;    <span class="keywordflow">break</span>;</div>
@@ -4335,7 +4152,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l02099"></a><span class="lineno"> 2099</span>&#160;    <span class="keywordflow">if</span> ( !map )</div>
 <div class="line"><a name="l02100"></a><span class="lineno"> 2100</span>&#160;        <a class="code" href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a>( rowlen, *bw_row++ = ( 50 * *red++ + 50 * *green++ ) / 100)</div>
 <div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;    else {</div>
-<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;        <span class="keyword">register</span> rle_pixel **<a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a> = <a class="code" href="../../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688">map</a>;</div>
+<div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;        <span class="keyword">register</span> <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **<a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a> = <a class="code" href="../../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688">map</a>;</div>
 <div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;        <a class="code" href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a>( rowlen, *bw_row++ = (50 * cmap[0][*red++] +</div>
 <div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;                    50 * cmap[1][*green++]) /100)</div>
 <div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;    }</div>
@@ -4350,7 +4167,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;        <a class="code" href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a>( rowlen, *bw_row++ = ( 35 * *red++ + 55 * *green++ +</div>
 <div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;                    10 * *blue++ ) / 100)</div>
 <div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;    else {</div>
-<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;        <span class="keyword">register</span> rle_pixel **cmap = <a class="code" href="../../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688">map</a>;</div>
+<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;        <span class="keyword">register</span> <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **cmap = <a class="code" href="../../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688">map</a>;</div>
 <div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;        <a class="code" href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a>( rowlen, *bw_row++ = ( 35 * cmap[0][*red++] +</div>
 <div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;                    55 * cmap[1][*green++] +</div>
 <div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;                    10 * cmap[2][*blue++] ) / 100)</div>
@@ -4366,6 +4183,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="struct__image__info__struct_html_a79a939e79cdf9a42ed4e0d5e2b967f17"><div class="ttname"><a href="../../d1/d08/struct__image__info__struct.html#a79a939e79cdf9a42ed4e0d5e2b967f17">_image_info_struct::img_channels</a></div><div class="ttdeci">int img_channels</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00141">getx11.h:141</a></div></div>
 <div class="ttc" id="getx11_8h_html_aba0710cfd66c81c78fee5039faed386a"><div class="ttname"><a href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a></div><div class="ttdeci">#define duff8(counter, block)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00196">getx11.h:196</a></div></div>
 <div class="ttc" id="rletopaint_8c_html_a5cd35c06ebf1bb5b3a82f42478a8a9a7"><div class="ttname"><a href="../../dc/d72/rletopaint_8c.html#a5cd35c06ebf1bb5b3a82f42478a8a9a7">rows</a></div><div class="ttdeci">rle_pixel ** rows</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d72/rletopaint_8c_source.html#l00057">rletopaint.c:57</a></div></div>
+<div class="ttc" id="rle_8h_html_a5c3e1eb7fc1fd5a17f96d77df371e427"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a></div><div class="ttdeci">unsigned char rle_pixel</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00056">rle.h:56</a></div></div>
 <div class="ttc" id="struct__image__info__struct_html_a538323b7203b36e1ec8b199e20077cc2"><div class="ttname"><a href="../../d1/d08/struct__image__info__struct.html#a538323b7203b36e1ec8b199e20077cc2">_image_info_struct::in_cmap</a></div><div class="ttdeci">rle_pixel ** in_cmap</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00171">getx11.h:171</a></div></div>
 <div class="ttc" id="rletorla_8c_html_ad151d9cd1b26c22456148aa547fbbd85"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ad151d9cd1b26c22456148aa547fbbd85">progname</a></div><div class="ttdeci">char progname[30]</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00079">rletorla.c:79</a></div></div>
 <div class="ttc" id="get4d_8c_html_a4bf2bb259263c1d8416d80591d0ac671"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a></div><div class="ttdeci">rle_pixel ** cmap</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00047">get4d.c:47</a></div></div>
@@ -4386,13 +4204,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rle_pixel 	**&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> 	**&#160;</td>
           <td class="paramname"><em>in_rows</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rle_pixel **&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **&#160;</td>
           <td class="paramname"><em>out_rows</em>&#160;</td>
         </tr>
         <tr>
@@ -4405,9 +4223,9 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../d9/d22/map__scan_8c_source.html#l02139">2139</a> of file <a class="el" href="../../d9/d22/map__scan_8c_source.html">map_scan.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;{</div>
-<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;    <span class="keyword">register</span> rle_pixel *in, *out, *<a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a>;</div>
+<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *in, *out, *<a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a>;</div>
 <div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;    <span class="keyword">register</span> <span class="keywordtype">int</span> w;</div>
-<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;    rle_pixel **<a class="code" href="../../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688">map</a>;</div>
+<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **<a class="code" href="../../da/d92/getap_8c.html#a89a4ce76a78bc2852c5cbcfb3dad7688">map</a>;</div>
 <div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;    <span class="keywordtype">int</span> ncolors;</div>
 <div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;    <span class="keywordtype">int</span> rowlen;</div>
 <div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;</div>
@@ -4452,6 +4270,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="struct__image__info__struct_html_a79a939e79cdf9a42ed4e0d5e2b967f17"><div class="ttname"><a href="../../d1/d08/struct__image__info__struct.html#a79a939e79cdf9a42ed4e0d5e2b967f17">_image_info_struct::img_channels</a></div><div class="ttdeci">int img_channels</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00141">getx11.h:141</a></div></div>
 <div class="ttc" id="getx11_8h_html_aba0710cfd66c81c78fee5039faed386a"><div class="ttname"><a href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a></div><div class="ttdeci">#define duff8(counter, block)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00196">getx11.h:196</a></div></div>
 <div class="ttc" id="unexp_8c_html_abaa990e6f50e634d8342d08a51d9276a"><div class="ttname"><a href="../../d7/d73/unexp_8c.html#abaa990e6f50e634d8342d08a51d9276a">out_rows</a></div><div class="ttdeci">rle_pixel ** out_rows</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d73/unexp_8c_source.html#l00021">unexp.c:21</a></div></div>
+<div class="ttc" id="rle_8h_html_a5c3e1eb7fc1fd5a17f96d77df371e427"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a></div><div class="ttdeci">unsigned char rle_pixel</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00056">rle.h:56</a></div></div>
 <div class="ttc" id="struct__image__info__struct_html_a538323b7203b36e1ec8b199e20077cc2"><div class="ttname"><a href="../../d1/d08/struct__image__info__struct.html#a538323b7203b36e1ec8b199e20077cc2">_image_info_struct::in_cmap</a></div><div class="ttdeci">rle_pixel ** in_cmap</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d3e/getx11_8h_source.html#l00171">getx11.h:171</a></div></div>
 <div class="ttc" id="rletorla_8c_html_ad151d9cd1b26c22456148aa547fbbd85"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ad151d9cd1b26c22456148aa547fbbd85">progname</a></div><div class="ttdeci">char progname[30]</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00079">rletorla.c:79</a></div></div>
 <div class="ttc" id="get4d_8c_html_a4bf2bb259263c1d8416d80591d0ac671"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a></div><div class="ttdeci">rle_pixel ** cmap</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00047">get4d.c:47</a></div></div>
@@ -4478,14 +4297,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d22/map__scan_8c_ab59bbce08ca6cae4447b917e06deba90_icgraph.svg" width="419" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -4773,7 +4584,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:06 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

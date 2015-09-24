@@ -1,7 +1,0 @@
-<map id="init_mono_rw" name="init_mono_rw">
-<area shape="rect" id="node2" href="$d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d" title="malloc" alt="" coords="196,5,259,32"/>
-<area shape="rect" id="node3" href="$d7/dd0/fn__decls_8h.html#a69c92608417ec9462b3a40fa311a159c" title="get_dither_arrays" alt="" coords="160,56,295,83"/>
-<area shape="rect" id="node4" href="$d9/dbb/dither_8c.html#afad378428af71918afb13247f60d0594" title="bwdithermap" alt="" coords="176,107,279,133"/>
-<area shape="rect" id="node6" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="204,157,251,184"/>
-<area shape="rect" id="node5" href="$d9/dbb/dither_8c.html#a7ff23fcd77b62deab9304ffd3d684f47" title="make_square" alt="" coords="343,107,449,133"/>
-</map>

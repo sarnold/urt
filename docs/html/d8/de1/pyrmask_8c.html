@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: pyrmask.c File Reference</title>
+<title>Utah Raster Toolkit: tools/pyrmask.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -94,12 +95,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
-<code>#include &quot;pyramid.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d7d/pyramid_8h_source.html">pyramid.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for pyrmask.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d6d/pyrmask_8c__incl.svg" width="255" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d6d/pyrmask_8c__incl.svg" width="238" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -121,9 +122,9 @@ Functions</h2></td></tr>
 <tr class="separator:ad6bb4a86469fa9612d5d81f831161026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade521a0600ded19f1720b6f6df59b480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de1/pyrmask_8c.html#ade521a0600ded19f1720b6f6df59b480">main</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> argc, argv)</td></tr>
 <tr class="separator:ade521a0600ded19f1720b6f6df59b480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c9ddf952d1dae99b58334bc496c15c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de1/pyrmask_8c.html#a4c9ddf952d1dae99b58334bc496c15c5">copy_half_bands</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> level, pyramid *leftbandpyr, pyramid *rightbandpyr, pyramid *splitbandpyr)</td></tr>
+<tr class="memitem:a4c9ddf952d1dae99b58334bc496c15c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de1/pyrmask_8c.html#a4c9ddf952d1dae99b58334bc496c15c5">copy_half_bands</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> level, <a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *leftbandpyr, <a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *rightbandpyr, <a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *splitbandpyr)</td></tr>
 <tr class="separator:a4c9ddf952d1dae99b58334bc496c15c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a032b059932fb3226b3509a9de5843285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de1/pyrmask_8c.html#a032b059932fb3226b3509a9de5843285">copy_mask_bands</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> level, pyramid *leftbandpyr, pyramid *rightbandpyr, pyramid *splitbandpyr, pyramid *maskgausspyr)</td></tr>
+<tr class="memitem:a032b059932fb3226b3509a9de5843285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de1/pyrmask_8c.html#a032b059932fb3226b3509a9de5843285">copy_mask_bands</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> level, <a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *leftbandpyr, <a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *rightbandpyr, <a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *splitbandpyr, <a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *maskgausspyr)</td></tr>
 <tr class="separator:a032b059932fb3226b3509a9de5843285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -144,14 +145,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/de1/pyrmask_8c_abf69cef4a5fdee01efc1820cda6f876d_icgraph.svg" width="220" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -183,19 +176,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pyramid *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *&#160;</td>
           <td class="paramname"><em>leftbandpyr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pyramid *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *&#160;</td>
           <td class="paramname"><em>rightbandpyr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pyramid *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *&#160;</td>
           <td class="paramname"><em>splitbandpyr</em>&#160;</td>
         </tr>
         <tr>
@@ -209,30 +202,30 @@ Here is the caller graph for this function:</div>
 <p>Definition at line <a class="el" href="../../d8/de1/pyrmask_8c_source.html#l00189">189</a> of file <a class="el" href="../../d8/de1/pyrmask_8c_source.html">pyrmask.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a>, <a class="code" href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a>, <a class="code" href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="code" href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, chan, xlinewidth, <a class="code" href="../../dd/ddd/fant_8c.html#a19f74309ef48bc5d165c6afc335ed04f">nchan</a>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    rle_pixel *leftbase, *leftrastptr, *leftpxl, *leftsign;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    rle_pixel *rightbase, *rightrastptr, *rightpxl, *rightsign;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    rle_pixel *outbase, *outrastptr, *outpxl, *outsign;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *leftbase, *leftrastptr, *leftpxl, *leftsign;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *rightbase, *rightrastptr, *rightpxl, *rightsign;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *outbase, *outrastptr, *outpxl, *outsign;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">float</span> tval;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">int</span> rightval, leftval, outval;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    leftbase = leftbandpyr-&gt;corners[level];</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    rightbase = rightbandpyr-&gt;corners[level];</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    outbase = splitbandpyr-&gt;corners[level];</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    xsize = leftbandpyr-&gt;xlen[level];</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    ysize = leftbandpyr-&gt;ylen[level];</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    nchan = leftbandpyr-&gt;nchan - 1;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    splitbandpyr-&gt;xlen[level] = <a class="code" href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    splitbandpyr-&gt;ylen[level] = <a class="code" href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a>;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    xlinewidth = xsize + MASKSIZE - 1;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    leftbase = leftbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a>[level];</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    rightbase = rightbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a>[level];</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    outbase = splitbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a>[level];</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    xsize = leftbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[level];</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    ysize = leftbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[level];</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    nchan = leftbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a> - 1;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    splitbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[level] = <a class="code" href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    splitbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[level] = <a class="code" href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    xlinewidth = xsize + <a class="code" href="../../dd/d7d/pyramid_8h.html#ad078a0d585236ca75779ac5130475445">MASKSIZE</a> - 1;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    fprintf(stderr,<span class="stringliteral">&quot;Copying half of level %d, size %d\n&quot;</span>,level,xsize);</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">for</span> (y = 0; y &lt; <a class="code" href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a>; y++)</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    leftrastptr = &amp;(leftbase[MASKBELOW + (y+MASKBELOW) *</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    leftrastptr = &amp;(leftbase[<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a> + (y+<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a>) *</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                xlinewidth * (nchan+1)]);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    rightrastptr = &amp;(rightbase[MASKBELOW + (y+MASKBELOW) *</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    rightrastptr = &amp;(rightbase[<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a> + (y+<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a>) *</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                xlinewidth * (nchan+1)]);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    outrastptr = &amp;(outbase[MASKBELOW + (y+MASKBELOW) *</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    outrastptr = &amp;(outbase[<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a> + (y+<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a>) *</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                xlinewidth * (nchan+1)]);</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    outsign = &amp;(outrastptr[nchan * xlinewidth]);</div>
@@ -276,11 +269,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                  (1.0 - tval) * (<span class="keywordtype">float</span>) leftval);</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <a class="code" href="../../dc/d11/getami_8c.html#a4ffc2c11d17e77ece1d9561ae4f68318">if</a> (outval &lt; 0)</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            {</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            *outpxl = (rle_pixel) (-outval);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            *outpxl = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>) (-outval);</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            *outsign |= (1 &lt;&lt; chan);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            }</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            *outpxl = (rle_pixel) (outval);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            *outpxl = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>) (outval);</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        leftpxl++;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        rightpxl++;</div>
@@ -292,12 +285,19 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="ttc" id="structpyramid_html_abda0c579a6dfe178232ef6c15b44759d"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">pyramid::ylen</a></div><div class="ttdeci">int * ylen</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00024">pyramid.h:24</a></div></div>
+<div class="ttc" id="pyramid_8h_html_ad078a0d585236ca75779ac5130475445"><div class="ttname"><a href="../../dd/d7d/pyramid_8h.html#ad078a0d585236ca75779ac5130475445">MASKSIZE</a></div><div class="ttdeci">#define MASKSIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00015">pyramid.h:15</a></div></div>
+<div class="ttc" id="pyramid_8h_html_a53a6c6296186c04fb786e122a1f9ca63"><div class="ttname"><a href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a></div><div class="ttdeci">#define MASKBELOW</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00016">pyramid.h:16</a></div></div>
 <div class="ttc" id="read98721_8c_html_ae493181272fa9ab0f26074f3d55fa27a"><div class="ttname"><a href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a></div><div class="ttdeci">int xsize</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd6/read98721_8c_source.html#l00058">read98721.c:58</a></div></div>
 <div class="ttc" id="getami_8c_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a></div><div class="ttdeci">static int y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
+<div class="ttc" id="structpyramid_html_abbb6e0eb19259821adcd262f70fe0b83"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">pyramid::nchan</a></div><div class="ttdeci">int nchan</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00026">pyramid.h:26</a></div></div>
+<div class="ttc" id="structpyramid_html_a142685ace26d0a2ead5ebcc28d5ff92f"><div class="ttname"><a href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">pyramid::xlen</a></div><div class="ttdeci">int * xlen</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00024">pyramid.h:24</a></div></div>
+<div class="ttc" id="structpyramid_html_abb290d1b33d6ec8b3276d4c1ab848682"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">pyramid::corners</a></div><div class="ttdeci">rle_pixel ** corners</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00022">pyramid.h:22</a></div></div>
 <div class="ttc" id="getami_8c_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">static int x</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
 <div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
 <div class="ttc" id="read98721_8c_html_ac70272affec5182515dd40abe4c39f80"><div class="ttname"><a href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a></div><div class="ttdeci">int ysize</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd6/read98721_8c_source.html#l00059">read98721.c:59</a></div></div>
 <div class="ttc" id="getami_8c_html_a4ffc2c11d17e77ece1d9561ae4f68318"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a4ffc2c11d17e77ece1d9561ae4f68318">if</a></div><div class="ttdeci">if(tfd)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00852">getami.c:852</a></div></div>
+<div class="ttc" id="rle_8h_html_a5c3e1eb7fc1fd5a17f96d77df371e427"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a></div><div class="ttdeci">unsigned char rle_pixel</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00056">rle.h:56</a></div></div>
 <div class="ttc" id="fant_8c_html_a19f74309ef48bc5d165c6afc335ed04f"><div class="ttname"><a href="../../dd/ddd/fant_8c.html#a19f74309ef48bc5d165c6afc335ed04f">nchan</a></div><div class="ttdeci">int nchan</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/ddd/fant_8c_source.html#l00104">fant.c:104</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -315,14 +315,6 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/de1/pyrmask_8c_a5f97f19047458d0db10e22b301b5a691_icgraph.svg" width="250" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a032b059932fb3226b3509a9de5843285"></a>
@@ -338,25 +330,25 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pyramid *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *&#160;</td>
           <td class="paramname"><em>leftbandpyr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pyramid *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *&#160;</td>
           <td class="paramname"><em>rightbandpyr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pyramid *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *&#160;</td>
           <td class="paramname"><em>splitbandpyr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pyramid *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/df1/structpyramid.html">pyramid</a> *&#160;</td>
           <td class="paramname"><em>maskgausspyr</em>&#160;</td>
         </tr>
         <tr>
@@ -370,34 +362,34 @@ Here is the caller graph for this function:</div>
 <p>Definition at line <a class="el" href="../../d8/de1/pyrmask_8c_source.html#l00279">279</a> of file <a class="el" href="../../d8/de1/pyrmask_8c_source.html">pyrmask.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;{</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a>, <a class="code" href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a>, <a class="code" href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="code" href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, chan, xlinewidth, <a class="code" href="../../dd/ddd/fant_8c.html#a19f74309ef48bc5d165c6afc335ed04f">nchan</a>;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    rle_pixel *leftbase, *leftrastptr, *leftpxl, *leftsign;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    rle_pixel *rightbase, *rightrastptr, *rightpxl, *rightsign;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    rle_pixel *outbase, *outrastptr, *outpxl, *outsign;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    rle_pixel *maskbase, *maskrastptr, *maskpxl;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *leftbase, *leftrastptr, *leftpxl, *leftsign;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *rightbase, *rightrastptr, *rightpxl, *rightsign;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *outbase, *outrastptr, *outpxl, *outsign;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *maskbase, *maskrastptr, *maskpxl;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">float</span> tval;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordtype">int</span> rightval, leftval, outval;</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    leftbase = leftbandpyr-&gt;corners[level];</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    rightbase = rightbandpyr-&gt;corners[level];</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    outbase = splitbandpyr-&gt;corners[level];</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    maskbase = maskgausspyr-&gt;corners[level];</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    xsize = leftbandpyr-&gt;xlen[level];</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    ysize = leftbandpyr-&gt;ylen[level];</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    nchan = leftbandpyr-&gt;nchan - 1;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    splitbandpyr-&gt;xlen[level] = <a class="code" href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a>;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    splitbandpyr-&gt;ylen[level] = <a class="code" href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    xlinewidth = xsize + MASKSIZE - 1;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    leftbase = leftbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a>[level];</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    rightbase = rightbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a>[level];</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    outbase = splitbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a>[level];</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    maskbase = maskgausspyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a>[level];</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    xsize = leftbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[level];</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    ysize = leftbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[level];</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    nchan = leftbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a> - 1;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    splitbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[level] = <a class="code" href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    splitbandpyr-&gt;<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[level] = <a class="code" href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    xlinewidth = xsize + <a class="code" href="../../dd/d7d/pyramid_8h.html#ad078a0d585236ca75779ac5130475445">MASKSIZE</a> - 1;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment">/*    fprintf(stderr,&quot;Masking level %d, size %d\n&quot;,level,xsize); */</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">for</span> (y = 0; y &lt; <a class="code" href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a>; y++)</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    leftrastptr = &amp;(leftbase[MASKBELOW + (y+MASKBELOW) *</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    leftrastptr = &amp;(leftbase[<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a> + (y+<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a>) *</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                xlinewidth * (nchan+1)]);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    rightrastptr = &amp;(rightbase[MASKBELOW + (y+MASKBELOW) *</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    rightrastptr = &amp;(rightbase[<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a> + (y+<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a>) *</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                xlinewidth * (nchan+1)]);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    outrastptr = &amp;(outbase[MASKBELOW + (y+MASKBELOW) *</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    outrastptr = &amp;(outbase[<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a> + (y+<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a>) *</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                xlinewidth * (nchan+1)]);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    maskrastptr = &amp;(maskbase[MASKBELOW + (y+MASKBELOW) *</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    maskrastptr = &amp;(maskbase[<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a> + (y+<a class="code" href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a>) *</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                xlinewidth * nchan]);</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    outsign = &amp;(outrastptr[nchan * xlinewidth]);</div>
@@ -441,11 +433,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                  (1.0 - tval) * (<span class="keywordtype">float</span>) rightval);</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <a class="code" href="../../dc/d11/getami_8c.html#a4ffc2c11d17e77ece1d9561ae4f68318">if</a> (outval &lt; 0)</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            {</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            *outpxl = (rle_pixel) (-outval);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            *outpxl = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>) (-outval);</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            *outsign |= (1 &lt;&lt; chan);</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            }</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            *outpxl = (rle_pixel) (outval);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            *outpxl = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>) (outval);</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        }</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        leftpxl++;</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        rightpxl++;</div>
@@ -458,12 +450,19 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
+<div class="ttc" id="structpyramid_html_abda0c579a6dfe178232ef6c15b44759d"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">pyramid::ylen</a></div><div class="ttdeci">int * ylen</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00024">pyramid.h:24</a></div></div>
+<div class="ttc" id="pyramid_8h_html_ad078a0d585236ca75779ac5130475445"><div class="ttname"><a href="../../dd/d7d/pyramid_8h.html#ad078a0d585236ca75779ac5130475445">MASKSIZE</a></div><div class="ttdeci">#define MASKSIZE</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00015">pyramid.h:15</a></div></div>
+<div class="ttc" id="pyramid_8h_html_a53a6c6296186c04fb786e122a1f9ca63"><div class="ttname"><a href="../../dd/d7d/pyramid_8h.html#a53a6c6296186c04fb786e122a1f9ca63">MASKBELOW</a></div><div class="ttdeci">#define MASKBELOW</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00016">pyramid.h:16</a></div></div>
 <div class="ttc" id="read98721_8c_html_ae493181272fa9ab0f26074f3d55fa27a"><div class="ttname"><a href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a></div><div class="ttdeci">int xsize</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd6/read98721_8c_source.html#l00058">read98721.c:58</a></div></div>
 <div class="ttc" id="getami_8c_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a></div><div class="ttdeci">static int y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
+<div class="ttc" id="structpyramid_html_abbb6e0eb19259821adcd262f70fe0b83"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">pyramid::nchan</a></div><div class="ttdeci">int nchan</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00026">pyramid.h:26</a></div></div>
+<div class="ttc" id="structpyramid_html_a142685ace26d0a2ead5ebcc28d5ff92f"><div class="ttname"><a href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">pyramid::xlen</a></div><div class="ttdeci">int * xlen</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00024">pyramid.h:24</a></div></div>
+<div class="ttc" id="structpyramid_html_abb290d1b33d6ec8b3276d4c1ab848682"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">pyramid::corners</a></div><div class="ttdeci">rle_pixel ** corners</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00022">pyramid.h:22</a></div></div>
 <div class="ttc" id="getami_8c_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">static int x</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
 <div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
 <div class="ttc" id="read98721_8c_html_ac70272affec5182515dd40abe4c39f80"><div class="ttname"><a href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a></div><div class="ttdeci">int ysize</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd6/read98721_8c_source.html#l00059">read98721.c:59</a></div></div>
 <div class="ttc" id="getami_8c_html_a4ffc2c11d17e77ece1d9561ae4f68318"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a4ffc2c11d17e77ece1d9561ae4f68318">if</a></div><div class="ttdeci">if(tfd)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00852">getami.c:852</a></div></div>
+<div class="ttc" id="rle_8h_html_a5c3e1eb7fc1fd5a17f96d77df371e427"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a></div><div class="ttdeci">unsigned char rle_pixel</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00056">rle.h:56</a></div></div>
 <div class="ttc" id="fant_8c_html_a19f74309ef48bc5d165c6afc335ed04f"><div class="ttname"><a href="../../dd/ddd/fant_8c.html#a19f74309ef48bc5d165c6afc335ed04f">nchan</a></div><div class="ttdeci">int nchan</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/ddd/fant_8c_source.html#l00104">fant.c:104</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -480,14 +479,6 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/de1/pyrmask_8c_a5458775d73ccfaef0545791feec845fa_icgraph.svg" width="226" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -528,42 +519,42 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">float</span> *mask_mult_table;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">float</span> *<a class="code" href="../../d5/d6d/mcut_8c.html#a21afb99d107f6f1c95d07fd885909535">mask</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> level, <a class="code" href="../../dc/d7d/getmex_8c.html#a455b74a5e1fddf2977fbb8a8db763131">levels</a> = 0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    rle_pixel *imgcorner;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    pyramid leftgausspyr, leftbandpyr;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    pyramid rightgausspyr, rightbandpyr;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    pyramid maskgausspyr;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    pyramid splitpyr;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *imgcorner;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d6/df1/structpyramid.html">pyramid</a> leftgausspyr, leftbandpyr;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../d6/df1/structpyramid.html">pyramid</a> rightgausspyr, rightbandpyr;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d6/df1/structpyramid.html">pyramid</a> maskgausspyr;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d6/df1/structpyramid.html">pyramid</a> splitpyr;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">     * &quot;Left&quot; and &quot;right&quot; are historical relics from a program that</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">     * joined two images at the middle.  Left == inside mask; right == outside.</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    rle_hdr left_hdr;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    rle_hdr right_hdr;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    rle_hdr mask_hdr;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    rle_hdr <a class="code" href="../../d6/d0d/dvirle2_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> left_hdr;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> right_hdr;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> mask_hdr;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> <a class="code" href="../../d6/d0d/dvirle2_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    left_hdr = *<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( NULL );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    right_hdr = *<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( NULL );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    mask_hdr = *<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( NULL );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    left_hdr = *<a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( NULL );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    right_hdr = *<a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( NULL );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    mask_hdr = *<a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( NULL );</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a>( argc, argv,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a>( argc, argv,</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="stringliteral">&quot;% l%-levels!d o%-outfile!s inmask!s outmask!s maskfile!s&quot;</span>,</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        &amp;lflag, &amp;levels,</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        &amp;oflag, &amp;outfname, &amp;leftname, &amp;rightname, &amp;maskname ) == 0 )</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    exit( 1 );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    leftfile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>( <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), leftname, <span class="stringliteral">&quot;r&quot;</span> );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    rightfile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>( <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), rightname, <span class="stringliteral">&quot;r&quot;</span> );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    maskfile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>( <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), maskname, <span class="stringliteral">&quot;r&quot;</span> );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    leftfile = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>( <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), leftname, <span class="stringliteral">&quot;r&quot;</span> );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    rightfile = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>( <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), rightname, <span class="stringliteral">&quot;r&quot;</span> );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    maskfile = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>( <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), maskname, <span class="stringliteral">&quot;r&quot;</span> );</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    outfile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>( <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), outfname, <span class="stringliteral">&quot;w&quot;</span> );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    outfile = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>( <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), outfname, <span class="stringliteral">&quot;w&quot;</span> );</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">/* actual mask is always 5x5 */</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    mask = <a class="code" href="../../df/d69/pyrlib_8c.html#aeb33951a1d9fd87fef7e85aad2f34d7a">gauss_mask</a>(5);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/* initialize mask_mult_table */</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    mask_mult_table = (<span class="keywordtype">float</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>(<span class="keyword">sizeof</span>(<span class="keywordtype">float</span>) * 5 * 5 * 256);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    RLE_CHECK_ALLOC( <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), mask_mult_table, <span class="stringliteral">&quot;mask&quot;</span> );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    mask_mult_table = (<span class="keywordtype">float</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>(<span class="keyword">sizeof</span>(<span class="keywordtype">float</span>) * 5 * 5 * 256);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ae4f5beab3e61c61050bf9872b411e7ba">RLE_CHECK_ALLOC</a>( <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), mask_mult_table, <span class="stringliteral">&quot;mask&quot;</span> );</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (i=0; i &lt; 5; i++)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    maskmult = &amp;(mask_mult_table[(i*5) &lt;&lt; 8]);</div>
@@ -575,16 +566,16 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;left_hdr, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), leftname, 0 );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;right_hdr, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), rightname, 0 );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;mask_hdr, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), maskname, 0 );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;out_hdr, left_hdr.cmd, outfname, 0 );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;left_hdr, <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), leftname, 0 );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;right_hdr, <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), rightname, 0 );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;mask_hdr, <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), maskname, 0 );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;out_hdr, left_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, outfname, 0 );</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> ( rle_cnt = 0; ; rle_cnt++ )</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> ( (rle_err = <a class="code" href="../../d8/de1/pyrmask_8c.html#afe6e88a46cac5c423aa3034b1aaa38da">rle_to_pyramids</a>( leftfile, &amp;leftgausspyr, &amp;leftbandpyr,</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                     &amp;left_hdr, levels, mask_mult_table ))</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;         != RLE_SUCCESS )</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;         != <a class="code" href="../../d7/d27/rle_8h.html#af8151a769dcd3909e10aca29bdbd525f">RLE_SUCCESS</a> )</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        errname = leftname;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">break</span>;</div>
@@ -593,7 +584,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> ( (rle_err = <a class="code" href="../../d8/de1/pyrmask_8c.html#afe6e88a46cac5c423aa3034b1aaa38da">rle_to_pyramids</a>( rightfile, &amp;rightgausspyr,</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                     &amp;rightbandpyr, &amp;right_hdr,</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                     levels, mask_mult_table ))</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;         != RLE_SUCCESS )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;         != <a class="code" href="../../d7/d27/rle_8h.html#af8151a769dcd3909e10aca29bdbd525f">RLE_SUCCESS</a> )</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        errname = rightname;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">break</span>;</div>
@@ -601,58 +592,58 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> ( (rle_err = <a class="code" href="../../d8/de1/pyrmask_8c.html#afe6e88a46cac5c423aa3034b1aaa38da">rle_to_pyramids</a>( maskfile, &amp;maskgausspyr, 0,</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                     &amp;mask_hdr, levels, mask_mult_table ))</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;         != RLE_SUCCESS )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;         != <a class="code" href="../../d7/d27/rle_8h.html#af8151a769dcd3909e10aca29bdbd525f">RLE_SUCCESS</a> )</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        errname = maskname;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (leftgausspyr.nchan != rightgausspyr.nchan)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (leftgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a> != rightgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a>)</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        fprintf(stderr,</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="stringliteral">&quot;%s: Left and right images must have same number of channels\n&quot;</span>,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ));</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ));</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        exit(-2);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> ((leftgausspyr.xlen[0] != rightgausspyr.xlen[0]) ||</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        (leftgausspyr.ylen[0] != rightgausspyr.ylen[0]))</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> ((leftgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[0] != rightgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[0]) ||</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        (leftgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[0] != rightgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[0]))</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        fprintf(stderr,</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="stringliteral">&quot;%s: Left and right images must have same dimensions\n&quot;</span>,</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ));</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        exit(-2);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">if</span> (leftgausspyr.nchan != maskgausspyr.nchan)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">if</span> (leftgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a> != maskgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a>)</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        fprintf(stderr,</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="stringliteral">&quot;%s: Currently, mask image must have a mask per input channel\n&quot;</span>,</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ));</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ));</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        exit(-2);</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">if</span> ((leftgausspyr.xlen[0] != maskgausspyr.xlen[0]) ||</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        (leftgausspyr.ylen[0] != maskgausspyr.ylen[0]))</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">if</span> ((leftgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[0] != maskgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[0]) ||</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        (leftgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[0] != maskgausspyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[0]))</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        fprintf(stderr,</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="stringliteral">&quot;%s: Mask image must have same dimensions as input images\n&quot;</span>,</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ));</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        exit(-2);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    splitpyr.nchan = leftbandpyr.nchan;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    splitpyr.levels = leftbandpyr.levels;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    splitpyr.corners = (rle_pixel **) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( splitpyr.levels</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                          * <span class="keyword">sizeof</span>( rle_pixel *) );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    splitpyr.xlen = (<span class="keywordtype">int</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( splitpyr.levels * <span class="keyword">sizeof</span>( <span class="keywordtype">int</span> ) );</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    splitpyr.ylen = (<span class="keywordtype">int</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( splitpyr.levels * <span class="keyword">sizeof</span>( <span class="keywordtype">int</span> ) );</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    RLE_CHECK_ALLOC( <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ),</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;             splitpyr.corners &amp;&amp; splitpyr.xlen &amp;&amp; splitpyr.ylen,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a> = leftbandpyr.<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#aa8f3edb51699bb84f6156e35aed7293f">levels</a> = leftbandpyr.<a class="code" href="../../d6/df1/structpyramid.html#aa8f3edb51699bb84f6156e35aed7293f">levels</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a> = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#aa8f3edb51699bb84f6156e35aed7293f">levels</a></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                          * <span class="keyword">sizeof</span>( <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *) );</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#aa8f3edb51699bb84f6156e35aed7293f">levels</a> * <span class="keyword">sizeof</span>( <span class="keywordtype">int</span> ) );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#aa8f3edb51699bb84f6156e35aed7293f">levels</a> * <span class="keyword">sizeof</span>( <span class="keywordtype">int</span> ) );</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ae4f5beab3e61c61050bf9872b411e7ba">RLE_CHECK_ALLOC</a>( <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ),</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;             splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">corners</a> &amp;&amp; splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a> &amp;&amp; splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>,</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;             <span class="stringliteral">&quot;split pyramid&quot;</span> );</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    splitpyr.xlen[0] = leftbandpyr.xlen[0];</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    splitpyr.ylen[0] = leftbandpyr.ylen[0];</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[0] = leftbandpyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[0];</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[0] = leftbandpyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[0];</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="../../d8/de1/pyrmask_8c.html#abf69cef4a5fdee01efc1820cda6f876d">alloc_pyramid</a>(&amp;splitpyr);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">for</span>(level = splitpyr.levels - 1; level &gt;= 0; level--)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">for</span>(level = splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#aa8f3edb51699bb84f6156e35aed7293f">levels</a> - 1; level &gt;= 0; level--)</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="../../d8/de1/pyrmask_8c.html#a5f97f19047458d0db10e22b301b5a691">copy_mask_bands</a>(level,&amp;leftbandpyr,&amp;rightbandpyr,</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                &amp;splitpyr,&amp;maskgausspyr);</div>
@@ -662,50 +653,55 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">     ****************************************************/</span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="../../d8/de1/pyrmask_8c.html#ae55f2e907f4487a1a52e496f61cd5fb0">rebuild_image</a>(&amp;imgcorner,&amp;splitpyr,mask_mult_table);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#afc916e29aea8788e0878ca315ff69821">rle_hdr_cp</a>( &amp;left_hdr, &amp;out_hdr );</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a>( argv, &amp;left_hdr, &amp;out_hdr );</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="../../d8/de1/pyrmask_8c.html#a5458775d73ccfaef0545791feec845fa">dump_pyramid</a>(outfile,1,&amp;imgcorner,splitpyr.xlen[0],splitpyr.ylen[0],</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;             splitpyr.nchan - 1,left_hdr);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#afc916e29aea8788e0878ca315ff69821">rle_hdr_cp</a>( &amp;left_hdr, &amp;out_hdr );</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a211dd704f17c1336fc225d7d67e0006f">rle_addhist</a>( argv, &amp;left_hdr, &amp;out_hdr );</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="../../d8/de1/pyrmask_8c.html#a5458775d73ccfaef0545791feec845fa">dump_pyramid</a>(outfile,1,&amp;imgcorner,splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">xlen</a>[0],splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">ylen</a>[0],</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;             splitpyr.<a class="code" href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">nchan</a> - 1,left_hdr);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">/* Check for an error.  EOF or EMPTY is ok if at least one image</span></div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">     * has been read.  Otherwise, print an error message.</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> ( rle_cnt == 0 || (rle_err != RLE_EOF &amp;&amp; rle_err != RLE_EMPTY) )</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="../../d7/d24/rle__error_8c.html#af931d686cf3ca715c9b900527f0961c0">rle_get_error</a>( rle_err, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), errname );</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> ( rle_cnt == 0 || (rle_err != <a class="code" href="../../d7/d27/rle_8h.html#ab9eb0d97af30e88650c1ef2a3e4b257d">RLE_EOF</a> &amp;&amp; rle_err != <a class="code" href="../../d7/d27/rle_8h.html#afd905274e1716b1f6477f78bf49cef1e">RLE_EMPTY</a>) )</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a6e3f20815a16949894bab1820c97fe1d">rle_get_error</a>( rle_err, <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), errname );</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    exit(0);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
-<div class="ttc" id="rle__open__f_8c_html_a89733a45961817885603ae01210290b7"><div class="ttname"><a href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(char *prog_name, char *file_name, char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/rle__open__f_8c_source.html#l00216">rle_open_f.c:216</a></div></div>
 <div class="ttc" id="mcut_8c_html_a21afb99d107f6f1c95d07fd885909535"><div class="ttname"><a href="../../d5/d6d/mcut_8c.html#a21afb99d107f6f1c95d07fd885909535">mask</a></div><div class="ttdeci">static unsigned mask</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d6d/mcut_8c_source.html#l00162">mcut.c:162</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_afc916e29aea8788e0878ca315ff69821"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#afc916e29aea8788e0878ca315ff69821">rle_hdr_cp</a></div><div class="ttdeci">rle_hdr * rle_hdr_cp(rle_hdr *from_hdr, rle_hdr *to_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00119">rle_hdr.c:119</a></div></div>
+<div class="ttc" id="structpyramid_html_abda0c579a6dfe178232ef6c15b44759d"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abda0c579a6dfe178232ef6c15b44759d">pyramid::ylen</a></div><div class="ttdeci">int * ylen</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00024">pyramid.h:24</a></div></div>
+<div class="ttc" id="rle_8h_html_a7827333daec9d306aff4729fbd61b031"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a></div><div class="ttdeci">int scanargs(int argc, char **argv, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs.c:94</a></div></div>
 <div class="ttc" id="giftorle_8c_html_ae581849c67336453bd5b81e6518019a9"><div class="ttname"><a href="../../d1/dad/giftorle_8c.html#ae581849c67336453bd5b81e6518019a9">outfile</a></div><div class="ttdeci">FILE * outfile</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dad/giftorle_8c_source.html#l00061">giftorle.c:61</a></div></div>
-<div class="ttc" id="rle__error_8c_html_af931d686cf3ca715c9b900527f0961c0"><div class="ttname"><a href="../../d7/d24/rle__error_8c.html#af931d686cf3ca715c9b900527f0961c0">rle_get_error</a></div><div class="ttdeci">int rle_get_error(int code, char *pgmname, char *fname)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d24/rle__error_8c_source.html#l00076">rle_error.c:76</a></div></div>
-<div class="ttc" id="cmd__name_8c_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
+<div class="ttc" id="rle_8h_html_afd905274e1716b1f6477f78bf49cef1e"><div class="ttname"><a href="../../d7/d27/rle_8h.html#afd905274e1716b1f6477f78bf49cef1e">RLE_EMPTY</a></div><div class="ttdeci">#define RLE_EMPTY</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00073">rle.h:73</a></div></div>
+<div class="ttc" id="structpyramid_html_aa8f3edb51699bb84f6156e35aed7293f"><div class="ttname"><a href="../../d6/df1/structpyramid.html#aa8f3edb51699bb84f6156e35aed7293f">pyramid::levels</a></div><div class="ttdeci">int levels</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00028">pyramid.h:28</a></div></div>
 <div class="ttc" id="pyrmask_8c_html_afe6e88a46cac5c423aa3034b1aaa38da"><div class="ttname"><a href="../../d8/de1/pyrmask_8c.html#afe6e88a46cac5c423aa3034b1aaa38da">rle_to_pyramids</a></div><div class="ttdeci">int rle_to_pyramids()</div></div>
+<div class="ttc" id="rle_8h_html_a211dd704f17c1336fc225d7d67e0006f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a211dd704f17c1336fc225d7d67e0006f">rle_addhist</a></div><div class="ttdeci">void rle_addhist(char *argv[], rle_hdr *in_hdr, rle_hdr *out_hdr)</div></div>
+<div class="ttc" id="rle_8h_html_af8151a769dcd3909e10aca29bdbd525f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#af8151a769dcd3909e10aca29bdbd525f">RLE_SUCCESS</a></div><div class="ttdeci">#define RLE_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00070">rle.h:70</a></div></div>
 <div class="ttc" id="pyrmask_8c_html_a5458775d73ccfaef0545791feec845fa"><div class="ttname"><a href="../../d8/de1/pyrmask_8c.html#a5458775d73ccfaef0545791feec845fa">dump_pyramid</a></div><div class="ttdeci">void dump_pyramid()</div></div>
 <div class="ttc" id="pyrlib_8c_html_aeb33951a1d9fd87fef7e85aad2f34d7a"><div class="ttname"><a href="../../df/d69/pyrlib_8c.html#aeb33951a1d9fd87fef7e85aad2f34d7a">gauss_mask</a></div><div class="ttdeci">float * gauss_mask(int siz)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d69/pyrlib_8c_source.html#l00333">pyrlib.c:333</a></div></div>
+<div class="ttc" id="structpyramid_html_abbb6e0eb19259821adcd262f70fe0b83"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abbb6e0eb19259821adcd262f70fe0b83">pyramid::nchan</a></div><div class="ttdeci">int nchan</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00026">pyramid.h:26</a></div></div>
 <div class="ttc" id="pyrmask_8c_html_ae55f2e907f4487a1a52e496f61cd5fb0"><div class="ttname"><a href="../../d8/de1/pyrmask_8c.html#ae55f2e907f4487a1a52e496f61cd5fb0">rebuild_image</a></div><div class="ttdeci">void rebuild_image()</div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
+<div class="ttc" id="rle_8h_html_ab89ecb548e22ac958f24c71fba852464"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, const char *pgmname, const char *fname, int img_num)</div></div>
+<div class="ttc" id="structrle__hdr_html_a56fc353295f9b9b62cd48ea02347116f"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">rle_hdr::cmd</a></div><div class="ttdeci">const char * cmd</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00133">rle.h:133</a></div></div>
+<div class="ttc" id="structrle__hdr_html"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html">rle_hdr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00096">rle.h:96</a></div></div>
+<div class="ttc" id="structpyramid_html_a142685ace26d0a2ead5ebcc28d5ff92f"><div class="ttname"><a href="../../d6/df1/structpyramid.html#a142685ace26d0a2ead5ebcc28d5ff92f">pyramid::xlen</a></div><div class="ttdeci">int * xlen</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00024">pyramid.h:24</a></div></div>
 <div class="ttc" id="pyrmask_8c_html_abf69cef4a5fdee01efc1820cda6f876d"><div class="ttname"><a href="../../d8/de1/pyrmask_8c.html#abf69cef4a5fdee01efc1820cda6f876d">alloc_pyramid</a></div><div class="ttdeci">void alloc_pyramid()</div></div>
+<div class="ttc" id="structpyramid_html_abb290d1b33d6ec8b3276d4c1ab848682"><div class="ttname"><a href="../../d6/df1/structpyramid.html#abb290d1b33d6ec8b3276d4c1ab848682">pyramid::corners</a></div><div class="ttdeci">rle_pixel ** corners</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00022">pyramid.h:22</a></div></div>
+<div class="ttc" id="rle_8h_html_a6e3f20815a16949894bab1820c97fe1d"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a6e3f20815a16949894bab1820c97fe1d">rle_get_error</a></div><div class="ttdeci">int rle_get_error(int code, const char *pgmname, const char *fname)</div></div>
+<div class="ttc" id="structpyramid_html"><div class="ttname"><a href="../../d6/df1/structpyramid.html">pyramid</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d7d/pyramid_8h_source.html#l00019">pyramid.h:19</a></div></div>
 <div class="ttc" id="getmex_8c_html_a455b74a5e1fddf2977fbb8a8db763131"><div class="ttname"><a href="../../dc/d7d/getmex_8c.html#a455b74a5e1fddf2977fbb8a8db763131">levels</a></div><div class="ttdeci">#define levels</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7d/getmex_8c_source.html#l00031">getmex.c:31</a></div></div>
 <div class="ttc" id="pyrmask_8c_html_a5f97f19047458d0db10e22b301b5a691"><div class="ttname"><a href="../../d8/de1/pyrmask_8c.html#a5f97f19047458d0db10e22b301b5a691">copy_mask_bands</a></div><div class="ttdeci">void copy_mask_bands()</div></div>
-<div class="ttc" id="rle__addhist_8c_html_a4f9433d6e4e203d0ecea1c7d3837afc3"><div class="ttname"><a href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a></div><div class="ttdeci">void rle_addhist(argv, rle_hdr *in_hdr, rle_hdr *out_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/def/rle__addhist_8c_source.html#l00054">rle_addhist.c:54</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a82e79385f2d45cc3b80ce0f4f369eae5"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, char *pgmname, char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
+<div class="ttc" id="rle_8h_html_ab9eb0d97af30e88650c1ef2a3e4b257d"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab9eb0d97af30e88650c1ef2a3e4b257d">RLE_EOF</a></div><div class="ttdeci">#define RLE_EOF</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00074">rle.h:74</a></div></div>
+<div class="ttc" id="rle_8h_html_a5c3e1eb7fc1fd5a17f96d77df371e427"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a></div><div class="ttdeci">unsigned char rle_pixel</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00056">rle.h:56</a></div></div>
+<div class="ttc" id="rle_8h_html_afc916e29aea8788e0878ca315ff69821"><div class="ttname"><a href="../../d7/d27/rle_8h.html#afc916e29aea8788e0878ca315ff69821">rle_hdr_cp</a></div><div class="ttdeci">rle_hdr * rle_hdr_cp(rle_hdr *from_hdr, rle_hdr *to_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00119">rle_hdr.c:119</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
+<div class="ttc" id="rle_8h_html_a76eefa2808915342600d65f36f77eb26"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(const char *prog_name, const char *f_name, const char *mode)</div></div>
+<div class="ttc" id="rle_8h_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
 <div class="ttc" id="painttorle_8c_html_ae48c37db113eec555c7f4ce2e48e90de"><div class="ttname"><a href="../../d2/d80/painttorle_8c.html#ae48c37db113eec555c7f4ce2e48e90de">oflag</a></div><div class="ttdeci">int oflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/painttorle_8c_source.html#l00045">painttorle.c:45</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ea6d702c0484056c8504d6ce7fede08"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a></div><div class="ttdeci">int scanargs(va_alist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00091">scanargs.c:91</a></div></div>
 <div class="ttc" id="dvirle2_8c_html_ad9e5ade73c3b1f8491a6f6a2892255f8"><div class="ttname"><a href="../../d6/d0d/dvirle2_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a></div><div class="ttdeci">rle_hdr out_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0d/dvirle2_8c_source.html#l00089">dvirle2.c:89</a></div></div>
+<div class="ttc" id="rle_8h_html_ae4f5beab3e61c61050bf9872b411e7ba"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ae4f5beab3e61c61050bf9872b411e7ba">RLE_CHECK_ALLOC</a></div><div class="ttdeci">#define RLE_CHECK_ALLOC(pgm, ptr, name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00086">rle.h:86</a></div></div>
+<div class="ttc" id="rle_8h_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/de1/pyrmask_8c_ade521a0600ded19f1720b6f6df59b480_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="ae55f2e907f4487a1a52e496f61cd5fb0"></a>
@@ -721,14 +717,6 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/de1/pyrmask_8c_ae55f2e907f4487a1a52e496f61cd5fb0_icgraph.svg" width="220" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="afe6e88a46cac5c423aa3034b1aaa38da"></a>
@@ -743,14 +731,6 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/de1/pyrmask_8c_afe6e88a46cac5c423aa3034b1aaa38da_icgraph.svg" width="234" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -780,7 +760,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:08 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

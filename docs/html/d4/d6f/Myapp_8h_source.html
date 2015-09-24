@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: Myapp.h Source File</title>
+<title>Utah Raster Toolkit: get/next/Myapp.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -90,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">Myapp.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/d6f/Myapp_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#import &lt;appkit/Application.h&gt;</span></div>
+<a href="../../d4/d6f/Myapp_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">appkit</span><span class="preprocessor">/</span><span class="preprocessor">Application</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Myapp.h</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// </span></div>
@@ -100,39 +101,44 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// This program is In the Public Domain. If you make any improvements to this</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// program please let me know</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html">   11</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="../../d2/d28/interfaceMyapp.html">Myapp</a>:<a class="code" href="../../d5/d4c/classApplication.html">Application</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;@<span class="keyword">interface</span> <a class="code" href="../../dd/d24/classMyapp.html">Myapp</a>:<a class="code" href="../../dd/d24/classMyapp.html">Application</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">   13</a></span>&#160;    <span class="keywordtype">id</span>                  <a class="code" href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">   14</a></span>&#160;    <span class="keywordtype">id</span>                  <a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a4d3ff61e8ffb3075419d1c9e5bc7a070">   15</a></span>&#160;    <span class="keywordtype">id</span>                  <a class="code" href="../../d2/d28/interfaceMyapp.html#a4d3ff61e8ffb3075419d1c9e5bc7a070">savePanelAccessory</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">   16</a></span>&#160;    <span class="keywordtype">id</span>                  <a class="code" href="../../d2/d28/interfaceMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">compPopUP</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">   17</a></span>&#160;    <span class="keywordtype">int</span>                 <a class="code" href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a>;     <span class="comment">/* 1 tiff 2 eps */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a6ef273646b895260dfd226af990dded6">   13</a></span>&#160;    id                  <a class="code" href="../../dd/d24/classMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">   14</a></span>&#160;    id                  <a class="code" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a4d3ff61e8ffb3075419d1c9e5bc7a070">   15</a></span>&#160;    id                  <a class="code" href="../../dd/d24/classMyapp.html#a4d3ff61e8ffb3075419d1c9e5bc7a070">savePanelAccessory</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">   16</a></span>&#160;    id                  <a class="code" href="../../dd/d24/classMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">compPopUP</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">   17</a></span>&#160;    <span class="keywordtype">int</span>                 <a class="code" href="../../dd/d24/classMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a>;     <span class="comment">/* 1 tiff 2 eps */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;+ new;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;- (<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>)appOpenFile:(const <span class="keywordtype">char</span> *)fullPath type:(const <span class="keywordtype">char</span> *)type;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;- (BOOL)appAcceptsAnotherFile:sender;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;- openfile:sender;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;- print:sender;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- <a class="code" href="../../dc/d11/getami_8c.html#a1e03263353a7ba1bf855a8fe86b072e6">save</a>:sender;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;- saveTypeEPS:sender;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;- saveTypeTiff:sender;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;- (<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>)setCompType;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="ttc" id="getami_8c_html_a1e03263353a7ba1bf855a8fe86b072e6"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a1e03263353a7ba1bf855a8fe86b072e6">save</a></div><div class="ttdeci">void save(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00982">getami.c:982</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_a8f56d2983554193810d7bea1c7df7738"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">Myapp::savepanel</a></div><div class="ttdeci">id savepanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00014">Myapp.h:14</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_a7087fa2f53b84d7be9f570d55e0bf371"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">Myapp::compPopUP</a></div><div class="ttdeci">id compPopUP</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00016">Myapp.h:16</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_aa58cfcd30a716c38c3a35b851af573cd"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">Myapp::saveType</a></div><div class="ttdeci">int saveType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00017">Myapp.h:17</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_a6ef273646b895260dfd226af990dded6"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">Myapp::openpanel</a></div><div class="ttdeci">id openpanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00013">Myapp.h:13</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_a4d3ff61e8ffb3075419d1c9e5bc7a070"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#a4d3ff61e8ffb3075419d1c9e5bc7a070">Myapp::savePanelAccessory</a></div><div class="ttdeci">id savePanelAccessory</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00015">Myapp.h:15</a></div></div>
-<div class="ttc" id="classApplication_html"><div class="ttname"><a href="../../d5/d4c/classApplication.html">Application</a></div></div>
-<div class="ttc" id="interfaceMyapp_html"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html">Myapp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00011">Myapp.h:11</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;+ <a class="code" href="../../dd/d24/classMyapp.html#a05be9c91fc634db5446d590ff777eab4">new</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;- (<span class="keywordtype">int</span>)<a class="code" href="../../dd/d24/classMyapp.html#a9f791114f47990ec39e577e3c2af34b6">appOpenFile</a>:(<span class="keyword">const</span> <span class="keywordtype">char</span> *)fullPath <a class="code" href="../../dd/d24/classMyapp.html#a9f791114f47990ec39e577e3c2af34b6">type</a>:(<span class="keyword">const</span> <span class="keywordtype">char</span> *)type;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;- (<a class="code" href="../../dd/d24/classMyapp.html#a71a0288fbcf24d90dd0ddac43b483305">BOOL</a>)<a class="code" href="../../dd/d24/classMyapp.html#a71a0288fbcf24d90dd0ddac43b483305">appAcceptsAnotherFile</a>:sender;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#a9bbdb4f38d3d3ef78cb010aa72112327">openfile</a>:sender;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#a82a4520ebca1d36aacba8f621ad83315">print</a>:sender;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#aac2860ca0a5e6f74fbde9bd6ad2d98b7">save</a>:sender;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#a6b9d95d88c1c86ad89f93f396dd08ff6">saveTypeEPS</a>:sender;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#a620002a37da4cb7420b130a61f698b5a">saveTypeTiff</a>:sender;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;- (<span class="keywordtype">int</span>)<a class="code" href="../../dd/d24/classMyapp.html#ab85df5f44cede844904cc95acc584d7b">setCompType</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;@<span class="keyword">end</span></div>
+<div class="ttc" id="classMyapp_html_ab85df5f44cede844904cc95acc584d7b"><div class="ttname"><a href="../../dd/d24/classMyapp.html#ab85df5f44cede844904cc95acc584d7b">-[Myapp setCompType]</a></div><div class="ttdeci">int setCompType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00128">Myapp.m:128</a></div></div>
+<div class="ttc" id="classMyapp_html_a7087fa2f53b84d7be9f570d55e0bf371"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">Myapp::compPopUP</a></div><div class="ttdeci">id compPopUP</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00016">Myapp.h:16</a></div></div>
+<div class="ttc" id="classMyapp_html_a71a0288fbcf24d90dd0ddac43b483305"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a71a0288fbcf24d90dd0ddac43b483305">-[Myapp appAcceptsAnotherFile:]</a></div><div class="ttdeci">BOOL appAcceptsAnotherFile:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00047">Myapp.m:47</a></div></div>
+<div class="ttc" id="classMyapp_html_a620002a37da4cb7420b130a61f698b5a"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a620002a37da4cb7420b130a61f698b5a">-[Myapp saveTypeTiff:]</a></div><div class="ttdeci">id saveTypeTiff:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00119">Myapp.m:119</a></div></div>
+<div class="ttc" id="classMyapp_html_a6b9d95d88c1c86ad89f93f396dd08ff6"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a6b9d95d88c1c86ad89f93f396dd08ff6">-[Myapp saveTypeEPS:]</a></div><div class="ttdeci">id saveTypeEPS:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00110">Myapp.m:110</a></div></div>
+<div class="ttc" id="classMyapp_html_a8f56d2983554193810d7bea1c7df7738"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">Myapp::savepanel</a></div><div class="ttdeci">id savepanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00014">Myapp.h:14</a></div></div>
+<div class="ttc" id="classMyapp_html_a4d3ff61e8ffb3075419d1c9e5bc7a070"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a4d3ff61e8ffb3075419d1c9e5bc7a070">Myapp::savePanelAccessory</a></div><div class="ttdeci">id savePanelAccessory</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00015">Myapp.h:15</a></div></div>
+<div class="ttc" id="classMyapp_html_a6ef273646b895260dfd226af990dded6"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a6ef273646b895260dfd226af990dded6">Myapp::openpanel</a></div><div class="ttdeci">id openpanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00013">Myapp.h:13</a></div></div>
+<div class="ttc" id="classMyapp_html_aac2860ca0a5e6f74fbde9bd6ad2d98b7"><div class="ttname"><a href="../../dd/d24/classMyapp.html#aac2860ca0a5e6f74fbde9bd6ad2d98b7">-[Myapp save:]</a></div><div class="ttdeci">id save:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00089">Myapp.m:89</a></div></div>
+<div class="ttc" id="classMyapp_html_a05be9c91fc634db5446d590ff777eab4"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a05be9c91fc634db5446d590ff777eab4">+[Myapp new]</a></div><div class="ttdeci">id new()</div></div>
+<div class="ttc" id="classMyapp_html_aa58cfcd30a716c38c3a35b851af573cd"><div class="ttname"><a href="../../dd/d24/classMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">Myapp::saveType</a></div><div class="ttdeci">int saveType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00017">Myapp.h:17</a></div></div>
+<div class="ttc" id="classMyapp_html_a9bbdb4f38d3d3ef78cb010aa72112327"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a9bbdb4f38d3d3ef78cb010aa72112327">-[Myapp openfile:]</a></div><div class="ttdeci">id openfile:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00052">Myapp.m:52</a></div></div>
+<div class="ttc" id="classMyapp_html_a82a4520ebca1d36aacba8f621ad83315"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a82a4520ebca1d36aacba8f621ad83315">-[Myapp print:]</a></div><div class="ttdeci">id print:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00083">Myapp.m:83</a></div></div>
+<div class="ttc" id="classMyapp_html_a9f791114f47990ec39e577e3c2af34b6"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a9f791114f47990ec39e577e3c2af34b6">-[Myapp appOpenFile:type:]</a></div><div class="ttdeci">int appOpenFile:type:(const char *fullPath,[type] const char *type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00034">Myapp.m:34</a></div></div>
+<div class="ttc" id="classMyapp_html"><div class="ttname"><a href="../../dd/d24/classMyapp.html">Myapp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00025">Myapp.m:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:03 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

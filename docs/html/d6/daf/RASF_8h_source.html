@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: RASF.h Source File</title>
+<title>Utah Raster Toolkit: get/next/RASF.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -90,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">RASF.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d6/daf/RASF_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="../../d8/d0f/Image_8h.html">Image.h</a>&quot;</span></div>
+<a href="../../d6/daf/RASF_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <a class="code" href="../../d8/d0f/Image_8h.html">&quot;Image.h&quot;</a></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// RASF.h</span></div>
@@ -102,22 +103,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// program please let me know</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../df/d3d/interfaceRASF.html">   13</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="../../df/d3d/interfaceRASF.html">RASF</a>:<a class="code" href="../../d2/d41/interfaceImage.html">Image</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../df/d3d/interfaceRASF.html">   13</a></span>&#160;@<span class="keyword">interface</span> <a class="code" href="../../df/d3d/interfaceRASF.html">RASF</a>:<a class="code" href="../../d8/d00/classImage.html">Image</a></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- <a class="code" href="../../d2/d80/painttorle_8c.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;- open:(<span class="keywordtype">char</span> *)filename;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="ttc" id="Image_8h_html"><div class="ttname"><a href="../../d8/d0f/Image_8h.html">Image.h</a></div></div>
-<div class="ttc" id="interfaceImage_html"><div class="ttname"><a href="../../d2/d41/interfaceImage.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0f/Image_8h_source.html#l00014">Image.h:14</a></div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- <a class="code" href="../../df/d3d/interfaceRASF.html#adaf06db66a77e590a14cad262aab9be2">init</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;- <a class="code" href="../../df/d3d/interfaceRASF.html#a06fac1f9c0d50a0c18c34a9872b8b033">open</a>:(<span class="keywordtype">char</span> *)filename;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;@<span class="keyword">end</span></div>
+<div class="ttc" id="classImage_html"><div class="ttname"><a href="../../d8/d00/classImage.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d45/Image_8m_source.html#l00026">Image.m:26</a></div></div>
+<div class="ttc" id="interfaceRASF_html_adaf06db66a77e590a14cad262aab9be2"><div class="ttname"><a href="../../df/d3d/interfaceRASF.html#adaf06db66a77e590a14cad262aab9be2">-[RASF init]</a></div><div class="ttdeci">id init()</div></div>
 <div class="ttc" id="interfaceRASF_html"><div class="ttname"><a href="../../df/d3d/interfaceRASF.html">RASF</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/daf/RASF_8h_source.html#l00013">RASF.h:13</a></div></div>
-<div class="ttc" id="painttorle_8c_html_a02fd73d861ef2e4aabb38c0c9ff82947"><div class="ttname"><a href="../../d2/d80/painttorle_8c.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/painttorle_8c_source.html#l00177">painttorle.c:177</a></div></div>
+<div class="ttc" id="interfaceRASF_html_a06fac1f9c0d50a0c18c34a9872b8b033"><div class="ttname"><a href="../../df/d3d/interfaceRASF.html#a06fac1f9c0d50a0c18c34a9872b8b033">-[RASF open:]</a></div><div class="ttdeci">id open:(char *filename)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d95/RASF_8m_source.html#l00036">RASF.m:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:03 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

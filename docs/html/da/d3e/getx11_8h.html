@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: getx11.h File Reference</title>
+<title>Utah Raster Toolkit: get/getx11/getx11.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -90,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">getx11.h File Reference</div>  </div>
@@ -103,18 +105,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <code>#include &lt;X11/Xlibint.h&gt;</code><br />
 <code>#include &lt;X11/Xutil.h&gt;</code><br />
 <code>#include &lt;X11/cursorfont.h&gt;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
+<code>#include &lt;sys/ipc.h&gt;</code><br />
+<code>#include &lt;sys/shm.h&gt;</code><br />
+<code>#include &lt;X11/extensions/XShm.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/dd0/fn__decls_8h_source.html">fn_decls.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for getx11.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d8a/getx11_8h__incl.svg" width="100%" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d8a/getx11_8h__incl.svg" width="100%" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/dfb/getx11_8h__dep__incl.svg" width="552" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/dfb/getx11_8h__dep__incl.svg" width="100%" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div>
@@ -149,11 +154,11 @@ Macros</h2></td></tr>
 <tr class="separator:ac3f01e9e8493bcb43ef628047fbb7d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a885d3cda262dc7191918ca9a05c2aac7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#a885d3cda262dc7191918ca9a05c2aac7">SHIFT_MASK_PIXEL_32</a>(<a class="el" href="../../dc/d11/getami_8c.html#afd7b1ea9ff115205b65e0bffc92946ac">r</a>,  <a class="el" href="../../dc/d11/getami_8c.html#a83576af39a9f289a28c1263d61073508">g</a>,  <a class="el" href="../../dc/d11/getami_8c.html#a41cede1b4c0d05cff170ad5761f70964">b</a>)</td></tr>
 <tr class="separator:a885d3cda262dc7191918ca9a05c2aac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a202767af7f06cef8e1c69d9771f157c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#a202767af7f06cef8e1c69d9771f157c3">Min</a>(<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>,  <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;(((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &lt; (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td></tr>
+<tr class="memitem:a202767af7f06cef8e1c69d9771f157c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#a202767af7f06cef8e1c69d9771f157c3">Min</a>(<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>,  <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;(((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &lt; (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td></tr>
 <tr class="separator:a202767af7f06cef8e1c69d9771f157c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56957c78144b268fbcdbf7d9fb5acafe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#a56957c78144b268fbcdbf7d9fb5acafe">Max</a>(<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>,  <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;(((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &gt; (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td></tr>
+<tr class="memitem:a56957c78144b268fbcdbf7d9fb5acafe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#a56957c78144b268fbcdbf7d9fb5acafe">Max</a>(<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>,  <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;(((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &gt; (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td></tr>
 <tr class="separator:a56957c78144b268fbcdbf7d9fb5acafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3d4fdc3db6d8a67518517a179cfa6fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#ae3d4fdc3db6d8a67518517a179cfa6fa">SAVED_RLE_ROW</a>(<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>,  <a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;((<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;scan_data + (((<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) + 1) * (<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;w * (<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;dpy_channels))</td></tr>
+<tr class="memitem:ae3d4fdc3db6d8a67518517a179cfa6fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#ae3d4fdc3db6d8a67518517a179cfa6fa">SAVED_RLE_ROW</a>(<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>,  <a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)&#160;&#160;&#160;((<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;scan_data + (((<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) + 1) * (<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;w * (<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;dpy_channels))</td></tr>
 <tr class="separator:ae3d4fdc3db6d8a67518517a179cfa6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba0710cfd66c81c78fee5039faed386a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#aba0710cfd66c81c78fee5039faed386a">duff8</a>(<a class="el" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a>,  block)</td></tr>
 <tr class="separator:aba0710cfd66c81c78fee5039faed386a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +177,11 @@ Typedefs</h2></td></tr>
 <tr class="separator:a4b246b6a087b6214449635641a0bc475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada0e5f451a91bcccbdf0e65f955fc4e1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="../../d1/d08/struct__image__info__struct.html">_image_info_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#ada0e5f451a91bcccbdf0e65f955fc4e1">image_information</a></td></tr>
 <tr class="separator:ada0e5f451a91bcccbdf0e65f955fc4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acff2d9ca3cbddc0e9507cf8f6962a7d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dad/rle__config_8h.html#adb44ac7efac3f296f59074202d9bdc01">void_star</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#acff2d9ca3cbddc0e9507cf8f6962a7d7">shmat</a> ()</td></tr>
+<tr class="separator:acff2d9ca3cbddc0e9507cf8f6962a7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -195,6 +205,12 @@ Variables</h2></td></tr>
 <tr class="separator:a08ceded587923c873665cde672368701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adae4e6b9ce7e35b1ed95a4b9617c3a69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#adae4e6b9ce7e35b1ed95a4b9617c3a69">specified_levels</a></td></tr>
 <tr class="separator:adae4e6b9ce7e35b1ed95a4b9617c3a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9754e6050cc835e10698809414fbd86f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/getx11_8h.html#a127a96e09108f503cca20256eaa4ddff">Boolean</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#a9754e6050cc835e10698809414fbd86f">do_sharing</a></td></tr>
+<tr class="separator:a9754e6050cc835e10698809414fbd86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc75f078764a6a8dd2b817f3de7893d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/getx11_8h.html#a127a96e09108f503cca20256eaa4ddff">Boolean</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#a4bc75f078764a6a8dd2b817f3de7893d">use_shared_pixmaps</a></td></tr>
+<tr class="separator:a4bc75f078764a6a8dd2b817f3de7893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdab00d87c268041d149cce57fb2ca16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d3e/getx11_8h.html#a127a96e09108f503cca20256eaa4ddff">Boolean</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#abdab00d87c268041d149cce57fb2ca16">no_shared_space</a></td></tr>
+<tr class="separator:abdab00d87c268041d149cce57fb2ca16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfdc094dc6efc00644900152ea1f0c73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3e/getx11_8h.html#acfdc094dc6efc00644900152ea1f0c73">no_color_ref_counts</a></td></tr>
 <tr class="separator:acfdc094dc6efc00644900152ea1f0c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -353,12 +369,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &gt; (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td>
+          <td></td><td>&#160;&#160;&#160;(((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &gt; (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -381,12 +397,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &lt; (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td>
+          <td></td><td>&#160;&#160;&#160;(((<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) &lt; (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>)) ? (<a class="el" href="../../d3/dea/inv__cmap_8c.html#a3162ada50d1df39e0f0555ea3d60dea1">x</a>) : (<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -409,12 +425,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
+          <td class="paramname"><a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;scan_data + (((<a class="el" href="../../d0/d2c/getgmr_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) + 1) * (<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;w * (<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;dpy_channels))</td>
+          <td></td><td>&#160;&#160;&#160;((<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;scan_data + (((<a class="el" href="../../dc/d60/getfb_8h.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) + 1) * (<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;w * (<a class="el" href="../../dc/d11/getami_8c.html#a479444b9fea0f081236a870524ad684b">img</a>)-&gt;dpy_channels))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -613,6 +629,22 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="acff2d9ca3cbddc0e9507cf8f6962a7d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dad/rle__config_8h.html#adb44ac7efac3f296f59074202d9bdc01">void_star</a> shmat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="a7d15d75de866f70c22f42d15196f42b5"></a>
 <div class="memitem">
@@ -639,6 +671,20 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../db/d50/getx11_8c_source.html#l00064">64</a> of file <a class="el" href="../../db/d50/getx11_8c_source.html">getx11.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9754e6050cc835e10698809414fbd86f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d3e/getx11_8h.html#a127a96e09108f503cca20256eaa4ddff">Boolean</a> do_sharing</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../db/d50/getx11_8c_source.html#l00084">84</a> of file <a class="el" href="../../db/d50/getx11_8c_source.html">getx11.c</a>.</p>
 
 </div>
 </div>
@@ -684,6 +730,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abdab00d87c268041d149cce57fb2ca16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d3e/getx11_8h.html#a127a96e09108f503cca20256eaa4ddff">Boolean</a> no_shared_space</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../db/d50/getx11_8c_source.html#l00086">86</a> of file <a class="el" href="../../db/d50/getx11_8c_source.html">getx11.c</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab9e1449fd00c98428516f0b41eddcb10"></a>
 <div class="memitem">
 <div class="memproto">
@@ -724,6 +784,8 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="../../d3/d6f/show3_8c_source.html#l00029">29</a> of file <a class="el" href="../../d3/d6f/show3_8c_source.html">show3.c</a>.</p>
 
+<p>Referenced by <a class="el" href="../../d3/d6f/show3_8c_source.html#l00036">Fail()</a>, and <a class="el" href="../../d3/d6f/show3_8c_source.html#l00063">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="adae4e6b9ce7e35b1ed95a4b9617c3a69"></a>
@@ -754,6 +816,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4bc75f078764a6a8dd2b817f3de7893d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d3e/getx11_8h.html#a127a96e09108f503cca20256eaa4ddff">Boolean</a> use_shared_pixmaps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../db/d50/getx11_8c_source.html#l00085">85</a> of file <a class="el" href="../../db/d50/getx11_8c_source.html">getx11.c</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aea19c8830cb9b1045284f2e978a786cf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -766,12 +842,14 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="../../db/d50/getx11_8c_source.html#l00080">80</a> of file <a class="el" href="../../db/d50/getx11_8c_source.html">getx11.c</a>.</p>
 
+<p>Referenced by <a class="el" href="../../d8/d32/qcr_8c_source.html#l00164">print_qcr_status()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:06 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

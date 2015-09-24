@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: XGetHClrs.c Source File</title>
+<title>Utah Raster Toolkit: get/getx11/XGetHClrs.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -90,48 +91,48 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">XGetHClrs.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../db/d83/XGetHClrs_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef XLIBINT_H_NOT_AVAILABLE</span></div>
+<a href="../../db/d83/XGetHClrs_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">XLIBINT_H_NOT_AVAILABLE</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/* $XConsortium: XGetHClrs.c,v 11.10 88/09/06 16:07:50 martin Exp $ */</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Copyright    Massachusetts Institute of Technology    1986   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;X11/X.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;X11/Xlib.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;X11/Xutil.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#a9cbd892e4ec99bfc12d693d1f9fd88c7">    9</a></span>&#160;<span class="preprocessor">#define NEED_REPLIES</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;X11/Xlibint.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">X11</span><span class="preprocessor">/</span><span class="preprocessor">X</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">X11</span><span class="preprocessor">/</span><span class="preprocessor">Xlib</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">X11</span><span class="preprocessor">/</span><span class="preprocessor">Xutil</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#a9cbd892e4ec99bfc12d693d1f9fd88c7">    9</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NEED_REPLIES</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">X11</span><span class="preprocessor">/</span><span class="preprocessor">Xlibint</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">   12</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#a890ae7764b74383a75f1ec5825fb06e8">   13</a></span>&#160;<span class="keyword">static</span> Status *<a class="code" href="../../db/d83/XGetHClrs_8c.html#a890ae7764b74383a75f1ec5825fb06e8">st</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#ae29aa2d4ae440022daaed1107eb306b3">   14</a></span>&#160;<span class="keyword">static</span> Status <a class="code" href="../../db/d83/XGetHClrs_8c.html#ae29aa2d4ae440022daaed1107eb306b3">status</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#afd89e2e4aa5099ceafcf5e85198791b3">   13</a></span>&#160;<span class="keyword">static</span> Status *<a class="code" href="../../db/d83/XGetHClrs_8c.html#afd89e2e4aa5099ceafcf5e85198791b3">st</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#a6e27f49150e9a14580fb313cc2777e00">   14</a></span>&#160;<span class="keyword">static</span> Status <a class="code" href="../../db/d83/XGetHClrs_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#ab86607e3a92c8a5f7419a0161babc409">   16</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../db/d83/XGetHClrs_8c.html#ab86607e3a92c8a5f7419a0161babc409">dummy_handle_x_errors</a>( <a class="code" href="../../d1/dea/getx10_8c.html#a7d43b3edf58f8d85a89852ab95b740f6">dpy</a>, <a class="code" href="../../da/d92/getap_8c.html#ae0c0685c1a0014742d6d908b15a78236">event</a>)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Display *<a class="code" href="../../d1/dea/getx10_8c.html#a7d43b3edf58f8d85a89852ab95b740f6">dpy</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    XErrorEvent *<a class="code" href="../../da/d92/getap_8c.html#ae0c0685c1a0014742d6d908b15a78236">event</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#ab86607e3a92c8a5f7419a0161babc409">   16</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> dummy_handle_x_errors( dpy, event)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Display *dpy;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    XErrorEvent *event;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../db/d83/XGetHClrs_8c.html#a890ae7764b74383a75f1ec5825fb06e8">st</a>[<a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a>++] = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../db/d83/XGetHClrs_8c.html#ae29aa2d4ae440022daaed1107eb306b3">status</a> = False;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../db/d83/XGetHClrs_8c.html#afd89e2e4aa5099ceafcf5e85198791b3">st</a>[<a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a>++] = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../db/d83/XGetHClrs_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = False;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#abd2200c131da8e98bc3a1954b7f0baaa">   26</a></span>&#160;Status <a class="code" href="../../db/d83/XGetHClrs_8c.html#abd2200c131da8e98bc3a1954b7f0baaa">XAllocColors</a>(<a class="code" href="../../d1/dea/getx10_8c.html#a7d43b3edf58f8d85a89852ab95b740f6">dpy</a>, <a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a>, defs, ndefs, statuses)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;register Display *<a class="code" href="../../d1/dea/getx10_8c.html#a7d43b3edf58f8d85a89852ab95b740f6">dpy</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;Colormap <a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../db/d83/XGetHClrs_8c.html#ad0ae8b23920776718f724cb685d99638">   26</a></span>&#160;Status <a class="code" href="../../dd/dc5/prototypes_8h.html#a7e29b2395c8a2f6699129aa9d76a1f8a">XAllocColors</a>(<a class="code" href="../../dd/dc5/prototypes_8h.html#a7e29b2395c8a2f6699129aa9d76a1f8a">dpy</a>, <a class="code" href="../../dd/dc5/prototypes_8h.html#a7e29b2395c8a2f6699129aa9d76a1f8a">cmap</a>, <a class="code" href="../../dd/dc5/prototypes_8h.html#a7e29b2395c8a2f6699129aa9d76a1f8a">defs</a>, <a class="code" href="../../dd/dc5/prototypes_8h.html#a7e29b2395c8a2f6699129aa9d76a1f8a">ndefs</a>, <a class="code" href="../../dd/dc5/prototypes_8h.html#a7e29b2395c8a2f6699129aa9d76a1f8a">statuses</a>)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">register</span> Display *dpy;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;Colormap cmap;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;XColor *defs;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> ndefs;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;Status *statuses;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    xAllocColorReply rep;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">register</span> xAllocColorReq *req;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> (*<span class="keyword">function</span>)();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> (*function)();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> i;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Status return_status;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    XSync(dpy, False);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">function</span> = XSetErrorHandler( <a class="code" href="../../db/d83/XGetHClrs_8c.html#ab86607e3a92c8a5f7419a0161babc409">dummy_handle_x_errors</a> );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../db/d83/XGetHClrs_8c.html#a890ae7764b74383a75f1ec5825fb06e8">st</a> = statuses;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    function = XSetErrorHandler( dummy_handle_x_errors );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../db/d83/XGetHClrs_8c.html#afd89e2e4aa5099ceafcf5e85198791b3">st</a> = statuses;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    LockDisplay(dpy);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
@@ -139,13 +140,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    GetReq(AllocColor, req);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    req-&gt;cmap = <a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    req-&gt;red = defs[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>].red;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    req-&gt;green = defs[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>].green;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    req-&gt;blue = defs[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>].blue;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    req-&gt;cmap = cmap;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    req-&gt;red = defs[i].red;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    req-&gt;green = defs[i].green;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    req-&gt;blue = defs[i].blue;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../db/d83/XGetHClrs_8c.html#ae29aa2d4ae440022daaed1107eb306b3">status</a> = True;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../db/d83/XGetHClrs_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = True;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a> = 0; <a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a> &lt; ndefs; <a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a>++)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    statuses[<a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a>] = _XReply(dpy, (xReply *) &amp;rep, 0, xTrue);</div>
@@ -155,33 +156,27 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        defs[<a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a>].green = rep.green;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        defs[<a class="code" href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a>].blue = rep.blue;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="../../db/d83/XGetHClrs_8c.html#ae29aa2d4ae440022daaed1107eb306b3">status</a> = False;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="../../db/d83/XGetHClrs_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = False;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    return_status = <a class="code" href="../../db/d83/XGetHClrs_8c.html#ae29aa2d4ae440022daaed1107eb306b3">status</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    return_status = <a class="code" href="../../db/d83/XGetHClrs_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    UnlockDisplay(dpy);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    SyncHandle();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    XSetErrorHandler( <span class="keyword">function</span> );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    XSetErrorHandler( function );</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span>(return_status);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !XLIBINT_H_NOT_AVAILABLE */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="getx10_8c_html_a7d43b3edf58f8d85a89852ab95b740f6"><div class="ttname"><a href="../../d1/dea/getx10_8c.html#a7d43b3edf58f8d85a89852ab95b740f6">dpy</a></div><div class="ttdeci">Display * dpy</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dea/getx10_8c_source.html#l00094">getx10.c:94</a></div></div>
-<div class="ttc" id="XGetHClrs_8c_html_a890ae7764b74383a75f1ec5825fb06e8"><div class="ttname"><a href="../../db/d83/XGetHClrs_8c.html#a890ae7764b74383a75f1ec5825fb06e8">st</a></div><div class="ttdeci">static Status * st</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d83/XGetHClrs_8c_source.html#l00013">XGetHClrs.c:13</a></div></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* !XLIBINT_H_NOT_AVAILABLE */</span></div>
+<div class="ttc" id="XGetHClrs_8c_html_a6e27f49150e9a14580fb313cc2777e00"><div class="ttname"><a href="../../db/d83/XGetHClrs_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a></div><div class="ttdeci">static int status</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d83/XGetHClrs_8c_source.html#l00014">XGetHClrs.c:14</a></div></div>
+<div class="ttc" id="XGetHClrs_8c_html_afd89e2e4aa5099ceafcf5e85198791b3"><div class="ttname"><a href="../../db/d83/XGetHClrs_8c.html#afd89e2e4aa5099ceafcf5e85198791b3">st</a></div><div class="ttdeci">static int * st</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d83/XGetHClrs_8c_source.html#l00013">XGetHClrs.c:13</a></div></div>
 <div class="ttc" id="XGetHClrs_8c_html_a617a47c70795bcff659815ad0efd2266"><div class="ttname"><a href="../../db/d83/XGetHClrs_8c.html#a617a47c70795bcff659815ad0efd2266">counter</a></div><div class="ttdeci">static int counter</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d83/XGetHClrs_8c_source.html#l00012">XGetHClrs.c:12</a></div></div>
-<div class="ttc" id="XGetHClrs_8c_html_ab86607e3a92c8a5f7419a0161babc409"><div class="ttname"><a href="../../db/d83/XGetHClrs_8c.html#ab86607e3a92c8a5f7419a0161babc409">dummy_handle_x_errors</a></div><div class="ttdeci">static int dummy_handle_x_errors(Display *dpy, XErrorEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d83/XGetHClrs_8c_source.html#l00016">XGetHClrs.c:16</a></div></div>
-<div class="ttc" id="XGetHClrs_8c_html_abd2200c131da8e98bc3a1954b7f0baaa"><div class="ttname"><a href="../../db/d83/XGetHClrs_8c.html#abd2200c131da8e98bc3a1954b7f0baaa">XAllocColors</a></div><div class="ttdeci">Status XAllocColors(Display *dpy, Colormap cmap, XColor *defs, int ndefs, Status *statuses)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d83/XGetHClrs_8c_source.html#l00026">XGetHClrs.c:26</a></div></div>
-<div class="ttc" id="getap_8c_html_ae0c0685c1a0014742d6d908b15a78236"><div class="ttname"><a href="../../da/d92/getap_8c.html#ae0c0685c1a0014742d6d908b15a78236">event</a></div><div class="ttdeci">gpr_ $event_t event</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/getap_8c_source.html#l00105">getap.c:105</a></div></div>
-<div class="ttc" id="XGetHClrs_8c_html_ae29aa2d4ae440022daaed1107eb306b3"><div class="ttname"><a href="../../db/d83/XGetHClrs_8c.html#ae29aa2d4ae440022daaed1107eb306b3">status</a></div><div class="ttdeci">static Status status</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d83/XGetHClrs_8c_source.html#l00014">XGetHClrs.c:14</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
-<div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
-<div class="ttc" id="get4d_8c_html_a4bf2bb259263c1d8416d80591d0ac671"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a></div><div class="ttdeci">rle_pixel ** cmap</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00047">get4d.c:47</a></div></div>
+<div class="ttc" id="prototypes_8h_html_a7e29b2395c8a2f6699129aa9d76a1f8a"><div class="ttname"><a href="../../dd/dc5/prototypes_8h.html#a7e29b2395c8a2f6699129aa9d76a1f8a">XAllocColors</a></div><div class="ttdeci">int XAllocColors(register Display *dpy, Colormap cmap, XColor *defs, int ndefs, int *statuses)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

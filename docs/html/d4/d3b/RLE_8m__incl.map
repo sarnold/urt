@@ -1,4 +1,6 @@
-<map id="RLE.m" name="RLE.m">
-<area shape="rect" id="node2" href="$d8/d0f/RLE_8h.html" title="RLE.h" alt="" coords="187,80,247,107"/>
-<area shape="rect" id="node4" href="$d8/d0f/Image_8h.html" title="Image.h" alt="" coords="181,155,253,181"/>
+<map id="get/next/RLE.m" name="get/next/RLE.m">
+<area shape="rect" id="node2" href="$d8/d0f/RLE_8h.html" title="RLE.h" alt="" coords="440,80,500,107"/>
+<area shape="rect" id="node3" href="$d7/d27/rle_8h.html" title="rle.h" alt="" coords="446,155,495,181"/>
+<area shape="rect" id="node8" href="$d8/d0f/Image_8h.html" title="Image.h" alt="" coords="202,155,274,181"/>
+<area shape="rect" id="node4" href="$df/dad/rle__config_8h.html" title="rle_config.h" alt="" coords="404,229,499,256"/>
 </map>

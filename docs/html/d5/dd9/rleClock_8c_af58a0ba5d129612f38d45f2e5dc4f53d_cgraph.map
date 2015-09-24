@@ -1,7 +1,0 @@
-<map id="drawHand" name="drawHand">
-<area shape="rect" id="node2" href="$d5/dd9/rleClock_8c.html#a3c6969cf72d4e9966262f6b71de3edf0" title="polarLine" alt="" coords="153,5,234,32"/>
-<area shape="rect" id="node3" href="$d5/dd9/rleClock_8c.html#a3a6bb64f0dfa1d19876d6d2ad54a6e19" title="areaFlood" alt="" coords="150,56,237,83"/>
-<area shape="rect" id="node4" href="$d5/dd9/rleClock_8c.html#a3c0c095dedbe38c544690c7a0e9b4c3d" title="polarToX" alt="" coords="153,107,233,133"/>
-<area shape="rect" id="node5" href="$d5/dd9/rleClock_8c.html#a5b95d008139ccd0f38c1212e81fa9772" title="polarToY" alt="" coords="153,157,233,184"/>
-<area shape="rect" id="node6" href="$d5/dd9/rleClock_8c.html#a569194c27f98bfd605fe649efb9c29a9" title="rasterAddBits" alt="" coords="140,208,247,235"/>
-</map>

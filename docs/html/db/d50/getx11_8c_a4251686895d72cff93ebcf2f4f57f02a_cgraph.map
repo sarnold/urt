@@ -1,6 +1,0 @@
-<map id="action_flip_backward" name="action_flip_backward">
-<area shape="rect" id="node2" href="$d7/dd0/fn__decls_8h.html#af2a9f1fee798207986fcdd6a51543e42" title="set_timer" alt="" coords="233,5,313,32"/>
-<area shape="rect" id="node3" href="$db/d50/getx11_8c.html#a84e1814bcc6f83ad5491f930d01545c3" title="handle_exposure" alt="" coords="208,56,339,83"/>
-<area shape="rect" id="node5" href="$d7/dd0/fn__decls_8h.html#a775d833c85eb59a7b5f094ab1b344c95" title="wait_timer" alt="" coords="230,107,317,133"/>
-<area shape="rect" id="node4" href="$d7/dd0/fn__decls_8h.html#aa865a828176f9dd02f835f9b7063691d" title="put_X_image" alt="" coords="387,56,491,83"/>
-</map>

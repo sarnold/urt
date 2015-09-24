@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: rle_error.c Source File</title>
+<title>Utah Raster Toolkit: lib/rle_error.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -116,11 +117,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * Date:    Mon Mar  2 1992</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * Copyright (c) 1992, University of Michigan</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef lint</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">lint</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d7/d24/rle__error_8c.html#a0cf3b38cc3353ed52376c64cd61460f5">   28</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="../../d7/d24/rle__error_8c.html#a0cf3b38cc3353ed52376c64cd61460f5">rcs_id</a>[] = <span class="stringliteral">&quot;$Header: /l/spencer/src/urt/lib/RCS/rle_error.c,v 3.0.1.1 1992/03/04 19:33:27 spencer Exp $&quot;</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;rle.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="../../d7/d27/rle_8h.html">&quot;rle.h&quot;</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*****************************************************************</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * TAG( rle_alloc_error )</span></div>
@@ -135,8 +136,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> * Returns int because it&#39;s used in a conditional expression.</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d7/d24/rle__error_8c.html#ada027c114502e3e27c7649cadabeedc3">   46</a></span>&#160;<a class="code" href="../../d7/d24/rle__error_8c.html#ada027c114502e3e27c7649cadabeedc3">rle_alloc_error</a>( pgm, name )</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;CONST_DECL <span class="keywordtype">char</span> *pgm, *name;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d7/d24/rle__error_8c.html#ab3754ff83858cb429f15a1deae56f452">   46</a></span>&#160;<a class="code" href="../../d7/d24/rle__error_8c.html#ab3754ff83858cb429f15a1deae56f452">rle_alloc_error</a>( <a class="code" href="../../d7/d24/rle__error_8c.html#ab3754ff83858cb429f15a1deae56f452">pgm</a>, <a class="code" href="../../d7/d24/rle__error_8c.html#ab3754ff83858cb429f15a1deae56f452">name</a> )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *pgm, *name;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> ( name )</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    fprintf( stderr, <span class="stringliteral">&quot;%s: memory allocation failed.\n&quot;</span>, pgm );</div>
@@ -144,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    fprintf( stderr, <span class="stringliteral">&quot;%s: memory allocation failed (no space for %s).\n&quot;</span>,</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;         pgm, name );</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    exit( RLE_NO_SPACE );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    exit( <a class="code" href="../../d7/d27/rle_8h.html#a69912452a4a49a4cea4614fb0687b9d6">RLE_NO_SPACE</a> );</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">/* Will some compilers bitch about this because they know exit</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     * doesn&#39;t return??</span></div>
@@ -165,36 +166,36 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> *  Returns code.</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d7/d24/rle__error_8c.html#af931d686cf3ca715c9b900527f0961c0">   76</a></span>&#160;<a class="code" href="../../d7/d24/rle__error_8c.html#af931d686cf3ca715c9b900527f0961c0">rle_get_error</a>( code, pgmname, <a class="code" href="../../d3/d6f/show3_8c.html#a64e65075a909038d47a47ea45adcb50f">fname</a> )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> code;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;CONST_DECL <span class="keywordtype">char</span> *pgmname;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;CONST_DECL <span class="keywordtype">char</span> *<a class="code" href="../../d3/d6f/show3_8c.html#a64e65075a909038d47a47ea45adcb50f">fname</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d7/d24/rle__error_8c.html#a8829c85542443e2e977f47db3499ab52">   76</a></span>&#160;<a class="code" href="../../d7/d24/rle__error_8c.html#a8829c85542443e2e977f47db3499ab52">rle_get_error</a>( <a class="code" href="../../d7/d24/rle__error_8c.html#a8829c85542443e2e977f47db3499ab52">code</a>, <a class="code" href="../../d7/d24/rle__error_8c.html#a8829c85542443e2e977f47db3499ab52">pgmname</a>, <a class="code" href="../../d7/d24/rle__error_8c.html#a8829c85542443e2e977f47db3499ab52">fname</a> )</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">int</span> code;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *pgmname;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *fname;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (! fname || strcmp( fname, <span class="stringliteral">&quot;-&quot;</span> ) == 0 )</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    fname = <span class="stringliteral">&quot;Standard Input&quot;</span>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">switch</span>( code )</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">case</span> RLE_SUCCESS:       <span class="comment">/* success */</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d7/d27/rle_8h.html#af8151a769dcd3909e10aca29bdbd525f">RLE_SUCCESS</a>:       <span class="comment">/* success */</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">case</span> RLE_NOT_RLE:       <span class="comment">/* Not an RLE file */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d7/d27/rle_8h.html#afb02dd94d62230a77863c5f05f5ed2f6">RLE_NOT_RLE</a>:       <span class="comment">/* Not an RLE file */</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    fprintf( stderr, <span class="stringliteral">&quot;%s: %s is not an RLE file\n&quot;</span>,</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;         pgmname, fname );</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">case</span> RLE_NO_SPACE:          <span class="comment">/* malloc failed */</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d7/d27/rle_8h.html#a69912452a4a49a4cea4614fb0687b9d6">RLE_NO_SPACE</a>:          <span class="comment">/* malloc failed */</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    fprintf( stderr,</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;         <span class="stringliteral">&quot;%s: Malloc failed reading header of file %s\n&quot;</span>,</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;         pgmname, fname );</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">case</span> RLE_EMPTY:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d7/d27/rle_8h.html#afd905274e1716b1f6477f78bf49cef1e">RLE_EMPTY</a>:</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    fprintf( stderr, <span class="stringliteral">&quot;%s: %s is an empty file\n&quot;</span>,</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;         pgmname, fname );</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">case</span> RLE_EOF:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d7/d27/rle_8h.html#ab9eb0d97af30e88650c1ef2a3e4b257d">RLE_EOF</a>:</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    fprintf( stderr,</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;         <span class="stringliteral">&quot;%s: RLE header of %s is incomplete (premature EOF)\n&quot;</span>,</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;         pgmname, fname );</div>
@@ -207,17 +208,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> code;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="ttc" id="rle__error_8c_html_af931d686cf3ca715c9b900527f0961c0"><div class="ttname"><a href="../../d7/d24/rle__error_8c.html#af931d686cf3ca715c9b900527f0961c0">rle_get_error</a></div><div class="ttdeci">int rle_get_error(int code, char *pgmname, char *fname)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d24/rle__error_8c_source.html#l00076">rle_error.c:76</a></div></div>
-<div class="ttc" id="show3_8c_html_a64e65075a909038d47a47ea45adcb50f"><div class="ttname"><a href="../../d3/d6f/show3_8c.html#a64e65075a909038d47a47ea45adcb50f">fname</a></div><div class="ttdeci">char * fname[3]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6f/show3_8c_source.html#l00031">show3.c:31</a></div></div>
-<div class="ttc" id="rle__error_8c_html_ada027c114502e3e27c7649cadabeedc3"><div class="ttname"><a href="../../d7/d24/rle__error_8c.html#ada027c114502e3e27c7649cadabeedc3">rle_alloc_error</a></div><div class="ttdeci">int rle_alloc_error(char *pgm, char *name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d24/rle__error_8c_source.html#l00046">rle_error.c:46</a></div></div>
+<div class="ttc" id="rle_8h_html_afd905274e1716b1f6477f78bf49cef1e"><div class="ttname"><a href="../../d7/d27/rle_8h.html#afd905274e1716b1f6477f78bf49cef1e">RLE_EMPTY</a></div><div class="ttdeci">#define RLE_EMPTY</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00073">rle.h:73</a></div></div>
+<div class="ttc" id="rle_8h_html_af8151a769dcd3909e10aca29bdbd525f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#af8151a769dcd3909e10aca29bdbd525f">RLE_SUCCESS</a></div><div class="ttdeci">#define RLE_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00070">rle.h:70</a></div></div>
+<div class="ttc" id="rle_8h_html_afb02dd94d62230a77863c5f05f5ed2f6"><div class="ttname"><a href="../../d7/d27/rle_8h.html#afb02dd94d62230a77863c5f05f5ed2f6">RLE_NOT_RLE</a></div><div class="ttdeci">#define RLE_NOT_RLE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00071">rle.h:71</a></div></div>
+<div class="ttc" id="rle__error_8c_html_a8829c85542443e2e977f47db3499ab52"><div class="ttname"><a href="../../d7/d24/rle__error_8c.html#a8829c85542443e2e977f47db3499ab52">rle_get_error</a></div><div class="ttdeci">int rle_get_error(int code, const  char *pgmname, const  char *fname)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d24/rle__error_8c_source.html#l00076">rle_error.c:76</a></div></div>
+<div class="ttc" id="rle_8h_html_a69912452a4a49a4cea4614fb0687b9d6"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a69912452a4a49a4cea4614fb0687b9d6">RLE_NO_SPACE</a></div><div class="ttdeci">#define RLE_NO_SPACE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00072">rle.h:72</a></div></div>
 <div class="ttc" id="rle__error_8c_html_a0cf3b38cc3353ed52376c64cd61460f5"><div class="ttname"><a href="../../d7/d24/rle__error_8c.html#a0cf3b38cc3353ed52376c64cd61460f5">rcs_id</a></div><div class="ttdeci">static char rcs_id[]</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d24/rle__error_8c_source.html#l00028">rle_error.c:28</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
+<div class="ttc" id="rle_8h_html_ab9eb0d97af30e88650c1ef2a3e4b257d"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab9eb0d97af30e88650c1ef2a3e4b257d">RLE_EOF</a></div><div class="ttdeci">#define RLE_EOF</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00074">rle.h:74</a></div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
+<div class="ttc" id="rle__error_8c_html_ab3754ff83858cb429f15a1deae56f452"><div class="ttname"><a href="../../d7/d24/rle__error_8c.html#ab3754ff83858cb429f15a1deae56f452">rle_alloc_error</a></div><div class="ttdeci">int rle_alloc_error(char *pgm, char *name) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d24/rle__error_8c_source.html#l00046">rle_error.c:46</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:03 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

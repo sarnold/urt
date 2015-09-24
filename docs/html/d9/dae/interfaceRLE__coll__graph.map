@@ -1,4 +1,5 @@
 <map id="RLE" name="RLE">
-<area shape="rect" id="node2" href="$d2/d41/interfaceImage.html" title="Image" alt="" coords="277,183,338,209"/>
-<area shape="rect" id="node3" href="$d7/d9f/classView.html" title="View" alt="" coords="5,5,57,32"/>
+<area shape="rect" id="node2" href="$d8/d00/classImage.html" title="Image" alt="" coords="268,231,329,257"/>
+<area shape="rect" id="node3" href="$d7/d9f/classView.html" title="View" alt="" coords="48,213,100,240"/>
+<area shape="rect" id="node10" href="$d6/dab/structrle__hdr.html" title="rle_hdr" alt="" coords="265,956,332,983"/>
 </map>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: scanargs.c File Reference</title>
+<title>Utah Raster Toolkit: lib/scanargs.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -94,14 +95,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">scanargs.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;rle_config.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../df/dad/rle__config_8h_source.html">rle_config.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
-<code>#include &lt;varargs.h&gt;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for scanargs.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d13/scanargs_8c__incl.svg" width="390" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d13/scanargs_8c__incl.svg" width="412" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -113,11 +114,11 @@ Macros</h2></td></tr>
 <tr class="separator:a7ebc9a785e5ab85457c98595aac81589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a996bde01ecac342918f0a2c4e7ce7bd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a996bde01ecac342918f0a2c4e7ce7bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a435175024ad996b2a45d734fa9eea0e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a>(msg)&#160;&#160;&#160;{fprintf(stderr, &quot;%s\n&quot;, msg); goto <a class="el" href="../../df/db4/tifftorle_8c.html#a42c6b1edc1bd763019f0eb5edce18793">error</a>; }</td></tr>
+<tr class="memitem:a435175024ad996b2a45d734fa9eea0e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a>(msg)&#160;&#160;&#160;{fprintf(stderr, &quot;%s\n&quot;, msg); goto <a class="el" href="../../df/db4/tifftorle_8c.html#a28f2432142cf40344ef1aed919783a71">error</a>; }</td></tr>
 <tr class="separator:a435175024ad996b2a45d734fa9eea0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26e3926f3d15ee89e67169a7f7e0d79d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>(<a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a>,  cnt)&#160;&#160;&#160;(<a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a> *) <a class="el" href="../../d9/d67/tobw_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( (cnt) * sizeof( <a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a> ) )</td></tr>
+<tr class="memitem:a26e3926f3d15ee89e67169a7f7e0d79d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>(<a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a>,  cnt)&#160;&#160;&#160;(<a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a> *) <a class="el" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( (cnt) * sizeof( <a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a> ) )</td></tr>
 <tr class="separator:a26e3926f3d15ee89e67169a7f7e0d79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cac65c9f54b079d2919639f7c794077"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">RENEW</a>(<a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a>,  <a class="el" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>,  cnt)&#160;&#160;&#160;(<a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a> *) realloc( <a class="el" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>, (cnt) * sizeof( <a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a> ) )</td></tr>
+<tr class="memitem:a7cac65c9f54b079d2919639f7c794077"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">RENEW</a>(<a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a>,  <a class="el" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>,  cnt)&#160;&#160;&#160;(<a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a> *) realloc( <a class="el" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>, (cnt) * sizeof( <a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a> ) )</td></tr>
 <tr class="separator:a7cac65c9f54b079d2919639f7c794077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -137,16 +138,16 @@ Functions</h2></td></tr>
 <tr class="separator:a862219039664df6eb3cfced58addf830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbfbdeb76ff8247a7be05c5666e09d95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a> ()</td></tr>
 <tr class="separator:adbfbdeb76ff8247a7be05c5666e09d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea6d702c0484056c8504d6ce7fede08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a> (va_alist)</td></tr>
-<tr class="separator:a7ea6d702c0484056c8504d6ce7fede08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a860d43f1fb68d32fba9d48f83d3c86ef"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a860d43f1fb68d32fba9d48f83d3c86ef">_do_scanargs</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> argc, char **argv, CONST_DECL char   *<a class="el" href="../../d7/dac/ppmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>, va_list argl)</td></tr>
-<tr class="separator:a860d43f1fb68d32fba9d48f83d3c86ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a055153db05ea025cca23cada404f23e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a055153db05ea025cca23cada404f23e1">scan_usage</a> (char **argv, CONST_DECL char *<a class="el" href="../../d7/dac/ppmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>)</td></tr>
-<tr class="separator:a055153db05ea025cca23cada404f23e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abadefaa317ecfaecbf6550b68253bac4"><td class="memItemLeft" align="right" valign="top">static CONST_DECL char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#abadefaa317ecfaecbf6550b68253bac4">prformat</a> (CONST_DECL char   *<a class="el" href="../../d7/dac/ppmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> recurse)</td></tr>
-<tr class="separator:abadefaa317ecfaecbf6550b68253bac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5f0d477fc4d1f7196dcd1f46b76c649"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#af5f0d477fc4d1f7196dcd1f46b76c649">isnum</a> (CONST_DECL char *<a class="el" href="../../d0/dcc/rletorla_8c.html#a3e6c64a4b8fd9c31b174ce283f0a8bbf">str</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> typchr, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> comma_list)</td></tr>
-<tr class="separator:af5f0d477fc4d1f7196dcd1f46b76c649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7827333daec9d306aff4729fbd61b031"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">scanargs</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> argc, char **argv, const char *<a class="el" href="../../d7/dac/ppmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>,...)</td></tr>
+<tr class="separator:a7827333daec9d306aff4729fbd61b031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6abc25f6f59da9aa7d09131aeb7ca95c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">_do_scanargs</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> argc, char **argv, const  char   *<a class="el" href="../../d7/dac/ppmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>, va_list argl)</td></tr>
+<tr class="separator:a6abc25f6f59da9aa7d09131aeb7ca95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0e23b5d40d010fd940f5b58cf95a97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a5b0e23b5d40d010fd940f5b58cf95a97">scan_usage</a> (char **argv, const  char *<a class="el" href="../../d7/dac/ppmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>)</td></tr>
+<tr class="separator:a5b0e23b5d40d010fd940f5b58cf95a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0283a656ac84c7abacfeac66f2e397"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">prformat</a> (char   *<a class="el" href="../../d7/dac/ppmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> recurse) const</td></tr>
+<tr class="separator:a1b0283a656ac84c7abacfeac66f2e397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eaa903aaca2286505604bc2360e825a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">isnum</a> (const  char *<a class="el" href="../../d0/dcc/rletorla_8c.html#a3e6c64a4b8fd9c31b174ce283f0a8bbf">str</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> typchr, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> comma_list)</td></tr>
+<tr class="separator:a4eaa903aaca2286505604bc2360e825a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a435175024ad996b2a45d734fa9eea0e3"></a>
@@ -158,7 +159,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">msg</td><td>)</td>
-          <td>&#160;&#160;&#160;{fprintf(stderr, &quot;%s\n&quot;, msg); goto <a class="el" href="../../df/db4/tifftorle_8c.html#a42c6b1edc1bd763019f0eb5edce18793">error</a>; }</td>
+          <td>&#160;&#160;&#160;{fprintf(stderr, &quot;%s\n&quot;, msg); goto <a class="el" href="../../df/db4/tifftorle_8c.html#a28f2432142cf40344ef1aed919783a71">error</a>; }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -175,7 +176,7 @@ Functions</h2></td></tr>
           <td class="memname">#define NEW</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a>, </td>
+          <td class="paramname"><a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -186,7 +187,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(<a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a> *) <a class="el" href="../../d9/d67/tobw_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( (cnt) * sizeof( <a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a> ) )</td>
+          <td></td><td>&#160;&#160;&#160;(<a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a> *) <a class="el" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( (cnt) * sizeof( <a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a> ) )</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -217,7 +218,7 @@ Functions</h2></td></tr>
           <td class="memname">#define RENEW</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a>, </td>
+          <td class="paramname"><a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -234,7 +235,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(<a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a> *) realloc( <a class="el" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>, (cnt) * sizeof( <a class="el" href="../../d5/dd9/rleClock_8c.html#a2774af8f15357562734d30b70f1b1c96">type</a> ) )</td>
+          <td></td><td>&#160;&#160;&#160;(<a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a> *) realloc( <a class="el" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>, (cnt) * sizeof( <a class="el" href="../../d5/dd9/rleClock_8c.html#a515301d21ed81c14e853388ade876b7d">type</a> ) )</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -308,17 +309,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_a862219039664df6eb3cfced58addf830_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a860d43f1fb68d32fba9d48f83d3c86ef"></a>
+<a class="anchor" id="a6abc25f6f59da9aa7d09131aeb7ca95c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -340,7 +333,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">CONST_DECL char   *&#160;</td>
+          <td class="paramtype">const  char   *&#160;</td>
           <td class="paramname"><em>format</em>, </td>
         </tr>
         <tr>
@@ -363,11 +356,13 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../d4/db0/scanargs_8c_source.html#l00124">124</a> of file <a class="el" href="../../d4/db0/scanargs_8c_source.html">scanargs.c</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">int</span>    check;           <span class="comment">/* check counter to be sure all argvs</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">                       are processed */</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span>  *cp;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span>  *cp;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">int</span>    cnt;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d3/d42/rletoabA62_8c.html#adb50a0eab9fed92fc3bfc7dfa4f2c410">optarg</a> = 0;         <span class="comment">/* where optional args start */</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">int</span>     nopt = 0;</div>
@@ -396,7 +391,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">double</span> *dbllist = 0;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">char</span>  * argp;           <span class="comment">/* Pointer to argument. */</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    CONST_DECL <span class="keywordtype">char</span>   *ncp;     <span class="comment">/* remember cp during flag scanning */</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span>   *ncp;     <span class="comment">/* remember cp during flag scanning */</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span>   cntrl[7] = <span class="stringliteral">&quot;%  %1s&quot;</span>;  <span class="comment">/* control string for scanf&#39;s */</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">char</span>    junk[2];            <span class="comment">/* junk buffer for scanf&#39;s */</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
@@ -897,7 +892,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                }</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                <span class="keywordflow">if</span> ( typchr != <span class="charliteral">&#39;s&#39;</span> &amp;&amp; comma_list )</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>( (<span class="keywordtype">char</span> *) strlist );</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                free( (<span class="keywordtype">char</span> *) strlist );</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;            }</div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( cnt &gt;= argc )</div>
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;            {</div>
@@ -930,23 +925,23 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    <span class="keywordflow">if</span> ( help )</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( argv, <a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a> );</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>(arg_used);</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    free(arg_used);</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<a class="code" href="../../dc/d7b/aliastorle_8c.html#ac2c29217831f208a3b22bae552c5124f">error</a>: </div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<a class="code" href="../../dc/d7b/aliastorle_8c.html#ad5e1e85917b7b2dfae6e56c3d2ca925d">error</a>: </div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    <span class="keywordflow">if</span> ( !no_usage )</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( argv, <a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a> );</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>(arg_used);</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    free(arg_used);</div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;}</div>
-<div class="ttc" id="aliastorle_8c_html_ac2c29217831f208a3b22bae552c5124f"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#ac2c29217831f208a3b22bae552c5124f">error</a></div><div class="ttdeci">static void error()</div></div>
 <div class="ttc" id="fant_8c_html_ab2391a688166a14a4af286bcc8a8b072"><div class="ttname"><a href="../../dd/ddd/fant_8c.html#ab2391a688166a14a4af286bcc8a8b072">pass</a></div><div class="ttdeci">int pass</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/ddd/fant_8c_source.html#l00102">fant.c:102</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a26e3926f3d15ee89e67169a7f7e0d79d"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a></div><div class="ttdeci">#define NEW(type, cnt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00066">scanargs.c:66</a></div></div>
 <div class="ttc" id="rleClock_8c_html_ab4da28acaeb839de1f7b3713201ae2ac"><div class="ttname"><a href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a></div><div class="ttdeci">_urt_stack * s</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dd9/rleClock_8c_source.html#l00919">rleClock.c:919</a></div></div>
 <div class="ttc" id="rastorle_8c_html_acb5ba97551079e0b072c62c21d784ac5"><div class="ttname"><a href="../../d8/d81/rastorle_8c.html#acb5ba97551079e0b072c62c21d784ac5">depth</a></div><div class="ttdeci">static int depth</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/rastorle_8c_source.html#l00068">rastorle.c:68</a></div></div>
 <div class="ttc" id="scanargs_8c_html_adbfbdeb76ff8247a7be05c5666e09d95"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a></div><div class="ttdeci">void scan_usage()</div></div>
-<div class="ttc" id="rletorla_8c_html_aafde19f7d36ca163a143579c1b125b6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a></div><div class="ttdeci">void free()</div></div>
 <div class="ttc" id="scanargs_8c_html_a2a5612de1c2935309d59a4f9e339d10f"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a2a5612de1c2935309d59a4f9e339d10f">isnum</a></div><div class="ttdeci">static int isnum()</div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
+<div class="ttc" id="aliastorle_8c_html_ad5e1e85917b7b2dfae6e56c3d2ca925d"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#ad5e1e85917b7b2dfae6e56c3d2ca925d">error</a></div><div class="ttdeci">static void error(int)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00559">aliastorle.c:559</a></div></div>
 <div class="ttc" id="scanargs_8c_html_abacbbdefe312ec12aef4657fb2c48e98"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a></div><div class="ttdeci">int * ptr</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00057">scanargs.c:57</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a7ebc9a785e5ab85457c98595aac81589"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a></div><div class="ttdeci">#define YES</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00059">scanargs.c:59</a></div></div>
 <div class="ttc" id="pgmtorle_8c_html_a317afff57d87a89158c2b038d37b2b08"><div class="ttname"><a href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a></div><div class="ttdeci">int format</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/pgmtorle_8c_source.html#l00050">pgmtorle.c:50</a></div></div>
@@ -956,9 +951,9 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="scanargs_8c_html_a435175024ad996b2a45d734fa9eea0e3"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a></div><div class="ttdeci">#define ERROR(msg)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00061">scanargs.c:61</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
-Here is the call graph for this function:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_a860d43f1fb68d32fba9d48f83d3c86ef_cgraph.svg" width="270" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_a6abc25f6f59da9aa7d09131aeb7ca95c_icgraph.svg" width="251" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -986,17 +981,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_a2a5612de1c2935309d59a4f9e339d10f_icgraph.svg" width="230" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="af5f0d477fc4d1f7196dcd1f46b76c649"></a>
+<a class="anchor" id="a4eaa903aaca2286505604bc2360e825a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1006,7 +993,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> isnum </td>
           <td>(</td>
-          <td class="paramtype">CONST_DECL char *&#160;</td>
+          <td class="paramtype"> const  char *&#160;</td>
           <td class="paramname"><em>str</em>, </td>
         </tr>
         <tr>
@@ -1036,7 +1023,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../d4/db0/scanargs_8c_source.html#l00894">894</a> of file <a class="el" href="../../d4/db0/scanargs_8c_source.html">scanargs.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;{</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span> *allowed, *digits, *cp;</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *allowed, *digits, *cp;</div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    <span class="keywordtype">int</span> hasdigit = <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>;</div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;</div>
 <div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    <span class="keywordflow">switch</span>( typchr )</div>
@@ -1084,6 +1071,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    }</div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;    <span class="keywordflow">return</span> hasdigit;</div>
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;}</div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a7ebc9a785e5ab85457c98595aac81589"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a></div><div class="ttdeci">#define YES</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00059">scanargs.c:59</a></div></div>
 <div class="ttc" id="rletorla_8c_html_a3e6c64a4b8fd9c31b174ce283f0a8bbf"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#a3e6c64a4b8fd9c31b174ce283f0a8bbf">str</a></div><div class="ttdeci">char * str</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00079">rletorla.c:79</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a996bde01ecac342918f0a2c4e7ce7bd5"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a></div><div class="ttdeci">#define NO</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00060">scanargs.c:60</a></div></div>
@@ -1111,17 +1099,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_adf82761e407e03810d345781225e4b4e_icgraph.svg" width="232" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="abadefaa317ecfaecbf6550b68253bac4"></a>
+<a class="anchor" id="a1b0283a656ac84c7abacfeac66f2e397"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1129,9 +1109,9 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static CONST_DECL char* prformat </td>
+          <td class="memname">static const char* prformat </td>
           <td>(</td>
-          <td class="paramtype">CONST_DECL char   *&#160;</td>
+          <td class="paramtype">char   *&#160;</td>
           <td class="paramname"><em>format</em>, </td>
         </tr>
         <tr>
@@ -1143,7 +1123,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -1155,7 +1135,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../d4/db0/scanargs_8c_source.html#l00742">742</a> of file <a class="el" href="../../d4/db0/scanargs_8c_source.html">scanargs.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;{</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span>  *cp;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span>  *cp;</div>
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordtype">bool</span>    required, comma_list;</div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordtype">int</span>    list_of, <a class="code" href="../../d8/d81/rastorle_8c.html#acb5ba97551079e0b072c62c21d784ac5">depth</a>;</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;</div>
@@ -1297,18 +1277,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;}</div>
 <div class="ttc" id="scanargs_8c_html_adf82761e407e03810d345781225e4b4e"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a></div><div class="ttdeci">static char * prformat()</div></div>
 <div class="ttc" id="rastorle_8c_html_acb5ba97551079e0b072c62c21d784ac5"><div class="ttname"><a href="../../d8/d81/rastorle_8c.html#acb5ba97551079e0b072c62c21d784ac5">depth</a></div><div class="ttdeci">static int depth</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/rastorle_8c_source.html#l00068">rastorle.c:68</a></div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a7ebc9a785e5ab85457c98595aac81589"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a></div><div class="ttdeci">#define YES</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00059">scanargs.c:59</a></div></div>
 <div class="ttc" id="pgmtorle_8c_html_a317afff57d87a89158c2b038d37b2b08"><div class="ttname"><a href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a></div><div class="ttdeci">int format</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/pgmtorle_8c_source.html#l00050">pgmtorle.c:50</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a996bde01ecac342918f0a2c4e7ce7bd5"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a></div><div class="ttdeci">#define NO</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00060">scanargs.c:60</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_abadefaa317ecfaecbf6550b68253bac4_cgraph.svg" width="208" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="adbfbdeb76ff8247a7be05c5666e09d95"></a>
@@ -1324,17 +1297,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_adbfbdeb76ff8247a7be05c5666e09d95_icgraph.svg" width="270" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a055153db05ea025cca23cada404f23e1"></a>
+<a class="anchor" id="a5b0e23b5d40d010fd940f5b58cf95a97"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1347,7 +1312,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">CONST_DECL char *&#160;</td>
+          <td class="paramtype">const  char *&#160;</td>
           <td class="paramname"><em>format</em>&#160;</td>
         </tr>
         <tr>
@@ -1360,7 +1325,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../d4/db0/scanargs_8c_source.html#l00707">707</a> of file <a class="el" href="../../d4/db0/scanargs_8c_source.html">scanargs.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;{</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span> * cp;</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * cp;</div>
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    fprintf (stderr, <span class="stringliteral">&quot;usage : &quot;</span>);</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keywordflow">if</span> (*(cp = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>) != <span class="charliteral">&#39; &#39;</span>)</div>
@@ -1390,46 +1355,63 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    (void)<a class="code" href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a> (cp, <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>);</div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;}</div>
 <div class="ttc" id="scanargs_8c_html_adf82761e407e03810d345781225e4b4e"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a></div><div class="ttdeci">static char * prformat()</div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="pgmtorle_8c_html_a317afff57d87a89158c2b038d37b2b08"><div class="ttname"><a href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a></div><div class="ttdeci">int format</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/pgmtorle_8c_source.html#l00050">pgmtorle.c:50</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a996bde01ecac342918f0a2c4e7ce7bd5"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a></div><div class="ttdeci">#define NO</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00060">scanargs.c:60</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_a055153db05ea025cca23cada404f23e1_cgraph.svg" width="232" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a7ea6d702c0484056c8504d6ce7fede08"></a>
+<a class="anchor" id="a7827333daec9d306aff4729fbd61b031"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> scanargs </td>
           <td>(</td>
-          <td class="paramtype">va_alist&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d4/db0/scanargs_8c_source.html#l00091">91</a> of file <a class="el" href="../../d4/db0/scanargs_8c_source.html">scanargs.c</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/db0/scanargs_8c_source.html#l00094">94</a> of file <a class="el" href="../../d4/db0/scanargs_8c_source.html">scanargs.c</a>.</p>
+
+<p>References <a class="el" href="../../d4/db0/scanargs_8c_source.html#l00124">_do_scanargs()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    va_list argl;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> retval;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifndef USE_STDARG</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> argc;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">char</span> ** argv;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    CONST_DECL <span class="keywordtype">char</span> *<a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *<a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    va_start( argl );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    argc = va_arg( argl, <span class="keywordtype">int</span> );</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    argv = va_arg( argl, <span class="keywordtype">char</span> ** );</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    format = va_arg( argl, CONST_DECL <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    format = va_arg( argl, <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * );</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    va_start( argl, format );</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -1437,21 +1419,14 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    va_end( argl );</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> retval;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="pgmtorle_8c_html_a317afff57d87a89158c2b038d37b2b08"><div class="ttname"><a href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a></div><div class="ttdeci">int format</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/pgmtorle_8c_source.html#l00050">pgmtorle.c:50</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a862219039664df6eb3cfced58addf830"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a862219039664df6eb3cfced58addf830">_do_scanargs</a></div><div class="ttdeci">static int _do_scanargs()</div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_a7ea6d702c0484056c8504d6ce7fede08_cgraph.svg" width="251" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_a7ea6d702c0484056c8504d6ce7fede08_icgraph.svg" width="191" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/db0/scanargs_8c_a7827333daec9d306aff4729fbd61b031_cgraph.svg" width="251" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -1461,7 +1436,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:07 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

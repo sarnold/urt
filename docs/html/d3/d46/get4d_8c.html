@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: get4d.c File Reference</title>
+<title>Utah Raster Toolkit: get/get4d.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -98,11 +99,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &quot;gl.h&quot;</code><br />
 <code>#include &quot;device.h&quot;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for get4d.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/df5/get4d_8c__incl.svg" width="404" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/df5/get4d_8c__incl.svg" width="388" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -174,9 +175,9 @@ Variables</h2></td></tr>
 <tr class="separator:afb65d4b9228a3a17c8b1bc5258996532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bfffb89e894e6db933b642bab94f9b1"><td class="memItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/get4d_8c.html#a7bfffb89e894e6db933b642bab94f9b1">rgb_image</a></td></tr>
 <tr class="separator:a7bfffb89e894e6db933b642bab94f9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad24a9b5f83b74566a2901b7746e7305"><td class="memItemLeft" align="right" valign="top">rle_hdr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a></td></tr>
+<tr class="memitem:aad24a9b5f83b74566a2901b7746e7305"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a></td></tr>
 <tr class="separator:aad24a9b5f83b74566a2901b7746e7305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bf2bb259263c1d8416d80591d0ac671"><td class="memItemLeft" align="right" valign="top">rle_pixel **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a></td></tr>
+<tr class="memitem:a4bf2bb259263c1d8416d80591d0ac671"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a></td></tr>
 <tr class="separator:a4bf2bb259263c1d8416d80591d0ac671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -252,6 +253,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../d3/d46/get4d_8c_source.html#l00566">566</a> of file <a class="el" href="../../d3/d46/get4d_8c_source.html">get4d.c</a>.</p>
+
+<p>References <a class="el" href="../../d3/d46/get4d_8c_source.html#l00029">i</a>, <a class="el" href="../../d3/d46/get4d_8c_source.html#l00043">rect_image</a>, <a class="el" href="../../dc/d7d/getmex_8c_source.html#l00025">x_size</a>, and <a class="el" href="../../dc/d7d/getmex_8c_source.html#l00025">y_size</a>.</p>
 <div class="fragment"><div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;{</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="../../d3/d46/get4d_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>=0;<a class="code" href="../../d3/d46/get4d_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>&lt;(<a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a>*<a class="code" href="../../d3/d46/get4d_8c.html#a99e442a053babaa64367447a56138823">y_size</a>);<a class="code" href="../../d3/d46/get4d_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        (*(<a class="code" href="../../d3/d46/get4d_8c.html#afb65d4b9228a3a17c8b1bc5258996532">rect_image</a>+<a class="code" href="../../d3/d46/get4d_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>)) = (((*(<a class="code" href="../../d3/d46/get4d_8c.html#afb65d4b9228a3a17c8b1bc5258996532">rect_image</a>+<a class="code" href="../../d3/d46/get4d_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>))&amp;255)&gt;&gt;1)|128;</div>
@@ -261,14 +264,6 @@ Variables</h2></td></tr>
 <div class="ttc" id="get4d_8c_html_afb65d4b9228a3a17c8b1bc5258996532"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#afb65d4b9228a3a17c8b1bc5258996532">rect_image</a></div><div class="ttdeci">unsigned long * rect_image</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00043">get4d.c:43</a></div></div>
 <div class="ttc" id="get4d_8c_html_aa84601b56e801ce086fd86309a13e695"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a></div><div class="ttdeci">int x_size</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00028">get4d.c:28</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d46/get4d_8c_aef731f7da1ca3a67556fb4ef40c0d6c8_icgraph.svg" width="244" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="af1e5f57fa511be9fa99aee630ceba576"></a>
@@ -304,51 +299,51 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">     * Read setup info from file. </span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a> );</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.cmd, <a class="code" href="../../d8/d35/targatorle_8c.html#af19157da745ecb3f2b088c8f3a10c0a7">infile</a>, 0 );</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.rle_file = <a class="code" href="../../d8/d35/targatorle_8c.html#af19157da745ecb3f2b088c8f3a10c0a7">infile</a>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../db/d53/rle__getrow_8c.html#a619b27463c26e0a4a3d9648a9869ee52">rle_get_setup</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a> ) &lt; 0 )</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a> );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, <a class="code" href="../../d8/d35/targatorle_8c.html#af19157da745ecb3f2b088c8f3a10c0a7">infile</a>, 0 );</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> = <a class="code" href="../../d8/d35/targatorle_8c.html#af19157da745ecb3f2b088c8f3a10c0a7">infile</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d7/d27/rle_8h.html#a619b27463c26e0a4a3d9648a9869ee52">rle_get_setup</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a> ) &lt; 0 )</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;%s: Error reading setup information from %s\n&quot;</span>,</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.cmd, <a class="code" href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a> ? <a class="code" href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a> : <span class="stringliteral">&quot;stdin&quot;</span>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, <a class="code" href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a> ? <a class="code" href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a> : <span class="stringliteral">&quot;stdin&quot;</span>);</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    exit(1);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d3/d46/get4d_8c.html#a3d5e8a5e14aedecc2ae73f9ccc98bac5">dbg</a> )</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="../../db/d53/rle__getrow_8c.html#a0e01db41714fa588d5458fed1fd0dd55">rle_debug</a>( 1 );</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a0e01db41714fa588d5458fed1fd0dd55">rle_debug</a>( 1 );</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="comment">/* We`re only interested in R, G, &amp; B */</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    RLE_CLR_BIT(<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, RLE_ALPHA);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">for</span> (i = 3; i &lt; <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ncolors; i++)</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    RLE_CLR_BIT(<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, i);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    ncolors = <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ncolors &gt; 3 ? 3 : <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ncolors;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a15b5371544b2e071aed529a627bfe414">RLE_CLR_BIT</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, <a class="code" href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">for</span> (i = 3; i &lt; <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a>; i++)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a15b5371544b2e071aed529a627bfe414">RLE_CLR_BIT</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, i);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    ncolors = <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a> &gt; 3 ? 3 : <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a>;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">/* Do nicer b&amp;w rendering if only one color channel in input. */</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> ( ncolors == 1 &amp;&amp; <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ncmap &lt;= 1 )</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> ( ncolors == 1 &amp;&amp; <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a0f7f474af7788cf184d4cb1a129ec5eb">ncmap</a> &lt;= 1 )</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#a1896e77d616768af321555b82b8ad469">bwflag</a> = 1;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">     * Compute image size and allocate storage for colormapped image. </span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a> = (<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.xmax - <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.xmin + 1);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#a99e442a053babaa64367447a56138823">y_size</a> = (<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ymax - <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ymin + 1);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a> = (<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a3c560ac98611d72a55f725b2b53f8306">xmax</a> - <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a157435c3f4deb1ac39fd1cf2ba1008a8">xmin</a> + 1);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#a99e442a053babaa64367447a56138823">y_size</a> = (<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a> - <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a> + 1);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d3/d46/get4d_8c.html#a87239fcc64dd275b9156bfd428e9004c">gt</a> )</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <a class="code" href="../../d3/d46/get4d_8c.html#afb65d4b9228a3a17c8b1bc5258996532">rect_image</a> = (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a> * <a class="code" href="../../d3/d46/get4d_8c.html#a99e442a053babaa64367447a56138823">y_size</a> * <span class="keyword">sizeof</span>( <span class="keywordtype">long</span> ));</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <a class="code" href="../../d3/d46/get4d_8c.html#afb65d4b9228a3a17c8b1bc5258996532">rect_image</a> = (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a> * <a class="code" href="../../d3/d46/get4d_8c.html#a99e442a053babaa64367447a56138823">y_size</a> * <span class="keyword">sizeof</span>( <span class="keywordtype">long</span> ));</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <a class="code" href="../../d3/d46/get4d_8c.html#a7bfffb89e894e6db933b642bab94f9b1">rgb_image</a> = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a> * <a class="code" href="../../d3/d46/get4d_8c.html#a99e442a053babaa64367447a56138823">y_size</a> * 3 * <span class="keyword">sizeof</span>( <span class="keywordtype">char</span> ));</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <a class="code" href="../../d3/d46/get4d_8c.html#a7bfffb89e894e6db933b642bab94f9b1">rgb_image</a> = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a> * <a class="code" href="../../d3/d46/get4d_8c.html#a99e442a053babaa64367447a56138823">y_size</a> * 3 * <span class="keyword">sizeof</span>( <span class="keywordtype">char</span> ));</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">     * Set up for rle_getrow.  Pretend image x origin is 0. </span></div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; 3; i++)</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    scan[i] = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a>);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.xmax -= <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.xmin;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.xmin = 0;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    scan[i] = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a3c560ac98611d72a55f725b2b53f8306">xmax</a> -= <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a157435c3f4deb1ac39fd1cf2ba1008a8">xmin</a>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a157435c3f4deb1ac39fd1cf2ba1008a8">xmin</a> = 0;</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a> = <a class="code" href="../../dc/d11/getami_8c.html#a8f31580e06aae736fd6f1ed3c414ed94">buildmap</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, 3, <a class="code" href="../../d3/d46/get4d_8c.html#aaecf27754bb1102b6bf930a36e443dba">img_gamma</a>, <a class="code" href="../../d3/d46/get4d_8c.html#a0eea75479fce8dc00c06a39f8956cbde">disp_gamma</a> );</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a> = <a class="code" href="../../d7/d27/rle_8h.html#a0683647be765d65564fe36af29edea5c">buildmap</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, 3, <a class="code" href="../../d3/d46/get4d_8c.html#aaecf27754bb1102b6bf930a36e443dba">img_gamma</a>, <a class="code" href="../../d3/d46/get4d_8c.html#a0eea75479fce8dc00c06a39f8956cbde">disp_gamma</a> );</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">/* For each scan line, pack RGBs into the image memory. */</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">while</span> ((y = <a class="code" href="../../db/d53/rle__getrow_8c.html#a3602e1158189cba5e5b0f9b983cba776">rle_getrow</a>(&amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, scan)) &lt;= <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ymax)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">while</span> ((y = <a class="code" href="../../d7/d27/rle_8h.html#a2d41ef1e11f8f5ac3c6f031ca4ed6106">rle_getrow</a>(&amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, scan)) &lt;= <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a>)</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">switch</span> ( ncolors )</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
@@ -381,26 +376,26 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d3/d46/get4d_8c.html#a1896e77d616768af321555b82b8ad469">bwflag</a> )</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    {</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">if</span> (ncolors == 1)</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <a class="code" href="../../d9/d2a/rle__putrow_8c.html#ade53266831a9d8fda9234cbac857ebb4">rgb_to_bw</a> (scan[0], scan[1], scan[2], scan[0], x_size );</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <a class="code" href="../../d7/d27/rle_8h.html#ade53266831a9d8fda9234cbac857ebb4">rgb_to_bw</a> (scan[0], scan[1], scan[2], scan[0], x_size );</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <a class="code" href="../../d9/d2a/rle__putrow_8c.html#ade53266831a9d8fda9234cbac857ebb4">rgb_to_bw</a>( scan[0], scan[1], scan[ncolors - 1],</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <a class="code" href="../../d7/d27/rle_8h.html#ade53266831a9d8fda9234cbac857ebb4">rgb_to_bw</a>( scan[0], scan[1], scan[ncolors - 1],</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            scan[0], x_size );</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="comment">/* Note: pack_scanline only uses channel 0 for B&amp;W */</span></div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d3/d46/get4d_8c.html#a87239fcc64dd275b9156bfd428e9004c">gt</a> )</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <a class="code" href="../../d3/d46/get4d_8c.html#aa4284bc4db55e0ba540d7f84dd36279a">pack_rect_scanline</a>( scan, x_size,</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        &amp;<a class="code" href="../../d3/d46/get4d_8c.html#afb65d4b9228a3a17c8b1bc5258996532">rect_image</a>[(y - <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ymin) * x_size] );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        &amp;<a class="code" href="../../d3/d46/get4d_8c.html#afb65d4b9228a3a17c8b1bc5258996532">rect_image</a>[(y - <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a>) * x_size] );</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <a class="code" href="../../d3/d46/get4d_8c.html#acbd3b1052fde00c68c2b50fdc90af1fd">pack_rgb_scanline</a>( scan, x_size,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        &amp;<a class="code" href="../../d3/d46/get4d_8c.html#a7bfffb89e894e6db933b642bab94f9b1">rgb_image</a>[(y - <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.ymin) * x_size * 3] );</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        &amp;<a class="code" href="../../d3/d46/get4d_8c.html#a7bfffb89e894e6db933b642bab94f9b1">rgb_image</a>[(y - <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a>) * x_size * 3] );</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment">     * Free temp storage </span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; 3; i++)</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>(scan[i]);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    free(scan[i]);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="comment">/* Size flag can cut down the window size, except in GT rectangle mode. */</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#a3512f67ccb08d6d181f9e2a0725199bc">w_xsize</a> = <a class="code" href="../../d3/d46/get4d_8c.html#a772a1696c30a368dd2265a45e03da126">sizeflag</a> &amp;&amp; !<a class="code" href="../../d3/d46/get4d_8c.html#a87239fcc64dd275b9156bfd428e9004c">gt</a> ? <a class="code" href="../../d3/d46/get4d_8c.html#a0a802978bda6fa885b455315776a6dfb">MIN</a>( <a class="code" href="../../d3/d46/get4d_8c.html#a3512f67ccb08d6d181f9e2a0725199bc">w_xsize</a>, x_size ) : x_size;</div>
@@ -433,7 +428,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d3/d46/get4d_8c.html#aeea3fa44b7547230887a0e7e816a1efa">forkflg</a> ) foreground();    <span class="comment">/* Don`t fork. */</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d3/d46/get4d_8c.html#afbb121956d6d17d5891fc079fb75ed2b">NoBorder</a> ) noborder();</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#a5ae2c5d558f571138232c3e610a9a5f9">window_number</a> = winopen( <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.cmd );</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#a5ae2c5d558f571138232c3e610a9a5f9">window_number</a> = winopen( <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a> );</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a> ) wintitle( <a class="code" href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a> );</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="comment">/* Loosen the constraints once the window is created. */</span></div>
@@ -474,60 +469,53 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="get4d_8c_html_aad24a9b5f83b74566a2901b7746e7305"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a></div><div class="ttdeci">rle_hdr hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00046">get4d.c:46</a></div></div>
 <div class="ttc" id="get4d_8c_html_a4a24bd45d9ba736aa39a1fd9d0f0f3ca"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a4a24bd45d9ba736aa39a1fd9d0f0f3ca">w_ysize</a></div><div class="ttdeci">int w_ysize</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
 <div class="ttc" id="get4d_8c_html_a3d5e8a5e14aedecc2ae73f9ccc98bac5"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a3d5e8a5e14aedecc2ae73f9ccc98bac5">dbg</a></div><div class="ttdeci">int dbg</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00030">get4d.c:30</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a157435c3f4deb1ac39fd1cf2ba1008a8"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a157435c3f4deb1ac39fd1cf2ba1008a8">rle_hdr::xmin</a></div><div class="ttdeci">int xmin</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
 <div class="ttc" id="get4d_8c_html_a3512f67ccb08d6d181f9e2a0725199bc"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a3512f67ccb08d6d181f9e2a0725199bc">w_xsize</a></div><div class="ttdeci">int w_xsize</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
 <div class="ttc" id="get4d_8c_html_a998f24b5b40b36c57dadd679a9826c0a"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a998f24b5b40b36c57dadd679a9826c0a">w_xpos</a></div><div class="ttdeci">int w_xpos</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
-<div class="ttc" id="rle__getrow_8c_html_a0e01db41714fa588d5458fed1fd0dd55"><div class="ttname"><a href="../../db/d53/rle__getrow_8c.html#a0e01db41714fa588d5458fed1fd0dd55">rle_debug</a></div><div class="ttdeci">void rle_debug(int on_off)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d53/rle__getrow_8c_source.html#l00293">rle_getrow.c:293</a></div></div>
 <div class="ttc" id="get4d_8c_html_a99e442a053babaa64367447a56138823"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a99e442a053babaa64367447a56138823">y_size</a></div><div class="ttdeci">int y_size</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00028">get4d.c:28</a></div></div>
 <div class="ttc" id="get4d_8c_html_a1896e77d616768af321555b82b8ad469"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a1896e77d616768af321555b82b8ad469">bwflag</a></div><div class="ttdeci">int bwflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00032">get4d.c:32</a></div></div>
-<div class="ttc" id="rle__getrow_8c_html_a619b27463c26e0a4a3d9648a9869ee52"><div class="ttname"><a href="../../db/d53/rle__getrow_8c.html#a619b27463c26e0a4a3d9648a9869ee52">rle_get_setup</a></div><div class="ttdeci">int rle_get_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d53/rle__getrow_8c_source.html#l00074">rle_getrow.c:74</a></div></div>
 <div class="ttc" id="get4d_8c_html_aa4284bc4db55e0ba540d7f84dd36279a"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aa4284bc4db55e0ba540d7f84dd36279a">pack_rect_scanline</a></div><div class="ttdeci">pack_rect_scanline(rgb, int n, long *line)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00507">get4d.c:507</a></div></div>
 <div class="ttc" id="get4d_8c_html_a5ae2c5d558f571138232c3e610a9a5f9"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a5ae2c5d558f571138232c3e610a9a5f9">window_number</a></div><div class="ttdeci">long window_number</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00027">get4d.c:27</a></div></div>
-<div class="ttc" id="rle__getrow_8c_html_a3602e1158189cba5e5b0f9b983cba776"><div class="ttname"><a href="../../db/d53/rle__getrow_8c.html#a3602e1158189cba5e5b0f9b983cba776">rle_getrow</a></div><div class="ttdeci">int rle_getrow(rle_hdr *the_hdr, scanline)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d53/rle__getrow_8c_source.html#l00333">rle_getrow.c:333</a></div></div>
 <div class="ttc" id="get4d_8c_html_a772a1696c30a368dd2265a45e03da126"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a772a1696c30a368dd2265a45e03da126">sizeflag</a></div><div class="ttdeci">int sizeflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
-<div class="ttc" id="getami_8c_html_a8f31580e06aae736fd6f1ed3c414ed94"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a8f31580e06aae736fd6f1ed3c414ed94">buildmap</a></div><div class="ttdeci">rle_pixel ** buildmap()</div></div>
 <div class="ttc" id="get4d_8c_html_aeea3fa44b7547230887a0e7e816a1efa"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aeea3fa44b7547230887a0e7e816a1efa">forkflg</a></div><div class="ttdeci">int forkflg</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00031">get4d.c:31</a></div></div>
 <div class="ttc" id="get4d_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00029">get4d.c:29</a></div></div>
-<div class="ttc" id="rle__putrow_8c_html_ade53266831a9d8fda9234cbac857ebb4"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#ade53266831a9d8fda9234cbac857ebb4">rgb_to_bw</a></div><div class="ttdeci">void rgb_to_bw(rle_pixel *red_row, rle_pixel *green_row, rle_pixel *blue_row, rle_pixel *bw_row, int rowlen)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00680">rle_putrow.c:680</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a62bd76bb5db5c115b58c2853f9daa3bc"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">rle_hdr::ymin</a></div><div class="ttdeci">int ymin</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_ade53266831a9d8fda9234cbac857ebb4"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ade53266831a9d8fda9234cbac857ebb4">rgb_to_bw</a></div><div class="ttdeci">void rgb_to_bw(rle_pixel *red_row, rle_pixel *green_row, rle_pixel *blue_row, rle_pixel *bw_row, int rowlen)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00680">rle_putrow.c:680</a></div></div>
 <div class="ttc" id="getami_8c_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a></div><div class="ttdeci">static int y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
 <div class="ttc" id="get4d_8c_html_aa49ec765beb6263519194b874718848c"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aa49ec765beb6263519194b874718848c">posflag</a></div><div class="ttdeci">int posflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
 <div class="ttc" id="rle_8c_html_a56bd6c0cdce1fc80d985feb72caad7f0"><div class="ttname"><a href="../../dd/d78/rle_8c.html#a56bd6c0cdce1fc80d985feb72caad7f0">scan</a></div><div class="ttdeci">unsigned char ** scan</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d78/rle_8c_source.html#l00026">rle.c:26</a></div></div>
 <div class="ttc" id="get4d_8c_html_adc1a4612075873203d57be46460731d6"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#adc1a4612075873203d57be46460731d6">w_ypos</a></div><div class="ttdeci">int w_ypos</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
-<div class="ttc" id="rletorla_8c_html_aafde19f7d36ca163a143579c1b125b6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a></div><div class="ttdeci">void free()</div></div>
 <div class="ttc" id="get4d_8c_html_aaecf27754bb1102b6bf930a36e443dba"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aaecf27754bb1102b6bf930a36e443dba">img_gamma</a></div><div class="ttdeci">double img_gamma</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00036">get4d.c:36</a></div></div>
 <div class="ttc" id="get4d_8c_html_a4dcdf477efd29b23849a3eb7f61fa734"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a4dcdf477efd29b23849a3eb7f61fa734">colmap</a></div><div class="ttdeci">short colmap[128][3]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00037">get4d.c:37</a></div></div>
 <div class="ttc" id="getbob_8c_html_a15e3502f2b8f5c4f7862beb54676e236"><div class="ttname"><a href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a></div><div class="ttdeci">string infname</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/db1/getbob_8c_source.html#l00068">getbob.c:68</a></div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
+<div class="ttc" id="rle_8h_html_ab89ecb548e22ac958f24c71fba852464"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, const char *pgmname, const char *fname, int img_num)</div></div>
+<div class="ttc" id="structrle__hdr_html_a56fc353295f9b9b62cd48ea02347116f"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">rle_hdr::cmd</a></div><div class="ttdeci">const char * cmd</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00133">rle.h:133</a></div></div>
+<div class="ttc" id="rle_8h_html_a619b27463c26e0a4a3d9648a9869ee52"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a619b27463c26e0a4a3d9648a9869ee52">rle_get_setup</a></div><div class="ttdeci">int rle_get_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d53/rle__getrow_8c_source.html#l00074">rle_getrow.c:74</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a3c560ac98611d72a55f725b2b53f8306"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a3c560ac98611d72a55f725b2b53f8306">rle_hdr::xmax</a></div><div class="ttdeci">int xmax</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
 <div class="ttc" id="get4d_8c_html_a0eea75479fce8dc00c06a39f8956cbde"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a0eea75479fce8dc00c06a39f8956cbde">disp_gamma</a></div><div class="ttdeci">double disp_gamma</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00035">get4d.c:35</a></div></div>
 <div class="ttc" id="get4d_8c_html_afb65d4b9228a3a17c8b1bc5258996532"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#afb65d4b9228a3a17c8b1bc5258996532">rect_image</a></div><div class="ttdeci">unsigned long * rect_image</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00043">get4d.c:43</a></div></div>
 <div class="ttc" id="get4d_8c_html_aa84601b56e801ce086fd86309a13e695"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aa84601b56e801ce086fd86309a13e695">x_size</a></div><div class="ttdeci">int x_size</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00028">get4d.c:28</a></div></div>
 <div class="ttc" id="get4d_8c_html_a87239fcc64dd275b9156bfd428e9004c"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a87239fcc64dd275b9156bfd428e9004c">gt</a></div><div class="ttdeci">int gt</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00034">get4d.c:34</a></div></div>
 <div class="ttc" id="get4d_8c_html_a262a21ccd3f305168795ffd23ee97029"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a262a21ccd3f305168795ffd23ee97029">MAX</a></div><div class="ttdeci">#define MAX(i, j)  </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00023">get4d.c:23</a></div></div>
+<div class="ttc" id="rle_8h_html_a15b5371544b2e071aed529a627bfe414"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a15b5371544b2e071aed529a627bfe414">RLE_CLR_BIT</a></div><div class="ttdeci">#define RLE_CLR_BIT(glob, bit)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00124">rle.h:124</a></div></div>
 <div class="ttc" id="targatorle_8c_html_af19157da745ecb3f2b088c8f3a10c0a7"><div class="ttname"><a href="../../d8/d35/targatorle_8c.html#af19157da745ecb3f2b088c8f3a10c0a7">infile</a></div><div class="ttdeci">FILE * infile</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d35/targatorle_8c_source.html#l00102">targatorle.c:102</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a0f7f474af7788cf184d4cb1a129ec5eb"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a0f7f474af7788cf184d4cb1a129ec5eb">rle_hdr::ncmap</a></div><div class="ttdeci">int ncmap</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a50f668a9b76ee5fc16ec507d8c8ac42b"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">rle_hdr::ymax</a></div><div class="ttdeci">int ymax</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a0e01db41714fa588d5458fed1fd0dd55"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a0e01db41714fa588d5458fed1fd0dd55">rle_debug</a></div><div class="ttdeci">void rle_debug(int on_off)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d53/rle__getrow_8c_source.html#l00293">rle_getrow.c:293</a></div></div>
 <div class="ttc" id="get4d_8c_html_a7504889ed059b126dcd4206ffa554372"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a7504889ed059b126dcd4206ffa554372">bitsavail</a></div><div class="ttdeci">long bitsavail</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00038">get4d.c:38</a></div></div>
+<div class="ttc" id="rle_8h_html_a0683647be765d65564fe36af29edea5c"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a0683647be765d65564fe36af29edea5c">buildmap</a></div><div class="ttdeci">rle_pixel ** buildmap(rle_hdr *the_hdr, int minmap, double orig_gamma, double new_gamma)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dcf/buildmap_8c_source.html#l00056">buildmap.c:56</a></div></div>
 <div class="ttc" id="get4d_8c_html_a0a802978bda6fa885b455315776a6dfb"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a0a802978bda6fa885b455315776a6dfb">MIN</a></div><div class="ttdeci">#define MIN(i, j)  </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00024">get4d.c:24</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a82e79385f2d45cc3b80ce0f4f369eae5"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, char *pgmname, char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
+<div class="ttc" id="rle_8h_html_a4fc9e81d78732f391d8b7da947831711"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a></div><div class="ttdeci">#define RLE_ALPHA</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00065">rle.h:65</a></div></div>
 <div class="ttc" id="get4d_8c_html_acbd3b1052fde00c68c2b50fdc90af1fd"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#acbd3b1052fde00c68c2b50fdc90af1fd">pack_rgb_scanline</a></div><div class="ttdeci">pack_rgb_scanline(rgb, int n, unsigned char *lines)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00542">get4d.c:542</a></div></div>
 <div class="ttc" id="get4d_8c_html_afbb121956d6d17d5891fc079fb75ed2b"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#afbb121956d6d17d5891fc079fb75ed2b">NoBorder</a></div><div class="ttdeci">int NoBorder</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00033">get4d.c:33</a></div></div>
 <div class="ttc" id="get4d_8c_html_a4bf2bb259263c1d8416d80591d0ac671"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a></div><div class="ttdeci">rle_pixel ** cmap</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00047">get4d.c:47</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 <div class="ttc" id="get4d_8c_html_a7bfffb89e894e6db933b642bab94f9b1"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a7bfffb89e894e6db933b642bab94f9b1">rgb_image</a></div><div class="ttdeci">unsigned char * rgb_image</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00044">get4d.c:44</a></div></div>
+<div class="ttc" id="rle_8h_html_a2d41ef1e11f8f5ac3c6f031ca4ed6106"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a2d41ef1e11f8f5ac3c6f031ca4ed6106">rle_getrow</a></div><div class="ttdeci">int rle_getrow(rle_hdr *the_hdr, rle_pixel *scanline[])</div></div>
+<div class="ttc" id="structrle__hdr_html_a73983779ca206439513fb17db9df1f88"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_hdr::rle_file</a></div><div class="ttdeci">FILE * rle_file</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00114">rle.h:114</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a5f6621380c12c10bcadd8b8ffdaa7716"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">rle_hdr::ncolors</a></div><div class="ttdeci">int ncolors</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/d46/get4d_8c_af1e5f57fa511be9fa99aee630ceba576_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d46/get4d_8c_af1e5f57fa511be9fa99aee630ceba576_icgraph.svg" width="179" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a2e1c56207484e456874379d624fc0e67"></a>
@@ -562,11 +550,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">char</span> *var;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> gtflag = 0, slowflag = 0, gflag = 0, <a class="code" href="../../dd/dce/getsun_8c.html#ad532de65ced2a7f637c0cfa3a6e7e993">iflag</a> = 0;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a> = *<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( (rle_hdr *)NULL );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), NULL, 0 );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a> = *<a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( (<a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *)NULL );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>, <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), NULL, 0 );</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">/* Handle arguments. */</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a>( argc, argv,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a>( argc, argv,</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;           <span class="stringliteral">&quot;% D%- f%- GS%- g%-disp_gamma!F iI%-image_gamma!F n%- \n\</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="stringliteral">    p%-xpos!dypos!d s%-xsize!dysize!d w%- file%s&quot;</span>,</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;           &amp;<a class="code" href="../../d3/d46/get4d_8c.html#a3d5e8a5e14aedecc2ae73f9ccc98bac5">dbg</a>, &amp;<a class="code" href="../../d3/d46/get4d_8c.html#aeea3fa44b7547230887a0e7e816a1efa">forkflg</a>,</div>
@@ -604,7 +592,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> ( !gflag )</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">char</span> *var = getenv( <span class="stringliteral">&quot;HOME&quot;</span> );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>[BUFSIZ];</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>[BUFSIZ];</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    FILE *gamfile;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">float</span> flt_gam = 0;  <span class="comment">/* Just in case of 68000 iris botch. */</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
@@ -629,19 +617,18 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="../../d3/d46/get4d_8c.html#a1896e77d616768af321555b82b8ad469">bwflag</a> = 1;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="../../d3/d46/get4d_8c.html#a87239fcc64dd275b9156bfd428e9004c">gt</a> = 1;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }       </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    infile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.cmd, infname, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    infile = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>(<a class="code" href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, infname, <span class="stringliteral">&quot;r&quot;</span>);</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#af1e5f57fa511be9fa99aee630ceba576">get_pic</a>( infile, infname ); <span class="comment">/* Read image and make a window for it. */</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="../../d3/d46/get4d_8c.html#a7504889ed059b126dcd4206ffa554372">bitsavail</a>==0)            <span class="comment">/* modify gey levels if necessary */</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="../../d3/d46/get4d_8c.html#aef731f7da1ca3a67556fb4ef40c0d6c8">convertgreylevels</a>();</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="../../d3/d46/get4d_8c.html#af5fdef37044a0f909acb8f9d2bf39bf3">update_pic</a>();       <span class="comment">/* Keep drawing the window. */</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
-<div class="ttc" id="rle__open__f_8c_html_a89733a45961817885603ae01210290b7"><div class="ttname"><a href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(char *prog_name, char *file_name, char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/rle__open__f_8c_source.html#l00216">rle_open_f.c:216</a></div></div>
 <div class="ttc" id="get4d_8c_html_aad24a9b5f83b74566a2901b7746e7305"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a></div><div class="ttdeci">rle_hdr hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00046">get4d.c:46</a></div></div>
 <div class="ttc" id="get4d_8c_html_a4a24bd45d9ba736aa39a1fd9d0f0f3ca"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a4a24bd45d9ba736aa39a1fd9d0f0f3ca">w_ysize</a></div><div class="ttdeci">int w_ysize</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
 <div class="ttc" id="get4d_8c_html_a3d5e8a5e14aedecc2ae73f9ccc98bac5"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a3d5e8a5e14aedecc2ae73f9ccc98bac5">dbg</a></div><div class="ttdeci">int dbg</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00030">get4d.c:30</a></div></div>
+<div class="ttc" id="rle_8h_html_a7827333daec9d306aff4729fbd61b031"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a></div><div class="ttdeci">int scanargs(int argc, char **argv, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs.c:94</a></div></div>
 <div class="ttc" id="get4d_8c_html_a3512f67ccb08d6d181f9e2a0725199bc"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a3512f67ccb08d6d181f9e2a0725199bc">w_xsize</a></div><div class="ttdeci">int w_xsize</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
 <div class="ttc" id="get4d_8c_html_a998f24b5b40b36c57dadd679a9826c0a"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a998f24b5b40b36c57dadd679a9826c0a">w_xpos</a></div><div class="ttdeci">int w_xpos</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
-<div class="ttc" id="cmd__name_8c_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
 <div class="ttc" id="get4d_8c_html_a1896e77d616768af321555b82b8ad469"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a1896e77d616768af321555b82b8ad469">bwflag</a></div><div class="ttdeci">int bwflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00032">get4d.c:32</a></div></div>
 <div class="ttc" id="get4d_8c_html_a772a1696c30a368dd2265a45e03da126"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a772a1696c30a368dd2265a45e03da126">sizeflag</a></div><div class="ttdeci">int sizeflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00041">get4d.c:41</a></div></div>
 <div class="ttc" id="get4d_8c_html_aeea3fa44b7547230887a0e7e816a1efa"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aeea3fa44b7547230887a0e7e816a1efa">forkflg</a></div><div class="ttdeci">int forkflg</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00031">get4d.c:31</a></div></div>
@@ -650,27 +637,22 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="get4d_8c_html_aaecf27754bb1102b6bf930a36e443dba"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aaecf27754bb1102b6bf930a36e443dba">img_gamma</a></div><div class="ttdeci">double img_gamma</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00036">get4d.c:36</a></div></div>
 <div class="ttc" id="getbob_8c_html_a15e3502f2b8f5c4f7862beb54676e236"><div class="ttname"><a href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a></div><div class="ttdeci">string infname</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/db1/getbob_8c_source.html#l00068">getbob.c:68</a></div></div>
 <div class="ttc" id="get4d_8c_html_aef731f7da1ca3a67556fb4ef40c0d6c8"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#aef731f7da1ca3a67556fb4ef40c0d6c8">convertgreylevels</a></div><div class="ttdeci">convertgreylevels(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00566">get4d.c:566</a></div></div>
+<div class="ttc" id="rle_8h_html_ab89ecb548e22ac958f24c71fba852464"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, const char *pgmname, const char *fname, int img_num)</div></div>
+<div class="ttc" id="structrle__hdr_html_a56fc353295f9b9b62cd48ea02347116f"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">rle_hdr::cmd</a></div><div class="ttdeci">const char * cmd</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00133">rle.h:133</a></div></div>
 <div class="ttc" id="get4d_8c_html_af5fdef37044a0f909acb8f9d2bf39bf3"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#af5fdef37044a0f909acb8f9d2bf39bf3">update_pic</a></div><div class="ttdeci">update_pic()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00347">get4d.c:347</a></div></div>
+<div class="ttc" id="structrle__hdr_html"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html">rle_hdr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00096">rle.h:96</a></div></div>
 <div class="ttc" id="getsun_8c_html_ad532de65ced2a7f637c0cfa3a6e7e993"><div class="ttname"><a href="../../dd/dce/getsun_8c.html#ad532de65ced2a7f637c0cfa3a6e7e993">iflag</a></div><div class="ttdeci">int iflag</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dce/getsun_8c_source.html#l00080">getsun.c:80</a></div></div>
-<div class="ttc" id="into_8c_html_a14af58745eae96da73c46abfb269ec67"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a></div><div class="ttdeci">static char buf[BUFSIZ+1]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00046">into.c:46</a></div></div>
+<div class="ttc" id="into_8c_html_a1bc8eca937a3533dfcc1eca53c250cc2"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a></div><div class="ttdeci">static char buf[4096   +1]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00046">into.c:46</a></div></div>
 <div class="ttc" id="get4d_8c_html_a0eea75479fce8dc00c06a39f8956cbde"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a0eea75479fce8dc00c06a39f8956cbde">disp_gamma</a></div><div class="ttdeci">double disp_gamma</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00035">get4d.c:35</a></div></div>
 <div class="ttc" id="get4d_8c_html_af1e5f57fa511be9fa99aee630ceba576"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#af1e5f57fa511be9fa99aee630ceba576">get_pic</a></div><div class="ttdeci">get_pic(FILE *infile, char *infname)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00165">get4d.c:165</a></div></div>
 <div class="ttc" id="get4d_8c_html_a87239fcc64dd275b9156bfd428e9004c"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a87239fcc64dd275b9156bfd428e9004c">gt</a></div><div class="ttdeci">int gt</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00034">get4d.c:34</a></div></div>
 <div class="ttc" id="targatorle_8c_html_af19157da745ecb3f2b088c8f3a10c0a7"><div class="ttname"><a href="../../d8/d35/targatorle_8c.html#af19157da745ecb3f2b088c8f3a10c0a7">infile</a></div><div class="ttdeci">FILE * infile</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d35/targatorle_8c_source.html#l00102">targatorle.c:102</a></div></div>
 <div class="ttc" id="get4d_8c_html_a7504889ed059b126dcd4206ffa554372"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a7504889ed059b126dcd4206ffa554372">bitsavail</a></div><div class="ttdeci">long bitsavail</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00038">get4d.c:38</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a82e79385f2d45cc3b80ce0f4f369eae5"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, char *pgmname, char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
+<div class="ttc" id="rle_8h_html_a76eefa2808915342600d65f36f77eb26"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(const char *prog_name, const char *f_name, const char *mode)</div></div>
 <div class="ttc" id="get4d_8c_html_afbb121956d6d17d5891fc079fb75ed2b"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#afbb121956d6d17d5891fc079fb75ed2b">NoBorder</a></div><div class="ttdeci">int NoBorder</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00033">get4d.c:33</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ea6d702c0484056c8504d6ce7fede08"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a></div><div class="ttdeci">int scanargs(va_alist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00091">scanargs.c:91</a></div></div>
+<div class="ttc" id="rle_8h_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
+<div class="ttc" id="rle_8h_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/d46/get4d_8c_a2e1c56207484e456874379d624fc0e67_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="aa4284bc4db55e0ba540d7f84dd36279a"></a>
@@ -733,14 +715,6 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="get4d_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00029">get4d.c:29</a></div></div>
 <div class="ttc" id="getami_8c_html_a41cede1b4c0d05cff170ad5761f70964"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a41cede1b4c0d05cff170ad5761f70964">b</a></div><div class="ttdeci">static unsigned char b</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00692">getami.c:692</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d46/get4d_8c_aa4284bc4db55e0ba540d7f84dd36279a_icgraph.svg" width="371" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="acbd3b1052fde00c68c2b50fdc90af1fd"></a>
@@ -790,14 +764,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="get4d_8c_html_a1896e77d616768af321555b82b8ad469"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a1896e77d616768af321555b82b8ad469">bwflag</a></div><div class="ttdeci">int bwflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00032">get4d.c:32</a></div></div>
 <div class="ttc" id="get4d_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00029">get4d.c:29</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d46/get4d_8c_acbd3b1052fde00c68c2b50fdc90af1fd_icgraph.svg" width="367" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="af5fdef37044a0f909acb8f9d2bf39bf3"></a>
@@ -978,14 +944,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="get4d_8c_html_a0a802978bda6fa885b455315776a6dfb"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a0a802978bda6fa885b455315776a6dfb">MIN</a></div><div class="ttdeci">#define MIN(i, j)  </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00024">get4d.c:24</a></div></div>
 <div class="ttc" id="get4d_8c_html_a7bfffb89e894e6db933b642bab94f9b1"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a7bfffb89e894e6db933b642bab94f9b1">rgb_image</a></div><div class="ttdeci">unsigned char * rgb_image</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00044">get4d.c:44</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d3/d46/get4d_8c_af5fdef37044a0f909acb8f9d2bf39bf3_icgraph.svg" width="202" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -1022,7 +980,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rle_pixel** cmap</td>
+          <td class="memname"><a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>** cmap</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1106,7 +1064,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rle_hdr hdr</td>
+          <td class="memname"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> hdr</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1126,6 +1084,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../d3/d46/get4d_8c_source.html#l00029">29</a> of file <a class="el" href="../../d3/d46/get4d_8c_source.html">get4d.c</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d3/d46/get4d_8c_source.html#l00566">convertgreylevels()</a>.</p>
 
 </div>
 </div>
@@ -1182,6 +1142,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../d3/d46/get4d_8c_source.html#l00043">43</a> of file <a class="el" href="../../d3/d46/get4d_8c_source.html">get4d.c</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d3/d46/get4d_8c_source.html#l00566">convertgreylevels()</a>.</p>
 
 </div>
 </div>
@@ -1314,7 +1276,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:05 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

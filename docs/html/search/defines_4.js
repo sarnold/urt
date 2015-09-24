@@ -4,6 +4,7 @@ var searchData=
   ['d_5fxstart',['D_XSTART',['../d4/dd6/read98721_8c.html#a432727167390aa2c6e08751bd4d5607a',1,'read98721.c']]],
   ['d_5fysize',['D_YSIZE',['../d4/dd6/read98721_8c.html#a497364d4b4df89a2b8c16a1901e2a727',1,'read98721.c']]],
   ['d_5fystart',['D_YSTART',['../d4/dd6/read98721_8c.html#adcea0f9d1353f210dc7af6a701f8328e',1,'read98721.c']]],
+  ['data',['DATA',['../d0/d6e/rle__put_8h.html#aad9ae913bdfab20dd94ad04ee2d5b045',1,'rle_put.h']]],
   ['datum',['DATUM',['../dc/dd9/XtndRunget_8c.html#a48dacc37367fa271dd080a1db051923d',1,'DATUM():&#160;XtndRunget.c'],['../d9/dd6/rle__cp_8c.html#a48dacc37367fa271dd080a1db051923d',1,'DATUM():&#160;rle_cp.c'],['../df/dce/rle__getraw_8c.html#a48dacc37367fa271dd080a1db051923d',1,'DATUM():&#160;rle_getraw.c'],['../db/d53/rle__getrow_8c.html#a48dacc37367fa271dd080a1db051923d',1,'DATUM():&#160;rle_getrow.c'],['../d8/d7c/rle__getskip_8c.html#a48dacc37367fa271dd080a1db051923d',1,'DATUM():&#160;rle_getskip.c']]],
   ['default_5flevels',['DEFAULT_LEVELS',['../db/d50/getx11_8c.html#a8958a2678e347415ed5da413d561b372',1,'getx11.c']]],
   ['defaultbottommargin',['DefaultBottomMargin',['../df/d5c/dvirle_8h.html#a86ae935356bd878f10120b707b433ef6',1,'dvirle.h']]],

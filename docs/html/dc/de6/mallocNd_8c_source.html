@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: mallocNd.c Source File</title>
+<title>Utah Raster Toolkit: tools/mallocNd.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -158,12 +159,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">/* Imports */</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdio</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdlib</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">/* Forward declarations */</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../dc/de6/mallocNd_8c.html#aca2f4e380869110bbb273b8bc013de7e">BuildIndirectionTable</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">BuildIndirectionTable</a>();</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/*  ------------------------------------------------------------------------ */</span></div>
@@ -171,16 +172,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">**  A simple test case and example of mallocNd use.</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#ifdef TEST</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<a class="code" href="../../dc/d7b/aliastorle_8c.html#a70db8bd1d499619f7ff9c1ca2ff3c8df">main</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> <span class="preprocessor">TEST</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;main()</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>, j, k, l;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">int</span> i, j, k, l;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">unsigned</span> Dims[5] = { 1, 2, 3, 4, 5 };</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">double</span> *****A, *<a class="code" href="../../dc/d11/getami_8c.html#a0a604d02c55e16e2f9f3d7799c45e555">B</a>, val;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">extern</span> <span class="keywordtype">char</span> *<a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">mallocNd</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">double</span> *****A, *B, val;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">extern</span> <span class="keywordtype">char</span> *mallocNd();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">/* A will be a 5-d */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  A = (<span class="keywordtype">double</span> *****) <a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">mallocNd</a>( 5, Dims, <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>) );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  A = (<span class="keywordtype">double</span> *****) mallocNd( 5, Dims, <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>) );</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">if</span> (A == NULL)</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      fprintf( stderr, <span class="stringliteral">&quot;No memory!&quot;</span>);</div>
@@ -194,11 +195,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span>(j=0; j&lt;3; j++)</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">for</span>(k=0; k&lt;4; k++)</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">for</span>(l=0; l&lt;5; l++) {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      val = l + 10*(k + 10*(j + 10*<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      A[0][<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>][j][k][l] = val;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      val = l + 10*(k + 10*(j + 10*i));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      A[0][i][j][k][l] = val;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">/* Print the array in linear order (tests that the array is really</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">  ** contiguous).</span></div>
@@ -206,23 +207,23 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  B = &amp;(A[0][0][0][0][0]);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordflow">for</span>(i=0; i&lt;120; i++) {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    printf( <span class="stringliteral">&quot;%6.0f &quot;</span>, B[i] );</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> ((i %10) == 9) putchar(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> ((i %10) == 9) putchar(<span class="stringliteral">&#39;\n&#39;</span>);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">/*  ------------------------------------------------------------------------ */</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">  125</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">mallocNd</a>( nDim, Dims, sizeofelt )</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;     unsigned <span class="keywordtype">int</span> nDim;     <span class="comment">/* The number of dimensions */</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">  125</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">mallocNd</a>( <a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">nDim</a>, <a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">Dims</a>, <a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">sizeofelt</a> )</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nDim;     <span class="comment">/* The number of dimensions */</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Dims[];   <span class="comment">/* The size of each dimension (left-to-right) */</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sizeofelt;    <span class="comment">/* The number of bytes for each element */</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">char</span> *<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>, *tableBase, *arrayBase, *nextFreeArray, *nextFreeTable;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">char</span> *ptr, *tableBase, *arrayBase, *nextFreeArray, *nextFreeTable;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> arrayBytesNeeded, tableBytesNeeded, dimProduct, slop;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="comment">/* Count up the space needed for the indirection tables.</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">   **  It&#39;s sizeof(pointer) * Dim[0] * ( 1 + Dim[1] * ( 1 + Dim[2] ... ))</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">   */</span></div>
@@ -230,34 +231,34 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  dimProduct  = 1;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordflow">for</span>(i=0; i&lt;nDim-1;  i++)</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      dimProduct *= Dims[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>];</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      dimProduct *= Dims[i];</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      tableBytesNeeded += dimProduct*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="comment">/* Add in extra space to force alignment of the array */</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  slop = (tableBytesNeeded % sizeofelt);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordflow">if</span> (slop != 0) </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordflow">if</span> (slop != 0)</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    slop = sizeofelt - slop;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="comment">/*  Add in the space for the array itself */</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  dimProduct *= Dims[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>];</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  dimProduct *= Dims[i];</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  arrayBytesNeeded = dimProduct*sizeofelt;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="comment">/* Get the memory for the whole thing */</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  ptr = <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( tableBytesNeeded + slop + arrayBytesNeeded );</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  ptr = malloc( tableBytesNeeded + slop + arrayBytesNeeded );</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">if</span> (ptr == NULL) <span class="keywordflow">return</span> (<span class="keywordtype">char</span> *) NULL;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="comment">/* Set up the base address of the actual array and the indirection table */</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  tableBase = <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  tableBase = ptr;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  arrayBase = ptr + slop + tableBytesNeeded;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="comment">/* Set up the next free pointers for the table space and the array space */</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  nextFreeTable = tableBase;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  nextFreeArray = arrayBase;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="comment">/* Build the indirection tables recursively */</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  (void) <a class="code" href="../../dc/de6/mallocNd_8c.html#aca2f4e380869110bbb273b8bc013de7e">BuildIndirectionTable</a>( nDim, Dims,  (<span class="keywordtype">char</span> ***)&amp;nextFreeTable, </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                   &amp;nextFreeArray, sizeofelt );</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  (<span class="keywordtype">void</span>) <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">BuildIndirectionTable</a><a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">(</a> nDim<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">,</a> Dims<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">,</a>  (<span class="keywordtype">char</span> ***)&amp;nextFreeTable<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">,</a></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                   &amp;nextFreeArray<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">,</a> sizeofelt <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">)</a>;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">/* Do a sanity check to be sure we haven&#39;t run off the end of the allocated</span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">  ** memory.  Not strictly needed but here for robustness and debugging.</span></div>
@@ -273,20 +274,20 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">  184</a></span>&#160;<span class="keywordtype">char</span> * <a class="code" href="../../dc/de6/mallocNd_8c.html#aca2f4e380869110bbb273b8bc013de7e">BuildIndirectionTable</a>( nDim, Dims, nextFreeTable, nextFreeArray, </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                 sizeofelt )</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;     unsigned nDim;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">  184</a></span>&#160;<span class="keywordtype">char</span> * <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">BuildIndirectionTable</a>( <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">nDim</a>, <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">Dims</a>, <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">nextFreeTable</a>, <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">nextFreeArray</a>,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                 <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">sizeofelt</a> )</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;     <span class="keywordtype">unsigned</span> nDim;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;     <span class="keywordtype">unsigned</span> Dims[];</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;     <span class="keywordtype">char</span> ***nextFreeTable, **nextFreeArray;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;     <span class="keywordtype">unsigned</span> sizeofelt;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;{</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">int</span> i;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordtype">char</span> *ReturnValue, **table;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordflow">if</span> (nDim  == 1) { <span class="comment">/* Base case, indirection table unneeded */</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    ReturnValue =  *nextFreeArray;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    *nextFreeArray += sizeofelt * Dims[0];</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  } <span class="keywordflow">else</span> {  </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">/* Allocate the 1&#39;st level indirection table and fill it in </span></div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">    **  calling ourselves recursively for the others.</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">     */</span></div>
@@ -294,8 +295,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    *nextFreeTable += Dims[0];</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">for</span>(i=0; i&lt;Dims[0]; i++)</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    table[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code" href="../../dc/de6/mallocNd_8c.html#aca2f4e380869110bbb273b8bc013de7e">BuildIndirectionTable</a>( nDim-1, Dims+1, nextFreeTable, </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                     nextFreeArray, sizeofelt );</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    table[i] = <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">BuildIndirectionTable</a><a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">(</a> nDim-1<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">,</a> Dims+1<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">,</a> nextFreeTable<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">,</a></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                     nextFreeArray<a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">,</a> sizeofelt <a class="code" href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">)</a>;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    ReturnValue = (<span class="keywordtype">char</span> *) table;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  }</div>
@@ -307,28 +308,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">**  Special case for 2-d arrays</span></div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keywordtype">char</span> *</div>
-<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="../../dc/de6/mallocNd_8c.html#adad9b7f8b77aeda613cd057909b29145">  218</a></span>&#160;<a class="code" href="../../dc/de6/mallocNd_8c.html#adad9b7f8b77aeda613cd057909b29145">malloc_2d</a>(n,m,sizeofelt)</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> n, m, sizeofelt;</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="../../dc/de6/mallocNd_8c.html#adad9b7f8b77aeda613cd057909b29145">  218</a></span>&#160;<a class="code" href="../../dc/de6/mallocNd_8c.html#adad9b7f8b77aeda613cd057909b29145">malloc_2d</a>(<a class="code" href="../../dc/de6/mallocNd_8c.html#adad9b7f8b77aeda613cd057909b29145">n</a>,<a class="code" href="../../dc/de6/mallocNd_8c.html#adad9b7f8b77aeda613cd057909b29145">m</a>,<a class="code" href="../../dc/de6/mallocNd_8c.html#adad9b7f8b77aeda613cd057909b29145">sizeofelt</a>)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keywordtype">int</span> n, m, sizeofelt;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordtype">unsigned</span> Dims[2];</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  Dims[0] = n;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  Dims[1] = m;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">mallocNd</a>(2,Dims,sizeofelt);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">mallocNd</a><a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">(</a>2<a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">,</a>Dims<a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">,</a>sizeofelt<a class="code" href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">)</a>;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
-<div class="ttc" id="mallocNd_8c_html_aca2f4e380869110bbb273b8bc013de7e"><div class="ttname"><a href="../../dc/de6/mallocNd_8c.html#aca2f4e380869110bbb273b8bc013de7e">BuildIndirectionTable</a></div><div class="ttdeci">char * BuildIndirectionTable()</div></div>
-<div class="ttc" id="getami_8c_html_a0a604d02c55e16e2f9f3d7799c45e555"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a0a604d02c55e16e2f9f3d7799c45e555">B</a></div><div class="ttdeci">static unsigned int B[32]</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00098">getami.c:98</a></div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
+<div class="ttc" id="mallocNd_8c_html_a83c4f08ab171b9e0d4e57018f9055368"><div class="ttname"><a href="../../dc/de6/mallocNd_8c.html#a83c4f08ab171b9e0d4e57018f9055368">BuildIndirectionTable</a></div><div class="ttdeci">char * BuildIndirectionTable(unsigned nDim, Dims, char ***nextFreeTable, char **nextFreeArray, unsigned sizeofelt)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/mallocNd_8c_source.html#l00184">mallocNd.c:184</a></div></div>
 <div class="ttc" id="mallocNd_8c_html_adad9b7f8b77aeda613cd057909b29145"><div class="ttname"><a href="../../dc/de6/mallocNd_8c.html#adad9b7f8b77aeda613cd057909b29145">malloc_2d</a></div><div class="ttdeci">char * malloc_2d(int n, int m, int sizeofelt)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/mallocNd_8c_source.html#l00218">mallocNd.c:218</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
-<div class="ttc" id="scanargs_8c_html_abacbbdefe312ec12aef4657fb2c48e98"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a></div><div class="ttdeci">int * ptr</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00057">scanargs.c:57</a></div></div>
-<div class="ttc" id="aliastorle_8c_html_a70db8bd1d499619f7ff9c1ca2ff3c8df"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#a70db8bd1d499619f7ff9c1ca2ff3c8df">main</a></div><div class="ttdeci">void main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00121">aliastorle.c:121</a></div></div>
 <div class="ttc" id="mallocNd_8c_html_ac7b961ea6a07e91fb8b0b05d4ff4a0a9"><div class="ttname"><a href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">mallocNd</a></div><div class="ttdeci">char * mallocNd(unsigned int nDim, Dims, unsigned int sizeofelt)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/mallocNd_8c_source.html#l00125">mallocNd.c:125</a></div></div>
-<div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:04 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

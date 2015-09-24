@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: graytorle.c File Reference</title>
+<title>Utah Raster Toolkit: cnv/graytorle.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -94,11 +95,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for graytorle.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d40/graytorle_8c__incl.svg" width="147" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d40/graytorle_8c__incl.svg" width="224" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -166,12 +167,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/d80/painttorle_8c.html#ae48c37db113eec555c7f4ce2e48e90de">oflag</a>;              <span class="comment">/* Output file flag. */</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> files;          <span class="comment">/* Number of files. */</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">char</span> **<a class="code" href="../../d3/d6f/show3_8c.html#a64e65075a909038d47a47ea45adcb50f">fname</a>;       <span class="comment">/* List of input file names. */</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    rle_hdr <a class="code" href="../../d6/d0d/dvirle2_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    rle_pixel **outrow;     <span class="comment">/* Output buffer. */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> <a class="code" href="../../d6/d0d/dvirle2_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **outrow;     <span class="comment">/* Output buffer. */</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>, <a class="code" href="../../dd/d78/rle_8c.html#af1d3cff2e4538e23400e260bae3dadad">row</a>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">char</span> *trash;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (! <a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a>( argc,argv,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (! <a class="code" href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a>( argc,argv,</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="stringliteral">&quot;% a%- h%-hdrsize!d o%-outfile!s xsize!d ysize!d files!*s\n(\</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral">\tConvert one or more raw images to an RLE image.\n\</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral">\t-a\tFirst input file is alpha channel.  Normally first is red.\n\</span></div>
@@ -185,25 +186,25 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        &amp;files, &amp;fname ))</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    exit( -1 );</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    out_hdr = *<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( (rle_hdr *)NULL );</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;out_hdr, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), oname, 0 );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    out_hdr = *<a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( (<a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *)NULL );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;out_hdr, <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), oname, 0 );</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">/* </span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">     * Get enough file pointers for all input files that are specified,</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">     * and try to open them.</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    inpfil = (FILE **)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( <span class="keyword">sizeof</span>( FILE * ) * files );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    inpfil = (FILE **)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( <span class="keyword">sizeof</span>( FILE * ) * files );</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">for</span> ( i=0; i&lt;files; i++ )</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    inpfil[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>( <span class="stringliteral">&quot;graytorle&quot;</span>, fname[i], <span class="stringliteral">&quot;r&quot;</span> );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    inpfil[<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>( <span class="stringliteral">&quot;graytorle&quot;</span>, fname[i], <span class="stringliteral">&quot;r&quot;</span> );</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> ( inpfil[i] == stdin )</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> ( stdin_used )</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        fprintf( stderr,</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;              <span class="stringliteral">&quot;%s: Can&#39;t use standard input for more than one file\n&quot;</span>,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;             out_hdr.cmd );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;             out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a> );</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        exit( -1 );</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        stdin_used++;</div>
@@ -214,12 +215,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> ( hflag &amp;&amp; (hsize &gt; 0) ) </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    trash = (<span class="keywordtype">char</span> *)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( hsize );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    trash = (<span class="keywordtype">char</span> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( hsize );</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">for</span> ( i=0; i&lt;files; i++ )</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        fread( trash, 1, hsize, inpfil[i] );</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>( trash );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    free( trash );</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">/* Adjust alpha channnel flag to use as index. */</span></div>
@@ -231,20 +232,20 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">/* Initialize the_hdr and allocate image row storage. */</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    out_hdr.alpha = aflag;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    out_hdr.ncolors = files - aflag;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    out_hdr.xmax = xsize - 1;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    out_hdr.ymax = ysize - 1;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    out_hdr.rle_file = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>(out_hdr.cmd, oname, <span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span> ( i = -aflag; i&lt;out_hdr.ncolors; i++)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    RLE_SET_BIT( out_hdr, i );</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a>( argv, (rle_hdr *)NULL, &amp;out_hdr );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a>( &amp;out_hdr );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a779785428d5ba91ce1c69d37cbc89492">alpha</a> = aflag;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a> = files - aflag;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a3c560ac98611d72a55f725b2b53f8306">xmax</a> = xsize - 1;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a> = ysize - 1;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>(out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, oname, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span> ( i = -aflag; i&lt;out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a>; i++)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a49993a9503617b391c2e325f422c2cde">RLE_SET_BIT</a>( out_hdr, i );</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a211dd704f17c1336fc225d7d67e0006f">rle_addhist</a>( argv, (<a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *)NULL, &amp;out_hdr );</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a>( &amp;out_hdr );</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b">rle_row_alloc</a>( &amp;out_hdr, &amp;outrow ))</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d7/d27/rle_8h.html#abf83029f1ab364a8cb72524f58d70a3b">rle_row_alloc</a>( &amp;out_hdr, &amp;outrow ))</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;%s: Ran out of heap space!!\n&quot;</span>,</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        out_hdr.cmd );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        out_hdr.<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a> );</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    exit(-2);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
@@ -254,44 +255,44 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">for</span> ( i = -aflag; i&lt;files-aflag; i++ )</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        fread( outrow[i], 1, xsize, inpfil[i+aflag] );</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">rle_putrow</a>( outrow, xsize, &amp;out_hdr );</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a09af968cef68e644e69f3b18a0e6e178">rle_putrow</a>( outrow, xsize, &amp;out_hdr );</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a>( &amp;out_hdr );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a>( &amp;out_hdr );</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
-<div class="ttc" id="rle__open__f_8c_html_a89733a45961817885603ae01210290b7"><div class="ttname"><a href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(char *prog_name, char *file_name, char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/rle__open__f_8c_source.html#l00216">rle_open_f.c:216</a></div></div>
-<div class="ttc" id="cmd__name_8c_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
-<div class="ttc" id="rle__row__alc_8c_html_abf83029f1ab364a8cb72524f58d70a3b"><div class="ttname"><a href="../../da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b">rle_row_alloc</a></div><div class="ttdeci">int rle_row_alloc(rle_hdr *the_hdr, rle_pixel ***scanp)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbc/rle__row__alc_8c_source.html#l00056">rle_row_alc.c:56</a></div></div>
+<div class="ttc" id="rle_8h_html_a49993a9503617b391c2e325f422c2cde"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a49993a9503617b391c2e325f422c2cde">RLE_SET_BIT</a></div><div class="ttdeci">#define RLE_SET_BIT(glob, bit)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00122">rle.h:122</a></div></div>
+<div class="ttc" id="rle_8h_html_a7827333daec9d306aff4729fbd61b031"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a></div><div class="ttdeci">int scanargs(int argc, char **argv, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs.c:94</a></div></div>
+<div class="ttc" id="rle_8h_html_abf83029f1ab364a8cb72524f58d70a3b"><div class="ttname"><a href="../../d7/d27/rle_8h.html#abf83029f1ab364a8cb72524f58d70a3b">rle_row_alloc</a></div><div class="ttdeci">int rle_row_alloc(rle_hdr *the_hdr, rle_pixel ***scanp)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbc/rle__row__alc_8c_source.html#l00056">rle_row_alc.c:56</a></div></div>
+<div class="ttc" id="rle_8h_html_a09af968cef68e644e69f3b18a0e6e178"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a09af968cef68e644e69f3b18a0e6e178">rle_putrow</a></div><div class="ttdeci">void rle_putrow(rle_pixel *rows[], int rowlen, rle_hdr *the_hdr)</div></div>
+<div class="ttc" id="rle_8h_html_a211dd704f17c1336fc225d7d67e0006f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a211dd704f17c1336fc225d7d67e0006f">rle_addhist</a></div><div class="ttdeci">void rle_addhist(char *argv[], rle_hdr *in_hdr, rle_hdr *out_hdr)</div></div>
 <div class="ttc" id="read98721_8c_html_ae493181272fa9ab0f26074f3d55fa27a"><div class="ttname"><a href="../../d4/dd6/read98721_8c.html#ae493181272fa9ab0f26074f3d55fa27a">xsize</a></div><div class="ttdeci">int xsize</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd6/read98721_8c_source.html#l00058">read98721.c:58</a></div></div>
 <div class="ttc" id="show3_8c_html_a64e65075a909038d47a47ea45adcb50f"><div class="ttname"><a href="../../d3/d6f/show3_8c.html#a64e65075a909038d47a47ea45adcb50f">fname</a></div><div class="ttdeci">char * fname[3]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d6f/show3_8c_source.html#l00031">show3.c:31</a></div></div>
-<div class="ttc" id="rletorla_8c_html_aafde19f7d36ca163a143579c1b125b6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a></div><div class="ttdeci">void free()</div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
-<div class="ttc" id="rle__putrow_8c_html_af4fab734a5d227ad2ae95840f56fff3b"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a></div><div class="ttdeci">void rle_puteof(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00474">rle_putrow.c:474</a></div></div>
-<div class="ttc" id="rle__putrow_8c_html_aa26532b01bc4f49b7383765cdc23ea72"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">rle_putrow</a></div><div class="ttdeci">void rle_putrow(rows, int rowlen, rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00096">rle_putrow.c:96</a></div></div>
-<div class="ttc" id="rle__addhist_8c_html_a4f9433d6e4e203d0ecea1c7d3837afc3"><div class="ttname"><a href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a></div><div class="ttdeci">void rle_addhist(argv, rle_hdr *in_hdr, rle_hdr *out_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/def/rle__addhist_8c_source.html#l00054">rle_addhist.c:54</a></div></div>
+<div class="ttc" id="rle_8h_html_af4fab734a5d227ad2ae95840f56fff3b"><div class="ttname"><a href="../../d7/d27/rle_8h.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a></div><div class="ttdeci">void rle_puteof(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00474">rle_putrow.c:474</a></div></div>
+<div class="ttc" id="rle_8h_html_ab89ecb548e22ac958f24c71fba852464"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, const char *pgmname, const char *fname, int img_num)</div></div>
+<div class="ttc" id="structrle__hdr_html_a56fc353295f9b9b62cd48ea02347116f"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">rle_hdr::cmd</a></div><div class="ttdeci">const char * cmd</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00133">rle.h:133</a></div></div>
+<div class="ttc" id="structrle__hdr_html"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html">rle_hdr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00096">rle.h:96</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a3c560ac98611d72a55f725b2b53f8306"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a3c560ac98611d72a55f725b2b53f8306">rle_hdr::xmax</a></div><div class="ttdeci">int xmax</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a50f668a9b76ee5fc16ec507d8c8ac42b"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">rle_hdr::ymax</a></div><div class="ttdeci">int ymax</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
 <div class="ttc" id="read98721_8c_html_ac70272affec5182515dd40abe4c39f80"><div class="ttname"><a href="../../d4/dd6/read98721_8c.html#ac70272affec5182515dd40abe4c39f80">ysize</a></div><div class="ttdeci">int ysize</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd6/read98721_8c_source.html#l00059">read98721.c:59</a></div></div>
-<div class="ttc" id="rle__putrow_8c_html_af88a82b331cd6f425d2a2cc1623944c6"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a></div><div class="ttdeci">void rle_put_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00453">rle_putrow.c:453</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a82e79385f2d45cc3b80ce0f4f369eae5"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, char *pgmname, char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
+<div class="ttc" id="rle_8h_html_a5c3e1eb7fc1fd5a17f96d77df371e427"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a></div><div class="ttdeci">unsigned char rle_pixel</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00056">rle.h:56</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a779785428d5ba91ce1c69d37cbc89492"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a779785428d5ba91ce1c69d37cbc89492">rle_hdr::alpha</a></div><div class="ttdeci">int alpha</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a76eefa2808915342600d65f36f77eb26"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(const char *prog_name, const char *f_name, const char *mode)</div></div>
+<div class="ttc" id="rle_8h_html_af88a82b331cd6f425d2a2cc1623944c6"><div class="ttname"><a href="../../d7/d27/rle_8h.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a></div><div class="ttdeci">void rle_put_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00453">rle_putrow.c:453</a></div></div>
+<div class="ttc" id="rle_8h_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
 <div class="ttc" id="rle_8c_html_af1d3cff2e4538e23400e260bae3dadad"><div class="ttname"><a href="../../dd/d78/rle_8c.html#af1d3cff2e4538e23400e260bae3dadad">row</a></div><div class="ttdeci">int row</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d78/rle_8c_source.html#l00027">rle.c:27</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 <div class="ttc" id="painttorle_8c_html_ae48c37db113eec555c7f4ce2e48e90de"><div class="ttname"><a href="../../d2/d80/painttorle_8c.html#ae48c37db113eec555c7f4ce2e48e90de">oflag</a></div><div class="ttdeci">int oflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/painttorle_8c_source.html#l00045">painttorle.c:45</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ea6d702c0484056c8504d6ce7fede08"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a></div><div class="ttdeci">int scanargs(va_alist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00091">scanargs.c:91</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a73983779ca206439513fb17db9df1f88"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_hdr::rle_file</a></div><div class="ttdeci">FILE * rle_file</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00114">rle.h:114</a></div></div>
 <div class="ttc" id="dvirle2_8c_html_ad9e5ade73c3b1f8491a6f6a2892255f8"><div class="ttname"><a href="../../d6/d0d/dvirle2_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a></div><div class="ttdeci">rle_hdr out_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0d/dvirle2_8c_source.html#l00089">dvirle2.c:89</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a5f6621380c12c10bcadd8b8ffdaa7716"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">rle_hdr::ncolors</a></div><div class="ttdeci">int ncolors</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dac/graytorle_8c_ade521a0600ded19f1720b6f6df59b480_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:05 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

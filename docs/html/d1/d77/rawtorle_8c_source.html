@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: rawtorle.c Source File</title>
+<title>Utah Raster Toolkit: cnv/rawtorle.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -138,53 +139,53 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> * pic.[000-100].[rgb]    :  cat pic.* | rawtorle -w ... -h ... -n 3 -s -r </span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;rle.h&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdio</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="../../d7/d27/rle_8h.html">&quot;rle.h&quot;</a></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/* hey.. why spin normally! */</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d1/d77/rawtorle_8c.html#a9f5f34e58083f6ea564c1fe64baf30a6">   53</a></span>&#160;<span class="preprocessor">#define duff(counter, block) {\</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">  while (counter &gt;= 4) {\</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">     { block; } \</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">     { block; } \</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">     { block; } \</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">     { block; } \</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">     counter -= 4;\</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">  } \</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">  switch (counter &amp; 3) { \</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">     case 3:    { block; } \</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">     case 2:    { block; } \</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">     case 1:    { block; } \</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">     case 0:    counter = 0;\</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">     }\</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d1/d77/rawtorle_8c.html#a9f5f34e58083f6ea564c1fe64baf30a6">   53</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">duff</span><span class="preprocessor">(</span><span class="preprocessor">counter</span><span class="preprocessor">,</span> <span class="preprocessor">block</span><span class="preprocessor">)</span> <span class="preprocessor">{</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">while</span> <span class="preprocessor">(</span><span class="preprocessor">counter</span> <span class="preprocessor">&gt;=</span> 4<span class="preprocessor">)</span> <span class="preprocessor">{</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;     <span class="preprocessor">{</span> <span class="preprocessor">block</span><span class="preprocessor">;</span> <span class="preprocessor">}</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;     <span class="preprocessor">{</span> <span class="preprocessor">block</span><span class="preprocessor">;</span> <span class="preprocessor">}</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     <span class="preprocessor">{</span> <span class="preprocessor">block</span><span class="preprocessor">;</span> <span class="preprocessor">}</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     <span class="preprocessor">{</span> <span class="preprocessor">block</span><span class="preprocessor">;</span> <span class="preprocessor">}</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;     <span class="preprocessor">counter</span> <span class="preprocessor">-=</span> 4<span class="preprocessor">;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="preprocessor">}</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">switch</span> <span class="preprocessor">(</span><span class="preprocessor">counter</span> <span class="preprocessor">&amp;</span> 3<span class="preprocessor">)</span> <span class="preprocessor">{</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;     <span class="keywordflow">case</span> 3<span class="preprocessor">:</span>    <span class="preprocessor">{</span> <span class="preprocessor">block</span><span class="preprocessor">;</span> <span class="preprocessor">}</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;     <span class="keywordflow">case</span> 2<span class="preprocessor">:</span>    <span class="preprocessor">{</span> <span class="preprocessor">block</span><span class="preprocessor">;</span> <span class="preprocessor">}</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;     <span class="keywordflow">case</span> 1<span class="preprocessor">:</span>    <span class="preprocessor">{</span> <span class="preprocessor">block</span><span class="preprocessor">;</span> <span class="preprocessor">}</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;     <span class="keywordflow">case</span> 0<span class="preprocessor">:</span>    <span class="preprocessor">counter</span> <span class="preprocessor">=</span> 0<span class="preprocessor">;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;     <span class="preprocessor">}</span><span class="preprocessor">\</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">}</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d1/d77/rawtorle_8c.html#ade521a0600ded19f1720b6f6df59b480">   70</a></span>&#160;<a class="code" href="../../d1/d77/rawtorle_8c.html#ade521a0600ded19f1720b6f6df59b480">main</a>(argc,argv) </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> argc;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d1/d77/rawtorle_8c.html#ade521a0600ded19f1720b6f6df59b480">   70</a></span>&#160;<a class="code" href="../../dd/dc5/prototypes_8h.html#a70db8bd1d499619f7ff9c1ca2ff3c8df">main</a>(<a class="code" href="../../dd/dc5/prototypes_8h.html#a70db8bd1d499619f7ff9c1ca2ff3c8df">argc</a>,<a class="code" href="../../dd/dc5/prototypes_8h.html#a70db8bd1d499619f7ff9c1ca2ff3c8df">argv</a>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">int</span> argc;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">char</span> *argv[];</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{ </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> i;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">char</span> *header_bytes = NULL, *trailer_bytes = NULL;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a> = NULL, *outfname = NULL;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    FILE *<a class="code" href="../../d8/d35/targatorle_8c.html#af19157da745ecb3f2b088c8f3a10c0a7">infile</a>, *<a class="code" href="../../d1/dad/giftorle_8c.html#ae581849c67336453bd5b81e6518019a9">outfile</a>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    rle_hdr <a class="code" href="../../df/d1f/iristorle_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d2/d80/painttorle_8c.html#ae48c37db113eec555c7f4ce2e48e90de">oflag</a> = 0, wflag = 0, hflag = 0, nflag = 0;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">char</span> *infname = NULL, *outfname = NULL;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    FILE *infile, *outfile;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    rle_hdr hdr;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> oflag = 0, wflag = 0, hflag = 0, nflag = 0;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> fflag = 0, tflag = 0, Nsflag = 0, rflag = 0;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#define Nflag   (Nsflag &amp; 2)</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#define sflag   (Nsflag &amp; 1)</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d5/da5/pgmtorle_8c.html#adc7ed4d9991bc47d473e178bd4fe9a49">header</a> = 0, trailer = 0, alpha_value = 255;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">Nflag</span>   <span class="preprocessor">(</span><span class="preprocessor">Nsflag</span> <span class="preprocessor">&amp;</span> 2<span class="preprocessor">)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">sflag</span>   <span class="preprocessor">(</span><span class="preprocessor">Nsflag</span> <span class="preprocessor">&amp;</span> 1<span class="preprocessor">)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> header = 0, trailer = 0, alpha_value = 255;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> pflag= 0, right_pad = 0, lflag = 0, left_pad = 0;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> aflag = 0, input_alpha = 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d5/da5/pgmtorle_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a> = 512, <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a> = 512, nochan = 3;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> height = 512, width = 512, nochan = 3;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> red_pos, alpha_pos, green_pos = 0, blue_pos = 0;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> img_size;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">/* Default color values */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    rle_pixel **<a class="code" href="../../d2/d80/painttorle_8c.html#a6c7c6b8350441f205e30479c28ce56f5">outrows</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **outrows;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *inrows;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> inrows_size;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a>( argc, argv, </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">scanargs</a><a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">(</a> argc<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> argv<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          <span class="stringliteral">&quot;% Ns%- r%- w%-width!d h%-height!d f%-header-size!d \n\</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral">\t\tt%-trailer-size!d n%-nchannels!d a%-alpha-value%d  \n\</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="stringliteral">\t\tp%-scanline-pad!d l%-left-scanline-pad!d o%-outfile!s \n\</span></div>
@@ -198,35 +199,35 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="stringliteral">\t\tcat pic.r pic.g pic.b | rawtorle)\n\</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="stringliteral">\t-r\treverse the channel order (e.g. read data as ABGR instead of\n\</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="stringliteral">\t\tthe default RGBA order)\n\</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="stringliteral">\t-s\tInput data is in scanline interleaved order.)&quot;</span>,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;          &amp;Nsflag, &amp;rflag, &amp;wflag, &amp;<a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, &amp;hflag, &amp;height,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          &amp;fflag, &amp;header, &amp;tflag, &amp;trailer, &amp;nflag, &amp;nochan,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          &amp;aflag, &amp;alpha_value,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          &amp;pflag, &amp;right_pad, &amp;lflag, &amp;left_pad,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;          &amp;oflag, &amp;outfname, &amp;infname ) == 0)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="stringliteral">\t-s\tInput data is in scanline interleaved order.)&quot;</span><a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;          &amp;Nsflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;rflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;wflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;width<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;hflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;height<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          &amp;fflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;header<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;tflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;trailer<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;nflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;nochan<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          &amp;aflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;alpha_value<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          &amp;pflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;right_pad<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;lflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;left_pad<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;          &amp;oflag<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;outfname<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">,</a> &amp;infname <a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">)</a> == 0)</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    exit( 1 );</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">/* Initialize header. */</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    hdr = *<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( (rle_hdr *)NULL );</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;hdr, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), outfname, 0 );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    hdr = *<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a><a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">(</a> (rle_hdr *)NULL <a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">)</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a231008fb07b3bdc4d89c30d48b659909">rle_names</a><a class="code" href="../../d2/df3/rle__hdr_8c.html#a231008fb07b3bdc4d89c30d48b659909">(</a> &amp;hdr<a class="code" href="../../d2/df3/rle__hdr_8c.html#a231008fb07b3bdc4d89c30d48b659909">,</a> <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a><a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">(</a> argv <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">)</a><a class="code" href="../../d2/df3/rle__hdr_8c.html#a231008fb07b3bdc4d89c30d48b659909">,</a> outfname<a class="code" href="../../d2/df3/rle__hdr_8c.html#a231008fb07b3bdc4d89c30d48b659909">,</a> 0 <a class="code" href="../../d2/df3/rle__hdr_8c.html#a231008fb07b3bdc4d89c30d48b659909">)</a>;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">/* Error check arguments. */</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a> &lt;= 0 || height &lt;= 0 ) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span> ( width &lt;= 0 || height &lt;= 0 ) {</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;%s: Invalid width or height arg (%d,%d)\n&quot;</span>,</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        hdr.cmd, <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>, height);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, width, height);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    exit(-2);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> ( 0 &gt; nochan || nochan &gt; 4 ) {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;%s: Invalid number of channels %d\n&quot;</span>,</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        hdr.cmd, nochan);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>, nochan);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    exit(-2);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">/* For 2 channels we assume one is an alpha channel */</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">if</span> ( nochan == 2 || nochan == 4 )</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    input_alpha = 1;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">/* either way, who cares */</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a> &amp;&amp; nochan == 1 )</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    Nsflag = 0;</div>
@@ -234,62 +235,62 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a> &amp;&amp; (lflag || pflag))</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    fprintf( stderr,</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;         <span class="stringliteral">&quot;%s: -N with -l or -p is not supported, padding ignored.\n&quot;</span>,</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;         hdr.cmd );</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;         hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a> );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">/* Open Raw file */</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    infile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>( hdr.cmd, infname, <span class="stringliteral">&quot;r&quot;</span> );</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    outfile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>( hdr.cmd, outfname, <span class="stringliteral">&quot;w&quot;</span> );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    infile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a><a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">(</a> hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a><a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">,</a> infname<a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">,</a> <span class="stringliteral">&quot;r&quot;</span> <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">)</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    outfile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a><a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">(</a> hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a><a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">,</a> outfname<a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">,</a> <span class="stringliteral">&quot;w&quot;</span> <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">)</a>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">/* for -Non-interleaved case, we need nochan-1 whole channels of buffer */</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    inrows_size = <a class="code" href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a> ? <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a> * (height + 1) * (nochan - 1) : width * nochan;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    inrows_size = <a class="code" href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a> ? width * (height + 1) * (nochan - 1) : width * nochan;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> ((inrows = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a> ( inrows_size )) == NULL) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> ((inrows = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) malloc ( inrows_size )) == NULL) {</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;%s: No memory available for inrows malloc\n&quot;</span>,</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        hdr.cmd);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    exit(-2);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">/* HACK: we allocate more memory; we jack the size for the first fread */</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a> ) </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a> )</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    inrows_size = width * height * (nochan - 1) + width;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    img_size = width * <a class="code" href="../../d5/da5/pgmtorle_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    img_size = width * height;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>.rle_file = <a class="code" href="../../d1/dad/giftorle_8c.html#ae581849c67336453bd5b81e6518019a9">outfile</a>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>.xmin = <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>.ymin = 0;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>.xmax = width - 1;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>.ymax = height - 1;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>.alpha = aflag || input_alpha;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> = outfile;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../d6/dab/structrle__hdr.html#a157435c3f4deb1ac39fd1cf2ba1008a8">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a157435c3f4deb1ac39fd1cf2ba1008a8">xmin</a> = <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a> = 0;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../d6/dab/structrle__hdr.html#a3c560ac98611d72a55f725b2b53f8306">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a3c560ac98611d72a55f725b2b53f8306">xmax</a> = width - 1;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a> = height - 1;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../d6/dab/structrle__hdr.html#a779785428d5ba91ce1c69d37cbc89492">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a779785428d5ba91ce1c69d37cbc89492">alpha</a> = aflag || input_alpha;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">switch</span> ( nochan ) {</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">case</span> 4: <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>.ncolors = 3;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a> = 3;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">case</span> 2: <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>.ncolors = 1;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a> = 1;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">if</span> ( aflag || input_alpha )</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    RLE_SET_BIT( <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>, RLE_ALPHA );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a49993a9503617b391c2e325f422c2cde">RLE_SET_BIT</a>( <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>, <a class="code" href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a> );</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    RLE_CLR_BIT( <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>, RLE_ALPHA );</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a>( argv, (rle_hdr *)NULL, &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a> );</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a15b5371544b2e071aed529a627bfe414">RLE_CLR_BIT</a>( <a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>, <a class="code" href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a> );</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a><a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">(</a> argv<a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">,</a> (rle_hdr *)NULL<a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">,</a> &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a> <a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">)</a>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">/* maybe faster to malloc and fread than to do lots of GETCs, Idunno */</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span> (fflag) </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    header_bytes = (<span class="keywordtype">char</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a> ( header );</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">if</span> (tflag) </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    trailer_bytes = (<span class="keywordtype">char</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a> ( trailer );</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span> (fflag)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    header_bytes = (<span class="keywordtype">char</span> *) malloc ( header );</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">if</span> (tflag)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    trailer_bytes = (<span class="keywordtype">char</span> *) malloc ( trailer );</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b">rle_row_alloc</a>( &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a>, &amp;outrows )) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b">rle_row_alloc</a><a class="code" href="../../da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b">(</a> &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a><a class="code" href="../../da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b">,</a> &amp;outrows <a class="code" href="../../da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b">)</a>) {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;%s: No memory available for rle_row_alloc\n&quot;</span>,</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        hdr.cmd);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">.</a><a class="code" href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">cmd</a>);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    exit(-2);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">/* insert alpha channel */</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">if</span> ( aflag &amp;&amp; !input_alpha )</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>; i++)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        outrows[RLE_ALPHA][i] = alpha_value;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; width; i++)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        outrows[<a class="code" href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a>][i] = alpha_value;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="comment">/* setup byte positions for reversed colors or otherwise */</span></div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span> ( rflag ) {</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    alpha_pos = 0;</div>
@@ -309,7 +310,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        blue_pos = 2;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a> ) {</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    red_pos *= img_size;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    green_pos *= img_size;</div>
@@ -317,14 +318,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    alpha_pos *= img_size;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../d1/d77/rawtorle_8c.html#a6710fbf8aad91222515ef7080999b862">sflag</a> ) {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    red_pos *= <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    green_pos *= <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    blue_pos *= <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    alpha_pos *= <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    red_pos *= width;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    green_pos *= width;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    blue_pos *= width;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    alpha_pos *= width;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">while</span> ( !feof( infile ))</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> = <a class="code" href="../../d5/da5/pgmtorle_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">int</span> y = height;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">int</span> ni_y = 0;   <span class="comment">/* only used in -N cases */</span></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">int</span> first_line = 1;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">int</span> fread_len = inrows_size;</div>
@@ -333,9 +334,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">/* skip the header */</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (fflag)</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        fread( header_bytes, 1, header, infile );</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">while</span> (--y &gt;= 0) {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keyword">register</span> rle_pixel *p, *o;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keyword">register</span> <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *p, *o;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keyword">register</span> <span class="keywordtype">int</span> stride = nochan, count;</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">/* LEFT_PAD */</span></div>
@@ -348,11 +349,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            perror( <span class="stringliteral">&quot;read error&quot;</span> );</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        exit (!first_line);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="comment">/* RIGHT_PAD */</span></div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">for</span> (count = 0; count &lt; right_pad; count++)</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        getc(infile);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="comment">/* non-interleaved data is easier to compute than interleaved */</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span> ( <a class="code" href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a> ) {</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="comment">/*</span></div>
@@ -362,115 +363,116 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">         * the fread parameters for all of the remaining scanlines</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">if</span> ( first_line ) {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            fread_len = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            fread_len = width;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            fread_pos = inrows + (img_size * (nochan - 1));</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">if</span> ( input_alpha ) </div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            outrows[RLE_ALPHA] = (rflag ? inrows + ni_y : fread_pos);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">if</span> ( input_alpha )</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a>] = (rflag ? inrows + ni_y : fread_pos);</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span> ( rflag )</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            outrows[RLE_RED] = fread_pos;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a0c8d176de58c9f8295bae73631f44be0">RLE_RED</a>] = fread_pos;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            outrows[RLE_RED] = inrows + red_pos + ni_y;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a0c8d176de58c9f8295bae73631f44be0">RLE_RED</a>] = inrows + red_pos + ni_y;</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">if</span> (nochan &gt; 2) {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            outrows[RLE_GREEN] = inrows + green_pos + ni_y;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a290766387c12977ef1782afa3f5bc88e">RLE_GREEN</a>] = inrows + green_pos + ni_y;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">if</span> ( rflag || input_alpha )</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            outrows[RLE_BLUE] = inrows + blue_pos + ni_y;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a0f10dfaf1eb8219cbd8055b2cfd10dad">RLE_BLUE</a>] = inrows + blue_pos + ni_y;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            outrows[RLE_BLUE] = fread_pos;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a0f10dfaf1eb8219cbd8055b2cfd10dad">RLE_BLUE</a>] = fread_pos;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        ni_y += <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        ni_y += width;</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( <a class="code" href="../../d1/d77/rawtorle_8c.html#a6710fbf8aad91222515ef7080999b862">sflag</a> ) {</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="comment">/* scanline interleaved! Like the rle_putrow format.. cake  */</span></div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="comment">/* we only need to jack the pointers on the first scanline */</span></div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">if</span> (first_line) {</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">if</span> ( input_alpha )</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            outrows[RLE_ALPHA] = inrows + alpha_pos;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            outrows[RLE_RED] = inrows + red_pos;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a>] = inrows + alpha_pos;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a0c8d176de58c9f8295bae73631f44be0">RLE_RED</a>] = inrows + red_pos;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">if</span> (nochan &gt; 2) {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            outrows[RLE_GREEN] = inrows + green_pos;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            outrows[RLE_BLUE] = inrows +  blue_pos;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a290766387c12977ef1782afa3f5bc88e">RLE_GREEN</a>] = inrows + green_pos;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            outrows[<a class="code" href="../../d7/d27/rle_8h.html#a0f10dfaf1eb8219cbd8055b2cfd10dad">RLE_BLUE</a>] = inrows +  blue_pos;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            }</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        }</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="comment">/* ahhh...  the default.  interleaved data */</span></div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">if</span> ( input_alpha ) {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            o = outrows[RLE_ALPHA];</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            o = outrows[<a class="code" href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a>];</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            p = inrows + alpha_pos;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            count = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            count = width;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <a class="code" href="../../d1/d77/rawtorle_8c.html#a9f5f34e58083f6ea564c1fe64baf30a6">duff</a>(count, *o++ = *p; p += stride);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }       </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        o = outrows[RLE_RED];</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        o = outrows[<a class="code" href="../../d7/d27/rle_8h.html#a0c8d176de58c9f8295bae73631f44be0">RLE_RED</a>];</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        p = inrows + red_pos;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        count = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        count = width;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <a class="code" href="../../d1/d77/rawtorle_8c.html#a9f5f34e58083f6ea564c1fe64baf30a6">duff</a>( count, *o++ = *p; p += stride);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">if</span> (nochan &gt; 2) {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            o = outrows[RLE_GREEN];</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            o = outrows[<a class="code" href="../../d7/d27/rle_8h.html#a290766387c12977ef1782afa3f5bc88e">RLE_GREEN</a>];</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            p = inrows + green_pos;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            count = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            count = width;</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <a class="code" href="../../d1/d77/rawtorle_8c.html#a9f5f34e58083f6ea564c1fe64baf30a6">duff</a>( count, *o++ = *p; p += stride);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            o = outrows[RLE_BLUE];</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            o = outrows[<a class="code" href="../../d7/d27/rle_8h.html#a0f10dfaf1eb8219cbd8055b2cfd10dad">RLE_BLUE</a>];</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            p = inrows + blue_pos;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            count = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            count = width;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <a class="code" href="../../d1/d77/rawtorle_8c.html#a9f5f34e58083f6ea564c1fe64baf30a6">duff</a>( count, *o++ = *p; p += stride);</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        }</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="comment">/* start the file */</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">if</span> (first_line) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a>( &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a> );</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a><a class="code" href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">(</a> &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a> <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">)</a>;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        first_line = 0;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <a class="code" href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">rle_putrow</a>( outrows, width, &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a> );</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <a class="code" href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">rle_putrow</a><a class="code" href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">(</a> outrows<a class="code" href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">,</a> width<a class="code" href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">,</a> &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a> <a class="code" href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">)</a>;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a>( &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a> );</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a><a class="code" href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">(</a> &amp;<a class="code" href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a> <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">)</a>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">/* skip the trailer */</span></div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordflow">if</span> (tflag)</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        fread( trailer_bytes, 1, trailer, infile );</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    }</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    exit(0);</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;}</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
 <div class="ttc" id="rle__open__f_8c_html_a89733a45961817885603ae01210290b7"><div class="ttname"><a href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(char *prog_name, char *file_name, char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/rle__open__f_8c_source.html#l00216">rle_open_f.c:216</a></div></div>
-<div class="ttc" id="giftorle_8c_html_ae581849c67336453bd5b81e6518019a9"><div class="ttname"><a href="../../d1/dad/giftorle_8c.html#ae581849c67336453bd5b81e6518019a9">outfile</a></div><div class="ttdeci">FILE * outfile</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dad/giftorle_8c_source.html#l00061">giftorle.c:61</a></div></div>
+<div class="ttc" id="rle_8h_html_a49993a9503617b391c2e325f422c2cde"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a49993a9503617b391c2e325f422c2cde">RLE_SET_BIT</a></div><div class="ttdeci">#define RLE_SET_BIT(glob, bit)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00122">rle.h:122</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a157435c3f4deb1ac39fd1cf2ba1008a8"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a157435c3f4deb1ac39fd1cf2ba1008a8">rle_hdr::xmin</a></div><div class="ttdeci">int xmin</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle__hdr_8c_html_a231008fb07b3bdc4d89c30d48b659909"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a231008fb07b3bdc4d89c30d48b659909">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, const  char *pgmname, const  char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
 <div class="ttc" id="cmd__name_8c_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
-<div class="ttc" id="pgmtorle_8c_html_a2474a5474cbff19523a51eb1de01cda4"><div class="ttname"><a href="../../d5/da5/pgmtorle_8c.html#a2474a5474cbff19523a51eb1de01cda4">width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/pgmtorle_8c_source.html#l00051">pgmtorle.c:51</a></div></div>
+<div class="ttc" id="prototypes_8h_html_a70db8bd1d499619f7ff9c1ca2ff3c8df"><div class="ttname"><a href="../../dd/dc5/prototypes_8h.html#a70db8bd1d499619f7ff9c1ca2ff3c8df">main</a></div><div class="ttdeci">void main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00121">aliastorle.c:121</a></div></div>
 <div class="ttc" id="rle__row__alc_8c_html_abf83029f1ab364a8cb72524f58d70a3b"><div class="ttname"><a href="../../da/dbc/rle__row__alc_8c.html#abf83029f1ab364a8cb72524f58d70a3b">rle_row_alloc</a></div><div class="ttdeci">int rle_row_alloc(rle_hdr *the_hdr, rle_pixel ***scanp)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbc/rle__row__alc_8c_source.html#l00056">rle_row_alc.c:56</a></div></div>
-<div class="ttc" id="pgmtorle_8c_html_ad12fc34ce789bce6c8a05d8a17138534"><div class="ttname"><a href="../../d5/da5/pgmtorle_8c.html#ad12fc34ce789bce6c8a05d8a17138534">height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/pgmtorle_8c_source.html#l00051">pgmtorle.c:51</a></div></div>
-<div class="ttc" id="iristorle_8c_html_aad24a9b5f83b74566a2901b7746e7305"><div class="ttname"><a href="../../df/d1f/iristorle_8c.html#aad24a9b5f83b74566a2901b7746e7305">hdr</a></div><div class="ttdeci">rle_hdr hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d1f/iristorle_8c_source.html#l00035">iristorle.c:35</a></div></div>
-<div class="ttc" id="getami_8c_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a></div><div class="ttdeci">static int y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
-<div class="ttc" id="getbob_8c_html_a15e3502f2b8f5c4f7862beb54676e236"><div class="ttname"><a href="../../d2/db1/getbob_8c.html#a15e3502f2b8f5c4f7862beb54676e236">infname</a></div><div class="ttdeci">string infname</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/db1/getbob_8c_source.html#l00068">getbob.c:68</a></div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
+<div class="ttc" id="rle_8h_html_a290766387c12977ef1782afa3f5bc88e"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a290766387c12977ef1782afa3f5bc88e">RLE_GREEN</a></div><div class="ttdeci">#define RLE_GREEN</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00063">rle.h:63</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a62bd76bb5db5c115b58c2853f9daa3bc"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">rle_hdr::ymin</a></div><div class="ttdeci">int ymin</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a0f10dfaf1eb8219cbd8055b2cfd10dad"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a0f10dfaf1eb8219cbd8055b2cfd10dad">RLE_BLUE</a></div><div class="ttdeci">#define RLE_BLUE</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00064">rle.h:64</a></div></div>
+<div class="ttc" id="scanargs_8c_html_a7827333daec9d306aff4729fbd61b031"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">scanargs</a></div><div class="ttdeci">int scanargs(int argc, char **argv, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs.c:94</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a56fc353295f9b9b62cd48ea02347116f"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a56fc353295f9b9b62cd48ea02347116f">rle_hdr::cmd</a></div><div class="ttdeci">const char * cmd</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00133">rle.h:133</a></div></div>
 <div class="ttc" id="rle__putrow_8c_html_af4fab734a5d227ad2ae95840f56fff3b"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a></div><div class="ttdeci">void rle_puteof(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00474">rle_putrow.c:474</a></div></div>
 <div class="ttc" id="rawtorle_8c_html_a6710fbf8aad91222515ef7080999b862"><div class="ttname"><a href="../../d1/d77/rawtorle_8c.html#a6710fbf8aad91222515ef7080999b862">sflag</a></div><div class="ttdeci">#define sflag</div></div>
+<div class="ttc" id="rle_8h_html_a0c8d176de58c9f8295bae73631f44be0"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a0c8d176de58c9f8295bae73631f44be0">RLE_RED</a></div><div class="ttdeci">#define RLE_RED</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00062">rle.h:62</a></div></div>
 <div class="ttc" id="rle__putrow_8c_html_aa26532b01bc4f49b7383765cdc23ea72"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#aa26532b01bc4f49b7383765cdc23ea72">rle_putrow</a></div><div class="ttdeci">void rle_putrow(rows, int rowlen, rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00096">rle_putrow.c:96</a></div></div>
-<div class="ttc" id="rawtorle_8c_html_ade521a0600ded19f1720b6f6df59b480"><div class="ttname"><a href="../../d1/d77/rawtorle_8c.html#ade521a0600ded19f1720b6f6df59b480">main</a></div><div class="ttdeci">void main(int argc, argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d77/rawtorle_8c_source.html#l00070">rawtorle.c:70</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a3c560ac98611d72a55f725b2b53f8306"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a3c560ac98611d72a55f725b2b53f8306">rle_hdr::xmax</a></div><div class="ttdeci">int xmax</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
 <div class="ttc" id="rawtorle_8c_html_a9f5f34e58083f6ea564c1fe64baf30a6"><div class="ttname"><a href="../../d1/d77/rawtorle_8c.html#a9f5f34e58083f6ea564c1fe64baf30a6">duff</a></div><div class="ttdeci">#define duff(counter, block)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d77/rawtorle_8c_source.html#l00053">rawtorle.c:53</a></div></div>
 <div class="ttc" id="rle__addhist_8c_html_a4f9433d6e4e203d0ecea1c7d3837afc3"><div class="ttname"><a href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a></div><div class="ttdeci">void rle_addhist(argv, rle_hdr *in_hdr, rle_hdr *out_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/def/rle__addhist_8c_source.html#l00054">rle_addhist.c:54</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
-<div class="ttc" id="pgmtorle_8c_html_adc7ed4d9991bc47d473e178bd4fe9a49"><div class="ttname"><a href="../../d5/da5/pgmtorle_8c.html#adc7ed4d9991bc47d473e178bd4fe9a49">header</a></div><div class="ttdeci">int header</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/pgmtorle_8c_source.html#l00052">pgmtorle.c:52</a></div></div>
-<div class="ttc" id="targatorle_8c_html_af19157da745ecb3f2b088c8f3a10c0a7"><div class="ttname"><a href="../../d8/d35/targatorle_8c.html#af19157da745ecb3f2b088c8f3a10c0a7">infile</a></div><div class="ttdeci">FILE * infile</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d35/targatorle_8c_source.html#l00102">targatorle.c:102</a></div></div>
+<div class="ttc" id="rle_8h_html_a15b5371544b2e071aed529a627bfe414"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a15b5371544b2e071aed529a627bfe414">RLE_CLR_BIT</a></div><div class="ttdeci">#define RLE_CLR_BIT(glob, bit)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00124">rle.h:124</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a50f668a9b76ee5fc16ec507d8c8ac42b"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">rle_hdr::ymax</a></div><div class="ttdeci">int ymax</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a5c3e1eb7fc1fd5a17f96d77df371e427"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a></div><div class="ttdeci">unsigned char rle_pixel</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00056">rle.h:56</a></div></div>
 <div class="ttc" id="rle__putrow_8c_html_af88a82b331cd6f425d2a2cc1623944c6"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a></div><div class="ttdeci">void rle_put_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00453">rle_putrow.c:453</a></div></div>
 <div class="ttc" id="rawtorle_8c_html_abbe40516c61c721e33e8cef077c0a56f"><div class="ttname"><a href="../../d1/d77/rawtorle_8c.html#abbe40516c61c721e33e8cef077c0a56f">Nflag</a></div><div class="ttdeci">#define Nflag</div></div>
-<div class="ttc" id="rle__hdr_8c_html_a82e79385f2d45cc3b80ce0f4f369eae5"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, char *pgmname, char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
-<div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a779785428d5ba91ce1c69d37cbc89492"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a779785428d5ba91ce1c69d37cbc89492">rle_hdr::alpha</a></div><div class="ttdeci">int alpha</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a4fc9e81d78732f391d8b7da947831711"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a4fc9e81d78732f391d8b7da947831711">RLE_ALPHA</a></div><div class="ttdeci">#define RLE_ALPHA</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00065">rle.h:65</a></div></div>
 <div class="ttc" id="rle__hdr_8c_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 <div class="ttc" id="rle__global_8c_html_a03d78e9418d9c2e117d2307c88573e6e"><div class="ttname"><a href="../../d5/dd1/rle__global_8c.html#a03d78e9418d9c2e117d2307c88573e6e">rle_dflt_hdr</a></div><div class="ttdeci">rle_hdr rle_dflt_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dd1/rle__global_8c_source.html#l00066">rle_global.c:66</a></div></div>
-<div class="ttc" id="painttorle_8c_html_ae48c37db113eec555c7f4ce2e48e90de"><div class="ttname"><a href="../../d2/d80/painttorle_8c.html#ae48c37db113eec555c7f4ce2e48e90de">oflag</a></div><div class="ttdeci">int oflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/painttorle_8c_source.html#l00045">painttorle.c:45</a></div></div>
-<div class="ttc" id="painttorle_8c_html_a6c7c6b8350441f205e30479c28ce56f5"><div class="ttname"><a href="../../d2/d80/painttorle_8c.html#a6c7c6b8350441f205e30479c28ce56f5">outrows</a></div><div class="ttdeci">rle_pixel ** outrows</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/painttorle_8c_source.html#l00043">painttorle.c:43</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ea6d702c0484056c8504d6ce7fede08"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a></div><div class="ttdeci">int scanargs(va_alist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00091">scanargs.c:91</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a73983779ca206439513fb17db9df1f88"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_hdr::rle_file</a></div><div class="ttdeci">FILE * rle_file</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00114">rle.h:114</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a5f6621380c12c10bcadd8b8ffdaa7716"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">rle_hdr::ncolors</a></div><div class="ttdeci">int ncolors</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

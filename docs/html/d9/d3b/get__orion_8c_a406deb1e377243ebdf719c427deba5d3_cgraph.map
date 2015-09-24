@@ -1,5 +1,3 @@
 <map id="init_8_bit_colour_map" name="init_8_bit_colour_map">
-<area shape="rect" id="node2" href="$d4/df0/gamma_8c.html#aa61041b3d539ebd857f6d831c93a967b" title="gamma" alt="" coords="221,5,289,32"/>
-<area shape="rect" id="node3" href="$d9/dbb/dither_8c.html#af497d70ad3165f9bd58878047ba22f03" title="dithermap" alt="" coords="212,56,297,83"/>
-<area shape="rect" id="node4" href="$d9/dbb/dither_8c.html#a7ff23fcd77b62deab9304ffd3d684f47" title="make_square" alt="" coords="345,56,452,83"/>
+<area shape="rect" id="node2" href="$d9/dbb/dither_8c.html#af497d70ad3165f9bd58878047ba22f03" title="dithermap" alt="" coords="212,5,297,32"/>
 </map>

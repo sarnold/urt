@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: fb.h File Reference</title>
+<title>Utah Raster Toolkit: get/gmr27/fb.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -96,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d26/fb_8h__dep__incl.svg" width="118" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d26/fb_8h__dep__incl.svg" width="186" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -135,7 +136,7 @@ Macros</h2></td></tr>
 <tr class="separator:af88f4cf5f77bdbddb8ad0b89d1f934a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd8ab7741490621927421e5b6def8b14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#acd8ab7741490621927421e5b6def8b14">CursPos</a>&#160;&#160;&#160;(short)02	/* <a class="el" href="../../dc/d11/getami_8c.html#a6cf435ef5b58e79832a7bfbd0ca8dff6">if</a> on, <a class="el" href="../../da/d92/getap_8c.html#a6f87859e4aef040b22034a8951dddeb7">position</a> at A+<a class="el" href="../../dc/d11/getami_8c.html#a0a604d02c55e16e2f9f3d7799c45e555">B</a>, else at A */</td></tr>
 <tr class="separator:acd8ab7741490621927421e5b6def8b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368aa8296fafc2bfcb7d1cf2f6227018"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a368aa8296fafc2bfcb7d1cf2f6227018">CursOn</a>&#160;&#160;&#160;(short)01	/* Cursor visible or not */</td></tr>
+<tr class="memitem:a368aa8296fafc2bfcb7d1cf2f6227018"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a368aa8296fafc2bfcb7d1cf2f6227018">CursOn</a>&#160;&#160;&#160;(short)01	/* Cursor visible <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#a31739c27bdcfdac9faae7bf7a5df49e4">not</a> */</td></tr>
 <tr class="separator:a368aa8296fafc2bfcb7d1cf2f6227018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1916767f01591793cfc759ff3d35ffc2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a1916767f01591793cfc759ff3d35ffc2">LoadUpdateMode</a>&#160;&#160;&#160;(short)0026000</td></tr>
 <tr class="separator:a1916767f01591793cfc759ff3d35ffc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,9 +146,9 @@ Macros</h2></td></tr>
 <tr class="separator:a260a9022d127adf61a44d24a4505c13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a481be8f40adb37bf2e6431ef0035dfb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a481be8f40adb37bf2e6431ef0035dfb9">ScrUpdate</a>&#160;&#160;&#160;4	/* shift for S1S0 bits */</td></tr>
 <tr class="separator:a481be8f40adb37bf2e6431ef0035dfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c15bfcbb57362c67fae952923e7b014"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a8c15bfcbb57362c67fae952923e7b014">A_no_change</a>&#160;&#160;&#160;(short)0/* Ea or La remains unchanged */</td></tr>
+<tr class="memitem:a8c15bfcbb57362c67fae952923e7b014"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a8c15bfcbb57362c67fae952923e7b014">A_no_change</a>&#160;&#160;&#160;(short)0/* Ea <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> La remains unchanged */</td></tr>
 <tr class="separator:a8c15bfcbb57362c67fae952923e7b014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26fa2226fe02f551799dda1a5f60f84c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a26fa2226fe02f551799dda1a5f60f84c">A_C</a>&#160;&#160;&#160;1	/* Ea or La gets Ec or Lc */</td></tr>
+<tr class="memitem:a26fa2226fe02f551799dda1a5f60f84c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a26fa2226fe02f551799dda1a5f60f84c">A_C</a>&#160;&#160;&#160;1	/* Ea <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> La gets Ec <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> Lc */</td></tr>
 <tr class="separator:a26fa2226fe02f551799dda1a5f60f84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80437317613879913fa7396c8eae17fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a80437317613879913fa7396c8eae17fe">A_AB</a>&#160;&#160;&#160;2	/* Ea (La) gets Ea+Eb (La+Lb) */</td></tr>
 <tr class="separator:a80437317613879913fa7396c8eae17fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,15 +218,15 @@ Macros</h2></td></tr>
 <tr class="separator:a793e1cd2faa5d4ae023b7dea8cd71735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0d52e85268af97758d322de2f8ecc0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#ac0d52e85268af97758d322de2f8ecc0a">SelectWriteAll</a>&#160;&#160;&#160;(short)06000</td></tr>
 <tr class="separator:ac0d52e85268af97758d322de2f8ecc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afca0dd63a9105cb8ed470fdcac49e76e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a>&#160;&#160;&#160;(short)0200	/* Zoom and Pan card (Bit 7) */</td></tr>
+<tr class="memitem:afca0dd63a9105cb8ed470fdcac49e76e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a>&#160;&#160;&#160;(short)0200	/* Zoom <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> Pan card (Bit 7) */</td></tr>
 <tr class="separator:afca0dd63a9105cb8ed470fdcac49e76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ca17cb6a523c000f1d690b253b2d032"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a7ca17cb6a523c000f1d690b253b2d032">ZoomOn</a>&#160;&#160;&#160;(short)010	/* Enable <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> and Pan */</td></tr>
+<tr class="memitem:a7ca17cb6a523c000f1d690b253b2d032"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a7ca17cb6a523c000f1d690b253b2d032">ZoomOn</a>&#160;&#160;&#160;(short)010	/* Enable <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> Pan */</td></tr>
 <tr class="separator:a7ca17cb6a523c000f1d690b253b2d032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a164282fd861d4dbb9cd87cd35a8eed09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a164282fd861d4dbb9cd87cd35a8eed09">ZcursOn</a>&#160;&#160;&#160;(short)040	/* <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../d6/d28/gettaac_8c.html#a7a12555ff8c0a52bed4956969fd82d88">cursor</a> visible or not */</td></tr>
+<tr class="memitem:a164282fd861d4dbb9cd87cd35a8eed09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a164282fd861d4dbb9cd87cd35a8eed09">ZcursOn</a>&#160;&#160;&#160;(short)040	/* <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../d6/d28/gettaac_8c.html#a7a12555ff8c0a52bed4956969fd82d88">cursor</a> visible <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#a31739c27bdcfdac9faae7bf7a5df49e4">not</a> */</td></tr>
 <tr class="separator:a164282fd861d4dbb9cd87cd35a8eed09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce634ef94c7eb99a8ddb9274f009fbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#abce634ef94c7eb99a8ddb9274f009fbe">ZcBlink</a>&#160;&#160;&#160;(short)020	/* Blink <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../d6/d28/gettaac_8c.html#a7a12555ff8c0a52bed4956969fd82d88">cursor</a> or not */</td></tr>
+<tr class="memitem:abce634ef94c7eb99a8ddb9274f009fbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#abce634ef94c7eb99a8ddb9274f009fbe">ZcBlink</a>&#160;&#160;&#160;(short)020	/* Blink <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../d6/d28/gettaac_8c.html#a7a12555ff8c0a52bed4956969fd82d88">cursor</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#a31739c27bdcfdac9faae7bf7a5df49e4">not</a> */</td></tr>
 <tr class="separator:abce634ef94c7eb99a8ddb9274f009fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b7fe7260cf5b50e9786d04d7f232ed7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a6b7fe7260cf5b50e9786d04d7f232ed7">Zwrap</a>&#160;&#160;&#160;(short)04	/* Wrap or Clip */</td></tr>
+<tr class="memitem:a6b7fe7260cf5b50e9786d04d7f232ed7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a6b7fe7260cf5b50e9786d04d7f232ed7">Zwrap</a>&#160;&#160;&#160;(short)04	/* Wrap <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> Clip */</td></tr>
 <tr class="separator:a6b7fe7260cf5b50e9786d04d7f232ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a283f7dba38d0c904587a4d491e930f33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a283f7dba38d0c904587a4d491e930f33">Zfactor1</a>&#160;&#160;&#160;(short)0/* times one */</td></tr>
 <tr class="separator:a283f7dba38d0c904587a4d491e930f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,11 +240,11 @@ Macros</h2></td></tr>
 <tr class="separator:a4d6315b7cd407550487e8ba0dfab77c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d164a47f56d6345045e8f636c1e0f95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a3d164a47f56d6345045e8f636c1e0f95">ByteUnpacker</a>&#160;&#160;&#160;(short)01000</td></tr>
 <tr class="separator:a3d164a47f56d6345045e8f636c1e0f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30ffabe87f1737700c66e10e655dc2ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a30ffabe87f1737700c66e10e655dc2ad">UnpackText</a>&#160;&#160;&#160;(short)07000	/* <a class="el" href="../../dc/d25/fb_8h.html#af3ff568bb8675bb41da57034f22f9b32">Text</a> and <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td></tr>
+<tr class="memitem:a30ffabe87f1737700c66e10e655dc2ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a30ffabe87f1737700c66e10e655dc2ad">UnpackText</a>&#160;&#160;&#160;(short)07000	/* <a class="el" href="../../dc/d25/fb_8h.html#af3ff568bb8675bb41da57034f22f9b32">Text</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td></tr>
 <tr class="separator:a30ffabe87f1737700c66e10e655dc2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1b296757e92bc73b397343d741a9b04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#ac1b296757e92bc73b397343d741a9b04">UnpackGraphicData</a>&#160;&#160;&#160;(short)05000	/* Graphic Data and <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td></tr>
+<tr class="memitem:ac1b296757e92bc73b397343d741a9b04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#ac1b296757e92bc73b397343d741a9b04">UnpackGraphicData</a>&#160;&#160;&#160;(short)05000	/* Graphic Data <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td></tr>
 <tr class="separator:ac1b296757e92bc73b397343d741a9b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fbedde6037143a81365eb01376601e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a1fbedde6037143a81365eb01376601e0">UnpackImageData</a>&#160;&#160;&#160;(short)03000	/* <a class="el" href="../../d2/d41/interfaceImage.html">Image</a> Data and <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td></tr>
+<tr class="memitem:a1fbedde6037143a81365eb01376601e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#a1fbedde6037143a81365eb01376601e0">UnpackImageData</a>&#160;&#160;&#160;(short)03000	/* <a class="el" href="../../d8/d00/classImage.html">Image</a> Data <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td></tr>
 <tr class="separator:a1fbedde6037143a81365eb01376601e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac91a0842405a50f5f95a60a343565d93"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/fb_8h.html#ac91a0842405a50f5f95a60a343565d93">IntTest</a>&#160;&#160;&#160;(short)04000	/* Internal Tests */</td></tr>
 <tr class="separator:ac91a0842405a50f5f95a60a343565d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,7 +301,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define A_C&#160;&#160;&#160;1	/* Ea or La gets Ec or Lc */</td>
+          <td class="memname">#define A_C&#160;&#160;&#160;1	/* Ea <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> La gets Ec <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> Lc */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -314,7 +315,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define A_no_change&#160;&#160;&#160;(short)0/* Ea or La remains unchanged */</td>
+          <td class="memname">#define A_no_change&#160;&#160;&#160;(short)0/* Ea <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> La remains unchanged */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -398,7 +399,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CursOn&#160;&#160;&#160;(short)01	/* Cursor visible or not */</td>
+          <td class="memname">#define CursOn&#160;&#160;&#160;(short)01	/* Cursor visible <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#a31739c27bdcfdac9faae7bf7a5df49e4">not</a> */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1100,7 +1101,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define UnpackGraphicData&#160;&#160;&#160;(short)05000	/* Graphic Data and <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td>
+          <td class="memname">#define UnpackGraphicData&#160;&#160;&#160;(short)05000	/* Graphic Data <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1114,7 +1115,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define UnpackImageData&#160;&#160;&#160;(short)03000	/* <a class="el" href="../../d2/d41/interfaceImage.html">Image</a> Data and <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td>
+          <td class="memname">#define UnpackImageData&#160;&#160;&#160;(short)03000	/* <a class="el" href="../../d8/d00/classImage.html">Image</a> Data <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1128,7 +1129,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define UnpackText&#160;&#160;&#160;(short)07000	/* <a class="el" href="../../dc/d25/fb_8h.html#af3ff568bb8675bb41da57034f22f9b32">Text</a> and <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td>
+          <td class="memname">#define UnpackText&#160;&#160;&#160;(short)07000	/* <a class="el" href="../../dc/d25/fb_8h.html#af3ff568bb8675bb41da57034f22f9b32">Text</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> <a class="el" href="../../de/dc5/hilbert_8c.html#a07c4ee8488de919e242cd60aaef6497c">bit</a> 9. */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1226,7 +1227,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ZcBlink&#160;&#160;&#160;(short)020	/* Blink <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../d6/d28/gettaac_8c.html#a7a12555ff8c0a52bed4956969fd82d88">cursor</a> or not */</td>
+          <td class="memname">#define ZcBlink&#160;&#160;&#160;(short)020	/* Blink <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../d6/d28/gettaac_8c.html#a7a12555ff8c0a52bed4956969fd82d88">cursor</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#a31739c27bdcfdac9faae7bf7a5df49e4">not</a> */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1240,7 +1241,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ZcursOn&#160;&#160;&#160;(short)040	/* <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../d6/d28/gettaac_8c.html#a7a12555ff8c0a52bed4956969fd82d88">cursor</a> visible or not */</td>
+          <td class="memname">#define ZcursOn&#160;&#160;&#160;(short)040	/* <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../d6/d28/gettaac_8c.html#a7a12555ff8c0a52bed4956969fd82d88">cursor</a> visible <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#a31739c27bdcfdac9faae7bf7a5df49e4">not</a> */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1310,7 +1311,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define Zoom&#160;&#160;&#160;(short)0200	/* Zoom and Pan card (Bit 7) */</td>
+          <td class="memname">#define Zoom&#160;&#160;&#160;(short)0200	/* Zoom <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> Pan card (Bit 7) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1324,7 +1325,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ZoomOn&#160;&#160;&#160;(short)010	/* Enable <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> and Pan */</td>
+          <td class="memname">#define ZoomOn&#160;&#160;&#160;(short)010	/* Enable <a class="el" href="../../dc/d25/fb_8h.html#afca0dd63a9105cb8ed470fdcac49e76e">Zoom</a> <a class="el" href="../../dd/d7d/pyramid_8h.html#aa3d7d535cf450b91b9cb6d9cee2edbb9">and</a> Pan */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1338,7 +1339,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define Zwrap&#160;&#160;&#160;(short)04	/* Wrap or Clip */</td>
+          <td class="memname">#define Zwrap&#160;&#160;&#160;(short)04	/* Wrap <a class="el" href="../../dd/d7d/pyramid_8h.html#a339a611d7f9dc3a59c359f0da7beaf3c">or</a> Clip */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1350,7 +1351,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:06 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

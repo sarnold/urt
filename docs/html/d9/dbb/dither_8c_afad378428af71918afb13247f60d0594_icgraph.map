@@ -1,15 +1,4 @@
 <map id="bwdithermap" name="bwdithermap">
-<area shape="rect" id="node2" href="$d9/d3b/get__orion_8c.html#a08786fe2a42c0696925051109f0f60d4" title="init_monochrome_colour_map" alt="" coords="156,5,367,32"/>
-<area shape="rect" id="node4" href="$da/d92/getap_8c.html#afed4e945848223d47bf479a910ce4a50" title="window_color_map" alt="" coords="190,56,333,83"/>
-<area shape="rect" id="node6" href="$d7/dd0/fn__decls_8h.html#a51d89958ef25e77db8bf275fb290258c" title="init_color" alt="" coords="222,107,301,133"/>
-<area shape="rect" id="node9" href="$dd/d17/x11__stuff_8c.html#abdff2750647853dba9cc67373d9c9d0c" title="init_separate_color_rw" alt="" coords="178,157,345,184"/>
-<area shape="rect" id="node10" href="$dd/d17/x11__stuff_8c.html#a81944846c1fed64eee7b11566ffce0cc" title="init_color_rw" alt="" coords="210,208,313,235"/>
-<area shape="rect" id="node11" href="$dd/d17/x11__stuff_8c.html#adf61523675f79528c0b09be8e46bea3f" title="init_separate_color_ro" alt="" coords="179,259,343,285"/>
-<area shape="rect" id="node12" href="$dd/d17/x11__stuff_8c.html#aa2536bbb4df94156f9acb28c302208a2" title="init_color_ro" alt="" coords="211,309,311,336"/>
-<area shape="rect" id="node13" href="$dd/d17/x11__stuff_8c.html#a61dbe43c8c55c80734ca3a480c556eef" title="init_mono_rw" alt="" coords="208,360,315,387"/>
-<area shape="rect" id="node14" href="$dd/d17/x11__stuff_8c.html#a58b120346f31dbeef2ae9c79bcd1ab4c" title="init_mono_ro" alt="" coords="209,411,313,437"/>
-<area shape="rect" id="node3" href="$d9/d3b/get__orion_8c.html#a0708a0954f39ecdc7aa901286295ad01" title="main" alt="" coords="423,5,475,32"/>
-<area shape="rect" id="node5" href="$da/d92/getap_8c.html#a5ea466849f21e6c2be4ef9b2eb8868d3" title="main" alt="" coords="423,56,475,83"/>
-<area shape="rect" id="node7" href="$dd/dce/getsun_8c.html#af37dbffd297affdb588f6ae01659399a" title="get_pic" alt="" coords="415,107,483,133"/>
-<area shape="rect" id="node8" href="$d8/db3/to8_8c.html#a70db8bd1d499619f7ff9c1ca2ff3c8df" title="main" alt="" coords="423,157,475,184"/>
+<area shape="rect" id="node2" href="$dd/dce/getsun_8c.html#a51d89958ef25e77db8bf275fb290258c" title="init_color" alt="" coords="222,5,301,32"/>
+<area shape="rect" id="node3" href="$d9/d3b/get__orion_8c.html#a08786fe2a42c0696925051109f0f60d4" title="init_monochrome_colour_map" alt="" coords="156,56,367,83"/>
 </map>

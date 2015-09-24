@@ -1,6 +1,8 @@
-<map id="Myapp.m" name="Myapp.m">
-<area shape="rect" id="node2" href="$d4/d6f/Myapp_8h.html" title="Myapp.h" alt="" coords="39,80,115,107"/>
-<area shape="rect" id="node4" href="$d8/d0f/RLE_8h.html" title="RLE.h" alt="" coords="191,80,251,107"/>
-<area shape="rect" id="node10" href="$d6/daf/RASF_8h.html" title="RASF.h" alt="" coords="276,80,345,107"/>
-<area shape="rect" id="node6" href="$d8/d0f/Image_8h.html" title="Image.h" alt="" coords="268,155,340,181"/>
+<map id="get/next/Myapp.m" name="get/next/Myapp.m">
+<area shape="rect" id="node2" href="$d4/d6f/Myapp_8h.html" title="Myapp.h" alt="" coords="159,80,235,107"/>
+<area shape="rect" id="node4" href="$d8/d0f/RLE_8h.html" title="RLE.h" alt="" coords="391,80,451,107"/>
+<area shape="rect" id="node5" href="$d7/d27/rle_8h.html" title="rle.h" alt="" coords="429,155,479,181"/>
+<area shape="rect" id="node14" href="$d6/daf/RASF_8h.html" title="RASF.h" alt="" coords="279,80,349,107"/>
+<area shape="rect" id="node10" href="$d8/d0f/Image_8h.html" title="Image.h" alt="" coords="267,155,339,181"/>
+<area shape="rect" id="node6" href="$df/dad/rle__config_8h.html" title="rle_config.h" alt="" coords="385,229,480,256"/>
 </map>

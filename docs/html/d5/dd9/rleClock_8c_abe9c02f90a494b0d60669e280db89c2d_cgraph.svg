@@ -16,9 +16,9 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d5/dd9/rleClock_8c.html#a4d34167563c6f9d7485ac78f724f3103" target="_top" xlink:title="formatInterp">
-<polygon fill="white" stroke="black" points="113,-152.5 113,-171.5 187,-171.5 187,-152.5 113,-152.5"/>
-<text text-anchor="middle" x="150" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">formatInterp</text>
+<g id="a_node2"><a xlink:href="../../d5/dd9/rleClock_8c.html#a82be9a409434f2f10369338a7a6be483" target="_top" xlink:title="charMinMaxHeight">
+<polygon fill="white" stroke="black" points="97,-152.5 97,-171.5 203,-171.5 203,-152.5 97,-152.5"/>
+<text text-anchor="middle" x="150" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">charMinMaxHeight</text>
 </a>
 </g>
 </g>
@@ -29,7 +29,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d5/dd9/rleClock_8c.html#a201654cf3a9dd1390615abb8cb26469c" target="_top" xlink:title="charMinMaxWidth">
+<g id="a_node3"><a xlink:href="../../d5/dd9/rleClock_8c.html#a940b11a0e3e70317c7615dfdfa640f2b" target="_top" xlink:title="charMinMaxWidth">
 <polygon fill="white" stroke="black" points="99,-114.5 99,-133.5 201,-133.5 201,-114.5 99,-114.5"/>
 <text text-anchor="middle" x="150" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">charMinMaxWidth</text>
 </a>
@@ -42,20 +42,20 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d5/dd9/rleClock_8c.html#a5de9701a7f30055e96a1137e2eb337b6" target="_top" xlink:title="charMinMaxHeight">
-<polygon fill="white" stroke="black" points="97,-76.5 97,-95.5 203,-95.5 203,-76.5 97,-76.5"/>
-<text text-anchor="middle" x="150" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">charMinMaxHeight</text>
+<g id="a_node4"><a xlink:href="../../d5/dd9/rleClock_8c.html#a71c66ab855410158d5948cf33d0ae000" target="_top" xlink:title="formatInterp">
+<polygon fill="white" stroke="black" points="113,-76.5 113,-95.5 187,-95.5 187,-76.5 113,-76.5"/>
+<text text-anchor="middle" x="150" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">formatInterp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge"><title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M61.1502,-86C69.0535,-86 77.8967,-86 86.8456,-86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="86.9497,-89.5001 96.9497,-86 86.9496,-82.5001 86.9497,-89.5001"/>
+<path fill="none" stroke="midnightblue" d="M61.1502,-86C73.6106,-86 88.4075,-86 102.271,-86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="102.637,-89.5001 112.637,-86 102.637,-82.5001 102.637,-89.5001"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node"><title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d5/dd9/rleClock_8c.html#a05846a8d59a51cee2bfea183cf066c61" target="_top" xlink:title="lineDots">
+<g id="a_node5"><a xlink:href="../../d5/dd9/rleClock_8c.html#ac903125489b1f27d5d13b84a7888a1bc" target="_top" xlink:title="lineDots">
 <polygon fill="white" stroke="black" points="122.5,-38.5 122.5,-57.5 177.5,-57.5 177.5,-38.5 122.5,-38.5"/>
 <text text-anchor="middle" x="150" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">lineDots</text>
 </a>
@@ -68,7 +68,7 @@
 </g>
 <!-- Node6 -->
 <g id="node6" class="node"><title>Node6</title>
-<g id="a_node6"><a xlink:href="../../d5/dd9/rleClock_8c.html#a4511e885d896e3914dc149bf8849c665" target="_top" xlink:title="setDot">
+<g id="a_node6"><a xlink:href="../../d5/dd9/rleClock_8c.html#a0715797a9e20b528505a1078de2d6473" target="_top" xlink:title="setDot">
 <polygon fill="white" stroke="black" points="126.5,-0.5 126.5,-19.5 173.5,-19.5 173.5,-0.5 126.5,-0.5"/>
 <text text-anchor="middle" x="150" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">setDot</text>
 </a>

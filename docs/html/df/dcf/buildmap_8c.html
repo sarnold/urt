@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: buildmap.c File Reference</title>
+<title>Utah Raster Toolkit: lib/buildmap.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -93,12 +94,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for buildmap.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8d/buildmap_8c__incl.svg" width="236" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d8d/buildmap_8c__incl.svg" width="224" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -106,7 +107,7 @@ Include dependency graph for buildmap.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0683647be765d65564fe36af29edea5c"><td class="memItemLeft" align="right" valign="top">rle_pixel **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcf/buildmap_8c.html#a0683647be765d65564fe36af29edea5c">buildmap</a> (rle_hdr *<a class="el" href="../../df/db4/tifftorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> minmap, double orig_gamma, double new_gamma)</td></tr>
+<tr class="memitem:a0683647be765d65564fe36af29edea5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcf/buildmap_8c.html#a0683647be765d65564fe36af29edea5c">buildmap</a> (<a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *<a class="el" href="../../df/db4/tifftorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>, <a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> minmap, double orig_gamma, double new_gamma)</td></tr>
 <tr class="separator:a0683647be765d65564fe36af29edea5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -115,9 +116,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rle_pixel** buildmap </td>
+          <td class="memname"><a class="el" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>** buildmap </td>
           <td>(</td>
-          <td class="paramtype">rle_hdr *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *&#160;</td>
           <td class="paramname"><em>the_hdr</em>, </td>
         </tr>
         <tr>
@@ -147,17 +148,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../df/dcf/buildmap_8c_source.html#l00056">56</a> of file <a class="el" href="../../df/dcf/buildmap_8c_source.html">buildmap.c</a>.</p>
+
+<p>Referenced by <a class="el" href="../../dc/d11/getami_8c_source.html#l00540">find_most_used()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    rle_pixel ** <a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a>, * <a class="code" href="../../d7/d7d/rleldmap_8c.html#a50e517497759d2c883f6947b1045e43e">gammap</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> ** <a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a>, * <a class="code" href="../../d7/d7d/rleldmap_8c.html#a50e517497759d2c883f6947b1045e43e">gammap</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d4/df0/gamma_8c.html#aa61041b3d539ebd857f6d831c93a967b">gamma</a>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">register</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>, j;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d1/d55/rletoppm_8c.html#a29dddcd6b1993a31acea83bc5c8f16f0">maplen</a>, cmaplen, nmap;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;ncmap == 0 )  <span class="comment">/* make identity map */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> ( the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0f7f474af7788cf184d4cb1a129ec5eb">ncmap</a> == 0 )  <span class="comment">/* make identity map */</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    nmap = (minmap &lt; <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;ncolors) ? <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;ncolors : minmap;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cmap = (rle_pixel **)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( nmap * <span class="keyword">sizeof</span>(rle_pixel *) );</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    cmap[0] = (rle_pixel *)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( nmap * 256 * <span class="keyword">sizeof</span>(rle_pixel) );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    nmap = (minmap &lt; the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a>) ? the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a> : minmap;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cmap = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( nmap * <span class="keyword">sizeof</span>(<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *) );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    cmap[0] = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( nmap * 256 * <span class="keyword">sizeof</span>(<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>) );</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span> ( j = 1; j &lt; nmap; j++ )</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        cmap[j] = cmap[j-1] + 256;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> ( i = 0; i &lt; 256; i++ )</div>
@@ -168,7 +171,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">else</span>            <span class="comment">/* make map from the_hdr */</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">/* Map is at least 256 long */</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    cmaplen = (1 &lt;&lt; <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;cmaplen);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    cmaplen = (1 &lt;&lt; the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a8f6c39be986cf1c005386449f0acbda4">cmaplen</a>);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> ( cmaplen &lt; 256 )</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        maplen = 256;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">else</span></div>
@@ -177,22 +180,22 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">/* Nmap is max( minmap, the_hdr-&gt;ncmap, the_hdr-&gt;ncolors ). */</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    nmap = minmap;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> ( nmap &lt; the_hdr-&gt;ncmap )</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        nmap = <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;ncmap;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        nmap = the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0f7f474af7788cf184d4cb1a129ec5eb">ncmap</a>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> ( nmap &lt; the_hdr-&gt;ncolors )</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        nmap = <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;ncolors;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        nmap = the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">ncolors</a>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">/* Allocate memory for the map and secondary pointers. */</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    cmap = (rle_pixel **)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( nmap * <span class="keyword">sizeof</span>(rle_pixel *) );</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    cmap[0] = (rle_pixel *)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( nmap * maplen * <span class="keyword">sizeof</span>(rle_pixel) );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    cmap = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> **)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( nmap * <span class="keyword">sizeof</span>(<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *) );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    cmap[0] = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( nmap * maplen * <span class="keyword">sizeof</span>(<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>) );</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span> ( i = 1; i &lt; nmap; i++ )</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        cmap[i] = cmap[0] + i * maplen;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">/* Fill it in. */</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span> ( i = 0; i &lt; <a class="code" href="../../d1/d55/rletoppm_8c.html#a29dddcd6b1993a31acea83bc5c8f16f0">maplen</a>; i++ )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">for</span> ( j = 0; j &lt; <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;ncmap; j++ )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">for</span> ( j = 0; j &lt; the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a0f7f474af7788cf184d4cb1a129ec5eb">ncmap</a>; j++ )</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> ( i &lt; cmaplen )</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            cmap[j][<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>-&gt;cmap[j*cmaplen + <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &gt;&gt; 8;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            cmap[j][<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = the_hdr-&gt;<a class="code" href="../../d6/dab/structrle__hdr.html#a3ecc4588eeea8882fc05aff6cdbc6f6f">cmap</a>[j*cmaplen + <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] &gt;&gt; 8;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            cmap[j][<a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>] = <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">for</span> ( ; j &lt; nmap; j++ )</div>
@@ -204,7 +207,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">if</span> ( orig_gamma == 0 )</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">char</span> *v;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> ( (v = <a class="code" href="../../db/db2/rle__getcom_8c.html#a9cefd612c381bf82c9cdf1f3a3b12dd6">rle_getcom</a>( <span class="stringliteral">&quot;image_gamma&quot;</span>, <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a> )) != NULL )</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> ( (v = <a class="code" href="../../d7/d27/rle_8h.html#a247d80b86082524fe3f6731e98205a58">rle_getcom</a>( <span class="stringliteral">&quot;image_gamma&quot;</span>, the_hdr )) != NULL )</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        orig_gamma = atof( v );</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">/* Protect against bogus information */</span></div>
@@ -213,7 +216,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        orig_gamma = 1.0 / orig_gamma;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( (v = <a class="code" href="../../db/db2/rle__getcom_8c.html#a9cefd612c381bf82c9cdf1f3a3b12dd6">rle_getcom</a>( <span class="stringliteral">&quot;display_gamma&quot;</span>, <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a> )) != NULL)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( (v = <a class="code" href="../../d7/d27/rle_8h.html#a247d80b86082524fe3f6731e98205a58">rle_getcom</a>( <span class="stringliteral">&quot;display_gamma&quot;</span>, the_hdr )) != NULL)</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        orig_gamma = atof( v );</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">/* Protect */</span></div>
@@ -232,31 +235,34 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> ( gamma != 1.0 )</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    gammap = (rle_pixel *)<a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( 256 * <span class="keyword">sizeof</span>(rle_pixel) );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    gammap = (<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a> *)<a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( 256 * <span class="keyword">sizeof</span>(<a class="code" href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a>) );</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">for</span> ( i = 0; i &lt; 256; i++ )</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        gammap[i] = (<span class="keywordtype">int</span>)(0.5 + 255.0 * pow( i / 255.0, gamma ));</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">for</span> ( i = 0; i &lt; nmap; i++ )</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">for</span> ( j = 0; j &lt; <a class="code" href="../../d1/d55/rletoppm_8c.html#a29dddcd6b1993a31acea83bc5c8f16f0">maplen</a>; j++ )</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        cmap[i][j] = gammap[cmap[i][j]];</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>( gammap );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    free( gammap );</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a>;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
-<div class="ttc" id="aliastorle_8c_html_a5489ae7bb45df0aad19a081a786538e1"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a></div><div class="ttdeci">rle_hdr the_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00100">aliastorle.c:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a247d80b86082524fe3f6731e98205a58"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a247d80b86082524fe3f6731e98205a58">rle_getcom</a></div><div class="ttdeci">char * rle_getcom(const char *name, rle_hdr *the_hdr)</div></div>
 <div class="ttc" id="rletoppm_8c_html_a29dddcd6b1993a31acea83bc5c8f16f0"><div class="ttname"><a href="../../d1/d55/rletoppm_8c.html#a29dddcd6b1993a31acea83bc5c8f16f0">maplen</a></div><div class="ttdeci">int maplen</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d55/rletoppm_8c_source.html#l00061">rletoppm.c:61</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a3ecc4588eeea8882fc05aff6cdbc6f6f"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a3ecc4588eeea8882fc05aff6cdbc6f6f">rle_hdr::cmap</a></div><div class="ttdeci">rle_map * cmap</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00112">rle.h:112</a></div></div>
 <div class="ttc" id="rleldmap_8c_html_a50e517497759d2c883f6947b1045e43e"><div class="ttname"><a href="../../d7/d7d/rleldmap_8c.html#a50e517497759d2c883f6947b1045e43e">gammap</a></div><div class="ttdeci">void gammap()</div></div>
-<div class="ttc" id="rletorla_8c_html_aafde19f7d36ca163a143579c1b125b6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a></div><div class="ttdeci">void free()</div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
 <div class="ttc" id="gamma_8c_html_aa61041b3d539ebd857f6d831c93a967b"><div class="ttname"><a href="../../d4/df0/gamma_8c.html#aa61041b3d539ebd857f6d831c93a967b">gamma</a></div><div class="ttdeci">int gamma(int x, float gamma_value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df0/gamma_8c_source.html#l00024">gamma.c:24</a></div></div>
-<div class="ttc" id="rle__getcom_8c_html_a9cefd612c381bf82c9cdf1f3a3b12dd6"><div class="ttname"><a href="../../db/db2/rle__getcom_8c.html#a9cefd612c381bf82c9cdf1f3a3b12dd6">rle_getcom</a></div><div class="ttdeci">char * rle_getcom(char *name, rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/rle__getcom_8c_source.html#l00081">rle_getcom.c:81</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a0f7f474af7788cf184d4cb1a129ec5eb"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a0f7f474af7788cf184d4cb1a129ec5eb">rle_hdr::ncmap</a></div><div class="ttdeci">int ncmap</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_a5c3e1eb7fc1fd5a17f96d77df371e427"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a5c3e1eb7fc1fd5a17f96d77df371e427">rle_pixel</a></div><div class="ttdeci">unsigned char rle_pixel</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00056">rle.h:56</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
+<div class="ttc" id="structrle__hdr_html_a8f6c39be986cf1c005386449f0acbda4"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a8f6c39be986cf1c005386449f0acbda4">rle_hdr::cmaplen</a></div><div class="ttdeci">int cmaplen</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
 <div class="ttc" id="get4d_8c_html_a4bf2bb259263c1d8416d80591d0ac671"><div class="ttname"><a href="../../d3/d46/get4d_8c.html#a4bf2bb259263c1d8416d80591d0ac671">cmap</a></div><div class="ttdeci">rle_pixel ** cmap</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d46/get4d_8c_source.html#l00047">get4d.c:47</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a5f6621380c12c10bcadd8b8ffdaa7716"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a5f6621380c12c10bcadd8b8ffdaa7716">rle_hdr::ncolors</a></div><div class="ttdeci">int ncolors</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
-Here is the call graph for this function:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dcf/buildmap_8c_a0683647be765d65564fe36af29edea5c_cgraph.svg" width="336" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dcf/buildmap_8c_a0683647be765d65564fe36af29edea5c_icgraph.svg" width="258" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -266,7 +272,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:07 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -1,8 +1,3 @@
 <map id="get_scanlines" name="get_scanlines">
-<area shape="rect" id="node2" href="$d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d" title="malloc" alt="" coords="176,5,239,32"/>
-<area shape="rect" id="node3" href="$d4/d1a/rletotiff_8c.html#a7e15c8e2885871839fc2b820dfbdb4ce" title="error" alt="" coords="181,56,234,83"/>
-<area shape="rect" id="node4" href="$db/d53/rle__getrow_8c.html#a3602e1158189cba5e5b0f9b983cba776" title="rle_getrow" alt="" coords="163,107,252,133"/>
-<area shape="rect" id="node7" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="184,157,231,184"/>
-<area shape="rect" id="node5" href="$db/d53/rle__getrow_8c.html#a61ac0da96b0dd8bc3cbc98afcd9b5c44" title="bfill" alt="" coords="324,81,367,108"/>
-<area shape="rect" id="node6" href="$d8/d7c/rle__getskip_8c.html#af6b1e1dc0867e9340f90668591c7c5b3" title="rle_getskip" alt="" coords="300,132,391,159"/>
+<area shape="rect" id="node2" href="$db/d53/rle__getrow_8c.html#a3602e1158189cba5e5b0f9b983cba776" title="rle_getrow" alt="" coords="163,5,252,32"/>
 </map>

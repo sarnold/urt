@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: getopt.c File Reference</title>
+<title>Utah Raster Toolkit: lib/getopt.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -93,12 +94,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">getopt.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;rle_config.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../df/dad/rle__config_8h_source.html">rle_config.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for getopt.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d7d/getopt_8c__incl.svg" width="192" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d7d/getopt_8c__incl.svg" width="223" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -106,8 +107,8 @@ Include dependency graph for getopt.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa4a0de5bffcb84a01c711ce72ef194a9"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/getopt_8c.html#aa4a0de5bffcb84a01c711ce72ef194a9">index</a> ()</td></tr>
-<tr class="separator:aa4a0de5bffcb84a01c711ce72ef194a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f035966ee1771c6b3bb7a84fb13019"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/getopt_8c.html#a58f035966ee1771c6b3bb7a84fb13019">strchr</a> ()</td></tr>
+<tr class="separator:a58f035966ee1771c6b3bb7a84fb13019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1484840539d6adef4a97ad6e239458ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/getopt_8c.html#a1484840539d6adef4a97ad6e239458ea">getopt</a> (<a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> argc, argv, char *optstring)</td></tr>
 <tr class="separator:a1484840539d6adef4a97ad6e239458ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -117,7 +118,7 @@ Variables</h2></td></tr>
 <tr class="separator:adb50a0eab9fed92fc3bfc7dfa4f2c410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e1c16213bbee2d5e8cc363309f418c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/getopt_8c.html#ad5e1c16213bbee2d5e8cc363309f418c">optind</a> = 0</td></tr>
 <tr class="separator:ad5e1c16213bbee2d5e8cc363309f418c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ce90c747c23f154610436f1b2918a0b"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/getopt_8c.html#a9ce90c747c23f154610436f1b2918a0b">scan</a> = NULL</td></tr>
+<tr class="memitem:a9ce90c747c23f154610436f1b2918a0b"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d53/getopt_8c.html#a9ce90c747c23f154610436f1b2918a0b">scan</a> = ((void *)0)</td></tr>
 <tr class="separator:a9ce90c747c23f154610436f1b2918a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -176,7 +177,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    c = *<a class="code" href="../../dc/d53/getopt_8c.html#a9ce90c747c23f154610436f1b2918a0b">scan</a>++;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    place = <a class="code" href="../../dc/d53/getopt_8c.html#aa4a0de5bffcb84a01c711ce72ef194a9">index</a>(optstring, c);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    place = <a class="code" href="../../df/dad/rle__config_8h.html#a8227c495a4fdf3385a170810f90c2b78">index</a>(optstring, c);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (place == NULL || c == <span class="charliteral">&#39;:&#39;</span>) {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;%s: unknown option -%c\n&quot;</span>, argv[0], c);</div>
@@ -203,48 +204,24 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span>( c );</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
 <div class="ttc" id="getopt_8c_html_ad5e1c16213bbee2d5e8cc363309f418c"><div class="ttname"><a href="../../dc/d53/getopt_8c.html#ad5e1c16213bbee2d5e8cc363309f418c">optind</a></div><div class="ttdeci">int optind</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d53/getopt_8c_source.html#l00030">getopt.c:30</a></div></div>
-<div class="ttc" id="getopt_8c_html_aa4a0de5bffcb84a01c711ce72ef194a9"><div class="ttname"><a href="../../dc/d53/getopt_8c.html#aa4a0de5bffcb84a01c711ce72ef194a9">index</a></div><div class="ttdeci">char * index()</div></div>
 <div class="ttc" id="getopt_8c_html_a9ce90c747c23f154610436f1b2918a0b"><div class="ttname"><a href="../../dc/d53/getopt_8c.html#a9ce90c747c23f154610436f1b2918a0b">scan</a></div><div class="ttdeci">static char * scan</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d53/getopt_8c_source.html#l00032">getopt.c:32</a></div></div>
+<div class="ttc" id="rle__config_8h_html_a8227c495a4fdf3385a170810f90c2b78"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#a8227c495a4fdf3385a170810f90c2b78">index</a></div><div class="ttdeci">#define index</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00096">rle_config.h:96</a></div></div>
 <div class="ttc" id="getopt_8c_html_adb50a0eab9fed92fc3bfc7dfa4f2c410"><div class="ttname"><a href="../../dc/d53/getopt_8c.html#adb50a0eab9fed92fc3bfc7dfa4f2c410">optarg</a></div><div class="ttdeci">char * optarg</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d53/getopt_8c_source.html#l00029">getopt.c:29</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d53/getopt_8c_a1484840539d6adef4a97ad6e239458ea_cgraph.svg" width="178" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d53/getopt_8c_a1484840539d6adef4a97ad6e239458ea_icgraph.svg" width="174" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="aa4a0de5bffcb84a01c711ce72ef194a9"></a>
+<a class="anchor" id="a58f035966ee1771c6b3bb7a84fb13019"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* index </td>
+          <td class="memname">char* strchr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d53/getopt_8c_aa4a0de5bffcb84a01c711ce72ef194a9_icgraph.svg" width="330" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -261,6 +238,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../dc/d53/getopt_8c_source.html#l00029">29</a> of file <a class="el" href="../../dc/d53/getopt_8c_source.html">getopt.c</a>.</p>
 
+<p>Referenced by <a class="el" href="../../dc/d11/getami_8c_source.html#l00229">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad5e1c16213bbee2d5e8cc363309f418c"></a>
@@ -275,6 +254,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="../../dc/d53/getopt_8c_source.html#l00030">30</a> of file <a class="el" href="../../dc/d53/getopt_8c_source.html">getopt.c</a>.</p>
 
+<p>Referenced by <a class="el" href="../../dc/d11/getami_8c_source.html#l00229">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9ce90c747c23f154610436f1b2918a0b"></a>
@@ -285,7 +266,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char* scan = NULL</td>
+          <td class="memname">char* scan = ((void *)0)</td>
         </tr>
       </table>
   </td>
@@ -302,7 +283,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:07 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

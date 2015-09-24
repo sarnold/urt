@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: bright.c File Reference</title>
+<title>Utah Raster Toolkit: get/qcr/bright.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -97,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for bright.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/de8/bright_8c__incl.svg" width="78" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/de8/bright_8c__incl.svg" width="126" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -140,7 +141,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="../../df/db7/bright_8c_source.html#l00007">7</a> of file <a class="el" href="../../df/db7/bright_8c_source.html">bright.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a>[BUFSIZ];</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a>[BUFSIZ];</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">short</span> lut[3][256];</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> print_luts = (strcmp(argv[1],<span class="stringliteral">&quot;-l&quot;</span>) == 0);</div>
@@ -176,21 +177,13 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="ttc" id="qcr_8c_html_a73416334b60b1feae3f95c0622d3ca5f"><div class="ttname"><a href="../../d8/d32/qcr_8c.html#a73416334b60b1feae3f95c0622d3ca5f">init_qcr</a></div><div class="ttdeci">int init_qcr(short verbose)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/qcr_8c_source.html#l00104">qcr.c:104</a></div></div>
 <div class="ttc" id="bright_8c_html_a29c2ba7b9e8c08d32177308e6e3b5aa8"><div class="ttname"><a href="../../df/db7/bright_8c.html#a29c2ba7b9e8c08d32177308e6e3b5aa8">lables</a></div><div class="ttdeci">char * lables[4]</div><div class="ttdef"><b>Definition:</b> <a href="../../df/db7/bright_8c_source.html#l00006">bright.c:6</a></div></div>
-<div class="ttc" id="into_8c_html_a14af58745eae96da73c46abfb269ec67"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a14af58745eae96da73c46abfb269ec67">buf</a></div><div class="ttdeci">static char buf[BUFSIZ+1]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00046">into.c:46</a></div></div>
 <div class="ttc" id="qcr_8c_html_a2f347ff842b6a79960bb73c4417a2746"><div class="ttname"><a href="../../d8/d32/qcr_8c.html#a2f347ff842b6a79960bb73c4417a2746">print_qcr_status</a></div><div class="ttdeci">print_qcr_status()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/qcr_8c_source.html#l00164">qcr.c:164</a></div></div>
+<div class="ttc" id="into_8c_html_a1bc8eca937a3533dfcc1eca53c250cc2"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a1bc8eca937a3533dfcc1eca53c250cc2">buf</a></div><div class="ttdeci">static char buf[4096   +1]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00046">into.c:46</a></div></div>
 <div class="ttc" id="qcr_8c_html_a7c498f004827c84e0e5ec17984a30f10"><div class="ttname"><a href="../../d8/d32/qcr_8c.html#a7c498f004827c84e0e5ec17984a30f10">qcr_rd_brt_tbl</a></div><div class="ttdeci">qcr_rd_brt_tbl(buf)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/qcr_8c_source.html#l00540">qcr.c:540</a></div></div>
 <div class="ttc" id="qcr_8c_html_a9e9a2a6a54565a4d798b27e896ac5107"><div class="ttname"><a href="../../d8/d32/qcr_8c.html#a9e9a2a6a54565a4d798b27e896ac5107">qcr_rd_brt_lvl</a></div><div class="ttdeci">qcr_rd_brt_lvl(buf)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/qcr_8c_source.html#l00553">qcr.c:553</a></div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
 <div class="ttc" id="qcr_8c_html_aa6a28e0637090281eff82dad432ed3c3"><div class="ttname"><a href="../../d8/d32/qcr_8c.html#aa6a28e0637090281eff82dad432ed3c3">qcr_rd_lut12</a></div><div class="ttdeci">qcr_rd_lut12(buf)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/qcr_8c_source.html#l00572">qcr.c:572</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/db7/bright_8c_a5ea466849f21e6c2be4ef9b2eb8868d3_cgraph.svg" width="396" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -211,7 +204,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:06 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

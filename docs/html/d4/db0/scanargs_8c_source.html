@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: scanargs.c Source File</title>
+<title>Utah Raster Toolkit: lib/scanargs.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -132,14 +133,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> *  to have all &quot;void&quot; functions so declared.</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;rle_config.h&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;ctype.h&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifndef USE_STDARG</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;varargs.h&gt;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="../../df/dad/rle__config_8h.html">&quot;rle_config.h&quot;</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdio</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">ctype</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <a class="code" href="../../df/dad/rle__config_8h.html#a9c5fc7dbf74b3a60e89af3a08a45167a">USE_STDARG</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">varargs</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">else</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdarg</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">   52</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/* </span></div>
@@ -148,63 +149,63 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">   57</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">int</span> *<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">   59</a></span>&#160;<span class="preprocessor">#define YES 1</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">   60</a></span>&#160;<span class="preprocessor">#define NO 0</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">   61</a></span>&#160;<span class="preprocessor">#define ERROR(msg)  {fprintf(stderr, &quot;%s\n&quot;, msg); goto error; }</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">   59</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">YES</span> 1</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">   60</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NO</span> 0</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">   61</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">ERROR</span><span class="preprocessor">(</span><span class="preprocessor">msg</span><span class="preprocessor">)</span>  <span class="preprocessor">{</span><span class="preprocessor">fprintf</span><span class="preprocessor">(</span>stderr<span class="preprocessor">,</span> <span class="stringliteral">&quot;%s\n&quot;</span><span class="preprocessor">,</span> <span class="preprocessor">msg</span><span class="preprocessor">)</span><span class="preprocessor">;</span> <span class="keywordflow">goto</span> <span class="preprocessor">error</span><span class="preprocessor">;</span> <span class="preprocessor">}</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/* </span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> * Storage allocation macros</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">   66</a></span>&#160;<span class="preprocessor">#define NEW( type, cnt )    (type *) malloc( (cnt) * sizeof( type ) )</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">   67</a></span>&#160;<span class="preprocessor">#define RENEW( type, ptr, cnt ) (type *) realloc( ptr, (cnt) * sizeof( type ) )</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">   66</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">NEW</span><span class="preprocessor">(</span> <span class="preprocessor">type</span><span class="preprocessor">,</span> <span class="preprocessor">cnt</span> <span class="preprocessor">)</span>    <span class="preprocessor">(</span><span class="preprocessor">type</span> <span class="preprocessor">*</span><span class="preprocessor">)</span> <span class="preprocessor">malloc</span><span class="preprocessor">(</span> <span class="preprocessor">(</span><span class="preprocessor">cnt</span><span class="preprocessor">)</span> <span class="preprocessor">*</span> <span class="keyword">sizeof</span><span class="preprocessor">(</span> <span class="preprocessor">type</span> <span class="preprocessor">)</span> <span class="preprocessor">)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">   67</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">RENEW</span><span class="preprocessor">(</span> <span class="preprocessor">type</span><span class="preprocessor">,</span> <span class="preprocessor">ptr</span><span class="preprocessor">,</span> <span class="preprocessor">cnt</span> <span class="preprocessor">)</span> <span class="preprocessor">(</span><span class="preprocessor">type</span> <span class="preprocessor">*</span><span class="preprocessor">)</span> <span class="preprocessor">realloc</span><span class="preprocessor">(</span> <span class="preprocessor">ptr</span><span class="preprocessor">,</span> <span class="preprocessor">(</span><span class="preprocessor">cnt</span><span class="preprocessor">)</span> <span class="preprocessor">*</span> <span class="keyword">sizeof</span><span class="preprocessor">(</span> <span class="preprocessor">type</span> <span class="preprocessor">)</span> <span class="preprocessor">)</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#if defined(c_plusplus) &amp;&amp; !defined(USE_PROTOTYPES)</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#define USE_PROTOTYPES</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">if</span> <span class="preprocessor">defined</span><span class="preprocessor">(</span><span class="preprocessor">c_plusplus</span><span class="preprocessor">)</span> <span class="preprocessor">&amp;&amp;</span> <span class="preprocessor">!</span><span class="preprocessor">defined</span><span class="preprocessor">(</span><a class="code" href="../../df/dad/rle__config_8h.html#ada440ec54eb75c757b0a71134f1cf891">USE_PROTOTYPES</a><span class="preprocessor">)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">USE_PROTOTYPES</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#ifndef USE_PROTOTYPES</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> * <a class="code" href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/db0/scanargs_8c.html#a2a5612de1c2935309d59a4f9e339d10f">isnum</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>  <a class="code" href="../../d4/db0/scanargs_8c.html#a862219039664df6eb3cfced58addf830">_do_scanargs</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">void</span>        <a class="code" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">static</span> CONST_DECL <span class="keywordtype">char</span> * <a class="code" href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a>( CONST_DECL <span class="keywordtype">char</span> *, <span class="keywordtype">int</span> );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/db0/scanargs_8c.html#a2a5612de1c2935309d59a4f9e339d10f">isnum</a>( CONST_DECL <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>, <span class="keywordtype">int</span> );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>  <a class="code" href="../../d4/db0/scanargs_8c.html#a862219039664df6eb3cfced58addf830">_do_scanargs</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv, CONST_DECL <span class="keywordtype">char</span> *<a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <a class="code" href="../../df/dad/rle__config_8h.html#ada440ec54eb75c757b0a71134f1cf891">USE_PROTOTYPES</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> * prformat();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> isnum();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>  _do_scanargs();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">void</span>        scan_usage();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">else</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">static</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * <a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">prformat</a>( <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *, <span class="keywordtype">int</span> );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">isnum</a>( <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>, <span class="keywordtype">int</span> );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span>  <a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">_do_scanargs</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv, <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *format,</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                  va_list argl );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span>        <a class="code" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( <span class="keywordtype">char</span> **, CONST_DECL <span class="keywordtype">char</span> * );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span>        <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( <span class="keywordtype">char</span> **, <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/* </span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> * Argument list is (argc, argv, format, ... )</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">int</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#ifndef USE_STDARG</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">   91</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a> ( va_alist )</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;va_dcl</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a> ( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv, CONST_DECL <span class="keywordtype">char</span> *<a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>, ... )</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !USE_STDARG */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <a class="code" href="../../df/dad/rle__config_8h.html#a9c5fc7dbf74b3a60e89af3a08a45167a">USE_STDARG</a></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">scanargs</a> ( <a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">va_alist</a> )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">va_dcl</a></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">else</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">   94</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">scanargs</a> ( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv, <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *format, ... )</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* !USE_STDARG */</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    va_list argl;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> retval;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifndef USE_STDARG</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <a class="code" href="../../df/dad/rle__config_8h.html#a9c5fc7dbf74b3a60e89af3a08a45167a">USE_STDARG</a></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> argc;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">char</span> ** argv;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    CONST_DECL <span class="keywordtype">char</span> *<a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    CONST_DECL <span class="keywordtype">char</span> *format;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    va_start( argl );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    argc = va_arg( argl, <span class="keywordtype">int</span> );</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    argv = va_arg( argl, <span class="keywordtype">char</span> ** );</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    format = va_arg( argl, CONST_DECL <span class="keywordtype">char</span> * );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">else</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    va_start( argl, format );</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    retval = <a class="code" href="../../d4/db0/scanargs_8c.html#a862219039664df6eb3cfced58addf830">_do_scanargs</a>( argc, argv, format, argl );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    retval = <a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">_do_scanargs</a><a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">(</a> argc<a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">,</a> argv<a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">,</a> format<a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">,</a> argl <a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">)</a>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    va_end( argl );</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> retval;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">/* </span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"> * This routine is necessary because of a pyramid compiler botch that</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"> * uses parameter registers in a varargs routine.  The extra</span></div>
@@ -213,34 +214,34 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a860d43f1fb68d32fba9d48f83d3c86ef">  124</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a862219039664df6eb3cfced58addf830">_do_scanargs</a>( argc, argv, format, argl )</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>     argc;           <span class="comment">/* Actual arguments */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">  124</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">_do_scanargs</a>( <a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">argc</a>, <a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">argv</a>, <a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">format</a>, <a class="code" href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">argl</a> )</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">int</span>     argc;           <span class="comment">/* Actual arguments */</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keywordtype">char</span>  **argv;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;CONST_DECL <span class="keywordtype">char</span>   *format;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span>   *format;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;va_list argl;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">int</span>    check;           <span class="comment">/* check counter to be sure all argvs</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">                       are processed */</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span>  *cp;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span>  *cp;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">int</span>    cnt;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="../../d3/d42/rletoabA62_8c.html#adb50a0eab9fed92fc3bfc7dfa4f2c410">optarg</a> = 0;         <span class="comment">/* where optional args start */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">int</span>     optarg = 0;         <span class="comment">/* where optional args start */</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">int</span>     nopt = 0;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">char</span>    tmpflg,         <span class="comment">/* temp flag */</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        typchr;         <span class="comment">/* type char from format string */</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">char</span>    c;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">bool</span>  * arg_used;           <span class="comment">/* array of flags */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>  * arg_used;           <span class="comment">/* array of flags */</span></div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>     aptr = 0;           <span class="comment">/* pointer to return loc */</span></div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">bool</span>    required;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>    required;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">int</span>     excnt;          <span class="comment">/* which flag is set */</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">bool</span>    exflag;         <span class="comment">/* when set, one of a set of exclusive</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>    exflag;         <span class="comment">/* when set, one of a set of exclusive</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">                       flags is set */</span></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">bool</span>    list_of;            <span class="comment">/* set if parsing off a list of args */</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">bool</span>    comma_list;         <span class="comment">/* set if AT&amp;T style multiple args */</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">bool</span>    no_usage;           <span class="comment">/* If set, don&#39;t print usage msg. */</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">bool</span>    help = <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>;          <span class="comment">/* If set, always print usage. */</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>    list_of;            <span class="comment">/* set if parsing off a list of args */</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>    comma_list;         <span class="comment">/* set if AT&amp;T style multiple args */</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>    no_usage;           <span class="comment">/* If set, don&#39;t print usage msg. */</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>    help = <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>;          <span class="comment">/* If set, always print usage. */</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">int</span>   * cnt_arg = 0;        <span class="comment">/* where to stuff list count */</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">int</span>     list_cnt;           <span class="comment">/* how many in list */</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">/* These are used to build return lists */</span></div>
@@ -251,12 +252,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">double</span> *dbllist = 0;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">char</span>  * argp;           <span class="comment">/* Pointer to argument. */</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    CONST_DECL <span class="keywordtype">char</span>   *ncp;     <span class="comment">/* remember cp during flag scanning */</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span>   *ncp;     <span class="comment">/* remember cp during flag scanning */</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span>   cntrl[7] = <span class="stringliteral">&quot;%  %1s&quot;</span>;  <span class="comment">/* control string for scanf&#39;s */</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">char</span>    junk[2];            <span class="comment">/* junk buffer for scanf&#39;s */</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">/* Set up for argument counting. */</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    arg_used = <a class="code" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>( <span class="keywordtype">bool</span>, argc );</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    arg_used = <a class="code" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>( <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>, argc );</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (arg_used == NULL)</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;malloc failed in scanargs, exiting\n&quot;</span>);</div>
@@ -277,7 +278,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        arg_used[cnt] = <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span> ( argc == 2 )</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( argv, format );</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a><a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">(</a> argv<a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">,</a> format <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">)</a>;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">else</span></div>
@@ -285,13 +286,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">/* If format string ends in @, don&#39;t print a usage message. */</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    no_usage = *(format + strlen( format ) - 1) == <span class="charliteral">&#39;&amp;&#39;</span>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    no_usage = *(format + strlen( format ) - 1) == <span class="stringliteral">&#39;&amp;&#39;</span>;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    cp = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    cp = format;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">/* </span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">     * Skip program name</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">while</span> ( *cp != <span class="charliteral">&#39; &#39;</span> &amp;&amp; *cp != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; *cp != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; *cp != <span class="charliteral">&#39;\0&#39;</span> )</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">while</span> ( *cp != <span class="stringliteral">&#39; &#39;</span> &amp;&amp; *cp != <span class="stringliteral">&#39;\t&#39;</span> &amp;&amp; *cp != <span class="stringliteral">&#39;\n&#39;</span> &amp;&amp; *cp != <span class="stringliteral">&#39;\0&#39;</span> )</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    cp++;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">while</span> (*cp)</div>
@@ -304,45 +305,45 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">default</span>:            <span class="comment">/* all other chars */</span></div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>:           <span class="comment">/* separators */</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;\t&#39;</span>:</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39; &#39;</span>:           <span class="comment">/* separators */</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;\t&#39;</span>:</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;\n&#39;</span>:</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        optarg = 0;     <span class="comment">/* end of optional arg string */</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:           <span class="comment">/* Surrounds a comment. */</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;(&#39;</span>:           <span class="comment">/* Surrounds a comment. */</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d8/d81/rastorle_8c.html#acb5ba97551079e0b072c62c21d784ac5">depth</a> = 1;      <span class="comment">/* Count parenthesis depth. */</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordtype">int</span> depth = 1;      <span class="comment">/* Count parenthesis depth. */</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">while</span> ( *cp &amp;&amp; depth &gt; 0 )</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">switch</span> ( *(cp++) )</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:   depth++;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:   depth--;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;(&#39;</span>:   depth++;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;)&#39;</span>:   depth--;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            }</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;!&#39;</span>:           <span class="comment">/* required argument */</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;!&#39;</span>:           <span class="comment">/* required argument */</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        required = <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;%&#39;</span>:           <span class="comment">/* not required argument */</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;%&#39;</span>:           <span class="comment">/* not required argument */</span></div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;reswitch:               <span class="comment">/* after finding &#39;*&#39; or &#39;,&#39; */</span></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">switch</span> (typchr = *(cp++))</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;,&#39;</span>:       <span class="comment">/* argument is AT&amp;T list of things */</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;,&#39;</span>:       <span class="comment">/* argument is AT&amp;T list of things */</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            comma_list = <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:       <span class="comment">/* argument is list of things */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;*&#39;</span>:       <span class="comment">/* argument is list of things */</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            list_of = <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            list_cnt = 0;   <span class="comment">/* none yet */</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            cnt_arg = va_arg( argl, <span class="keywordtype">int</span> *); <span class="comment">/* item count * here */</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">goto</span> reswitch;  <span class="comment">/* try again */</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;$&#39;</span>:       <span class="comment">/* &quot;rest&quot; of argument list */</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;$&#39;</span>:       <span class="comment">/* &quot;rest&quot; of argument list */</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">while</span> ( argc &gt; 1 &amp;&amp; !arg_used[argc-1] )</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                argc--; <span class="comment">/* find last used argument */</span></div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            *va_arg( argl, <span class="keywordtype">int</span> * ) = argc;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;&amp;&#39;</span>:       <span class="comment">/* Return unused args. */</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;&amp;&#39;</span>:       <span class="comment">/* Return unused args. */</span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="comment">/* Count how many.  Always include argv[0]. */</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">for</span> ( nopt = cnt = 1; cnt &lt; argc; cnt++ )</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">if</span> ( !arg_used[cnt] )</div>
@@ -371,7 +372,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            *va_arg( argl, <span class="keywordtype">char</span> *** ) = strlist;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;-&#39;</span>:       <span class="comment">/* argument is flag */</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;-&#39;</span>:       <span class="comment">/* argument is flag */</span></div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">if</span> (optarg &gt; 0)</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <a class="code" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a>(<span class="stringliteral">&quot;Format error: flag conditional on flag not allowed&quot;</span>);</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
@@ -379,13 +380,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            ncp = cp-1; <span class="comment">/* remember */</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            cp -= 3;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">for</span> (excnt = exflag = 0</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                ; *cp != <span class="charliteral">&#39; &#39;</span> &amp;&amp; !(*cp==<span class="charliteral">&#39;-&#39;</span> &amp;&amp;(cp[-1]==<span class="charliteral">&#39;!&#39;</span>||cp[-1]==<span class="charliteral">&#39;%&#39;</span>));</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                ; *cp != <span class="stringliteral">&#39; &#39;</span> &amp;&amp; !(*cp==<span class="stringliteral">&#39;-&#39;</span> &amp;&amp;(cp[-1]==<span class="stringliteral">&#39;!&#39;</span>||cp[-1]==<span class="stringliteral">&#39;%&#39;</span>));</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                (--cp, excnt++))</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            {</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">for</span> (cnt = optarg+1; cnt &lt; argc; cnt++)</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                {</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                <span class="comment">/* flags all start with - */</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keywordflow">if</span> (*argv[cnt] == <span class="charliteral">&#39;-&#39;</span> &amp;&amp; !arg_used[cnt] &amp;&amp;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keywordflow">if</span> (*argv[cnt] == <span class="stringliteral">&#39;-&#39;</span> &amp;&amp; !arg_used[cnt] &amp;&amp;</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    !isdigit(argv[cnt][1]))</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                    <span class="keywordflow">if</span> (*(argv[cnt] + 1) == *cp)</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    {</div>
@@ -412,22 +413,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">             */</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordflow">if</span> (!exflag)</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                (void)va_arg( argl, <span class="keywordtype">int</span> * );<span class="comment">/* skip the arg, too */</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                (<span class="keywordtype">void</span>)va_arg( argl, <span class="keywordtype">int</span> * );<span class="comment">/* skip the arg, too */</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keywordflow">while</span> (*++cp &amp;&amp; ! isspace(*cp))</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                <span class="keywordflow">if</span> (*cp == <span class="charliteral">&#39;!&#39;</span> || *cp == <span class="charliteral">&#39;%&#39;</span>)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                <span class="keywordflow">if</span> (*cp == <span class="stringliteral">&#39;!&#39;</span> || *cp == <span class="stringliteral">&#39;%&#39;</span>)</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                    <span class="keywordflow">if</span> ( *++cp == <span class="charliteral">&#39;*&#39;</span> || *cp == <span class="charliteral">&#39;,&#39;</span> )</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                    <span class="keywordflow">if</span> ( *++cp == <span class="stringliteral">&#39;*&#39;</span> || *cp == <span class="stringliteral">&#39;,&#39;</span> )</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    {</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    cp++;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    (void)va_arg( argl, <span class="keywordtype">int</span> * );</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    (<span class="keywordtype">void</span>)va_arg( argl, <span class="keywordtype">int</span> * );</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    }</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    <span class="comment">/* </span></div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">                     * Assume that char * might be a</span></div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment">                     * different size, but that all</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">                     * other pointers are same size.</span></div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">                     */</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    <span class="keywordflow">if</span> ( *cp == <span class="charliteral">&#39;s&#39;</span> )</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    (void)va_arg( argl, <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    <span class="keywordflow">if</span> ( *cp == <span class="stringliteral">&#39;s&#39;</span> )</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    (<span class="keywordtype">void</span>)va_arg( argl, <span class="keywordtype">char</span> * );</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                    (<span class="keywordtype">void</span>)va_arg( argl, <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a> );</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                }</div>
@@ -440,36 +441,36 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:       <span class="comment">/* char string */</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:       <span class="comment">/* decimal # */</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:       <span class="comment">/* octal # */</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:       <span class="comment">/* hexadecimal # */</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:       <span class="comment">/* &quot;number&quot; in C syntax */</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>:       <span class="comment">/* floating # */</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:       <span class="comment">/* long decimal # */</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:       <span class="comment">/* long octal # */</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>:       <span class="comment">/* long hexadecimal # */</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:       <span class="comment">/* long number in C syntax */</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>:       <span class="comment">/* double precision floating # */</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#if defined(sgi) &amp;&amp; !defined(mips)</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;s&#39;</span>:       <span class="comment">/* char string */</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;d&#39;</span>:       <span class="comment">/* decimal # */</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;o&#39;</span>:       <span class="comment">/* octal # */</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;x&#39;</span>:       <span class="comment">/* hexadecimal # */</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;n&#39;</span>:       <span class="comment">/* &quot;number&quot; in C syntax */</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;f&#39;</span>:       <span class="comment">/* floating # */</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;D&#39;</span>:       <span class="comment">/* long decimal # */</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;O&#39;</span>:       <span class="comment">/* long octal # */</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;X&#39;</span>:       <span class="comment">/* long hexadecimal # */</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:       <span class="comment">/* long number in C syntax */</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;F&#39;</span>:       <span class="comment">/* double precision floating # */</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">if</span> <span class="preprocessor">defined</span><span class="preprocessor">(</span><span class="preprocessor">sgi</span><span class="preprocessor">)</span> <span class="preprocessor">&amp;&amp;</span> <span class="preprocessor">!</span><span class="preprocessor">defined</span><span class="preprocessor">(</span><span class="preprocessor">mips</span><span class="preprocessor">)</span></div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="comment">/* Fix for broken SGI IRIS 2400/3000 floats */</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            <span class="keywordflow">if</span> ( typchr == <span class="charliteral">&#39;F&#39;</span> ) typchr = <span class="charliteral">&#39;f&#39;</span>;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* sgi */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            <span class="keywordflow">if</span> ( typchr == <span class="stringliteral">&#39;F&#39;</span> ) typchr = <span class="stringliteral">&#39;f&#39;</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">/* sgi */</span></div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keywordflow">for</span> (cnt = optarg+1; cnt &lt; argc; cnt++)</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            {</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                argp = argv[cnt];</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                <span class="keywordflow">if</span> ( <a class="code" href="../../d4/db0/scanargs_8c.html#a2a5612de1c2935309d59a4f9e339d10f">isnum</a>( argp, typchr, comma_list ) )</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                <span class="keywordflow">if</span> ( <a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">isnum</a><a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">(</a> argp<a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">,</a> typchr<a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">,</a> comma_list <a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">)</a> )</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                {</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                ;   <span class="comment">/* it&#39;s ok, then */</span></div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                }</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( *argp == <span class="charliteral">&#39;-&#39;</span> &amp;&amp; argp[1] != <span class="charliteral">&#39;\0&#39;</span> )</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( *argp == <span class="stringliteral">&#39;-&#39;</span> &amp;&amp; argp[1] != <span class="stringliteral">&#39;\0&#39;</span> )</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                <span class="keywordflow">if</span> ( optarg &gt; 0 ) <span class="comment">/* end optional args? */</span></div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                {</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                    <span class="comment">/* Eat the arg, too, if necessary */</span></div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                    <span class="keywordflow">if</span> ( list_cnt == 0 ) {</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                    <span class="keywordflow">if</span> ( typchr == <span class="charliteral">&#39;s&#39;</span> )</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                        (void)va_arg( argl, <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                    <span class="keywordflow">if</span> ( typchr == <span class="stringliteral">&#39;s&#39;</span> )</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                        (<span class="keywordtype">void</span>)va_arg( argl, <span class="keywordtype">char</span> * );</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                        (<span class="keywordtype">void</span>)va_arg( argl, <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a> );</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                    }</div>
@@ -477,9 +478,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                }</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( typchr != <span class="charliteral">&#39;s&#39;</span> )</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( typchr != <span class="stringliteral">&#39;s&#39;</span> )</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                <span class="keywordflow">continue</span>;   <span class="comment">/* not number, keep looking */</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <span class="comment">/* </span></div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment">                 * Otherwise usable argument may already</span></div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="comment">                 * be used.  (Must check this after</span></div>
@@ -494,15 +495,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="comment">                 */</span></div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                <span class="keywordflow">if</span> ( comma_list )</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                {</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                <span class="keyword">register</span> <span class="keywordtype">char</span> * <a class="code" href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a>;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                <span class="keywordtype">int</span> <a class="code" href="../../dd/ddd/fant_8c.html#ab2391a688166a14a4af286bcc8a8b072">pass</a>;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                <span class="keyword">register</span> <span class="keywordtype">char</span> * s;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                <span class="keywordtype">int</span> pass;</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                <span class="comment">/*</span></div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment">                 * Copy the string so we remain nondestructive</span></div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="comment">                 */</span></div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                s = <a class="code" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>( <span class="keywordtype">char</span>, strlen(argp)+1 );</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                strcpy( s, argp );</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                argp = <a class="code" href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a>;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                argp = s;</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                <span class="comment">/* </span></div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="comment">                 * On pass 0, just count them.  On</span></div>
@@ -510,15 +511,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="comment">                 */</span></div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                <span class="keywordflow">for</span> ( pass = 0; pass &lt;= 1; pass++ )</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                    <span class="keywordflow">for</span> ( s = argp; *s != <span class="charliteral">&#39;\0&#39;</span>; )</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                    <span class="keywordflow">for</span> ( s = argp; *s != <span class="stringliteral">&#39;\0&#39;</span>; )</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                    {</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                    <span class="keywordflow">if</span> ( pass )</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                        strlist[list_cnt] = <a class="code" href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a>;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                    <span class="keywordflow">while</span> ( (c = *s) != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; c != <span class="charliteral">&#39; &#39;</span> &amp;&amp;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                        c != <span class="charliteral">&#39;\t&#39;</span> &amp;&amp; c != <span class="charliteral">&#39;,&#39;</span> )</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                        strlist[list_cnt] = s;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                    <span class="keywordflow">while</span> ( (c = *s) != <span class="stringliteral">&#39;\0&#39;</span> &amp;&amp; c != <span class="stringliteral">&#39; &#39;</span> &amp;&amp;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                        c != <span class="stringliteral">&#39;\t&#39;</span> &amp;&amp; c != <span class="stringliteral">&#39;,&#39;</span> )</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                        s++;</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                    <span class="keywordflow">if</span> ( pass )</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                        *s = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                        *s = <span class="stringliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                    list_cnt++; <span class="comment">/* count separators */</span></div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                    <span class="comment">/* </span></div>
@@ -527,8 +528,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="comment">                     * don&#39;t.  Also skip spaces</span></div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">                     * after a comma.</span></div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment">                     */</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                    <span class="keywordflow">if</span> ( c != <span class="charliteral">&#39;\0&#39;</span> )</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                        <span class="keywordflow">while</span> ( *++s == <span class="charliteral">&#39; &#39;</span> || *s == <span class="charliteral">&#39;\t&#39;</span> )</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                    <span class="keywordflow">if</span> ( c != <span class="stringliteral">&#39;\0&#39;</span> )</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                        <span class="keywordflow">while</span> ( *++s == <span class="stringliteral">&#39; &#39;</span> || *s == <span class="stringliteral">&#39;\t&#39;</span> )</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                        ;</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                    }</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                    <span class="keywordflow">if</span> ( pass == 0 )</div>
@@ -551,30 +552,30 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                <span class="keywordflow">if</span> ( list_cnt == 1 || comma_list )</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                    <span class="keywordflow">switch</span>( typchr )</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                    {</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;s&#39;</span>:</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                        <span class="keywordflow">if</span> ( !comma_list )</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                        strlist = <a class="code" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>( <span class="keywordtype">char</span> *, 1 );</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;strlist[0];</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;n&#39;</span>:</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;d&#39;</span>:</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;o&#39;</span>:</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;x&#39;</span>:</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                        intlist = <a class="code" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>( <span class="keywordtype">int</span>, list_cnt );</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;intlist[0];</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>:</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;D&#39;</span>:</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;O&#39;</span>:</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;X&#39;</span>:</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                        longlist = <a class="code" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>( <span class="keywordtype">long</span>, list_cnt );</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;longlist[0];</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>:</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;f&#39;</span>:</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                        fltlist = <a class="code" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>( <span class="keywordtype">float</span>, list_cnt );</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;fltlist[0];</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>:</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;F&#39;</span>:</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                        dbllist = <a class="code" href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a>( <span class="keywordtype">double</span>, list_cnt );</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;dbllist[0];</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                        <span class="keywordflow">break</span>;</div>
@@ -582,33 +583,33 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;                    <span class="keywordflow">switch</span>( typchr )</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                    {</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;s&#39;</span>:</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;                        strlist = <a class="code" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">RENEW</a>( <span class="keywordtype">char</span> *, strlist,</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                                 list_cnt );</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;strlist[list_cnt-1];</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;n&#39;</span>:</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;d&#39;</span>:</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;o&#39;</span>:</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;x&#39;</span>:</div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;                        intlist = <a class="code" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">RENEW</a>( <span class="keywordtype">int</span>, intlist,</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;                                 list_cnt );</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;intlist[list_cnt-1];</div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>:</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;D&#39;</span>:</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;O&#39;</span>:</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;X&#39;</span>:</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                        longlist = <a class="code" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">RENEW</a>( <span class="keywordtype">long</span>, longlist,</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                                  list_cnt );</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;longlist[list_cnt-1];</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>:</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;f&#39;</span>:</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                        fltlist = <a class="code" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">RENEW</a>( <span class="keywordtype">float</span>, fltlist,</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                                 list_cnt );</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;fltlist[list_cnt-1];</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>:</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;F&#39;</span>:</div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                        dbllist = <a class="code" href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">RENEW</a>( <span class="keywordtype">double</span>, dbllist,</div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                                 list_cnt );</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;dbllist[list_cnt-1];</div>
@@ -618,7 +619,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                aptr = va_arg( argl, <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a> );</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                <span class="keywordflow">if</span> ( typchr == <span class="charliteral">&#39;s&#39;</span> )</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                <span class="keywordflow">if</span> ( typchr == <span class="stringliteral">&#39;s&#39;</span> )</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                {</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                <span class="keywordflow">if</span> ( ! comma_list )</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                    *(<span class="keywordtype">char</span> **)aptr = argp;</div>
@@ -636,22 +637,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                    argp = strlist[nopt];</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;                    <span class="keywordflow">switch</span>( typchr )</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                    {</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;n&#39;</span>:</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;d&#39;</span>:</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;o&#39;</span>:</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;x&#39;</span>:</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;intlist[nopt];</div>
 <div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>:</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;D&#39;</span>:</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;O&#39;</span>:</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;X&#39;</span>:</div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;longlist[nopt];</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>:</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;f&#39;</span>:</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;fltlist[nopt];</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                        <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>:</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                        <span class="keywordflow">case</span> <span class="stringliteral">&#39;F&#39;</span>:</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                        aptr = (<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>) &amp;dbllist[nopt];</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    }</div>
@@ -660,32 +661,32 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;<span class="comment">                     * Do conversion for n and N types</span></div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="comment">                     */</span></div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                    tmpflg = typchr;</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                    <span class="keywordflow">if</span> (typchr == <span class="charliteral">&#39;n&#39;</span> || typchr == <span class="charliteral">&#39;N&#39;</span> ) {</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                    <span class="keywordflow">if</span> (*argp != <span class="charliteral">&#39;0&#39;</span>)</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                        tmpflg = <span class="charliteral">&#39;d&#39;</span>;</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*(argp+1) == <span class="charliteral">&#39;x&#39;</span> ||</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                         *(argp+1) == <span class="charliteral">&#39;X&#39;</span>)</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                    <span class="keywordflow">if</span> (typchr == <span class="stringliteral">&#39;n&#39;</span> || typchr == <span class="stringliteral">&#39;N&#39;</span> ) {</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                    <span class="keywordflow">if</span> (*argp != <span class="stringliteral">&#39;0&#39;</span>)</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                        tmpflg = <span class="stringliteral">&#39;d&#39;</span>;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*(argp+1) == <span class="stringliteral">&#39;x&#39;</span> ||</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                         *(argp+1) == <span class="stringliteral">&#39;X&#39;</span>)</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                    {</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                        tmpflg = <span class="charliteral">&#39;x&#39;</span>;</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                        tmpflg = <span class="stringliteral">&#39;x&#39;</span>;</div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                        argp += 2;</div>
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                    }</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;                    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                        tmpflg = <span class="charliteral">&#39;o&#39;</span>;</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                        tmpflg = <span class="stringliteral">&#39;o&#39;</span>;</div>
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                    }</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                    <span class="keywordflow">if</span> (typchr == <span class="charliteral">&#39;N&#39;</span>)</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                    <span class="keywordflow">if</span> (typchr == <span class="stringliteral">&#39;N&#39;</span>)</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                    tmpflg = toupper( tmpflg );</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                    <span class="comment">/* put in conversion */</span></div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                    <span class="keywordflow">if</span> ( isupper( tmpflg ) )</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                    {</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    cntrl[1] = <span class="charliteral">&#39;l&#39;</span>;</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    cntrl[1] = <span class="stringliteral">&#39;l&#39;</span>;</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                    cntrl[2] = tolower( tmpflg );</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                    }</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                    {</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                    cntrl[1] = tmpflg;</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                    cntrl[2] = <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                    cntrl[2] = <span class="stringliteral">&#39; &#39;</span>;</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                    }</div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                    <span class="keywordflow">if</span> (sscanf (argp, cntrl, aptr, junk) != 1)</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                    <a class="code" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a> (<span class="stringliteral">&quot;Bad numeric argument&quot;</span>);</div>
@@ -706,22 +707,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            <span class="keywordflow">if</span> (required)</div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                <span class="keywordflow">switch</span> (typchr)</div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                {</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>: </div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>: </div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;x&#39;</span>:</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;X&#39;</span>:</div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                    <a class="code" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a> (<span class="stringliteral">&quot;missing hexadecimal argument&quot;</span>);</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>: </div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;s&#39;</span>:</div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;                    <a class="code" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a> (<span class="stringliteral">&quot;missing string argument&quot;</span>);</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>: </div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>: </div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;o&#39;</span>:</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;O&#39;</span>:</div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                    <a class="code" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a> (<span class="stringliteral">&quot;missing octal argument&quot;</span>);</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>: </div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>: </div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;d&#39;</span>:</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;D&#39;</span>:</div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;                    <a class="code" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a> (<span class="stringliteral">&quot;missing decimal argument&quot;</span>);</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>: </div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>: </div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;f&#39;</span>:</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;F&#39;</span>:</div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                    <a class="code" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a> (<span class="stringliteral">&quot;missing floating argument&quot;</span>);</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;n&#39;</span>:</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                    <a class="code" href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a> (<span class="stringliteral">&quot;missing numeric argument&quot;</span>);</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;                }</div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;            <span class="keywordflow">if</span> ( list_cnt &gt; 0 )</div>
@@ -729,36 +730,36 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;                *cnt_arg = list_cnt;</div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                <span class="keywordflow">switch</span> ( typchr )</div>
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                {</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;s&#39;</span>:</div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                    *va_arg( argl, <span class="keywordtype">char</span> *** ) = strlist;</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;n&#39;</span>:</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;d&#39;</span>:</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;o&#39;</span>:</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;x&#39;</span>:</div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;                    *va_arg( argl, <span class="keywordtype">int</span> ** ) = intlist;</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>:</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;D&#39;</span>:</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;O&#39;</span>:</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;X&#39;</span>:</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                    *va_arg( argl, <span class="keywordtype">long</span> ** ) = longlist;</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>:</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;f&#39;</span>:</div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;                    *va_arg( argl, <span class="keywordtype">float</span> ** ) = fltlist;</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>:</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;                <span class="keywordflow">case</span> <span class="stringliteral">&#39;F&#39;</span>:</div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                    *va_arg( argl, <span class="keywordtype">double</span> **) = dbllist;</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                }</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                <span class="keywordflow">if</span> ( typchr != <span class="charliteral">&#39;s&#39;</span> &amp;&amp; comma_list )</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>( (<span class="keywordtype">char</span> *) strlist );</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                <span class="keywordflow">if</span> ( typchr != <span class="stringliteral">&#39;s&#39;</span> &amp;&amp; comma_list )</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                free( (<span class="keywordtype">char</span> *) strlist );</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;            }</div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( cnt &gt;= argc )</div>
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;            {</div>
 <div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;                <span class="comment">/* Fell off end looking, so must eat the arg */</span></div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;                <span class="keywordflow">if</span> ( typchr == <span class="charliteral">&#39;s&#39;</span> )</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;                (void)va_arg( argl, <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;                <span class="keywordflow">if</span> ( typchr == <span class="stringliteral">&#39;s&#39;</span> )</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;                (<span class="keywordtype">void</span>)va_arg( argl, <span class="keywordtype">char</span> * );</div>
 <div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                (<span class="keywordtype">void</span>)va_arg( argl, <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a> );</div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            }</div>
@@ -773,7 +774,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;</div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    <span class="comment">/*  Count up empty flags */</span></div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keywordflow">for</span> (cnt=1; cnt&lt;argc; cnt++)</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <span class="keywordflow">if</span> (argv[cnt][0] == <span class="charliteral">&#39;-&#39;</span> &amp;&amp; argv[cnt][1] == <span class="charliteral">&#39;-&#39;</span> &amp;&amp; argv[cnt][2] == 0</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <span class="keywordflow">if</span> (argv[cnt][0] == <span class="stringliteral">&#39;-&#39;</span> &amp;&amp; argv[cnt][1] == <span class="stringliteral">&#39;-&#39;</span> &amp;&amp; argv[cnt][2] == 0</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        &amp;&amp; !arg_used[cnt] )</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        check += cnt;</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;</div>
@@ -783,65 +784,65 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;</div>
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <span class="comment">/* If -help, always print usage. */</span></div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    <span class="keywordflow">if</span> ( help )</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( argv, format );</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a><a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">(</a> argv<a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">,</a> format <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">)</a>;</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>(arg_used);</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    free(arg_used);</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<a class="code" href="../../dc/d7b/aliastorle_8c.html#ac2c29217831f208a3b22bae552c5124f">error</a>: </div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;error:</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    <span class="keywordflow">if</span> ( !no_usage )</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( argv, format );</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <a class="code" href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a>(arg_used);</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a><a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">(</a> argv<a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">,</a> format <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">)</a>;</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    free(arg_used);</div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;}</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00707"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a055153db05ea025cca23cada404f23e1">  707</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( argv, format )</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;char ** argv;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;CONST_DECL <span class="keywordtype">char</span> * format;</div>
+<div class="line"><a name="l00707"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a5b0e23b5d40d010fd940f5b58cf95a97">  707</a></span>&#160;<a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a>( <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">argv</a>, <a class="code" href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">format</a> )</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="keywordtype">char</span> ** argv;</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * format;</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;{</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span> * cp;</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * cp;</div>
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    fprintf (stderr, <span class="stringliteral">&quot;usage : &quot;</span>);</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keywordflow">if</span> (*(cp = format) != <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keywordflow">if</span> (*(cp = format) != <span class="stringliteral">&#39; &#39;</span>)</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    {</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">if</span> ( *cp == <span class="charliteral">&#39;%&#39;</span> )</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">if</span> ( *cp == <span class="stringliteral">&#39;%&#39;</span> )</div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    {</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        <span class="comment">/* </span></div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="comment">         * This is bogus, but until everyone can agree on a name</span></div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="comment">         * for (rindex/strrchr) ....</span></div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        <span class="keywordflow">for</span> ( cp = argv[0]; *cp != <span class="charliteral">&#39;\0&#39;</span>; cp++ )</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        <span class="keywordflow">for</span> ( cp = argv[0]; *cp != <span class="stringliteral">&#39;\0&#39;</span>; cp++ )</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        ;           <span class="comment">/* find the end of the string */</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        <span class="keywordflow">for</span> ( ; cp &gt; argv[0] &amp;&amp; *cp != <span class="charliteral">&#39;/&#39;</span>; cp-- )</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        <span class="keywordflow">for</span> ( ; cp &gt; argv[0] &amp;&amp; *cp != <span class="stringliteral">&#39;/&#39;</span>; cp-- )</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        ;           <span class="comment">/* find the last / */</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        <span class="keywordflow">if</span> ( *cp == <span class="charliteral">&#39;/&#39;</span> )</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        <span class="keywordflow">if</span> ( *cp == <span class="stringliteral">&#39;/&#39;</span> )</div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        cp++;</div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        fprintf( stderr, <span class="stringliteral">&quot;%s&quot;</span>, cp );</div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        cp = format + 1;        <span class="comment">/* reset to where it should be */</span></div>
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    }</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    <span class="keywordflow">while</span> (putc (*cp++, stderr) != <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    <span class="keywordflow">while</span> (putc (*cp++, stderr) != <span class="stringliteral">&#39; &#39;</span>);</div>
 <div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    }</div>
 <div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    fprintf (stderr, <span class="stringliteral">&quot;?? &quot;</span>);</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="keywordflow">while</span> (*cp == <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="keywordflow">while</span> (*cp == <span class="stringliteral">&#39; &#39;</span>)</div>
 <div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    cp++;</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    (void)<a class="code" href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a> (cp, <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>);</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    (<span class="keywordtype">void</span>)<a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">prformat</a> <a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">(</a>cp<a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">,</a> <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a><a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">)</a>;</div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;}</div>
 <div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="keyword">static</span> CONST_DECL <span class="keywordtype">char</span> *</div>
-<div class="line"><a name="l00742"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#abadefaa317ecfaecbf6550b68253bac4">  742</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a> (format, recurse)</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;CONST_DECL <span class="keywordtype">char</span>   *format;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="keyword">static</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *</div>
+<div class="line"><a name="l00742"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">  742</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">prformat</a> (<a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">format</a>, <a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">recurse</a>)</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span>   *format;</div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="keywordtype">int</span>     recurse;</div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;{</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span>  *cp;</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordtype">bool</span>    required, comma_list;</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordtype">int</span>    list_of, <a class="code" href="../../d8/d81/rastorle_8c.html#acb5ba97551079e0b072c62c21d784ac5">depth</a>;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span>  *cp;</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a>    required, comma_list;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordtype">int</span>    list_of, depth;</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    cp = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    cp = format;</div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keywordflow">if</span> (recurse)</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    putc (<span class="charliteral">&#39; &#39;</span>, stderr);</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    putc (<span class="stringliteral">&#39; &#39;</span>, stderr);</div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    required = <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>;</div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    list_of = 0;</div>
@@ -853,9 +854,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;        <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;            cp++;</div>
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>:</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;\t&#39;</span>:</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39; &#39;</span>:</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;\n&#39;</span>:</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;\t&#39;</span>:</div>
 <div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        <span class="comment">/* allow annotations */</span></div>
 <div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        <span class="keywordflow">for</span> ( ; format &lt; cp; format++ )</div>
 <div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;            putc( *format, stderr );</div>
@@ -863,7 +864,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;        format = ++cp;</div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;(&#39;</span>:</div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        <span class="comment">/* Parentheses surround an arbitrary (parenthesis</span></div>
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;<span class="comment">         * balanced) comment.</span></div>
 <div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;<span class="comment">         */</span></div>
@@ -872,88 +873,88 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">for</span> ( cp++, depth = 1; *cp &amp;&amp; depth &gt; 0; )</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;        {</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;            <span class="comment">/* Don&#39;t print last close paren. */</span></div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            <span class="keywordflow">if</span> ( *cp != <span class="charliteral">&#39;)&#39;</span> || depth &gt; 1 )</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            <span class="keywordflow">if</span> ( *cp != <span class="stringliteral">&#39;)&#39;</span> || depth &gt; 1 )</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;            putc( *cp, stderr );</div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;            <span class="keywordflow">switch</span>( *(cp++) )</div>
 <div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;            {</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:   depth++;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:   depth--;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;(&#39;</span>:   depth++;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;)&#39;</span>:   depth--;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;            }</div>
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        }</div>
 <div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        format = cp;</div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;!&#39;</span>: </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;!&#39;</span>:</div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        required = <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>;</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;%&#39;</span>: </div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        <span class="keywordflow">case</span> <span class="stringliteral">&#39;%&#39;</span>:</div>
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;reswitch:</div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="keywordflow">switch</span> (*++cp)</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        {</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;,&#39;</span>:</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;,&#39;</span>:</div>
 <div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;            comma_list++;</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;*&#39;</span>:</div>
 <div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;            list_of++;</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;            <span class="keywordflow">goto</span> reswitch;</div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;$&#39;</span>:       <span class="comment">/* &quot;rest&quot; of argument list */</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;$&#39;</span>:       <span class="comment">/* &quot;rest&quot; of argument list */</span></div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;            <span class="keywordflow">if</span> (!required)</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                putc (<span class="charliteral">&#39;[&#39;</span>, stderr);</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                putc (<span class="stringliteral">&#39;[&#39;</span>, stderr);</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            <span class="keywordflow">for</span> (; format &lt; cp - 1 - list_of; format++)</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;                putc (*format, stderr);</div>
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            fputs( <span class="stringliteral">&quot; ...&quot;</span>, stderr );</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;            <span class="keywordflow">if</span> ( !required )</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                putc( <span class="charliteral">&#39;]&#39;</span>, stderr );</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                putc( <span class="stringliteral">&#39;]&#39;</span>, stderr );</div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;-&#39;</span>:       <span class="comment">/* flags */</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;-&#39;</span>:       <span class="comment">/* flags */</span></div>
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;            <span class="keywordflow">if</span> (!required)</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                putc (<span class="charliteral">&#39;[&#39;</span>, stderr);</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;            putc (<span class="charliteral">&#39;-&#39;</span>, stderr);</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                putc (<span class="stringliteral">&#39;[&#39;</span>, stderr);</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;            putc (<span class="stringliteral">&#39;-&#39;</span>, stderr);</div>
 <div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;</div>
 <div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            <span class="keywordflow">if</span> (cp - format &gt; 2 + list_of)</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                putc (<span class="charliteral">&#39;{&#39;</span>, stderr);</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            cp = <a class="code" href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a>;</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;            <span class="keywordflow">while</span> (*cp != <span class="charliteral">&#39;%&#39;</span> &amp;&amp; *cp != <span class="charliteral">&#39;!&#39;</span>)</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                putc (<span class="stringliteral">&#39;{&#39;</span>, stderr);</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            cp = format;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;            <span class="keywordflow">while</span> (*cp != <span class="stringliteral">&#39;%&#39;</span> &amp;&amp; *cp != <span class="stringliteral">&#39;!&#39;</span>)</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                putc (*cp++, stderr);</div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;            <span class="keywordflow">if</span> (cp - format &gt; 1 + list_of)</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                putc (<span class="charliteral">&#39;}&#39;</span>, stderr);</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                putc (<span class="stringliteral">&#39;}&#39;</span>, stderr);</div>
 <div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            cp += 2;    <span class="comment">/* skip !- or %- */</span></div>
 <div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;            <span class="keywordflow">if</span> (*cp &amp;&amp; !isspace(*cp))</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                cp = <a class="code" href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a> (cp, <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>);</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                cp = <a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">prformat</a> <a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">(</a>cp<a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">,</a> <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a><a class="code" href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">)</a>;</div>
 <div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;                    <span class="comment">/* this is a recursive call */</span></div>
 <div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;</div>
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;            cp--;   <span class="comment">/* don&#39;t ignore next character */</span></div>
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;</div>
 <div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;            <span class="keywordflow">if</span> (!required)</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                putc (<span class="charliteral">&#39;]&#39;</span>, stderr);</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                putc (<span class="stringliteral">&#39;]&#39;</span>, stderr);</div>
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:       <span class="comment">/* char string */</span></div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:       <span class="comment">/* decimal # */</span></div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:       <span class="comment">/* octal # */</span></div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:       <span class="comment">/* hexadecimal # */</span></div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>:       <span class="comment">/* floating # */</span></div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:       <span class="comment">/* long decimal # */</span></div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:       <span class="comment">/* long octal # */</span></div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>:       <span class="comment">/* long hexadecimal # */</span></div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>:       <span class="comment">/* double precision floating # */</span></div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:       <span class="comment">/* numeric arg (C format) */</span></div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:       <span class="comment">/* long numeric arg */</span></div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;s&#39;</span>:       <span class="comment">/* char string */</span></div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;d&#39;</span>:       <span class="comment">/* decimal # */</span></div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;o&#39;</span>:       <span class="comment">/* octal # */</span></div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;x&#39;</span>:       <span class="comment">/* hexadecimal # */</span></div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;f&#39;</span>:       <span class="comment">/* floating # */</span></div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;D&#39;</span>:       <span class="comment">/* long decimal # */</span></div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;O&#39;</span>:       <span class="comment">/* long octal # */</span></div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;X&#39;</span>:       <span class="comment">/* long hexadecimal # */</span></div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;F&#39;</span>:       <span class="comment">/* double precision floating # */</span></div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;n&#39;</span>:       <span class="comment">/* numeric arg (C format) */</span></div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:       <span class="comment">/* long numeric arg */</span></div>
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;            <span class="keywordflow">if</span> (!required)</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                putc (<span class="charliteral">&#39;[&#39;</span>, stderr);</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                putc (<span class="stringliteral">&#39;[&#39;</span>, stderr);</div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            <span class="keywordflow">for</span> (; format &lt; cp - 1 - list_of; format++)</div>
 <div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;                putc (*format, stderr);</div>
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;            <span class="keywordflow">if</span> ( list_of != 0 )</div>
 <div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;            {</div>
 <div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;                <span class="keywordflow">if</span> ( comma_list )</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                putc( <span class="charliteral">&#39;,&#39;</span>, stderr );</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                putc( <span class="stringliteral">&#39;,&#39;</span>, stderr );</div>
 <div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;                putc( <span class="charliteral">&#39; &#39;</span>, stderr );</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;                putc( <span class="stringliteral">&#39; &#39;</span>, stderr );</div>
 <div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;                fputs( <span class="stringliteral">&quot;...&quot;</span>, stderr );</div>
 <div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;            }</div>
 <div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;            <span class="keywordflow">if</span> (!required)</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;                putc (<span class="charliteral">&#39;]&#39;</span>, stderr);</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;                putc (<span class="stringliteral">&#39;]&#39;</span>, stderr);</div>
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;            <span class="keywordflow">default</span>: </div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;            <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        }</div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        required = <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>;</div>
@@ -962,7 +963,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keywordflow">if</span> (*cp)        <span class="comment">/* check for end of string */</span></div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;            format = ++cp;</div>
 <div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        <span class="keywordflow">if</span> (*cp &amp;&amp; !isspace(*cp))</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;            putc (<span class="charliteral">&#39; &#39;</span>, stderr);</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;            putc (<span class="stringliteral">&#39; &#39;</span>, stderr);</div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    }</div>
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    <span class="keywordflow">if</span> (recurse &amp;&amp; isspace(*cp))</div>
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;        <span class="keywordflow">break</span>;</div>
@@ -971,7 +972,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    {</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    <span class="keywordflow">for</span> ( ; format &lt; cp; format++ )</div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;        putc( *format, stderr );</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    putc (<span class="charliteral">&#39;\n&#39;</span>, stderr);</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    putc (<span class="stringliteral">&#39;\n&#39;</span>, stderr);</div>
 <div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    }</div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordflow">return</span> (cp);</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;}</div>
@@ -983,52 +984,52 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;<span class="comment"> * space and comma are also legal characters.</span></div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00894"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#af5f0d477fc4d1f7196dcd1f46b76c649">  894</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a2a5612de1c2935309d59a4f9e339d10f">isnum</a>( <a class="code" href="../../d0/dcc/rletorla_8c.html#a3e6c64a4b8fd9c31b174ce283f0a8bbf">str</a>, typchr, comma_list )</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;register CONST_DECL <span class="keywordtype">char</span> * <a class="code" href="../../d0/dcc/rletorla_8c.html#a3e6c64a4b8fd9c31b174ce283f0a8bbf">str</a>;</div>
+<div class="line"><a name="l00894"></a><span class="lineno"><a class="line" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">  894</a></span>&#160;<a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">isnum</a>( <a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">str</a>, <a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">typchr</a>, <a class="code" href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">comma_list</a> )</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;<span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> * str;</div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;<span class="keywordtype">int</span> typchr;</div>
 <div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;<span class="keywordtype">int</span> comma_list;</div>
 <div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;{</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    <span class="keyword">register</span> CONST_DECL <span class="keywordtype">char</span> *allowed, *digits, *cp;</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    <span class="keyword">register</span> <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *allowed, *digits, *cp;</div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    <span class="keywordtype">int</span> hasdigit = <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>;</div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;</div>
 <div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    <span class="keywordflow">switch</span>( typchr )</div>
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;    {</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;n&#39;</span>:</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        allowed = <span class="stringliteral">&quot; \t,+-x0123456789abcdefABCDEF&quot;</span>;</div>
 <div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;d&#39;</span>:</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;D&#39;</span>:</div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        allowed = <span class="stringliteral">&quot; \t,+-0123456789&quot;</span>;</div>
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;o&#39;</span>:</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;O&#39;</span>:</div>
 <div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        allowed = <span class="stringliteral">&quot; \t,01234567&quot;</span>;</div>
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>:</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;x&#39;</span>:</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;X&#39;</span>:</div>
 <div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;        allowed = <span class="stringliteral">&quot; \t,0123456789abcdefABCDEF&quot;</span>;</div>
 <div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;f&#39;</span>:</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;F&#39;</span>:</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;f&#39;</span>:</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;F&#39;</span>:</div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;        allowed = <span class="stringliteral">&quot; \t,+-eE.0123456789&quot;</span>;</div>
 <div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:           <span class="comment">/* only throw out decimal numbers */</span></div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;s&#39;</span>:           <span class="comment">/* only throw out decimal numbers */</span></div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;        allowed = <span class="stringliteral">&quot; \t,+-.0123456789&quot;</span>;</div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    }</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    digits = allowed;</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keywordflow">while</span> ( *digits != <span class="charliteral">&#39;0&#39;</span> )</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keywordflow">while</span> ( *digits != <span class="stringliteral">&#39;0&#39;</span> )</div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    digits++;</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    <span class="keywordflow">if</span> ( ! comma_list )</div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    allowed += 3;             <span class="comment">/* then don&#39;t allow space, tab, comma */</span></div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    <span class="keywordflow">while</span> ( *str != <span class="charliteral">&#39;\0&#39;</span> )</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    <span class="keywordflow">while</span> ( *str != <span class="stringliteral">&#39;\0&#39;</span> )</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    {</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <span class="keywordflow">for</span> ( cp = allowed; *cp != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; *cp != *<a class="code" href="../../d0/dcc/rletorla_8c.html#a3e6c64a4b8fd9c31b174ce283f0a8bbf">str</a>; cp++ )</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <span class="keywordflow">for</span> ( cp = allowed; *cp != <span class="stringliteral">&#39;\0&#39;</span> &amp;&amp; *cp != *str; cp++ )</div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;            ;</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;        <span class="keywordflow">if</span> ( *cp == <span class="charliteral">&#39;\0&#39;</span> )</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;        <span class="keywordflow">if</span> ( *cp == <span class="stringliteral">&#39;\0&#39;</span> )</div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a>;           <span class="comment">/* if not in allowed chars, not number */</span></div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;    <span class="keywordflow">if</span> ( cp - digits &gt;= 0 )</div>
 <div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;        hasdigit = <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>;</div>
@@ -1036,31 +1037,25 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    }</div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;    <span class="keywordflow">return</span> hasdigit;</div>
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;}</div>
-<div class="ttc" id="scanargs_8c_html_adf82761e407e03810d345781225e4b4e"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#adf82761e407e03810d345781225e4b4e">prformat</a></div><div class="ttdeci">static char * prformat()</div></div>
-<div class="ttc" id="aliastorle_8c_html_ac2c29217831f208a3b22bae552c5124f"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#ac2c29217831f208a3b22bae552c5124f">error</a></div><div class="ttdeci">static void error()</div></div>
-<div class="ttc" id="fant_8c_html_ab2391a688166a14a4af286bcc8a8b072"><div class="ttname"><a href="../../dd/ddd/fant_8c.html#ab2391a688166a14a4af286bcc8a8b072">pass</a></div><div class="ttdeci">int pass</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/ddd/fant_8c_source.html#l00102">fant.c:102</a></div></div>
+<div class="ttc" id="rle__config_8h_html_a9c5fc7dbf74b3a60e89af3a08a45167a"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#a9c5fc7dbf74b3a60e89af3a08a45167a">USE_STDARG</a></div><div class="ttdeci">#define USE_STDARG</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00024">rle_config.h:24</a></div></div>
+<div class="ttc" id="rle__config_8h_html_ada440ec54eb75c757b0a71134f1cf891"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#ada440ec54eb75c757b0a71134f1cf891">USE_PROTOTYPES</a></div><div class="ttdeci">#define USE_PROTOTYPES</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00022">rle_config.h:22</a></div></div>
+<div class="ttc" id="scanargs_8c_html_a6abc25f6f59da9aa7d09131aeb7ca95c"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a6abc25f6f59da9aa7d09131aeb7ca95c">_do_scanargs</a></div><div class="ttdeci">static int _do_scanargs(int argc, char **argv, const  char   *format, va_list argl)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00124">scanargs.c:124</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a26e3926f3d15ee89e67169a7f7e0d79d"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a26e3926f3d15ee89e67169a7f7e0d79d">NEW</a></div><div class="ttdeci">#define NEW(type, cnt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00066">scanargs.c:66</a></div></div>
-<div class="ttc" id="rleClock_8c_html_ab4da28acaeb839de1f7b3713201ae2ac"><div class="ttname"><a href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a></div><div class="ttdeci">_urt_stack * s</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dd9/rleClock_8c_source.html#l00919">rleClock.c:919</a></div></div>
-<div class="ttc" id="rastorle_8c_html_acb5ba97551079e0b072c62c21d784ac5"><div class="ttname"><a href="../../d8/d81/rastorle_8c.html#acb5ba97551079e0b072c62c21d784ac5">depth</a></div><div class="ttdeci">static int depth</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/rastorle_8c_source.html#l00068">rastorle.c:68</a></div></div>
-<div class="ttc" id="scanargs_8c_html_adbfbdeb76ff8247a7be05c5666e09d95"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a></div><div class="ttdeci">void scan_usage()</div></div>
-<div class="ttc" id="rletorla_8c_html_aafde19f7d36ca163a143579c1b125b6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d">free</a></div><div class="ttdeci">void free()</div></div>
-<div class="ttc" id="scanargs_8c_html_a2a5612de1c2935309d59a4f9e339d10f"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a2a5612de1c2935309d59a4f9e339d10f">isnum</a></div><div class="ttdeci">static int isnum()</div></div>
+<div class="ttc" id="scanargs_8c_html_a1b0283a656ac84c7abacfeac66f2e397"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a1b0283a656ac84c7abacfeac66f2e397">prformat</a></div><div class="ttdeci">static const char * prformat(char   *format, int recurse) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00742">scanargs.c:742</a></div></div>
+<div class="ttc" id="scanargs_8c_html_a7827333daec9d306aff4729fbd61b031"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7827333daec9d306aff4729fbd61b031">scanargs</a></div><div class="ttdeci">int scanargs(int argc, char **argv, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs.c:94</a></div></div>
 <div class="ttc" id="scanargs_8c_html_ad5c9d4ba3dc37783a528b0925dc981a0"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#ad5c9d4ba3dc37783a528b0925dc981a0">bool</a></div><div class="ttdeci">char bool</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00052">scanargs.c:52</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="scanargs_8c_html_abacbbdefe312ec12aef4657fb2c48e98"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a></div><div class="ttdeci">int * ptr</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00057">scanargs.c:57</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a7ebc9a785e5ab85457c98595aac81589"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a></div><div class="ttdeci">#define YES</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00059">scanargs.c:59</a></div></div>
-<div class="ttc" id="pgmtorle_8c_html_a317afff57d87a89158c2b038d37b2b08"><div class="ttname"><a href="../../d5/da5/pgmtorle_8c.html#a317afff57d87a89158c2b038d37b2b08">format</a></div><div class="ttdeci">int format</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da5/pgmtorle_8c_source.html#l00050">pgmtorle.c:50</a></div></div>
-<div class="ttc" id="rletoabA62_8c_html_adb50a0eab9fed92fc3bfc7dfa4f2c410"><div class="ttname"><a href="../../d3/d42/rletoabA62_8c.html#adb50a0eab9fed92fc3bfc7dfa4f2c410">optarg</a></div><div class="ttdeci">char * optarg</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d53/getopt_8c_source.html#l00029">getopt.c:29</a></div></div>
-<div class="ttc" id="rletorla_8c_html_a3e6c64a4b8fd9c31b174ce283f0a8bbf"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#a3e6c64a4b8fd9c31b174ce283f0a8bbf">str</a></div><div class="ttdeci">char * str</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00079">rletorla.c:79</a></div></div>
+<div class="ttc" id="scanargs_8c_html_a4eaa903aaca2286505604bc2360e825a"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a4eaa903aaca2286505604bc2360e825a">isnum</a></div><div class="ttdeci">static int isnum(const  char *str, int typchr, int comma_list)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00894">scanargs.c:894</a></div></div>
+<div class="ttc" id="rleswap_8c_html_adbfbdeb76ff8247a7be05c5666e09d95"><div class="ttname"><a href="../../d9/d4b/rleswap_8c.html#adbfbdeb76ff8247a7be05c5666e09d95">scan_usage</a></div><div class="ttdeci">void scan_usage()</div></div>
 <div class="ttc" id="scanargs_8c_html_a996bde01ecac342918f0a2c4e7ce7bd5"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a996bde01ecac342918f0a2c4e7ce7bd5">NO</a></div><div class="ttdeci">#define NO</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00060">scanargs.c:60</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ea6d702c0484056c8504d6ce7fede08"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a></div><div class="ttdeci">int scanargs(va_alist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00091">scanargs.c:91</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a862219039664df6eb3cfced58addf830"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a862219039664df6eb3cfced58addf830">_do_scanargs</a></div><div class="ttdeci">static int _do_scanargs()</div></div>
 <div class="ttc" id="scanargs_8c_html_a7cac65c9f54b079d2919639f7c794077"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7cac65c9f54b079d2919639f7c794077">RENEW</a></div><div class="ttdeci">#define RENEW(type, ptr, cnt)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00067">scanargs.c:67</a></div></div>
 <div class="ttc" id="scanargs_8c_html_a435175024ad996b2a45d734fa9eea0e3"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a435175024ad996b2a45d734fa9eea0e3">ERROR</a></div><div class="ttdeci">#define ERROR(msg)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00061">scanargs.c:61</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:03 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

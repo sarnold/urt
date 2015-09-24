@@ -1,6 +1,0 @@
-<map id="rle_cp" name="rle_cp">
-<area shape="rect" id="node2" href="$d9/d2a/rle__putrow_8c.html#a018d4b7d6fe20504c07c24b9bd8fc304" title="rle_skiprow" alt="" coords="115,5,209,32"/>
-<area shape="rect" id="node3" href="$d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b" title="rle_puteof" alt="" coords="119,56,205,83"/>
-<area shape="rect" id="node5" href="$d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d" title="malloc" alt="" coords="131,107,193,133"/>
-<area shape="rect" id="node4" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="257,56,304,83"/>
-</map>

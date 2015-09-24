@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: gamma.c Source File</title>
+<title>Utah Raster Toolkit: get/cx3d/gamma.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -109,19 +110,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/* gamma.c, 6/30/86, T. McCollough, UU */</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">math</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d71/round_8h.html">round.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="../../d1/d71/round_8h.html">&quot;round.h&quot;</a></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d4/df0/gamma_8c.html#aa61041b3d539ebd857f6d831c93a967b">   24</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d4/df0/gamma_8c.html#aa61041b3d539ebd857f6d831c93a967b">gamma</a> ( <a class="code" href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, gamma_value )</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> <a class="code" href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d4/df0/gamma_8c.html#aa61041b3d539ebd857f6d831c93a967b">   24</a></span>&#160;<span class="keywordtype">int</span> gamma ( x, gamma_value )</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">int</span> x;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">float</span> gamma_value;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../dc/d72/rletopaint_8c.html#a4d2471380d101d0aa35fbfac47b44c97">gammamap</a>[256];</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> gammamap[256];</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">float</span> gv = 0.0;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (gv != gamma_value) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">int</span> i;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        gv = gamma_value;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">for</span> (i = 0 ; i &lt; 256 ; i++)</div>
@@ -129,19 +130,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <a class="code" href="../../d1/d71/round_8h.html#a6fcd43dd00e48006ef6c446f5277d658">round_positive</a>(255.0 * pow( i/255.0, 1.0/gv));</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> gammamap[<a class="code" href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> gammamap[x];</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="ttc" id="rletopaint_8c_html_a4d2471380d101d0aa35fbfac47b44c97"><div class="ttname"><a href="../../dc/d72/rletopaint_8c.html#a4d2471380d101d0aa35fbfac47b44c97">gammamap</a></div><div class="ttdeci">int gammamap[256]</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d72/rletopaint_8c_source.html#l00059">rletopaint.c:59</a></div></div>
-<div class="ttc" id="getami_8c_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">static int x</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
 <div class="ttc" id="round_8h_html_a6fcd43dd00e48006ef6c446f5277d658"><div class="ttname"><a href="../../d1/d71/round_8h.html#a6fcd43dd00e48006ef6c446f5277d658">round_positive</a></div><div class="ttdeci">#define round_positive(x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d71/round_8h_source.html#l00038">round.h:38</a></div></div>
-<div class="ttc" id="gamma_8c_html_aa61041b3d539ebd857f6d831c93a967b"><div class="ttname"><a href="../../d4/df0/gamma_8c.html#aa61041b3d539ebd857f6d831c93a967b">gamma</a></div><div class="ttdeci">int gamma(int x, float gamma_value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df0/gamma_8c_source.html#l00024">gamma.c:24</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
-<div class="ttc" id="round_8h_html"><div class="ttname"><a href="../../d1/d71/round_8h.html">round.h</a></div></div>
-<div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

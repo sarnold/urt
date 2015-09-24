@@ -1,3 +1,5 @@
-<map id="rleClock.c" name="rleClock.c">
-<area shape="rect" id="node8" href="$d9/d67/font_8h.html" title="font.h" alt="" coords="545,80,603,107"/>
+<map id="tools/clock/rleClock.c" name="tools/clock/rleClock.c">
+<area shape="rect" id="node5" href="$d7/d27/rle_8h.html" title="rle.h" alt="" coords="203,80,252,107"/>
+<area shape="rect" id="node11" href="$d9/d67/font_8h.html" title="font.h" alt="" coords="476,80,533,107"/>
+<area shape="rect" id="node6" href="$df/dad/rle__config_8h.html" title="rle_config.h" alt="" coords="180,155,275,181"/>
 </map>

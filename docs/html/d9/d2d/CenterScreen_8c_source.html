@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: CenterScreen.c Source File</title>
+<title>Utah Raster Toolkit: get/getami/CenterScreen.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -90,22 +91,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">CenterScreen.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d9/d2d/CenterScreen_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;intuition/intuition.h&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;graphics/gfxbase.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifdef LATTICE</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;proto/intuition.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="../../d9/d2d/CenterScreen_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">intuition</span><span class="preprocessor">/</span><span class="preprocessor">intuition</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">graphics</span><span class="preprocessor">/</span><span class="preprocessor">gfxbase</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> <span class="preprocessor">LATTICE</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">proto</span><span class="preprocessor">/</span><span class="preprocessor">intuition</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d9/d2d/CenterScreen_8c.html#a898606140dee9ce0adf096de00824d94">    7</a></span>&#160;<span class="preprocessor">#define MAX_X 362</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d9/d2d/CenterScreen_8c.html#a04835fbbac75231d7f24d44af7334fb1">    8</a></span>&#160;<span class="preprocessor">#define MAX_Y_NTSC 241</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d9/d2d/CenterScreen_8c.html#a4cbfc77736ca988d2e0c592ead5244f8">    9</a></span>&#160;<span class="preprocessor">#define MAX_Y_PAL 283</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d9/d2d/CenterScreen_8c.html#a898606140dee9ce0adf096de00824d94">    7</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">MAX_X</span> 362</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d9/d2d/CenterScreen_8c.html#a04835fbbac75231d7f24d44af7334fb1">    8</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">MAX_Y_NTSC</span> 241</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d9/d2d/CenterScreen_8c.html#a4cbfc77736ca988d2e0c592ead5244f8">    9</a></span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">MAX_Y_PAL</span> 283</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d3/d6f/show3_8c.html#abd0615dcf858ba7e81d9cfe23e2a17ff">   12</a></span>&#160;<a class="code" href="../../d9/d2d/CenterScreen_8c.html#a4528cc3054846b37aaba4b12eb24bb97">CenterScreen</a>(<span class="keyword">register</span> <span class="keyword">struct</span> <a class="code" href="../../d1/dad/giftorle_8c.html#aa46c6abb43be7f5c2cba73428a60c9db">Screen</a> *<a class="code" href="../../dc/d11/getami_8c.html#a190200837bc4dc3d2cc79f1794c3ea4d">screen</a>, <span class="keywordtype">int</span> *dx, <span class="keywordtype">int</span> *dy)</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d3/d6f/show3_8c.html#abd0615dcf858ba7e81d9cfe23e2a17ff">   12</a></span>&#160;CenterScreen(<span class="keyword">register</span> <span class="keyword">struct</span> Screen *screen, <span class="keywordtype">int</span> *dx, <span class="keywordtype">int</span> *dy)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">int</span> c640, c320, r400, r200, w, h, max_x, <a class="code" href="../../df/dfb/unslice_8c.html#a5f0d610eafd05463bc8771cfd8da1adc">max_y</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">struct </span>Preferences prefs;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="../../dc/d11/getami_8c.html#a27b8182e2ba664f425ed01cbb790f0ad">GfxBase</a> *<a class="code" href="../../dc/d11/getami_8c.html#a27b8182e2ba664f425ed01cbb790f0ad">GfxBase</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">int</span> c640, c320, r400, r200, w, h, max_x, max_y;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">struct</span> Preferences prefs;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">extern</span> <span class="keyword">struct</span> GfxBase *GfxBase;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  GetPrefs(&amp;prefs, <span class="keyword">sizeof</span>(prefs));</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  c640 = 640 + prefs.ColumnSizeChange;</div>
@@ -113,11 +114,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  r200 = 200 + prefs.RowSizeChange;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  r400 = r200 * 2;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  max_y = (GfxBase-&gt;DisplayFlags &amp; PAL) ? <a class="code" href="../../d9/d2d/CenterScreen_8c.html#a4cbfc77736ca988d2e0c592ead5244f8">MAX_Y_PAL</a> : <a class="code" href="../../d9/d2d/CenterScreen_8c.html#a04835fbbac75231d7f24d44af7334fb1">MAX_Y_NTSC</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  max_y = (GfxBase-&gt;DisplayFlags &amp; PAL) ? <a class="code" href="../../df/dc1/AdjustScreen_8c.html#a4cbfc77736ca988d2e0c592ead5244f8">MAX_Y_PAL</a> : <a class="code" href="../../df/dc1/AdjustScreen_8c.html#a04835fbbac75231d7f24d44af7334fb1">MAX_Y_NTSC</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">if</span> (screen-&gt;ViewPort.Modes &amp; LACE){</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    max_y *= 2;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  max_x = <a class="code" href="../../d9/d2d/CenterScreen_8c.html#a898606140dee9ce0adf096de00824d94">MAX_X</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  max_x = <a class="code" href="../../df/dc1/AdjustScreen_8c.html#a898606140dee9ce0adf096de00824d94">MAX_X</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (screen-&gt;ViewPort.Modes &amp; HIRES){</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    max_x *= 2;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }</div>
@@ -129,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">if</span> (screen-&gt;ViewPort.DHeight &lt;= max_y) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    h = screen-&gt;ViewPort.DHeight;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }<span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    h = <a class="code" href="../../df/dfb/unslice_8c.html#a5f0d610eafd05463bc8771cfd8da1adc">max_y</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    h = max_y;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">if</span> (screen-&gt;ViewPort.Modes &amp; HIRES){</div>
@@ -149,18 +150,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  RemakeDisplay();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="ttc" id="getami_8c_html_a27b8182e2ba664f425ed01cbb790f0ad"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a27b8182e2ba664f425ed01cbb790f0ad">GfxBase</a></div><div class="ttdeci">struct GfxBase * GfxBase</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00061">getami.c:61</a></div></div>
-<div class="ttc" id="CenterScreen_8c_html_a4cbfc77736ca988d2e0c592ead5244f8"><div class="ttname"><a href="../../d9/d2d/CenterScreen_8c.html#a4cbfc77736ca988d2e0c592ead5244f8">MAX_Y_PAL</a></div><div class="ttdeci">#define MAX_Y_PAL</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2d/CenterScreen_8c_source.html#l00009">CenterScreen.c:9</a></div></div>
-<div class="ttc" id="getami_8c_html_a190200837bc4dc3d2cc79f1794c3ea4d"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a190200837bc4dc3d2cc79f1794c3ea4d">screen</a></div><div class="ttdeci">static struct NewScreen screen</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00067">getami.c:67</a></div></div>
-<div class="ttc" id="CenterScreen_8c_html_a4528cc3054846b37aaba4b12eb24bb97"><div class="ttname"><a href="../../d9/d2d/CenterScreen_8c.html#a4528cc3054846b37aaba4b12eb24bb97">CenterScreen</a></div><div class="ttdeci">void CenterScreen(register struct Screen *screen, int *dx, int *dy)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2d/CenterScreen_8c_source.html#l00012">CenterScreen.c:12</a></div></div>
-<div class="ttc" id="giftorle_8c_html_aa46c6abb43be7f5c2cba73428a60c9db"><div class="ttname"><a href="../../d1/dad/giftorle_8c.html#aa46c6abb43be7f5c2cba73428a60c9db">Screen</a></div><div class="ttdeci">struct @0 Screen</div></div>
-<div class="ttc" id="unslice_8c_html_a5f0d610eafd05463bc8771cfd8da1adc"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a5f0d610eafd05463bc8771cfd8da1adc">max_y</a></div><div class="ttdeci">int max_y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00042">unslice.c:42</a></div></div>
-<div class="ttc" id="CenterScreen_8c_html_a04835fbbac75231d7f24d44af7334fb1"><div class="ttname"><a href="../../d9/d2d/CenterScreen_8c.html#a04835fbbac75231d7f24d44af7334fb1">MAX_Y_NTSC</a></div><div class="ttdeci">#define MAX_Y_NTSC</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2d/CenterScreen_8c_source.html#l00008">CenterScreen.c:8</a></div></div>
-<div class="ttc" id="CenterScreen_8c_html_a898606140dee9ce0adf096de00824d94"><div class="ttname"><a href="../../d9/d2d/CenterScreen_8c.html#a898606140dee9ce0adf096de00824d94">MAX_X</a></div><div class="ttdeci">#define MAX_X</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2d/CenterScreen_8c_source.html#l00007">CenterScreen.c:7</a></div></div>
+<div class="ttc" id="AdjustScreen_8c_html_a898606140dee9ce0adf096de00824d94"><div class="ttname"><a href="../../df/dc1/AdjustScreen_8c.html#a898606140dee9ce0adf096de00824d94">MAX_X</a></div><div class="ttdeci">#define MAX_X</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc1/AdjustScreen_8c_source.html#l00007">AdjustScreen.c:7</a></div></div>
+<div class="ttc" id="AdjustScreen_8c_html_a4cbfc77736ca988d2e0c592ead5244f8"><div class="ttname"><a href="../../df/dc1/AdjustScreen_8c.html#a4cbfc77736ca988d2e0c592ead5244f8">MAX_Y_PAL</a></div><div class="ttdeci">#define MAX_Y_PAL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc1/AdjustScreen_8c_source.html#l00009">AdjustScreen.c:9</a></div></div>
+<div class="ttc" id="AdjustScreen_8c_html_a04835fbbac75231d7f24d44af7334fb1"><div class="ttname"><a href="../../df/dc1/AdjustScreen_8c.html#a04835fbbac75231d7f24d44af7334fb1">MAX_Y_NTSC</a></div><div class="ttdeci">#define MAX_Y_NTSC</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dc1/AdjustScreen_8c_source.html#l00008">AdjustScreen.c:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

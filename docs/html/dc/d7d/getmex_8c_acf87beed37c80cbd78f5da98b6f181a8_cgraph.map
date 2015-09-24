@@ -1,9 +1,0 @@
-<map id="setgamma" name="setgamma">
-<area shape="rect" id="node2" href="$dc/d7d/getmex_8c.html#af8e2ce36b12570f5ffdca44dbc3dd2ac" title="configopen" alt="" coords="628,56,720,83"/>
-<area shape="rect" id="node3" href="$dc/d7d/getmex_8c.html#a44422ba36be617961c8358e4c6c6493f" title="newgamtables" alt="" coords="140,31,252,57"/>
-<area shape="rect" id="node4" href="$dc/d7d/getmex_8c.html#a7a52688f5e3f7cd177646dad2d9264e8" title="makegamtables" alt="" coords="300,132,420,159"/>
-<area shape="rect" id="node5" href="$dc/d7d/getmex_8c.html#ad8c820b1c7e80acfc6b59ab053e8cda9" title="getgamma" alt="" coords="480,81,568,108"/>
-<area shape="rect" id="node6" href="$dc/d7d/getmex_8c.html#a3adffe2617d1fcab5a4af2a350f96da2" title="getcolorbal" alt="" coords="479,132,569,159"/>
-<area shape="rect" id="node7" href="$dc/d7d/getmex_8c.html#a0593424f3bce9586fb0bb0177266bd2b" title="gammacorrect" alt="" coords="468,183,580,209"/>
-<area shape="rect" id="node8" href="$dc/d7d/getmex_8c.html#aabe1c81804655629d58f531a60aa7f9c" title="fixup" alt="" coords="499,233,549,260"/>
-</map>

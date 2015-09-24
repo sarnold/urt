@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['u_5fchar',['U_CHAR',['../d5/da5/pgmtorle_8c.html#a4c9582a0d75da0931724cedd34a3e2b2',1,'U_CHAR():&#160;pgmtorle.c'],['../d7/dac/ppmtorle_8c.html#a4c9582a0d75da0931724cedd34a3e2b2',1,'U_CHAR():&#160;ppmtorle.c'],['../dd/dcd/rlatorle_8c.html#a4c9582a0d75da0931724cedd34a3e2b2',1,'U_CHAR():&#160;rlatorle.c'],['../d0/dcc/rletorla_8c.html#a4c9582a0d75da0931724cedd34a3e2b2',1,'U_CHAR():&#160;rletorla.c']]]
+  ['tiff_5fsample',['tiff_sample',['../d4/d1a/rletotiff_8c.html#a36f58c256c40ef8e949fc3ec2d4c6f73',1,'rletotiff.c']]]
 ];

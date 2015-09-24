@@ -1,2 +1,6 @@
-<map id="rlezoom.c" name="rlezoom.c">
+<map id="tools/rlezoom.c" name="tools/rlezoom.c">
+<area shape="rect" id="node3" href="$d7/d27/rle_8h.html" title="rle.h" alt="" coords="99,80,148,107"/>
+<area shape="rect" id="node7" href="$d3/d5d/rle__raw_8h.html" title="rle_raw.h" alt="" coords="206,80,286,107"/>
+<area shape="rect" id="node4" href="$df/dad/rle__config_8h.html" title="rle_config.h" alt="" coords="92,155,187,181"/>
+<area shape="rect" id="node8" href="$da/d8d/rle__code_8h.html" title="rle_code.h" alt="" coords="211,155,299,181"/>
 </map>

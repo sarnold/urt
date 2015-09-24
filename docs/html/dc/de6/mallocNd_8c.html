@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: mallocNd.c File Reference</title>
+<title>Utah Raster Toolkit: tools/mallocNd.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -129,14 +130,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/de6/mallocNd_8c_aca2f4e380869110bbb273b8bc013de7e_icgraph.svg" width="500" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a83c4f08ab171b9e0d4e57018f9055368"></a>
@@ -207,14 +200,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="mallocNd_8c_html_aca2f4e380869110bbb273b8bc013de7e"><div class="ttname"><a href="../../dc/de6/mallocNd_8c.html#aca2f4e380869110bbb273b8bc013de7e">BuildIndirectionTable</a></div><div class="ttdeci">char * BuildIndirectionTable()</div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/de6/mallocNd_8c_a83c4f08ab171b9e0d4e57018f9055368_cgraph.svg" width="366" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="adad9b7f8b77aeda613cd057909b29145"></a>
@@ -257,14 +242,6 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
 <div class="ttc" id="mallocNd_8c_html_ac7b961ea6a07e91fb8b0b05d4ff4a0a9"><div class="ttname"><a href="../../dc/de6/mallocNd_8c.html#ac7b961ea6a07e91fb8b0b05d4ff4a0a9">mallocNd</a></div><div class="ttdeci">char * mallocNd(unsigned int nDim, Dims, unsigned int sizeofelt)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/mallocNd_8c_source.html#l00125">mallocNd.c:125</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/de6/mallocNd_8c_adad9b7f8b77aeda613cd057909b29145_cgraph.svg" width="427" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="ac7b961ea6a07e91fb8b0b05d4ff4a0a9"></a>
@@ -324,7 +301,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  arrayBytesNeeded = dimProduct*sizeofelt;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="comment">/* Get the memory for the whole thing */</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  ptr = <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( tableBytesNeeded + slop + arrayBytesNeeded );</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  ptr = <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( tableBytesNeeded + slop + arrayBytesNeeded );</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">if</span> (ptr == NULL) <span class="keywordflow">return</span> (<span class="keywordtype">char</span> *) NULL;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  </div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="comment">/* Set up the base address of the actual array and the indirection table */</span></div>
@@ -351,32 +328,16 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">return</span>(<span class="keywordtype">char</span> *) tableBase;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
 <div class="ttc" id="mallocNd_8c_html_aca2f4e380869110bbb273b8bc013de7e"><div class="ttname"><a href="../../dc/de6/mallocNd_8c.html#aca2f4e380869110bbb273b8bc013de7e">BuildIndirectionTable</a></div><div class="ttdeci">char * BuildIndirectionTable()</div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
 <div class="ttc" id="scanargs_8c_html_abacbbdefe312ec12aef4657fb2c48e98"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a></div><div class="ttdeci">int * ptr</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00057">scanargs.c:57</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/de6/mallocNd_8c_ac7b961ea6a07e91fb8b0b05d4ff4a0a9_cgraph.svg" width="292" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/de6/mallocNd_8c_ac7b961ea6a07e91fb8b0b05d4ff4a0a9_icgraph.svg" width="226" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:01 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:07 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -3,7 +3,7 @@ var searchData=
   ['charmask',['CHARMASK',['../df/d5c/dvirle_8h.html#aaa0432a3a1ad92d72368e64ee9bd55ba',1,'dvirle.h']]],
   ['charpad',['CHARPAD',['../d5/dd9/rleClock_8c.html#a00b2adeecd2e7b79be2c7ff2edbc3cfb',1,'rleClock.c']]],
   ['charshift',['CHARSHIFT',['../df/d5c/dvirle_8h.html#a573100c14f69b371d4fe5dbfde6aa096',1,'dvirle.h']]],
-  ['check',['CHECK',['../df/d17/dvirle1_8c.html#a4128724af62d778c51a59ad5239fbf29',1,'CHECK():&#160;dvirle1.c'],['../de/dd9/rlesplice_8c.html#a1d4900517b6e871f999f14ca7db3c54e',1,'Check():&#160;rlesplice.c']]],
+  ['check',['Check',['../de/dd9/rlesplice_8c.html#a1d4900517b6e871f999f14ca7db3c54e',1,'Check():&#160;rlesplice.c'],['../df/d17/dvirle1_8c.html#a4128724af62d778c51a59ad5239fbf29',1,'CHECK():&#160;dvirle1.c']]],
   ['check_5fmalloc',['CHECK_MALLOC',['../dc/d5c/rlequant_8c.html#a3aaa520fc799d8bc03a1b4ebce33cdfb',1,'rlequant.c']]],
   ['clamp',['CLAMP',['../d0/d79/rlespiff_8c.html#aaefe6f014fd5125ca10cc315080003c7',1,'rlespiff.c']]],
   ['clear_5fop',['CLEAR_OP',['../d5/d2c/rlecomp_8c.html#a8d067386e33f9d834262ff6bef0b4e0e',1,'rlecomp.c']]],
@@ -17,8 +17,13 @@ var searchData=
   ['color_5ftable_5findex',['COLOR_TABLE_INDEX',['../dd/d17/x11__stuff_8c.html#aff084a185e6ffabf7e7d305cab61a3e4',1,'x11_stuff.c']]],
   ['colormap',['ColorMap',['../dc/d25/fb_8h.html#a6e4e65b02a461ffc4aca756e538fb014',1,'fb.h']]],
   ['columns',['COLUMNS',['../df/d5c/dvirle_8h.html#a06c6c391fc11d106e9909f0401b255b1',1,'dvirle.h']]],
+  ['const_5fdecl',['CONST_DECL',['../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b',1,'CONST_DECL():&#160;rle_config.h'],['../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b',1,'CONST_DECL():&#160;rle_config.h']]],
   ['copy_5fline',['COPY_LINE',['../d6/d95/rletoraw_8c.html#a0f94bbbfe93c6dee5ad2141a26b3069c',1,'rletoraw.c']]],
   ['count_5fof',['COUNT_OF',['../da/d3e/getx11_8h.html#ad2c9953a182325927f71cdf196839599',1,'getx11.h']]],
+  ['cq_5ffast',['CQ_FAST',['../d4/dfd/colorquant_8h.html#a7026873717ad8938ce12e512e5247852',1,'colorquant.h']]],
+  ['cq_5fno_5frgbmap',['CQ_NO_RGBMAP',['../d4/dfd/colorquant_8h.html#a937c01fc82177559e68a0ef7ddf0b959',1,'colorquant.h']]],
+  ['cq_5fquantize',['CQ_QUANTIZE',['../d4/dfd/colorquant_8h.html#add941cc8b4eb47022a016b9a1f86efde',1,'colorquant.h']]],
+  ['cubicomp',['CUBICOMP',['../df/dad/rle__config_8h.html#a7ff7508ac2e3fefbe22738bb8c031fd5',1,'rle_config.h']]],
   ['curson',['CursOn',['../dc/d25/fb_8h.html#a368aa8296fafc2bfcb7d1cf2f6227018',1,'fb.h']]],
   ['curspos',['CursPos',['../dc/d25/fb_8h.html#acd8ab7741490621927421e5b6def8b14',1,'fb.h']]]
 ];

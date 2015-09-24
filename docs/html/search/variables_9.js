@@ -33,7 +33,7 @@ var searchData=
   ['img_5fgam',['img_gam',['../dd/dce/getsun_8c.html#ae99b99017aa943f5a053086f979c4f3f',1,'img_gam():&#160;getsun.c'],['../d1/dea/getx10_8c.html#ae99b99017aa943f5a053086f979c4f3f',1,'img_gam():&#160;getx10.c'],['../d8/db3/to8_8c.html#ae99b99017aa943f5a053086f979c4f3f',1,'img_gam():&#160;to8.c']]],
   ['img_5fgamma',['img_gamma',['../d3/d46/get4d_8c.html#aaecf27754bb1102b6bf930a36e443dba',1,'get4d.c']]],
   ['img_5finfo',['img_info',['../db/d50/getx11_8c.html#ae9b03749ffb7bdbb197efdd0b600867e',1,'getx11.c']]],
-  ['img_5fnum',['img_num',['../d1/d08/struct__image__info__struct.html#aedbf1eff0f5ae3ba3bf335ca8c015876',1,'_image_info_struct']]],
+  ['img_5fnum',['img_num',['../d6/dab/structrle__hdr.html#a1dbae0d98547fb7fd5c8ef54cb0e6e32',1,'rle_hdr::img_num()'],['../d1/d08/struct__image__info__struct.html#aedbf1eff0f5ae3ba3bf335ca8c015876',1,'_image_info_struct::img_num()']]],
   ['in_5fcmap',['in_cmap',['../d1/d08/struct__image__info__struct.html#a538323b7203b36e1ec8b199e20077cc2',1,'_image_info_struct::in_cmap()'],['../dd/dce/getsun_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2',1,'in_cmap():&#160;getsun.c'],['../d1/dea/getx10_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2',1,'in_cmap():&#160;getx10.c'],['../d8/db3/to8_8c.html#a2e1fe7f67fd8ebbe8382f369ecb137c2',1,'in_cmap():&#160;to8.c']]],
   ['in_5fhdr',['in_hdr',['../d7/d4a/rletogif_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0',1,'in_hdr():&#160;rletogif.c'],['../d4/d1a/rletotiff_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0',1,'in_hdr():&#160;rletotiff.c'],['../dd/ddd/fant_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0',1,'in_hdr():&#160;fant.c'],['../d5/d6d/mcut_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0',1,'in_hdr():&#160;mcut.c'],['../d7/d73/unexp_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0',1,'in_hdr():&#160;unexp.c'],['../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0',1,'in_hdr():&#160;unslice.c']]],
   ['in_5fline',['in_line',['../d2/d80/painttorle_8c.html#ac5242520b7a6094e74117fe985fe8639',1,'painttorle.c']]],
@@ -47,6 +47,9 @@ var searchData=
   ['inverse_5fflag',['inverse_flag',['../dc/d72/rletopaint_8c.html#ac5585f6cb72224d778977cfe6a3a734f',1,'inverse_flag():&#160;rletopaint.c'],['../da/d92/getap_8c.html#ac5585f6cb72224d778977cfe6a3a734f',1,'inverse_flag():&#160;getap.c']]],
   ['invert_5fflag',['invert_flag',['../d2/d80/painttorle_8c.html#a682b916858dac921abc2880679c4f110',1,'painttorle.c']]],
   ['is_5falpha',['is_alpha',['../d0/dcc/rletorla_8c.html#a6299b75b1e81568f89e439f4987d6e09',1,'rletorla.c']]],
+  ['is_5feof',['is_eof',['../d6/dab/structrle__hdr.html#aaef7e14b2d22882a5db990881104e6cd',1,'rle_hdr']]],
+  ['is_5finit',['is_init',['../d6/dab/structrle__hdr.html#a498a5f771d7588025000fea86b3bc3da',1,'rle_hdr']]],
+  ['is_5fseek',['is_seek',['../d6/dab/structrle__hdr.html#a7b40a7cffcd1dda9e24fbf3409cbc10c',1,'rle_hdr']]],
   ['isactive',['isActive',['../d9/d3b/get__orion_8c.html#a8624452ec060144a96573a51a785f0ab',1,'get_orion.c']]],
   ['isham',['isham',['../dc/d11/getami_8c.html#aa7e51b5aff2808d1e48a4ccc0b6429f8',1,'getami.c']]]
 ];

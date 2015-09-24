@@ -1,9 +1,0 @@
-<map id="copy_scanline" name="copy_scanline">
-<area shape="rect" id="node2" href="$d9/d2a/rle__putrow_8c.html#a018d4b7d6fe20504c07c24b9bd8fc304" title="rle_skiprow" alt="" coords="165,5,260,32"/>
-<area shape="rect" id="node3" href="$df/dce/rle__getraw_8c.html#a5ed570d65cead1b5587e84134c31e246" title="rle_getraw" alt="" coords="168,56,257,83"/>
-<area shape="rect" id="node6" href="$d6/d8c/rle__putraw_8c.html#ab36032e464af1d1505cdc69948fe9f17" title="rle_putraw" alt="" coords="169,107,257,133"/>
-<area shape="rect" id="node7" href="$df/dce/rle__getraw_8c.html#ad4a764bcb2dc8e45f3f57171022dbf2b" title="rle_freeraw" alt="" coords="165,157,260,184"/>
-<area shape="rect" id="node4" href="$d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d" title="malloc" alt="" coords="322,31,385,57"/>
-<area shape="rect" id="node5" href="$d8/d7c/rle__getskip_8c.html#af6b1e1dc0867e9340f90668591c7c5b3" title="rle_getskip" alt="" coords="308,81,399,108"/>
-<area shape="rect" id="node8" href="$d0/dcc/rletorla_8c.html#aafde19f7d36ca163a143579c1b125b6d" title="free" alt="" coords="330,157,377,184"/>
-</map>

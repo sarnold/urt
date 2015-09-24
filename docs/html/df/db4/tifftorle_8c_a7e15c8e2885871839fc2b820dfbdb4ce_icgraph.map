@@ -1,7 +1,0 @@
-<map id="error" name="error">
-<area shape="rect" id="node2" href="$d6/d10/rletoalias_8c.html#a86cf5e03c7b351c5a62a6951d179f6a5" title="read_rle" alt="" coords="124,5,199,32"/>
-<area shape="rect" id="node3" href="$d6/d10/rletoalias_8c.html#a2ec715df257f3a55ce2d2fed1d65dc2f" title="write_alias" alt="" coords="117,56,206,83"/>
-<area shape="rect" id="node4" href="$d6/d10/rletoalias_8c.html#a00f9e9c6eccf1c436fe0ac8cf8162814" title="Malloc" alt="" coords="130,107,193,133"/>
-<area shape="rect" id="node5" href="$df/db4/tifftorle_8c.html#ade521a0600ded19f1720b6f6df59b480" title="main" alt="" coords="264,183,316,209"/>
-<area shape="rect" id="node6" href="$df/db4/tifftorle_8c.html#ae6289c0f5ad8df9d34452253a23b385b" title="get_scanlines" alt="" coords="107,208,216,235"/>
-</map>

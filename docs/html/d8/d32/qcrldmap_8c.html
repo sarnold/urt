@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: qcrldmap.c File Reference</title>
+<title>Utah Raster Toolkit: get/qcr/qcrldmap.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -96,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for qcrldmap.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/dd9/qcrldmap_8c__incl.svg" width="102" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/dd9/qcrldmap_8c__incl.svg" width="150" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -141,7 +142,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> * lutptr;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> num;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (! <a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a>( argc, argv, <span class="stringliteral">&quot;% f%-file!s m%-stdmap!d v%-&quot;</span>, &amp;file_flag,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (! <a class="code" href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a>( argc, argv, <span class="stringliteral">&quot;% f%-file!s m%-stdmap!d v%-&quot;</span>, &amp;file_flag,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;           &amp;filename, &amp;mapflag, &amp;map_num, &amp;verbose_flag ))</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;std color maps are: 1=linear, 2=Polaroid 59,\n&quot;</span>);</div>
@@ -181,27 +182,19 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d8/d32/qcr_8c.html#a9ba2c39c0c04e87fb4c355c4362be6d8">qcr_ld_lut12</a>( lut_data );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="ttc" id="rle_8h_html_a7827333daec9d306aff4729fbd61b031"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a></div><div class="ttdeci">int scanargs(int argc, char **argv, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs.c:94</a></div></div>
 <div class="ttc" id="qcr_8c_html_a73416334b60b1feae3f95c0622d3ca5f"><div class="ttname"><a href="../../d8/d32/qcr_8c.html#a73416334b60b1feae3f95c0622d3ca5f">init_qcr</a></div><div class="ttdeci">int init_qcr(short verbose)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/qcr_8c_source.html#l00104">qcr.c:104</a></div></div>
 <div class="ttc" id="getx11_8c_html_aea19c8830cb9b1045284f2e978a786cf"><div class="ttname"><a href="../../db/d50/getx11_8c.html#aea19c8830cb9b1045284f2e978a786cf">verbose_flag</a></div><div class="ttdeci">Boolean verbose_flag</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d50/getx11_8c_source.html#l00080">getx11.c:80</a></div></div>
 <div class="ttc" id="qcr_8c_html_a1955c7178ed4c8eaecb6bcb8c0b07036"><div class="ttname"><a href="../../d8/d32/qcr_8c.html#a1955c7178ed4c8eaecb6bcb8c0b07036">qcr_load_i_luts</a></div><div class="ttdeci">qcr_load_i_luts(int lut)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/qcr_8c_source.html#l00584">qcr.c:584</a></div></div>
 <div class="ttc" id="qcr_8c_html_a9ba2c39c0c04e87fb4c355c4362be6d8"><div class="ttname"><a href="../../d8/d32/qcr_8c.html#a9ba2c39c0c04e87fb4c355c4362be6d8">qcr_ld_lut12</a></div><div class="ttdeci">qcr_ld_lut12(buf)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/qcr_8c_source.html#l00565">qcr.c:565</a></div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ea6d702c0484056c8504d6ce7fede08"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a></div><div class="ttdeci">int scanargs(va_alist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00091">scanargs.c:91</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d32/qcrldmap_8c_a5ea466849f21e6c2be4ef9b2eb8868d3_cgraph.svg" width="391" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:06 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

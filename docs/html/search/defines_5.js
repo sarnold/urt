@@ -16,5 +16,7 @@ var searchData=
   ['escape',['ESCAPE',['../d8/d81/rastorle_8c.html#afe4b0e625372cd38ec60150d6f5594b8',1,'rastorle.c']]],
   ['exact',['EXACT',['../dc/d11/getami_8c.html#a21ce6136374612540d3879e0974bb4c6',1,'getami.c']]],
   ['executegraphicwrite',['ExecuteGraphicWrite',['../dc/d25/fb_8h.html#ae704ab6e1d564ea60c2f7c79e9df65a8',1,'fb.h']]],
+  ['exit_5fstatus_5ffailure',['EXIT_STATUS_FAILURE',['../da/db6/exit__status_8h.html#a98e4acb961297563a69da4242c456e3e',1,'exit_status.h']]],
+  ['exit_5fstatus_5fsuccess',['EXIT_STATUS_SUCCESS',['../da/db6/exit__status_8h.html#aaddc92d79763590c81e9fc4e3fe27f44',1,'exit_status.h']]],
   ['extended_5fstatus',['EXTENDED_STATUS',['../d0/db3/qcr_8h.html#ad91cf53106185da98b08793b13c88820',1,'qcr.h']]]
 ];

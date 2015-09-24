@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: Myapp.m Source File</title>
+<title>Utah Raster Toolkit: get/next/Myapp.m Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -90,20 +91,20 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">Myapp.m</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d9/d10/Myapp_8m.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="../../d4/d6f/Myapp_8h.html">Myapp.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="../../d8/d0f/RLE_8h.html">RLE.h</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="../../d6/daf/RASF_8h.html">RASF.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#import &lt;rle.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#import &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#import &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#import &lt;libc.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#import &lt;appkit/OpenPanel.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;appkit/SavePanel.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &lt;appkit/PopUpList.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &lt;appkit/Control.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &lt;appkit/ActionCell.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#import &lt;strings.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#import &lt;appkit/tiff.h&gt;</span></div>
+<a href="../../d9/d10/Myapp_8m.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <a class="code" href="../../d4/d6f/Myapp_8h.html">&quot;Myapp.h&quot;</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <a class="code" href="../../d8/d0f/RLE_8h.html">&quot;RLE.h&quot;</a></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <a class="code" href="../../d6/daf/RASF_8h.html">&quot;RASF.h&quot;</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">rle</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdio</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdlib</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">libc</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">appkit</span><span class="preprocessor">/</span><span class="preprocessor">OpenPanel</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">appkit</span><span class="preprocessor">/</span><span class="preprocessor">SavePanel</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">appkit</span><span class="preprocessor">/</span><span class="preprocessor">PopUpList</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">appkit</span><span class="preprocessor">/</span><span class="preprocessor">Control</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">appkit</span><span class="preprocessor">/</span><span class="preprocessor">ActionCell</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">strings</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">import</span> <span class="preprocessor">&lt;</span><span class="preprocessor">appkit</span><span class="preprocessor">/</span><span class="preprocessor">tiff</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Myapp.m</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// </span></div>
@@ -114,150 +115,151 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// program please let me know</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// </span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@implementation </span><a class="code" href="../../d2/d28/interfaceMyapp.html">Myapp</a>:<a class="code" href="../../d5/d4c/classApplication.html">Application</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;+ <a class="code" href="../../d2/d28/interfaceMyapp.html#a05be9c91fc634db5446d590ff777eab4">new</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html">   25</a></span>&#160;@<span class="keyword">implementation</span> <a class="code" href="../../dd/d24/classMyapp.html">Myapp</a>:<a class="code" href="../../dd/d24/classMyapp.html">Application</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;+ <a class="code" href="../../dd/d24/classMyapp.html#a05be9c91fc634db5446d590ff777eab4">new</a></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d9/d10/Myapp_8m.html#ab6f3c269fc46c9c1c0f81b3431240138">   28</a></span>&#160;    <span class="keyword">self</span> = [<span class="keyword">super</span> new];</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    [<span class="keyword">self</span> activateSelf:NO];</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d9/d10/Myapp_8m.html#a4bcff74473009e65583fe3707074fb91">   30</a></span>&#160;    <a class="code" href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a> = 1;                <span class="comment">// Set Default type to save as Tiff</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d9/d10/Myapp_8m.html#ab6f3c269fc46c9c1c0f81b3431240138">   28</a></span>&#160;    self = [super new];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    [self activateSelf:NO];</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d9/d10/Myapp_8m.html#a4bcff74473009e65583fe3707074fb91">   30</a></span>&#160;    saveType = 1;                <span class="comment">// Set Default type to save as Tiff</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span>(self);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a9f791114f47990ec39e577e3c2af34b6">   34</a></span>&#160;- (<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>)appOpenFile:(const <span class="keywordtype">char</span> *)fullPath type:(const <span class="keywordtype">char</span> *)type</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a9f791114f47990ec39e577e3c2af34b6">   34</a></span>&#160;- (<span class="keywordtype">int</span>)<a class="code" href="../../dd/d24/classMyapp.html#a9f791114f47990ec39e577e3c2af34b6">appOpenFile</a>:(<span class="keyword">const</span> <span class="keywordtype">char</span> *)fullPath <a class="code" href="../../dd/d24/classMyapp.html#a9f791114f47990ec39e577e3c2af34b6">type</a>:(<span class="keyword">const</span> <span class="keywordtype">char</span> *)type</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">id</span>                  <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    [<span class="keyword">self</span> activateSelf:NO];</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (!strcmp(<a class="code" href="../../db/d50/getx11_8c.html#ac765329451135abec74c45e1897abf26">type</a>,<span class="stringliteral">&quot;rle&quot;</span>))</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a> = [[<a class="code" href="../../d4/dc6/interfaceRLE.html">RLE</a> alloc]init];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    id                  ptr;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    [self activateSelf:NO];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (!strcmp(type,<span class="stringliteral">&quot;rle&quot;</span>))</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ptr = <a class="code" href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">[</a>[<a class="code" href="../../d4/dc6/interfaceRLE.html">RLE</a> alloc]<a class="code" href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">init</a><a class="code" href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">]</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a> = [[<a class="code" href="../../df/d3d/interfaceRASF.html">RASF</a> alloc]init];</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    [ptr <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">open</a>:(char *)fullPath];</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ptr = <a class="code" href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">[</a>[<a class="code" href="../../df/d3d/interfaceRASF.html">RASF</a> alloc]<a class="code" href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">init</a><a class="code" href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">]</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d4/dc6/interfaceRLE.html#a151be2ba0debedc4c36f7305a74354ec">[</a>ptr <a class="code" href="../../d4/dc6/interfaceRLE.html#a151be2ba0debedc4c36f7305a74354ec">open</a><a class="code" href="../../d4/dc6/interfaceRLE.html#a151be2ba0debedc4c36f7305a74354ec">:</a>(<span class="keywordtype">char</span> *)fullPath<a class="code" href="../../d4/dc6/interfaceRLE.html#a151be2ba0debedc4c36f7305a74354ec">]</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> YES;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a71a0288fbcf24d90dd0ddac43b483305">   47</a></span>&#160;- (BOOL)appAcceptsAnotherFile:sender</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a71a0288fbcf24d90dd0ddac43b483305">   47</a></span>&#160;- (<a class="code" href="../../dd/d24/classMyapp.html#a71a0288fbcf24d90dd0ddac43b483305">BOOL</a>)<a class="code" href="../../dd/d24/classMyapp.html#a71a0288fbcf24d90dd0ddac43b483305">appAcceptsAnotherFile</a>:sender</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> YES;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a9bbdb4f38d3d3ef78cb010aa72112327">   52</a></span>&#160;- openfile:sender</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a9bbdb4f38d3d3ef78cb010aa72112327">   52</a></span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#a9bbdb4f38d3d3ef78cb010aa72112327">openfile</a>:sender</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">char</span>                      <a class="code" href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a>[1024];</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">char</span>                      temp[1024];</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">char</span>                      directory[1024];</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">char</span>                     *extension;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">id</span>                        <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    id                        ptr;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span>                       loop;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>  *<span class="keyword">const</span> opentypes[] = {<span class="stringliteral">&quot;rle&quot;</span>,<span class="stringliteral">&quot;rasf&quot;</span>,NULL};</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a> = [OpenPanel new];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    openpanel = [OpenPanel new];</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a> allowMultipleFiles:YES];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    [openpanel allowMultipleFiles:YES];</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> ([<a class="code" href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a> runModalForTypes:opentypes]) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> ([<a class="code" href="../../dd/d24/classMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a> runModalForTypes:opentypes]) {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    loop = 0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    strncpy(directory,[<a class="code" href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a> directory],1024);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">while</span> ([<a class="code" href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a> filenames][loop]) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        sprintf(<a class="code" href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a>,<span class="stringliteral">&quot;%s/%s&quot;</span>,directory,[<a class="code" href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a> filenames][loop]);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        extension = rindex(<a class="code" href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a>,<span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    strncpy(directory,[<a class="code" href="../../dd/d24/classMyapp.html#a6ef273646b895260dfd226af990dded6">openpanel</a> directory],1024);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">while</span> ([openpanel filenames][loop]) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        sprintf(temp,<span class="stringliteral">&quot;%s/%s&quot;</span>,directory,[openpanel filenames][loop]);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        extension = <a class="code" href="../../df/dad/rle__config_8h.html#a8c35ae4e83034731f6aecfb34c883ecf">rindex</a>(temp,<span class="stringliteral">&#39;.&#39;</span>);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (!strcmp(extension,<span class="stringliteral">&quot;.rle&quot;</span>))</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a> = [[<a class="code" href="../../d4/dc6/interfaceRLE.html">RLE</a> alloc]init];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        ptr = [[RLE alloc]init];</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a> = [[<a class="code" href="../../df/d3d/interfaceRASF.html">RASF</a> alloc]init];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        ptr = [[RASF alloc]init];</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        [ptr <a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">open</a>:temp];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        [ptr open:temp];</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        ++loop;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span>(self);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a82a4520ebca1d36aacba8f621ad83315">   83</a></span>&#160;- print:sender</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a82a4520ebca1d36aacba8f621ad83315">   83</a></span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#a82a4520ebca1d36aacba8f621ad83315">print</a>:sender</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    [[mainWindow contentView] printPSCode:sender];</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span>(self);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#aac2860ca0a5e6f74fbde9bd6ad2d98b7">   89</a></span>&#160;- <a class="code" href="../../dc/d11/getami_8c.html#a1e03263353a7ba1bf855a8fe86b072e6">save</a>:sender</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#aac2860ca0a5e6f74fbde9bd6ad2d98b7">   89</a></span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#aac2860ca0a5e6f74fbde9bd6ad2d98b7">save</a>:sender</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> = [SavePanel new];</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setAccessoryView:savePanelAccessory];</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setRequiredFileType:&quot;tiff&quot;];</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setTitle:&quot;Save To TIFF&quot;];</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">compPopUP</a> setEnabled:YES];</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a> = 1;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    savepanel = [SavePanel new];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    [<a class="code" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setAccessoryView:<a class="code" href="../../dd/d24/classMyapp.html#a4d3ff61e8ffb3075419d1c9e5bc7a070">savePanelAccessory</a>];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    [<a class="code" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setRequiredFileType:<span class="stringliteral">&quot;tiff&quot;</span>];</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    [<a class="code" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setTitle:<span class="stringliteral">&quot;Save To TIFF&quot;</span>];</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    [compPopUP setEnabled:YES];</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../dd/d24/classMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a> = 1;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (mainWindow != nil){</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> ([<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> runModal]){</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a> == 1){</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        [[mainWindow contentView] saveAsTiff:[<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> filename] usingCompression:[<span class="keyword">self</span> <a class="code" href="../../d2/d28/interfaceMyapp.html#ab85df5f44cede844904cc95acc584d7b">setCompType</a>]];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> ([savepanel runModal]){</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (saveType == 1){</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        [[mainWindow contentView] saveAsTiff:[savepanel filename] usingCompression:[self setCompType]];</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }<span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        [[mainWindow contentView] saveAsEPS:[<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> filename]];      </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        [[mainWindow contentView] saveAsEPS:[savepanel filename]];</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span>(self);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a6b9d95d88c1c86ad89f93f396dd08ff6">  110</a></span>&#160;- saveTypeEPS:sender</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a6b9d95d88c1c86ad89f93f396dd08ff6">  110</a></span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#a6b9d95d88c1c86ad89f93f396dd08ff6">saveTypeEPS</a>:sender</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setRequiredFileType:&quot;eps&quot;]; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setTitle:&quot;Save To EPS&quot;];</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">compPopUP</a> setEnabled:NO];</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a> = 2;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    [<a class="code" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setRequiredFileType:<span class="stringliteral">&quot;eps&quot;</span>];</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    [<a class="code" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setTitle:<span class="stringliteral">&quot;Save To EPS&quot;</span>];</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    [compPopUP setEnabled:NO];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="../../dd/d24/classMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a> = 2;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> (self);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#a620002a37da4cb7420b130a61f698b5a">  119</a></span>&#160;- saveTypeTiff:sender</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#a620002a37da4cb7420b130a61f698b5a">  119</a></span>&#160;- <a class="code" href="../../dd/d24/classMyapp.html#a620002a37da4cb7420b130a61f698b5a">saveTypeTiff</a>:sender</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setRequiredFileType:&quot;tiff&quot;]; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setTitle:&quot;Save To TIFF&quot;];</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    [<a class="code" href="../../d2/d28/interfaceMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">compPopUP</a> setEnabled:YES];</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a> = 1;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    [<a class="code" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setRequiredFileType:<span class="stringliteral">&quot;tiff&quot;</span>];</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    [<a class="code" href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">savepanel</a> setTitle:<span class="stringliteral">&quot;Save To TIFF&quot;</span>];</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    [compPopUP setEnabled:YES];</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="../../dd/d24/classMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">saveType</a> = 1;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span>(self);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="../../d2/d28/interfaceMyapp.html#ab85df5f44cede844904cc95acc584d7b">  128</a></span>&#160;- (<a class="code" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a>)<a class="code" href="../../d2/d28/interfaceMyapp.html#ab85df5f44cede844904cc95acc584d7b">setCompType</a></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="../../dd/d24/classMyapp.html#ab85df5f44cede844904cc95acc584d7b">  128</a></span>&#160;- (<span class="keywordtype">int</span>)<a class="code" href="../../dd/d24/classMyapp.html#ab85df5f44cede844904cc95acc584d7b">setCompType</a></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *selected_Cell =  [[<a class="code" href="../../d2/d28/interfaceMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">compPopUP</a> selectedCell] title];</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *selected_Cell =  [[<a class="code" href="../../dd/d24/classMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">compPopUP</a> selectedCell] title];</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">switch</span>(selected_Cell[0]){</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;L&#39;</span>:</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;L&#39;</span>:</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;         <span class="keywordflow">return</span>(NX_TIFF_COMPRESSION_LZW);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;P&#39;</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;P&#39;</span>:</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;         <span class="keywordflow">return</span>(NX_TIFF_COMPRESSION_PACKBITS);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;N&#39;</span>:</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;         <span class="keywordflow">return</span>(NX_TIFF_COMPRESSION_NONE);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;J&#39;</span>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">case</span> <span class="stringliteral">&#39;J&#39;</span>:</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;         <span class="keywordflow">return</span>(NX_TIFF_COMPRESSION_JPEG);</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span>(NX_TIFF_COMPRESSION_LZW);</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interfaceMyapp_html_ab85df5f44cede844904cc95acc584d7b"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#ab85df5f44cede844904cc95acc584d7b">-[Myapp setCompType]</a></div><div class="ttdeci">int setCompType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00128">Myapp.m:128</a></div></div>
-<div class="ttc" id="RLE_8h_html"><div class="ttname"><a href="../../d8/d0f/RLE_8h.html">RLE.h</a></div></div>
-<div class="ttc" id="getami_8c_html_a1e03263353a7ba1bf855a8fe86b072e6"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a1e03263353a7ba1bf855a8fe86b072e6">save</a></div><div class="ttdeci">void save(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00982">getami.c:982</a></div></div>
-<div class="ttc" id="getx11_8c_html_ac765329451135abec74c45e1897abf26"><div class="ttname"><a href="../../db/d50/getx11_8c.html#ac765329451135abec74c45e1897abf26">type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d50/getx11_8c_source.html#l00092">getx11.c:92</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_a8f56d2983554193810d7bea1c7df7738"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#a8f56d2983554193810d7bea1c7df7738">Myapp::savepanel</a></div><div class="ttdeci">id savepanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00014">Myapp.h:14</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_a7087fa2f53b84d7be9f570d55e0bf371"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">Myapp::compPopUP</a></div><div class="ttdeci">id compPopUP</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00016">Myapp.h:16</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_aa58cfcd30a716c38c3a35b851af573cd"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">Myapp::saveType</a></div><div class="ttdeci">int saveType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00017">Myapp.h:17</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_a6ef273646b895260dfd226af990dded6"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#a6ef273646b895260dfd226af990dded6">Myapp::openpanel</a></div><div class="ttdeci">id openpanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00013">Myapp.h:13</a></div></div>
-<div class="ttc" id="into_8c_html_a7b621116a1a2d3e4bd91437e8f62cb09"><div class="ttname"><a href="../../d3/dd5/into_8c.html#a7b621116a1a2d3e4bd91437e8f62cb09">temp</a></div><div class="ttdeci">static char temp[]</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd5/into_8c_source.html#l00045">into.c:45</a></div></div>
-<div class="ttc" id="interfaceMyapp_html_a05be9c91fc634db5446d590ff777eab4"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html#a05be9c91fc634db5446d590ff777eab4">+[Myapp new]</a></div><div class="ttdeci">id new()</div></div>
-<div class="ttc" id="RASF_8h_html"><div class="ttname"><a href="../../d6/daf/RASF_8h.html">RASF.h</a></div></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;@<span class="keyword">end</span></div>
+<div class="ttc" id="classMyapp_html_ab85df5f44cede844904cc95acc584d7b"><div class="ttname"><a href="../../dd/d24/classMyapp.html#ab85df5f44cede844904cc95acc584d7b">-[Myapp setCompType]</a></div><div class="ttdeci">int setCompType()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00128">Myapp.m:128</a></div></div>
+<div class="ttc" id="classMyapp_html_a7087fa2f53b84d7be9f570d55e0bf371"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a7087fa2f53b84d7be9f570d55e0bf371">Myapp::compPopUP</a></div><div class="ttdeci">id compPopUP</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00016">Myapp.h:16</a></div></div>
+<div class="ttc" id="classMyapp_html_a71a0288fbcf24d90dd0ddac43b483305"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a71a0288fbcf24d90dd0ddac43b483305">-[Myapp appAcceptsAnotherFile:]</a></div><div class="ttdeci">BOOL appAcceptsAnotherFile:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00047">Myapp.m:47</a></div></div>
+<div class="ttc" id="interfaceRLE_html_aece73bb4f7686d4971f664f546d7439b"><div class="ttname"><a href="../../d4/dc6/interfaceRLE.html#aece73bb4f7686d4971f664f546d7439b">-[RLE init]</a></div><div class="ttdeci">id init()</div></div>
+<div class="ttc" id="classMyapp_html_a620002a37da4cb7420b130a61f698b5a"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a620002a37da4cb7420b130a61f698b5a">-[Myapp saveTypeTiff:]</a></div><div class="ttdeci">id saveTypeTiff:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00119">Myapp.m:119</a></div></div>
+<div class="ttc" id="classMyapp_html_a6b9d95d88c1c86ad89f93f396dd08ff6"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a6b9d95d88c1c86ad89f93f396dd08ff6">-[Myapp saveTypeEPS:]</a></div><div class="ttdeci">id saveTypeEPS:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00110">Myapp.m:110</a></div></div>
+<div class="ttc" id="rle__config_8h_html_a8c35ae4e83034731f6aecfb34c883ecf"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#a8c35ae4e83034731f6aecfb34c883ecf">rindex</a></div><div class="ttdeci">#define rindex</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00097">rle_config.h:97</a></div></div>
+<div class="ttc" id="classMyapp_html_a8f56d2983554193810d7bea1c7df7738"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a8f56d2983554193810d7bea1c7df7738">Myapp::savepanel</a></div><div class="ttdeci">id savepanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00014">Myapp.h:14</a></div></div>
+<div class="ttc" id="classMyapp_html_a4d3ff61e8ffb3075419d1c9e5bc7a070"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a4d3ff61e8ffb3075419d1c9e5bc7a070">Myapp::savePanelAccessory</a></div><div class="ttdeci">id savePanelAccessory</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00015">Myapp.h:15</a></div></div>
+<div class="ttc" id="classMyapp_html_a6ef273646b895260dfd226af990dded6"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a6ef273646b895260dfd226af990dded6">Myapp::openpanel</a></div><div class="ttdeci">id openpanel</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00013">Myapp.h:13</a></div></div>
+<div class="ttc" id="classMyapp_html_aac2860ca0a5e6f74fbde9bd6ad2d98b7"><div class="ttname"><a href="../../dd/d24/classMyapp.html#aac2860ca0a5e6f74fbde9bd6ad2d98b7">-[Myapp save:]</a></div><div class="ttdeci">id save:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00089">Myapp.m:89</a></div></div>
+<div class="ttc" id="classMyapp_html_a05be9c91fc634db5446d590ff777eab4"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a05be9c91fc634db5446d590ff777eab4">+[Myapp new]</a></div><div class="ttdeci">id new()</div></div>
+<div class="ttc" id="classMyapp_html_aa58cfcd30a716c38c3a35b851af573cd"><div class="ttname"><a href="../../dd/d24/classMyapp.html#aa58cfcd30a716c38c3a35b851af573cd">Myapp::saveType</a></div><div class="ttdeci">int saveType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00017">Myapp.h:17</a></div></div>
 <div class="ttc" id="interfaceRLE_html"><div class="ttname"><a href="../../d4/dc6/interfaceRLE.html">RLE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0f/RLE_8h_source.html#l00013">RLE.h:13</a></div></div>
-<div class="ttc" id="Myapp_8h_html"><div class="ttname"><a href="../../d4/d6f/Myapp_8h.html">Myapp.h</a></div></div>
-<div class="ttc" id="classApplication_html"><div class="ttname"><a href="../../d5/d4c/classApplication.html">Application</a></div></div>
-<div class="ttc" id="interfaceMyapp_html"><div class="ttname"><a href="../../d2/d28/interfaceMyapp.html">Myapp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6f/Myapp_8h_source.html#l00011">Myapp.h:11</a></div></div>
-<div class="ttc" id="getami_8c_html_a61569f2965b7a369eb10b6d75d410d11"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a></div><div class="ttdeci">int</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00848">getami.c:848</a></div></div>
-<div class="ttc" id="scanargs_8c_html_abacbbdefe312ec12aef4657fb2c48e98"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a></div><div class="ttdeci">int * ptr</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00057">scanargs.c:57</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ebc9a785e5ab85457c98595aac81589"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ebc9a785e5ab85457c98595aac81589">YES</a></div><div class="ttdeci">#define YES</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00059">scanargs.c:59</a></div></div>
+<div class="ttc" id="classMyapp_html_a9bbdb4f38d3d3ef78cb010aa72112327"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a9bbdb4f38d3d3ef78cb010aa72112327">-[Myapp openfile:]</a></div><div class="ttdeci">id openfile:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00052">Myapp.m:52</a></div></div>
+<div class="ttc" id="classMyapp_html_a82a4520ebca1d36aacba8f621ad83315"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a82a4520ebca1d36aacba8f621ad83315">-[Myapp print:]</a></div><div class="ttdeci">id print:(id sender)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00083">Myapp.m:83</a></div></div>
+<div class="ttc" id="classMyapp_html_a9f791114f47990ec39e577e3c2af34b6"><div class="ttname"><a href="../../dd/d24/classMyapp.html#a9f791114f47990ec39e577e3c2af34b6">-[Myapp appOpenFile:type:]</a></div><div class="ttdeci">int appOpenFile:type:(const char *fullPath,[type] const char *type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00034">Myapp.m:34</a></div></div>
+<div class="ttc" id="interfaceRLE_html_a151be2ba0debedc4c36f7305a74354ec"><div class="ttname"><a href="../../d4/dc6/interfaceRLE.html#a151be2ba0debedc4c36f7305a74354ec">-[RLE open:]</a></div><div class="ttdeci">id open:(char *filename)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/db3/RLE_8m_source.html#l00031">RLE.m:31</a></div></div>
+<div class="ttc" id="classMyapp_html"><div class="ttname"><a href="../../dd/d24/classMyapp.html">Myapp</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/Myapp_8m_source.html#l00025">Myapp.m:25</a></div></div>
 <div class="ttc" id="interfaceRASF_html"><div class="ttname"><a href="../../df/d3d/interfaceRASF.html">RASF</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/daf/RASF_8h_source.html#l00013">RASF.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:03 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: rle_getcom.c Source File</title>
+<title>Utah Raster Toolkit: lib/rle_getcom.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -117,8 +118,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * Copyright (c) 1987, University of Utah</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;rle.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdio</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="../../d7/d27/rle_8h.html">&quot;rle.h&quot;</a></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*****************************************************************</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * TAG( match )</span></div>
@@ -139,16 +140,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> *  [None]</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> *</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">   50</a></span>&#160;<a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a>( n, v )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;register <span class="keywordtype">char</span> *n;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;register <span class="keywordtype">char</span> *v;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">   50</a></span>&#160;<a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a>( <a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">n</a>, <a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">v</a> )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">register</span> <span class="keywordtype">char</span> *n;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">register</span> <span class="keywordtype">char</span> *v;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> ( ; *n != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; *n != <span class="charliteral">&#39;=&#39;</span> &amp;&amp; *n == *v; n++, v++ )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> ( ; *n != <span class="stringliteral">&#39;\0&#39;</span> &amp;&amp; *n != <span class="stringliteral">&#39;=&#39;</span> &amp;&amp; *n == *v; n++, v++ )</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (*n == <span class="charliteral">&#39;\0&#39;</span> || *n == <span class="charliteral">&#39;=&#39;</span>) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> ( *v == <span class="charliteral">&#39;\0&#39;</span> )</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (*n == <span class="stringliteral">&#39;\0&#39;</span> || *n == <span class="stringliteral">&#39;=&#39;</span>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> ( *v == <span class="stringliteral">&#39;\0&#39;</span> )</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> v;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( *v == <span class="charliteral">&#39;=&#39;</span> )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( *v == <span class="stringliteral">&#39;=&#39;</span> )</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> ++v;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
@@ -170,30 +171,30 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> *  [None]</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">char</span> *</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../db/db2/rle__getcom_8c.html#a9cefd612c381bf82c9cdf1f3a3b12dd6">   81</a></span>&#160;<a class="code" href="../../db/db2/rle__getcom_8c.html#a9cefd612c381bf82c9cdf1f3a3b12dd6">rle_getcom</a>( name, <a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a> )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;CONST_DECL <span class="keywordtype">char</span> *name;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;rle_hdr *<a class="code" href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../db/db2/rle__getcom_8c.html#aa27b5b87bd79d94a914627210674c7b6">   81</a></span>&#160;<a class="code" href="../../db/db2/rle__getcom_8c.html#aa27b5b87bd79d94a914627210674c7b6">rle_getcom</a>( <a class="code" href="../../db/db2/rle__getcom_8c.html#aa27b5b87bd79d94a914627210674c7b6">name</a>, <a class="code" href="../../db/db2/rle__getcom_8c.html#aa27b5b87bd79d94a914627210674c7b6">the_hdr</a> )</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *name;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;rle_hdr *the_hdr;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    CONST_DECL <span class="keywordtype">char</span> ** cp;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> ** cp;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">char</span> * v;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> ( the_hdr-&gt;comments == NULL )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> ( the_hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">-&gt;</a><a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a> == NULL )</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> ( cp = the_hdr-&gt;comments; *cp; cp++ )</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> ( (v = <a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a>( name, *cp )) != NULL )</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> ( cp = the_hdr<a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">-&gt;</a><a class="code" href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">comments</a>; *cp; cp++ )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> ( (v = <a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a><a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">(</a> name<a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">,</a> *cp <a class="code" href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">)</a>) != NULL )</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> v;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="ttc" id="aliastorle_8c_html_a5489ae7bb45df0aad19a081a786538e1"><div class="ttname"><a href="../../dc/d7b/aliastorle_8c.html#a5489ae7bb45df0aad19a081a786538e1">the_hdr</a></div><div class="ttdeci">rle_hdr the_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d7b/aliastorle_8c_source.html#l00100">aliastorle.c:100</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a0a69b3269580c81e05fcc6bd334389ee"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a0a69b3269580c81e05fcc6bd334389ee">rle_hdr::comments</a></div><div class="ttdeci">const char ** comments</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00113">rle.h:113</a></div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
+<div class="ttc" id="rle__getcom_8c_html_aa27b5b87bd79d94a914627210674c7b6"><div class="ttname"><a href="../../db/db2/rle__getcom_8c.html#aa27b5b87bd79d94a914627210674c7b6">rle_getcom</a></div><div class="ttdeci">char * rle_getcom(char *name, rle_hdr *the_hdr) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/rle__getcom_8c_source.html#l00081">rle_getcom.c:81</a></div></div>
 <div class="ttc" id="rle__getcom_8c_html_a7502c8b599724ce86fee5df1311a2337"><div class="ttname"><a href="../../db/db2/rle__getcom_8c.html#a7502c8b599724ce86fee5df1311a2337">match</a></div><div class="ttdeci">static char * match(char *n, char *v)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/rle__getcom_8c_source.html#l00050">rle_getcom.c:50</a></div></div>
-<div class="ttc" id="rle__getcom_8c_html_a9cefd612c381bf82c9cdf1f3a3b12dd6"><div class="ttname"><a href="../../db/db2/rle__getcom_8c.html#a9cefd612c381bf82c9cdf1f3a3b12dd6">rle_getcom</a></div><div class="ttdeci">char * rle_getcom(char *name, rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/rle__getcom_8c_source.html#l00081">rle_getcom.c:81</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:03 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

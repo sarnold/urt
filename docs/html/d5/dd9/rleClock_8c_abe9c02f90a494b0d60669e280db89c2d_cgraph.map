@@ -1,7 +1,7 @@
 <map id="drawText" name="drawText">
-<area shape="rect" id="node2" href="$d5/dd9/rleClock_8c.html#a4d34167563c6f9d7485ac78f724f3103" title="formatInterp" alt="" coords="156,5,255,32"/>
-<area shape="rect" id="node3" href="$d5/dd9/rleClock_8c.html#a201654cf3a9dd1390615abb8cb26469c" title="charMinMaxWidth" alt="" coords="137,56,273,83"/>
-<area shape="rect" id="node4" href="$d5/dd9/rleClock_8c.html#a5de9701a7f30055e96a1137e2eb337b6" title="charMinMaxHeight" alt="" coords="135,107,276,133"/>
-<area shape="rect" id="node5" href="$d5/dd9/rleClock_8c.html#a05846a8d59a51cee2bfea183cf066c61" title="lineDots" alt="" coords="169,157,242,184"/>
-<area shape="rect" id="node6" href="$d5/dd9/rleClock_8c.html#a4511e885d896e3914dc149bf8849c665" title="setDot" alt="" coords="174,208,237,235"/>
+<area shape="rect" id="node2" href="$d5/dd9/rleClock_8c.html#a82be9a409434f2f10369338a7a6be483" title="charMinMaxHeight" alt="" coords="135,5,276,32"/>
+<area shape="rect" id="node3" href="$d5/dd9/rleClock_8c.html#a940b11a0e3e70317c7615dfdfa640f2b" title="charMinMaxWidth" alt="" coords="137,56,273,83"/>
+<area shape="rect" id="node4" href="$d5/dd9/rleClock_8c.html#a71c66ab855410158d5948cf33d0ae000" title="formatInterp" alt="" coords="156,107,255,133"/>
+<area shape="rect" id="node5" href="$d5/dd9/rleClock_8c.html#ac903125489b1f27d5d13b84a7888a1bc" title="lineDots" alt="" coords="169,157,242,184"/>
+<area shape="rect" id="node6" href="$d5/dd9/rleClock_8c.html#a0715797a9e20b528505a1078de2d6473" title="setDot" alt="" coords="174,208,237,235"/>
 </map>

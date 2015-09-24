@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: bread.c Source File</title>
+<title>Utah Raster Toolkit: get/gmr27/bread.c Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -114,18 +115,18 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../db/d67/bread_8c.html#a24d88bc9486743726cfbd05178b0f741">   22</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="../../db/d67/bread_8c.html#a24d88bc9486743726cfbd05178b0f741">rcs_ident</a>[] = <span class="stringliteral">&quot;$Header: bread.c,v 2.3 86/06/18 11:46:19 thomas Exp $&quot;</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;stdio.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../db/d67/bread_8c.html#ad33b8456f68670d375377ba55da937ff">   26</a></span>&#160;<a class="code" href="../../db/d67/bread_8c.html#ad33b8456f68670d375377ba55da937ff">bread</a>(<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>, <a class="code" href="../../da/d92/getap_8c.html#a6e8eb34cc6e823242ad6153bfb28be74">size</a>, iop)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;unsigned <a class="code" href="../../da/d92/getap_8c.html#a6e8eb34cc6e823242ad6153bfb28be74">size</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;register <span class="keywordtype">char</span> *<a class="code" href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;register FILE *iop;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;stdio.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../db/d67/bread_8c.html#ad33b8456f68670d375377ba55da937ff">   26</a></span>&#160;bread(ptr, size, iop)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">unsigned</span> size;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">register</span> <span class="keywordtype">char</span> *ptr;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">register</span> FILE *iop;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">register</span> <span class="keywordtype">unsigned</span> ndone, <a class="code" href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">register</span> <span class="keywordtype">unsigned</span> ndone, s;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">register</span> <span class="keywordtype">int</span> c;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (!size) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ndone = <a class="code" href="../../da/d92/getap_8c.html#a6e8eb34cc6e823242ad6153bfb28be74">size</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ndone = size;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> ( iop-&gt;_cnt &gt;= ndone )</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">switch</span> ( ndone )</div>
@@ -134,17 +135,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">         * &quot;sizeof(short)&quot; and &quot;sizeof(long)&quot;, but the compiler</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">         * doesn&#39;t like those.</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">case</span> <span class="keyword">sizeof</span>(short): *(<span class="keywordtype">short</span> *)ptr = *(<span class="keywordtype">short</span> *)iop-&gt;_ptr;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">case</span> <span class="keyword">sizeof</span>(<span class="keywordtype">short</span>): *(<span class="keywordtype">short</span> *)ptr = *(<span class="keywordtype">short</span> *)iop-&gt;_ptr;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">case</span> <span class="keyword">sizeof</span>(<span class="keywordtype">long</span>):  *(<span class="keywordtype">long</span> *)ptr = *(<span class="keywordtype">int</span> *)iop-&gt;_ptr;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">default</span>:        <span class="comment">/*bcopy( iop-&gt;_ptr, ptr, ndone );*/</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#ifdef vax</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> <span class="preprocessor">vax</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keyword">asm</span>(<span class="stringliteral">&quot;   movl  4(r10),r0&quot;</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keyword">asm</span>(<span class="stringliteral">&quot;   movc3 r9,(r0),(r11)&quot;</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">else</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                bcopy( iop-&gt;_ptr, ptr, ndone );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        iop-&gt;_cnt -= ndone;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        iop-&gt;_ptr += ndone;</div>
@@ -165,28 +166,23 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> ( s &gt; iop-&gt;_cnt )</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            s = iop-&gt;_cnt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            iop-&gt;_cnt -= <a class="code" href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a>; <span class="comment">/* work-around for CC bug */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            iop-&gt;_cnt -= s; <span class="comment">/* work-around for CC bug */</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/*          bcopy( iop-&gt;_ptr, ptr, s );*/</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keyword">asm</span>(<span class="stringliteral">&quot;   movl  4(r10),r0&quot;</span>);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keyword">asm</span>(<span class="stringliteral">&quot;   movc3 r8,(r0),(r11)&quot;</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            iop-&gt;_ptr += <a class="code" href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            ndone -= <a class="code" href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            ptr += <a class="code" href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            iop-&gt;_ptr += s;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            ndone -= s;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            ptr += s;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../da/d92/getap_8c.html#a6e8eb34cc6e823242ad6153bfb28be74">size</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> size;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="ttc" id="rleClock_8c_html_ab4da28acaeb839de1f7b3713201ae2ac"><div class="ttname"><a href="../../d5/dd9/rleClock_8c.html#ab4da28acaeb839de1f7b3713201ae2ac">s</a></div><div class="ttdeci">_urt_stack * s</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dd9/rleClock_8c_source.html#l00919">rleClock.c:919</a></div></div>
-<div class="ttc" id="scanargs_8c_html_abacbbdefe312ec12aef4657fb2c48e98"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#abacbbdefe312ec12aef4657fb2c48e98">ptr</a></div><div class="ttdeci">int * ptr</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00057">scanargs.c:57</a></div></div>
 <div class="ttc" id="bread_8c_html_a24d88bc9486743726cfbd05178b0f741"><div class="ttname"><a href="../../db/d67/bread_8c.html#a24d88bc9486743726cfbd05178b0f741">rcs_ident</a></div><div class="ttdeci">static char rcs_ident[]</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d67/bread_8c_source.html#l00022">bread.c:22</a></div></div>
-<div class="ttc" id="getap_8c_html_a6e8eb34cc6e823242ad6153bfb28be74"><div class="ttname"><a href="../../da/d92/getap_8c.html#a6e8eb34cc6e823242ad6153bfb28be74">size</a></div><div class="ttdeci">gpr_ $offset_t size</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/getap_8c_source.html#l00096">getap.c:96</a></div></div>
-<div class="ttc" id="bread_8c_html_ad33b8456f68670d375377ba55da937ff"><div class="ttname"><a href="../../db/d67/bread_8c.html#ad33b8456f68670d375377ba55da937ff">bread</a></div><div class="ttdeci">bread(char *ptr, unsigned size, FILE *iop)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d67/bread_8c_source.html#l00026">bread.c:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:00 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

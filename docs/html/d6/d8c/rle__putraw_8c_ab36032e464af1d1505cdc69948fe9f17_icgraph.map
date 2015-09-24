@@ -1,5 +1,0 @@
-<map id="rle_putraw" name="rle_putraw">
-<area shape="rect" id="node2" href="$d7/def/applymap_8c.html#a70db8bd1d499619f7ff9c1ca2ff3c8df" title="main" alt="" coords="171,5,223,32"/>
-<area shape="rect" id="node3" href="$d5/d2c/rlecomp_8c.html#a52aa460c4bbe517210ee242d3762a8fb" title="copy_scanline" alt="" coords="141,56,253,83"/>
-<area shape="rect" id="node4" href="$d5/d42/rlezoom_8c.html#a93e7f36e1343b502769244ac9789c0ff" title="integer_zoom" alt="" coords="143,107,251,133"/>
-</map>

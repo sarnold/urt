@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['targa',['TARGA',['../df/dad/rle__config_8h.html#afb005bf7b9e4ca18f562788d3be34b69',1,'rle_config.h']]],
   ['test_5fpat_5f0',['TEST_PAT_0',['../d0/db3/qcr_8h.html#a3a01da9d4676bb8af0aa63c87fd79f0b',1,'qcr.h']]],
   ['test_5fpat_5f1',['TEST_PAT_1',['../d0/db3/qcr_8h.html#a021d5f06883b95de1da8fbdcc7e1ba18',1,'qcr.h']]],
   ['text',['Text',['../dc/d25/fb_8h.html#af3ff568bb8675bb41da57034f22f9b32',1,'fb.h']]],
@@ -8,6 +9,7 @@ var searchData=
   ['three_5fpass_5frle',['THREE_PASS_RLE',['../d0/db3/qcr_8h.html#a4a2929df0ca4031d83165872c873bde4',1,'qcr.h']]],
   ['tick',['TICK',['../df/d41/timer_8c.html#a7d5ee1cc1e801872efa1ea7486189019',1,'timer.c']]],
   ['ticks',['TICKS',['../d5/dd9/rleClock_8c.html#aec3306780fb4af22ba80e4da7929e220',1,'rleClock.c']]],
+  ['tiff',['TIFF',['../df/dad/rle__config_8h.html#a4f5e071dc0f31e41d14ef868b76ea462',1,'rle_config.h']]],
   ['tlistlinks',['TLISTLINKS',['../d5/d6d/mcut_8c.html#af40e5ad67cb3aa643acfe283555b6044',1,'mcut.c']]],
   ['to_5f5_5fbits',['TO_5_BITS',['../d5/d6d/mcut_8c.html#a0a8ca8960a05f4b8cfb1359d4bd11951',1,'mcut.c']]],
   ['trace',['TRACE',['../d5/d6d/mcut_8c.html#a39f0f3aed93efd300b6fa2d97767a1f4',1,'mcut.c']]],

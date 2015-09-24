@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Utah Raster Toolkit: unslice.c File Reference</title>
+<title>Utah Raster Toolkit: tools/unslice.c File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../goblet.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Utah Raster Toolkit
    &#160;<span id="projectnumber">9999-git</span>
@@ -94,12 +95,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;rle.h&quot;</code><br />
-<code>#include &quot;rle_raw.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d27/rle_8h_source.html">rle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d5d/rle__raw_8h_source.html">rle_raw.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for unslice.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/df6/unslice_8c__incl.svg" width="252" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/df6/unslice_8c__incl.svg" width="306" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -122,11 +123,11 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:af1b3bff1622925d03c9cd14c5f1a51bf"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfb/unslice_8c.html#af1b3bff1622925d03c9cd14c5f1a51bf">rcsid</a> [] = &quot;$Header: /l/spencer/src/urt/tools/RCS/unslice.c,v 3.0.1.2 1992/04/30 14:14:54 spencer Exp $&quot;</td></tr>
 <tr class="separator:af1b3bff1622925d03c9cd14c5f1a51bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69e074b66d7a9cca98813bcfcbd1c1c0"><td class="memItemLeft" align="right" valign="top">rle_hdr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a></td></tr>
+<tr class="memitem:a69e074b66d7a9cca98813bcfcbd1c1c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a></td></tr>
 <tr class="separator:a69e074b66d7a9cca98813bcfcbd1c1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e5ade73c3b1f8491a6f6a2892255f8"><td class="memItemLeft" align="right" valign="top">rle_hdr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a></td></tr>
+<tr class="memitem:ad9e5ade73c3b1f8491a6f6a2892255f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a></td></tr>
 <tr class="separator:ad9e5ade73c3b1f8491a6f6a2892255f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ba75e28e3ee4322090a7c52aa06fd1d"><td class="memItemLeft" align="right" valign="top">rle_op **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a></td></tr>
+<tr class="memitem:a4ba75e28e3ee4322090a7c52aa06fd1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d7d/structrle__op.html">rle_op</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a></td></tr>
 <tr class="separator:a4ba75e28e3ee4322090a7c52aa06fd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade88b09142b928cbc5df7975685d2868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d11/getami_8c.html#a61569f2965b7a369eb10b6d75d410d11">int</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfb/unslice_8c.html#ade88b09142b928cbc5df7975685d2868">out_nraw</a></td></tr>
 <tr class="separator:ade88b09142b928cbc5df7975685d2868"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,14 +164,6 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dfb/unslice_8c_a3eed4c008388a743465ede7b87520a63_icgraph.svg" width="246" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a28081e92778d0e080436bda7ea372985"></a>
@@ -205,7 +198,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dfb/unslice_8c.html#ae9ec1a91d2a0066497a1f21a7d54d781">num_skip</a> &gt; 0)       <span class="comment">/* Must skip blank rows */</span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    {</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">if</span> (copy_flag)</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="../../d9/d2a/rle__putrow_8c.html#a018d4b7d6fe20504c07c24b9bd8fc304">rle_skiprow</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, 1 );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="../../d7/d27/rle_8h.html#a018d4b7d6fe20504c07c24b9bd8fc304">rle_skiprow</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, 1 );</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ae9ec1a91d2a0066497a1f21a7d54d781">num_skip</a>--;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dfb/unslice_8c.html#ae9ec1a91d2a0066497a1f21a7d54d781">num_skip</a> == 0)</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ae9ec1a91d2a0066497a1f21a7d54d781">num_skip</a> = -1;  <span class="comment">/* Flag raw data available */</span></div>
@@ -220,7 +213,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dfb/unslice_8c.html#ae9ec1a91d2a0066497a1f21a7d54d781">num_skip</a> == 32768)  <span class="comment">/* Hit the EOF */</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    {</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">if</span> (copy_flag)</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <a class="code" href="../../d9/d2a/rle__putrow_8c.html#a018d4b7d6fe20504c07c24b9bd8fc304">rle_skiprow</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, 1 );</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <a class="code" href="../../d7/d27/rle_8h.html#a018d4b7d6fe20504c07c24b9bd8fc304">rle_skiprow</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, 1 );</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
@@ -230,27 +223,19 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">goto</span> SKIP_ROW;</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">if</span> (copy_flag)</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="../../d6/d8c/rle__putraw_8c.html#ab36032e464af1d1505cdc69948fe9f17">rle_putraw</a>( <a class="code" href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ade88b09142b928cbc5df7975685d2868">out_nraw</a>, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="../../d3/d5d/rle__raw_8h.html#a6c24cd7356f9d42b5df800650bb25ecc">rle_putraw</a>( <a class="code" href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ade88b09142b928cbc5df7975685d2868">out_nraw</a>, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="../../df/dce/rle__getraw_8c.html#ad4a764bcb2dc8e45f3f57171022dbf2b">rle_freeraw</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, <a class="code" href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ade88b09142b928cbc5df7975685d2868">out_nraw</a> );</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
+<div class="ttc" id="rle_8h_html_a018d4b7d6fe20504c07c24b9bd8fc304"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a018d4b7d6fe20504c07c24b9bd8fc304">rle_skiprow</a></div><div class="ttdeci">void rle_skiprow(rle_hdr *the_hdr, int nrow)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00393">rle_putrow.c:393</a></div></div>
 <div class="ttc" id="rle__getraw_8c_html_ad4a764bcb2dc8e45f3f57171022dbf2b"><div class="ttname"><a href="../../df/dce/rle__getraw_8c.html#ad4a764bcb2dc8e45f3f57171022dbf2b">rle_freeraw</a></div><div class="ttdeci">void rle_freeraw(rle_hdr *the_hdr, scanraw, nraw)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/rle__getraw_8c_source.html#l00268">rle_getraw.c:268</a></div></div>
 <div class="ttc" id="unslice_8c_html_ade88b09142b928cbc5df7975685d2868"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ade88b09142b928cbc5df7975685d2868">out_nraw</a></div><div class="ttdeci">int * out_nraw</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00040">unslice.c:40</a></div></div>
-<div class="ttc" id="rle__putraw_8c_html_ab36032e464af1d1505cdc69948fe9f17"><div class="ttname"><a href="../../d6/d8c/rle__putraw_8c.html#ab36032e464af1d1505cdc69948fe9f17">rle_putraw</a></div><div class="ttdeci">void rle_putraw(rle_op **scanraw, int *nraw, rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8c/rle__putraw_8c_source.html#l00060">rle_putraw.c:60</a></div></div>
+<div class="ttc" id="rle__raw_8h_html_a6c24cd7356f9d42b5df800650bb25ecc"><div class="ttname"><a href="../../d3/d5d/rle__raw_8h.html#a6c24cd7356f9d42b5df800650bb25ecc">rle_putraw</a></div><div class="ttdeci">void rle_putraw()</div></div>
 <div class="ttc" id="unslice_8c_html_ad9e5ade73c3b1f8491a6f6a2892255f8"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a></div><div class="ttdeci">rle_hdr out_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00034">unslice.c:34</a></div></div>
-<div class="ttc" id="rle__putrow_8c_html_a018d4b7d6fe20504c07c24b9bd8fc304"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#a018d4b7d6fe20504c07c24b9bd8fc304">rle_skiprow</a></div><div class="ttdeci">void rle_skiprow(rle_hdr *the_hdr, int nrow)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00393">rle_putrow.c:393</a></div></div>
 <div class="ttc" id="unslice_8c_html_ae9ec1a91d2a0066497a1f21a7d54d781"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ae9ec1a91d2a0066497a1f21a7d54d781">num_skip</a></div><div class="ttdeci">int num_skip</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00043">unslice.c:43</a></div></div>
 <div class="ttc" id="unslice_8c_html_a4ba75e28e3ee4322090a7c52aa06fd1d"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a></div><div class="ttdeci">rle_op ** out_raw</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00039">unslice.c:39</a></div></div>
 <div class="ttc" id="unslice_8c_html_a69e074b66d7a9cca98813bcfcbd1c1c0"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a></div><div class="ttdeci">rle_hdr in_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00034">unslice.c:34</a></div></div>
 <div class="ttc" id="rle__getraw_8c_html_a5ed570d65cead1b5587e84134c31e246"><div class="ttname"><a href="../../df/dce/rle__getraw_8c.html#a5ed570d65cead1b5587e84134c31e246">rle_getraw</a></div><div class="ttdeci">unsigned int rle_getraw(rle_hdr *the_hdr, scanraw, nraw)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dce/rle__getraw_8c_source.html#l00078">rle_getraw.c:78</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dfb/unslice_8c_a28081e92778d0e080436bda7ea372985_cgraph.svg" width="404" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a2a14c4a1e92129bef253b1278401c6ed"></a>
@@ -265,14 +250,6 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dfb/unslice_8c_a2a14c4a1e92129bef253b1278401c6ed_icgraph.svg" width="186" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
 
 </div>
 </div>
@@ -305,18 +282,18 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">register</span> <span class="keywordtype">int</span> <a class="code" href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> current_y = 0;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.rle_file = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>(<a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, filename, 0 );</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>(<a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, filename, 0 );</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">/*</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">     * Many sanity checks.  Code must be 3am-proof!</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">     */</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="../../db/d53/rle__getrow_8c.html#a2d56ca99b896abbcb4d2f3f97c93a3ce">rle_get_setup_ok</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, filename );</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a92aa3b91e23d71659951052ae34ac4e2">rle_get_setup_ok</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, filename );</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a> &amp;&amp;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;       ((<a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a>[num] &gt; <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymax) ||</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    (<a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a>[num] &lt; <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymin)))</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;       ((<a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a>[num] &gt; <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a>) ||</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    (<a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a>[num] &lt; <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a>)))</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;%s: %s is out of slice range (%d %d)\n&quot;</span>,</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, filename, <a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a>[num], <a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a>[num]);</div>
@@ -329,38 +306,38 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    </div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">if</span> (num == 0)</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    FILE *f = <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.rle_file;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    CONST_DECL <span class="keywordtype">char</span> *name = <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.file_name;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    FILE *f = <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a> <span class="keywordtype">char</span> *name = <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#ae821f13cd5d93d3d1db83e11f9ef9ab5">file_name</a>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.file_name = NULL;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    (void)<a class="code" href="../../d2/df3/rle__hdr_8c.html#afc916e29aea8788e0878ca315ff69821">rle_hdr_cp</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.file_name = name;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.rle_file = f;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a>( <a class="code" href="../../df/dfb/unslice_8c.html#a15993f2dc15cc84efea78320990371ed">gargv</a>, (rle_hdr *)0, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#ae821f13cd5d93d3d1db83e11f9ef9ab5">file_name</a> = NULL;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    (void)<a class="code" href="../../d7/d27/rle_8h.html#afc916e29aea8788e0878ca315ff69821">rle_hdr_cp</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#ae821f13cd5d93d3d1db83e11f9ef9ab5">file_name</a> = name;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> = f;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#a211dd704f17c1336fc225d7d67e0006f">rle_addhist</a>( <a class="code" href="../../df/dfb/unslice_8c.html#a15993f2dc15cc84efea78320990371ed">gargv</a>, (<a class="code" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> *)0, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a>)</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.ymin = <a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a>[0];</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.ymax = <a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a>[<a class="code" href="../../df/dfb/unslice_8c.html#ac8fb234260ed02c01dabb0ac935e0372">ctl_lines</a>-1];</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a> = <a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a>[0];</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a> = <a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a>[<a class="code" href="../../df/dfb/unslice_8c.html#ac8fb234260ed02c01dabb0ac935e0372">ctl_lines</a>-1];</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.ymin = <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymin;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.ymax = <a class="code" href="../../df/dfb/unslice_8c.html#a5f0d610eafd05463bc8771cfd8da1adc">max_y</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a> = <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a> = <a class="code" href="../../df/dfb/unslice_8c.html#a5f0d610eafd05463bc8771cfd8da1adc">max_y</a>;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    current_y = <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.ymin;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    current_y = <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/d6e/rle__raw__alc_8c.html#a3f4a119f9ef60eb2599166c98946c339">rle_raw_alloc</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a>, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ade88b09142b928cbc5df7975685d2868">out_nraw</a> ) &lt; 0)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        RLE_CHECK_ALLOC( <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, 0, 0 );</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d3/d5d/rle__raw_8h.html#a0bc164554d50ac57856e569b2eaa6cc0">rle_raw_alloc</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a>, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ade88b09142b928cbc5df7975685d2868">out_nraw</a> ) &lt; 0)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <a class="code" href="../../d7/d27/rle_8h.html#ae4f5beab3e61c61050bf9872b411e7ba">RLE_CHECK_ALLOC</a>( <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, 0, 0 );</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span> ((! <a class="code" href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a>) &amp;&amp; (<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymax &lt; current_y))</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span> ((! <a class="code" href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a>) &amp;&amp; (<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a> &lt; current_y))</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    {</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    fprintf(stderr,</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;           <span class="stringliteral">&quot;%s: warning: slice %s completely ignored (wrong order?)\n&quot;</span>,</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, filename);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    fclose( <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.rle_file );</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    fclose( <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> );</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
@@ -371,7 +348,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a>)</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">for</span> (y = <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymin; y &lt;= <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymax; y++ )</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">for</span> (y = <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a>; y &lt;= <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a>; y++ )</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">if</span> ((y &gt;= <a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a>[num]) &amp;&amp; (y &lt;= <a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a>[num]))</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#a3eed4c008388a743465ede7b87520a63">copy_scanline</a>( y, 1 );</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">else</span></div>
@@ -379,47 +356,46 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">for</span> (y = <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymin; y &lt;= <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymax; y++ )</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">for</span> (y = <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">ymin</a>; y &lt;= <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a>; y++ )</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">if</span> (y &gt;= current_y)</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#a3eed4c008388a743465ede7b87520a63">copy_scanline</a>( y, 1 );</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="../../df/dfb/unslice_8c.html#a3eed4c008388a743465ede7b87520a63">copy_scanline</a>( y, 0 );</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    current_y = <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.ymax + 1;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    current_y = <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">ymax</a> + 1;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    fclose( <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.rle_file );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    fclose( <a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> );</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
-<div class="ttc" id="rle__open__f_8c_html_a89733a45961817885603ae01210290b7"><div class="ttname"><a href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(char *prog_name, char *file_name, char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/rle__open__f_8c_source.html#l00216">rle_open_f.c:216</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_afc916e29aea8788e0878ca315ff69821"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#afc916e29aea8788e0878ca315ff69821">rle_hdr_cp</a></div><div class="ttdeci">rle_hdr * rle_hdr_cp(rle_hdr *from_hdr, rle_hdr *to_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00119">rle_hdr.c:119</a></div></div>
 <div class="ttc" id="unslice_8c_html_af95e26b41954f04652fcc143bf94ae80"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a></div><div class="ttdeci">int * start_line</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00047">unslice.c:47</a></div></div>
-<div class="ttc" id="rle__raw__alc_8c_html_a3f4a119f9ef60eb2599166c98946c339"><div class="ttname"><a href="../../df/d6e/rle__raw__alc_8c.html#a3f4a119f9ef60eb2599166c98946c339">rle_raw_alloc</a></div><div class="ttdeci">int rle_raw_alloc(rle_hdr *the_hdr, rle_op ***scanp, int **nrawp)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d6e/rle__raw__alc_8c_source.html#l00060">rle_raw_alc.c:60</a></div></div>
+<div class="ttc" id="rle__raw_8h_html_a0bc164554d50ac57856e569b2eaa6cc0"><div class="ttname"><a href="../../d3/d5d/rle__raw_8h.html#a0bc164554d50ac57856e569b2eaa6cc0">rle_raw_alloc</a></div><div class="ttdeci">int rle_raw_alloc()</div></div>
 <div class="ttc" id="unslice_8c_html_ade88b09142b928cbc5df7975685d2868"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ade88b09142b928cbc5df7975685d2868">out_nraw</a></div><div class="ttdeci">int * out_nraw</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00040">unslice.c:40</a></div></div>
+<div class="ttc" id="rle_8h_html_a211dd704f17c1336fc225d7d67e0006f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a211dd704f17c1336fc225d7d67e0006f">rle_addhist</a></div><div class="ttdeci">void rle_addhist(char *argv[], rle_hdr *in_hdr, rle_hdr *out_hdr)</div></div>
 <div class="ttc" id="unslice_8c_html_ac66325923834270b6b3670d21229bb2d"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a></div><div class="ttdeci">int * stop_line</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00047">unslice.c:47</a></div></div>
 <div class="ttc" id="unslice_8c_html_a3eed4c008388a743465ede7b87520a63"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a3eed4c008388a743465ede7b87520a63">copy_scanline</a></div><div class="ttdeci">void copy_scanline()</div></div>
+<div class="ttc" id="structrle__hdr_html_a62bd76bb5db5c115b58c2853f9daa3bc"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a62bd76bb5db5c115b58c2853f9daa3bc">rle_hdr::ymin</a></div><div class="ttdeci">int ymin</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
 <div class="ttc" id="unslice_8c_html_ab9e1449fd00c98428516f0b41eddcb10"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a></div><div class="ttdeci">char * progname</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00051">unslice.c:51</a></div></div>
 <div class="ttc" id="unslice_8c_html_a4b7d9bfeafaa11a9e74226f565a4bcab"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a></div><div class="ttdeci">int ctlflag</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00045">unslice.c:45</a></div></div>
 <div class="ttc" id="getami_8c_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="../../dc/d11/getami_8c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a></div><div class="ttdeci">static int y</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d11/getami_8c_source.html#l00691">getami.c:691</a></div></div>
+<div class="ttc" id="rle_8h_html_ab89ecb548e22ac958f24c71fba852464"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, const char *pgmname, const char *fname, int img_num)</div></div>
+<div class="ttc" id="structrle__hdr_html"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html">rle_hdr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00096">rle.h:96</a></div></div>
 <div class="ttc" id="unslice_8c_html_ad9e5ade73c3b1f8491a6f6a2892255f8"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a></div><div class="ttdeci">rle_hdr out_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00034">unslice.c:34</a></div></div>
-<div class="ttc" id="rle__getrow_8c_html_a2d56ca99b896abbcb4d2f3f97c93a3ce"><div class="ttname"><a href="../../db/d53/rle__getrow_8c.html#a2d56ca99b896abbcb4d2f3f97c93a3ce">rle_get_setup_ok</a></div><div class="ttdeci">void rle_get_setup_ok(rle_hdr *the_hdr, char *prog_name, char *file_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d53/rle__getrow_8c_source.html#l00254">rle_getrow.c:254</a></div></div>
-<div class="ttc" id="rle__addhist_8c_html_a4f9433d6e4e203d0ecea1c7d3837afc3"><div class="ttname"><a href="../../d8/def/rle__addhist_8c.html#a4f9433d6e4e203d0ecea1c7d3837afc3">rle_addhist</a></div><div class="ttdeci">void rle_addhist(argv, rle_hdr *in_hdr, rle_hdr *out_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/def/rle__addhist_8c_source.html#l00054">rle_addhist.c:54</a></div></div>
+<div class="ttc" id="rle__config_8h_html_af47d5e7bf7b657d03be366c124eb619b"><div class="ttname"><a href="../../df/dad/rle__config_8h.html#af47d5e7bf7b657d03be366c124eb619b">CONST_DECL</a></div><div class="ttdeci">#define CONST_DECL</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dad/rle__config_8h_source.html#l00042">rle_config.h:42</a></div></div>
 <div class="ttc" id="unslice_8c_html_ae9ec1a91d2a0066497a1f21a7d54d781"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ae9ec1a91d2a0066497a1f21a7d54d781">num_skip</a></div><div class="ttdeci">int num_skip</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00043">unslice.c:43</a></div></div>
 <div class="ttc" id="unslice_8c_html_a15993f2dc15cc84efea78320990371ed"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a15993f2dc15cc84efea78320990371ed">gargv</a></div><div class="ttdeci">char ** gargv</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00052">unslice.c:52</a></div></div>
 <div class="ttc" id="unslice_8c_html_ac8fb234260ed02c01dabb0ac935e0372"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ac8fb234260ed02c01dabb0ac935e0372">ctl_lines</a></div><div class="ttdeci">int ctl_lines</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00046">unslice.c:46</a></div></div>
-<div class="ttc" id="rle__putrow_8c_html_af88a82b331cd6f425d2a2cc1623944c6"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a></div><div class="ttdeci">void rle_put_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00453">rle_putrow.c:453</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a82e79385f2d45cc3b80ce0f4f369eae5"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, char *pgmname, char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a50f668a9b76ee5fc16ec507d8c8ac42b"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a50f668a9b76ee5fc16ec507d8c8ac42b">rle_hdr::ymax</a></div><div class="ttdeci">int ymax</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00100">rle.h:100</a></div></div>
+<div class="ttc" id="rle_8h_html_afc916e29aea8788e0878ca315ff69821"><div class="ttname"><a href="../../d7/d27/rle_8h.html#afc916e29aea8788e0878ca315ff69821">rle_hdr_cp</a></div><div class="ttdeci">rle_hdr * rle_hdr_cp(rle_hdr *from_hdr, rle_hdr *to_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00119">rle_hdr.c:119</a></div></div>
 <div class="ttc" id="unslice_8c_html_a4ba75e28e3ee4322090a7c52aa06fd1d"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a4ba75e28e3ee4322090a7c52aa06fd1d">out_raw</a></div><div class="ttdeci">rle_op ** out_raw</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00039">unslice.c:39</a></div></div>
+<div class="ttc" id="rle_8h_html_a76eefa2808915342600d65f36f77eb26"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(const char *prog_name, const char *f_name, const char *mode)</div></div>
 <div class="ttc" id="unslice_8c_html_a5f0d610eafd05463bc8771cfd8da1adc"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a5f0d610eafd05463bc8771cfd8da1adc">max_y</a></div><div class="ttdeci">int max_y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00042">unslice.c:42</a></div></div>
+<div class="ttc" id="rle_8h_html_af88a82b331cd6f425d2a2cc1623944c6"><div class="ttname"><a href="../../d7/d27/rle_8h.html#af88a82b331cd6f425d2a2cc1623944c6">rle_put_setup</a></div><div class="ttdeci">void rle_put_setup(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00453">rle_putrow.c:453</a></div></div>
 <div class="ttc" id="unslice_8c_html_a69e074b66d7a9cca98813bcfcbd1c1c0"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a></div><div class="ttdeci">rle_hdr in_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00034">unslice.c:34</a></div></div>
+<div class="ttc" id="structrle__hdr_html_ae821f13cd5d93d3d1db83e11f9ef9ab5"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#ae821f13cd5d93d3d1db83e11f9ef9ab5">rle_hdr::file_name</a></div><div class="ttdeci">const char * file_name</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00134">rle.h:134</a></div></div>
+<div class="ttc" id="rle_8h_html_a92aa3b91e23d71659951052ae34ac4e2"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a92aa3b91e23d71659951052ae34ac4e2">rle_get_setup_ok</a></div><div class="ttdeci">void rle_get_setup_ok(rle_hdr *the_hdr, const char *prog_name, const char *file_name)</div></div>
+<div class="ttc" id="structrle__hdr_html_a73983779ca206439513fb17db9df1f88"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_hdr::rle_file</a></div><div class="ttdeci">FILE * rle_file</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00114">rle.h:114</a></div></div>
+<div class="ttc" id="rle_8h_html_ae4f5beab3e61c61050bf9872b411e7ba"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ae4f5beab3e61c61050bf9872b411e7ba">RLE_CHECK_ALLOC</a></div><div class="ttdeci">#define RLE_CHECK_ALLOC(pgm, ptr, name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00086">rle.h:86</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dfb/unslice_8c_a7090aec632931a42b5d606b6db234b9d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a70db8bd1d499619f7ff9c1ca2ff3c8df"></a>
@@ -455,10 +431,10 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">char</span> * ctlfilename = NULL, * out_fname = NULL;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a> = <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a> = <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv );</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#a15993f2dc15cc84efea78320990371ed">gargv</a> = argv;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (! <a class="code" href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a>(argc, argv,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (! <a class="code" href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a>(argc, argv,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;           <span class="stringliteral">&quot;% y%-ymax!d f%-ctlfile!s files!*s o%-outfile!s&quot;</span>,</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;           &amp;y_flag, &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a5f0d610eafd05463bc8771cfd8da1adc">max_y</a>,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;           &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a>, &amp;ctlfilename, &amp;nfiles, &amp;slicefiles,</div>
@@ -466,15 +442,15 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    exit(1);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">/* Open the output file */</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    (void)<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a> );</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    (void)<a class="code" href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.rle_file = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>(<a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, out_fname, <span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, <a class="code" href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), out_fname, 0 );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    (void)<a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a> );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    (void)<a class="code" href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>.<a class="code" href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_file</a> = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>(<a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, out_fname, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a>, <a class="code" href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a>( argv ), out_fname, 0 );</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( nfiles * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    RLE_CHECK_ALLOC( <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, <a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a>, 0 );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a>( nfiles * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    RLE_CHECK_ALLOC( <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a>, 0 );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( nfiles * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ae4f5beab3e61c61050bf9872b411e7ba">RLE_CHECK_ALLOC</a>( <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, <a class="code" href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a>, 0 );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a> = (<span class="keywordtype">int</span> *) <a class="code" href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a>( nfiles * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#ae4f5beab3e61c61050bf9872b411e7ba">RLE_CHECK_ALLOC</a>( <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, <a class="code" href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a>, 0 );</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a>)        <span class="comment">/* Read in and verify the control file */</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
@@ -483,7 +459,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">/* Read in the control file */</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ctlfile = <a class="code" href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a>( <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, ctlfilename, <span class="stringliteral">&quot;r&quot;</span> );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ctlfile = <a class="code" href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a>( <a class="code" href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a>, ctlfilename, <span class="stringliteral">&quot;r&quot;</span> );</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#ac8fb234260ed02c01dabb0ac935e0372">ctl_lines</a> = 0;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">while</span> (! feof( ctlfile ))</div>
@@ -521,40 +497,34 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; nfiles; i++)</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="../../df/dfb/unslice_8c.html#a2a14c4a1e92129bef253b1278401c6ed">do_slice</a>( i, slicefiles[i] );</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="../../d7/d27/rle_8h.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a>( &amp;<a class="code" href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a> );</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    exit( 0 );</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="ttc" id="rle__open__f_8c_html_a89733a45961817885603ae01210290b7"><div class="ttname"><a href="../../de/d4e/rle__open__f_8c.html#a89733a45961817885603ae01210290b7">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(char *prog_name, char *file_name, char *mode)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d4e/rle__open__f_8c_source.html#l00216">rle_open_f.c:216</a></div></div>
 <div class="ttc" id="unslice_8c_html_aee81fbb4e9ac997b5b9a89b9c6b78cc2"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#aee81fbb4e9ac997b5b9a89b9c6b78cc2">default_ctl_file</a></div><div class="ttdeci">char default_ctl_file[]</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00050">unslice.c:50</a></div></div>
+<div class="ttc" id="rle_8h_html_a7827333daec9d306aff4729fbd61b031"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a7827333daec9d306aff4729fbd61b031">scanargs</a></div><div class="ttdeci">int scanargs(int argc, char **argv, const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00094">scanargs.c:94</a></div></div>
 <div class="ttc" id="unslice_8c_html_af95e26b41954f04652fcc143bf94ae80"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#af95e26b41954f04652fcc143bf94ae80">start_line</a></div><div class="ttdeci">int * start_line</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00047">unslice.c:47</a></div></div>
-<div class="ttc" id="cmd__name_8c_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d8/d30/cmd__name_8c.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
 <div class="ttc" id="unslice_8c_html_ac66325923834270b6b3670d21229bb2d"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ac66325923834270b6b3670d21229bb2d">stop_line</a></div><div class="ttdeci">int * stop_line</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00047">unslice.c:47</a></div></div>
 <div class="ttc" id="getap_8c_html_a115c579493456d4aa8e32dc9e26681f9"><div class="ttname"><a href="../../da/d92/getap_8c.html#a115c579493456d4aa8e32dc9e26681f9">y_flag</a></div><div class="ttdeci">int y_flag</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d92/getap_8c_source.html#l00091">getap.c:91</a></div></div>
 <div class="ttc" id="unslice_8c_html_ab9e1449fd00c98428516f0b41eddcb10"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ab9e1449fd00c98428516f0b41eddcb10">progname</a></div><div class="ttdeci">char * progname</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00051">unslice.c:51</a></div></div>
 <div class="ttc" id="unslice_8c_html_a4b7d9bfeafaa11a9e74226f565a4bcab"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a4b7d9bfeafaa11a9e74226f565a4bcab">ctlflag</a></div><div class="ttdeci">int ctlflag</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00045">unslice.c:45</a></div></div>
+<div class="ttc" id="rle_8h_html_af4fab734a5d227ad2ae95840f56fff3b"><div class="ttname"><a href="../../d7/d27/rle_8h.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a></div><div class="ttdeci">void rle_puteof(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00474">rle_putrow.c:474</a></div></div>
 <div class="ttc" id="unslice_8c_html_a2a14c4a1e92129bef253b1278401c6ed"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a2a14c4a1e92129bef253b1278401c6ed">do_slice</a></div><div class="ttdeci">void do_slice()</div></div>
-<div class="ttc" id="rletorla_8c_html_ab7e36af3707843f77cc5b4e831c2fa6d"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#ab7e36af3707843f77cc5b4e831c2fa6d">malloc</a></div><div class="ttdeci">char * malloc()</div></div>
-<div class="ttc" id="rle__putrow_8c_html_af4fab734a5d227ad2ae95840f56fff3b"><div class="ttname"><a href="../../d9/d2a/rle__putrow_8c.html#af4fab734a5d227ad2ae95840f56fff3b">rle_puteof</a></div><div class="ttdeci">void rle_puteof(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2a/rle__putrow_8c_source.html#l00474">rle_putrow.c:474</a></div></div>
+<div class="ttc" id="rle_8h_html_ab89ecb548e22ac958f24c71fba852464"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ab89ecb548e22ac958f24c71fba852464">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, const char *pgmname, const char *fname, int img_num)</div></div>
 <div class="ttc" id="unslice_8c_html_ad9e5ade73c3b1f8491a6f6a2892255f8"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ad9e5ade73c3b1f8491a6f6a2892255f8">out_hdr</a></div><div class="ttdeci">rle_hdr out_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00034">unslice.c:34</a></div></div>
 <div class="ttc" id="unslice_8c_html_a15993f2dc15cc84efea78320990371ed"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a15993f2dc15cc84efea78320990371ed">gargv</a></div><div class="ttdeci">char ** gargv</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00052">unslice.c:52</a></div></div>
 <div class="ttc" id="unslice_8c_html_ac8fb234260ed02c01dabb0ac935e0372"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#ac8fb234260ed02c01dabb0ac935e0372">ctl_lines</a></div><div class="ttdeci">int ctl_lines</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00046">unslice.c:46</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a82e79385f2d45cc3b80ce0f4f369eae5"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a82e79385f2d45cc3b80ce0f4f369eae5">rle_names</a></div><div class="ttdeci">void rle_names(rle_hdr *the_hdr, char *pgmname, char *fname, int img_num)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00048">rle_hdr.c:48</a></div></div>
+<div class="ttc" id="XtndRunget_8c_html_aa21fad24622996b74839deccf1202f29"><div class="ttname"><a href="../../dc/dd9/XtndRunget_8c.html#aa21fad24622996b74839deccf1202f29">malloc</a></div><div class="ttdeci">void * malloc()</div></div>
 <div class="ttc" id="rletorla_8c_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="../../d0/dcc/rletorla_8c.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dcc/rletorla_8c_source.html#l00082">rletorla.c:82</a></div></div>
+<div class="ttc" id="rle_8h_html_a76eefa2808915342600d65f36f77eb26"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a76eefa2808915342600d65f36f77eb26">rle_open_f</a></div><div class="ttdeci">FILE * rle_open_f(const char *prog_name, const char *f_name, const char *mode)</div></div>
 <div class="ttc" id="unslice_8c_html_a5f0d610eafd05463bc8771cfd8da1adc"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a5f0d610eafd05463bc8771cfd8da1adc">max_y</a></div><div class="ttdeci">int max_y</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00042">unslice.c:42</a></div></div>
 <div class="ttc" id="unslice_8c_html_a69e074b66d7a9cca98813bcfcbd1c1c0"><div class="ttname"><a href="../../df/dfb/unslice_8c.html#a69e074b66d7a9cca98813bcfcbd1c1c0">in_hdr</a></div><div class="ttdeci">rle_hdr in_hdr</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dfb/unslice_8c_source.html#l00034">unslice.c:34</a></div></div>
-<div class="ttc" id="rle__hdr_8c_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d2/df3/rle__hdr_8c.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
+<div class="ttc" id="rle_8h_html_a271249070fdd12c176777c77d76f888f"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a271249070fdd12c176777c77d76f888f">cmd_name</a></div><div class="ttdeci">char * cmd_name(char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d30/cmd__name_8c_source.html#l00031">cmd_name.c:31</a></div></div>
 <div class="ttc" id="painttorle_8c_html_ae48c37db113eec555c7f4ce2e48e90de"><div class="ttname"><a href="../../d2/d80/painttorle_8c.html#ae48c37db113eec555c7f4ce2e48e90de">oflag</a></div><div class="ttdeci">int oflag</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d80/painttorle_8c_source.html#l00045">painttorle.c:45</a></div></div>
-<div class="ttc" id="scanargs_8c_html_a7ea6d702c0484056c8504d6ce7fede08"><div class="ttname"><a href="../../d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08">scanargs</a></div><div class="ttdeci">int scanargs(va_alist)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db0/scanargs_8c_source.html#l00091">scanargs.c:91</a></div></div>
+<div class="ttc" id="structrle__hdr_html_a73983779ca206439513fb17db9df1f88"><div class="ttname"><a href="../../d6/dab/structrle__hdr.html#a73983779ca206439513fb17db9df1f88">rle_hdr::rle_file</a></div><div class="ttdeci">FILE * rle_file</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00114">rle.h:114</a></div></div>
+<div class="ttc" id="rle_8h_html_ae4f5beab3e61c61050bf9872b411e7ba"><div class="ttname"><a href="../../d7/d27/rle_8h.html#ae4f5beab3e61c61050bf9872b411e7ba">RLE_CHECK_ALLOC</a></div><div class="ttdeci">#define RLE_CHECK_ALLOC(pgm, ptr, name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d27/rle_8h_source.html#l00086">rle.h:86</a></div></div>
+<div class="ttc" id="rle_8h_html_a8ba0e5b11d1e39ab7227f1686e676c86"><div class="ttname"><a href="../../d7/d27/rle_8h.html#a8ba0e5b11d1e39ab7227f1686e676c86">rle_hdr_init</a></div><div class="ttdeci">rle_hdr * rle_hdr_init(rle_hdr *the_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df3/rle__hdr_8c_source.html#l00267">rle_hdr.c:267</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dfb/unslice_8c_a70db8bd1d499619f7ff9c1ca2ff3c8df_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -619,7 +589,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rle_hdr in_hdr</td>
+          <td class="memname"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> in_hdr</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -661,12 +631,14 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rle_hdr out_hdr</td>
+          <td class="memname"><a class="el" href="../../d6/dab/structrle__hdr.html">rle_hdr</a> out_hdr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="../../df/dfb/unslice_8c_source.html#l00034">34</a> of file <a class="el" href="../../df/dfb/unslice_8c_source.html">unslice.c</a>.</p>
+
+<p>Referenced by <a class="el" href="../../d6/d0d/dvirle2_8c_source.html#l00787">FormFeed()</a>.</p>
 
 </div>
 </div>
@@ -689,7 +661,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rle_op** out_raw</td>
+          <td class="memname"><a class="el" href="../../d3/d7d/structrle__op.html">rle_op</a>** out_raw</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -765,7 +737,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 23 2015 22:07:02 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 24 2015 11:47:08 for Utah Raster Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

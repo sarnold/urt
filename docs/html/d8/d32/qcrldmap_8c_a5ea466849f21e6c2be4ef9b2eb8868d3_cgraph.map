@@ -1,9 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="node2" href="$d4/db0/scanargs_8c.html#a7ea6d702c0484056c8504d6ce7fede08" title="scanargs" alt="" coords="124,5,204,32"/>
-<area shape="rect" id="node4" href="$d8/d32/qcr_8c.html#a73416334b60b1feae3f95c0622d3ca5f" title="init_qcr" alt="" coords="130,56,198,83"/>
-<area shape="rect" id="node6" href="$d8/d32/qcr_8c.html#a1955c7178ed4c8eaecb6bcb8c0b07036" title="qcr_load_i_luts" alt="" coords="105,107,223,133"/>
-<area shape="rect" id="node8" href="$d8/d32/qcr_8c.html#a9ba2c39c0c04e87fb4c355c4362be6d8" title="qcr_ld_lut12" alt="" coords="115,157,213,184"/>
-<area shape="rect" id="node3" href="$d4/db0/scanargs_8c.html#a862219039664df6eb3cfced58addf830" title="_do_scanargs" alt="" coords="272,5,384,32"/>
-<area shape="rect" id="node5" href="$d8/d32/qcr_8c.html#a2a438a836aea68e6d1d03876f915fd34" title="write_qcr_cmd" alt="" coords="271,107,385,133"/>
-<area shape="rect" id="node7" href="$d8/d32/qcr_8c.html#a3f79487ca7f975f79879b953f719e20d" title="write_data" alt="" coords="284,157,372,184"/>
-</map>

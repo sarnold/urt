@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['g',['g',['../d7/d1a/structbitmap__hdr.html#a0b61d0cb2340cb4a4385f045a5b7fb27',1,'bitmap_hdr::g()'],['../d2/d41/interfaceImage.html#abdff9847cf088d76ab58837cd84017d9',1,'Image::g()'],['../d4/d47/struct__color.html#a72ee9efd2a159e24a8f8423e839869f5',1,'_color::g()'],['../da/da4/struct__color__box.html#abdc0c6a7225e8e310a5f4876de5a4373',1,'_color_box::g()'],['../dc/d11/getami_8c.html#ac553d498b3a9538154d0bb02e939e302',1,'G():&#160;getami.c'],['../dc/d11/getami_8c.html#a83576af39a9f289a28c1263d61073508',1,'g():&#160;getami.c']]],
+  ['g',['g',['../d7/d1a/structbitmap__hdr.html#a0b61d0cb2340cb4a4385f045a5b7fb27',1,'bitmap_hdr::g()'],['../d8/d00/classImage.html#abdff9847cf088d76ab58837cd84017d9',1,'Image::g()'],['../d4/d47/struct__color.html#a72ee9efd2a159e24a8f8423e839869f5',1,'_color::g()'],['../da/da4/struct__color__box.html#abdc0c6a7225e8e310a5f4876de5a4373',1,'_color_box::g()'],['../dc/d11/getami_8c.html#ac553d498b3a9538154d0bb02e939e302',1,'G():&#160;getami.c'],['../dc/d11/getami_8c.html#a83576af39a9f289a28c1263d61073508',1,'g():&#160;getami.c']]],
   ['g_5fbase_5fcolor',['g_base_color',['../d2/db1/getbob_8c.html#a6bee94eb30b5e85d94b34dd807f629dd',1,'getbob.c']]],
   ['g_5fin',['g_in',['../d7/d73/unexp_8c.html#a99dd1779c0f0352657a53ad90b38696a',1,'unexp.c']]],
   ['gam',['gam',['../d9/d3b/get__orion_8c.html#ad4dced8805f3d8b7e8885e9a13a36f6e',1,'gam():&#160;get_orion.c'],['../da/d92/getap_8c.html#ad4dced8805f3d8b7e8885e9a13a36f6e',1,'gam():&#160;getap.c'],['../d2/db1/getbob_8c.html#ad4dced8805f3d8b7e8885e9a13a36f6e',1,'gam():&#160;getbob.c']]],
@@ -16,12 +16,13 @@ var searchData=
   ['gdist',['gdist',['../d3/dea/inv__cmap_8c.html#abf1058666fb5f170ef5469b222ed7c29',1,'inv_cmap.c']]],
   ['gdp',['gdp',['../d3/dea/inv__cmap_8c.html#a591cf8a5be2237af49221140de8e06f6',1,'inv_cmap.c']]],
   ['gencps',['gencps',['../da/dda/rletops_8c.html#a10b163481a4a1673c4e24915ef6af47b',1,'rletops.c']]],
+  ['get',['get',['../d6/dab/structrle__hdr.html#a5001fa93780da0d84ea636f494f0e4f7',1,'rle_hdr']]],
   ['getchan',['getchan',['../d0/d2c/getgmr_8c.html#ac97143cb2c5285327cd570ce602e7961',1,'getchan():&#160;getgmr.c'],['../dc/dd9/XtndRunget_8c.html#ac97143cb2c5285327cd570ce602e7961',1,'getchan():&#160;getgmr.c']]],
   ['gfxbase',['GfxBase',['../dc/d11/getami_8c.html#a27b8182e2ba664f425ed01cbb790f0ad',1,'GfxBase():&#160;getami.c'],['../d3/d6f/show3_8c.html#a27b8182e2ba664f425ed01cbb790f0ad',1,'GfxBase():&#160;show3.c']]],
   ['ggamtable',['ggamtable',['../dc/d7d/getmex_8c.html#a90a0c5a31fdec9d5d26f80d6f35848a8',1,'getmex.c']]],
   ['given',['given',['../d5/dd9/rleClock_8c.html#a582d3ba8fb9903a7d94d92e63dd985d0',1,'rleClock.c']]],
-  ['globals',['Globals',['../dd/d78/rle_8c.html#a83d317c49e3846c6da4c44c6d7a3b952',1,'rle.c']]],
-  ['gmap',['gmap',['../d2/d41/interfaceImage.html#afc1570f7578bd0a35e5e68dbd4e52f9f',1,'Image']]],
+  ['globals',['Globals',['../dd/d78/rle_8c.html#a0e114b62a18a4c23591ca58f8c9c226d',1,'rle.c']]],
+  ['gmap',['gmap',['../d8/d00/classImage.html#afc1570f7578bd0a35e5e68dbd4e52f9f',1,'Image']]],
   ['gray_5fflag',['gray_flag',['../da/d92/getap_8c.html#a1dccedaa65ce64e131dfa596ddcf3c10',1,'getap.c']]],
   ['green',['green',['../d8/dcc/structcolor__t.html#a85e1636e41c5772cf432e4612ed00310',1,'color_t::green()'],['../d8/d81/rastorle_8c.html#af92262e3b436a331266e8b98f7b6f396',1,'green():&#160;rastorle.c'],['../d6/d28/gettaac_8c.html#a6428e88c9e84cf0b805d4d340f619672',1,'green():&#160;gettaac.c']]],
   ['green_5fmask',['green_mask',['../d0/db7/struct__cmap__info__struct.html#ae39ff712223f2224dc911ed09559254c',1,'_cmap_info_struct::green_mask()'],['../db/d50/getx11_8c.html#a148092089faad02e993c119c4574161a',1,'green_mask():&#160;getx11.c']]],
