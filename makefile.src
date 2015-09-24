@@ -12,9 +12,14 @@ GETSRCS = get/*.c \
           get/getami/*.c \
           get/gmr27/*.c \
           get/qcr/*.c
-CNVSRCS = cnv/*c
+CNVSRCS = cnv/*c \
+          cnv/rlepict/*.c \
+          cnv/rletoabA62/*.c \
+          cnv/rletogif/*.c \
+          cnv/tex/*.c
 LIBSRCS = lib/*.c
-TOOLSRCS = tools/*.c
+TOOLSRCS = tools/*.c \
+           tools/clock/*.c
 
 ALLSRCS = $(LIBSRCS) \
           $(CNVSRCS) \
