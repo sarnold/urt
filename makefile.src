@@ -12,12 +12,14 @@ GETSRCS = get/*.c \
           get/getami/*.c \
           get/gmr27/*.c \
           get/qcr/*.c
+
 CNVSRCS = cnv/*c \
-          cnv/rlepict/*.c \
           cnv/rletoabA62/*.c \
           cnv/rletogif/*.c \
           cnv/tex/*.c
+
 LIBSRCS = lib/*.c
+
 TOOLSRCS = tools/*.c \
            tools/clock/*.c
 
@@ -70,4 +72,4 @@ docs:	Doxyfile.html_cfg $(ALLSRCS) $(DOCS)/.keep_dir
 	@echo "API docs now in $(DOCS)/html"
 
 docsclean:
-	rm -rf docs/html
+	rm -rf docs/html docs/.keep_dir
