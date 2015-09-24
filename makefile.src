@@ -2,6 +2,26 @@
 # Top level makefile for Utah Raster Toolkit
 #
 
+DOX = doxygen
+DOCS = docs
+
+INCLUDES = include/*.h
+GETSRCS = get/*.c \
+          get/getx11/*.c \
+          get/cx3d/*.c \
+          get/getami/*.c \
+          get/gmr27/*.c \
+          get/qcr/*.c
+CNVSRCS = cnv/*c
+LIBSRCS = lib/*.c
+TOOLSRCS = tools/*.c
+
+ALLSRCS = $(LIBSRCS) \
+          $(CNVSRCS) \
+          $(TOOLSRCS) \
+          $(GETSRCS) \
+          $(INCLUDES)
+
 # Subdirectories that get made
 #ifnadd	NO_TOOLS	OPTDIRS		tools cnv get
 #emit OPTDIRS
@@ -32,5 +52,17 @@ install $(MAKE_TARGET) pristine depend:: doit
 		( cd $$d ; echo $(MAKE) $@ on $$d ; $(MAKE) $(MFLAGS) $@ ) ; \
 	done
 
-
 doit:
+
+
+$(DOCS)/.keep_dir:
+	mkdir -p $(dir $@)
+	touch $@
+
+docs:	Doxyfile.html_cfg $(ALLSRCS) $(DOCS)/.keep_dir
+	rm -rf $(DOCS)/html
+	$(DOX) Doxyfile.html_cfg
+	@echo "API docs now in $(DOCS)/html"
+
+docsclean:
+	rm -rf docs/html
