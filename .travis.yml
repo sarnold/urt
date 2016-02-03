@@ -1,0 +1,17 @@
+addons:
+  apt:
+    packages:
+    - doxygen
+    - graphviz
+
+language: c
+
+script: ./Configure config/travis-std && make && make docs
+
+install: true
+
+sudo: false
+
+notifications:
+  irc: "chat.freenode.net#code-hell"
+
