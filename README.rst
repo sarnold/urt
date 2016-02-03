@@ -1,5 +1,27 @@
-This is the Utah Raster Toolkit distribution version 3.0 of June, 1990, 
-plus build "modernization" and code fixes.  Next release will be a bug-fix 
+=========================
+ The Utah Raster Toolkit
+=========================
+
+(and RLE graphics library)
+==========================
+
+.. image:: https://img.shields.io/badge/license-GPL2-green.svg?dummy
+   :target: https://github.com/sarnold/urt/blob/master/LICENSE
+
+.. image:: https://badge.fury.io/gh/sarnold%2Furt.svg
+   :target: https://badge.fury.io/gh/sarnold%2Furt
+
+.. image:: https://travis-ci.org/sarnold/urt.svg?branch=master
+   :target: https://travis-ci.org/sarnold/urt
+
+.. image:: https://codeclimate.com/github/sarnold/urt/badges/gpa.svg
+   :target: https://codeclimate.com/github/sarnold/urt
+
+.. image:: http://githubbadges.herokuapp.com/sarnold/urt/issues.svg?style=fla$
+   :target: https://github.com/sarnold/urt/issues
+
+This is the Utah Raster Toolkit distribution version 3.x plus build 
+"modernization" and code fixes.  Next release will be a bug-fix
 and build update maintenance release.
 
 * Changes in maintenance release candidate 3.2_rc1: https://github.com/sarnold/urt/releases
@@ -20,16 +42,16 @@ changed.  See CHANGES for details.
 The source-only distribution contains the following subdirectories::
 
 	cnv:		File conversion directory.  A collection of
-			utilities for converting to and from the Utah
-			RLE format.
+				utilities for converting to and from the Utah
+				RLE format.
 
 	etc:		Contains some other sample programs that may
-			or may not be useful, but may be interesting to
-			look at if you are writing RLE programs.
+				or may not be useful, but may be interesting to
+				look at if you are writing RLE programs.
 
 	get:		Contains programs to display RLE images on various
-			types of displays, and instructions on how to
-			roll your own (see the README)
+				types of displays, and instructions on how to
+				roll your own (see the README)
 
 	include:	Necessary ".h" files for the library and toolkit.
 
@@ -40,33 +62,34 @@ The source-only distribution contains the following subdirectories::
 	tools:		Sources for the tools.
 
 	tex:		Source for dvi to rle conversion program.
-			Also has dviselect program.  Requires U of
-			Maryland MC-TeX distribution (see README).
+				Also has dviselect program.  Requires U of
+				Maryland MC-TeX distribution (see README).
 
 	img:		Contains a couple of uuencoded (use uudecode
-			to get them back) RLE files.
+				to get them back) RLE files.
 
 The FTP distribution contains the following directories, as well::
 
-			The following two directories are in urt-doc.tar.Z.
-	doc:		Contains long narrative descriptions of
-			the RLE file format and the Toolkit.
-			Documentation files are in Scribe ".mss" format,
-			PostScript ".ps" form, and cleartext (".doc).
-			A formatted version of the toolkit paper appeared
-			in the Proceedings of the USENIX 3rd Graphics
-			Workshop.
+	The following two directories are in urt-doc.tar.Z.
+
+	doc:		Contains long narrative descriptions of the RLE
+				file format and the Toolkit.  Documentation files
+				are in Scribe ".mss" format, PostScript ".ps" form,
+				and cleartext (".doc).  A formatted version of the
+				toolkit paper appeared in the Proceedings of the
+				USENIX 3rd Graphics Workshop.
+
 	doc/pics:	Postscript form of the raster images for the
-			toolkit paper.
+				toolkit paper.
 
 	img:		Includes some interesting RLE image files.
-			Distributed as urt-img.tar.Z.
+				Distributed as urt-img.tar.Z.
 
 To make and install the toolkit, you should::
 
 	0. If you got the source-only distribution, remove all the
 	   urt.kit?? and kit*isdone files:
-		rm urt.kit?? kit*isdone
+	   rm urt.kit?? kit*isdone
 
 	1. Edit config/urt (I recommend making a copy and editing that
 	   instead) to reflect your site configuration.  The
@@ -80,19 +103,19 @@ To make and install the toolkit, you should::
 	   All the configuration files compile as many of the
 	   conversion tools as possible for the given machine.  If you
 	   don't want some of these tools, comment out the corresponding
-	   lines. 
+	   lines.
 
 	2. Configure the makefiles by running
-		Configure config/urt
+	   Configure config/urt
 	   If you have made a different config file, substitute its
 	   name for config/urt, of course.  Once you have done this
 	   once, you can use 'make config' instead.
 
 	3a. If you have set the "RL" path in the config file to
-	   something besides "lib" (presumably the same as LIB_DEST),
-	   you must first
-		cd lib; make install
-	   Then do 3b.
+	    something besides "lib" (presumably the same as LIB_DEST),
+	    you must first
+			cd lib; make install
+	    Then do 3b.
 
 	3b. Run 'make' in this directory.  This will
 	   compile the library and tools you have selected.
@@ -117,7 +140,7 @@ indicated in parentheses)::
 	Macintosh (MacOS) with MPW [at least library and getmac program]
 	Cray 2 (UNICOS) (config/cray)
 
-If you find bugs, make improvements, write new tools or conversions, 
+If you find bugs, make improvements, write new tools or conversions,
 or have questions or suggestions, please send them to the address below.
 
 If you want to write your own tool, we suggest that you start with
@@ -145,13 +168,13 @@ Original core authors::
 	EECS Department
 	University of Michigan
 	Ann Arbor, MI 48109
-	
+
 	Rod G. Bogart
 	Computer-Aided Engineering Network
 	University of Michigan
 	Chrysler Building
 	Ann Arbor, MI 48109
-	
+
 	James Painter
 	Computer Science Department
 	University of Utah
