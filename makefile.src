@@ -4,8 +4,31 @@
 
 DOX = doxygen
 DOCS = docs
+CCCC = cccc
+METRICS = ccccout
+CCCOPTS = --lang=c
 
-INCLUDES = include/*.h
+GENHDRS = include/rle_config.h
+
+GENMAKE = config/gentoo \
+        makefile \
+        cnv/makefile \
+	cnv/rletoabA62/makefile \
+	cnv/rletogif/makefile \
+	cnv/tex/makefile \
+	get/cx3d/makefile \
+	get/getx11/makefile \
+	get/gmr27/makefile \
+	get/makefile \
+	get/qcr/makefile \
+	include/makefile \
+	lib/makefile \
+	man/makefile \
+	tools/clock/makefile \
+	tools/makefile
+
+INCLUDES = include/*.h $(GENHDRS)
+
 GETSRCS = get/*.c \
           get/getx11/*.c \
           get/cx3d/*.c \
@@ -72,4 +95,18 @@ docs:	Doxyfile.html_cfg $(ALLSRCS) $(DOCS)/.keep_dir
 	@echo "API docs now in $(DOCS)/html"
 
 docsclean:
-	rm -rf docs/html docs/.keep_dir
+	rm -rf $(DOCS)/.keep_dir $(DOCS)/html $(METRICS)/*.html
+
+genclean:
+	rm -f $(GENHDRS) $(GENMAKE)
+
+reallyclean: clean docsclean genclean
+
+$(METRICS)/.keep_dir:
+	mkdir -p $(dir $@)
+	touch $@
+
+metrics: $(ALLSRCS) $(METRICS)/.keep_dir
+	rm -rf $(METRICS)/*.html
+	$(CCCC) $(CCCOPTS) --outdir=$(METRICS)/ $(ALLSRCS)
+	@echo "Metrics output now in $(METRICS)/cccc.html"
