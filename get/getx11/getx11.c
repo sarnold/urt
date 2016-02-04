@@ -73,7 +73,7 @@ Pixel		pixel_base;
 
 char 		*progname = NULL;
 Display		*dpy = NULL;
-Window		root_window = NULL;
+Window		root_window = 0;
 int		screen = 0;
 
 Boolean		debug_flag = False;	/* set if debug mode -D */
@@ -115,7 +115,7 @@ image_information *i;
     i->colormap = NULL;
     i->visual_class = -1;
     i->pixmap_failed = False;
-    
+
     i->filename = NULL;
     i->img_num = 0;
     i->title = NULL;
@@ -427,7 +427,7 @@ char 		** argv;
 	    INHERIT(black_pixel);
 #undef INHERIT
 	}
-	else previous_img = NULL;
+	else previous_img = 0;
 
 	if ( !using_stdin ) {
 	    /* rle_cnt will be set to -1 when it is time to open a new
@@ -474,11 +474,11 @@ char 		** argv;
 	}
 	img->img_num = rle_cnt;
 
-	if ( tflag && title_string ) 
+	if ( tflag && title_string )
 	    img->title = title_string;
 
 	status = get_pic( img, window_geometry, previous_img );
-	
+
 	switch (status){
 	case SUCCESS:
 	    num_imgs++;
@@ -709,14 +709,14 @@ char *window_geometry;
 	img->mono_img = True;
     if ( img->mono_img )
 	img->dpy_channels = 1;
-    
+
     check_mono_color( img, &img_hdr );
 
     /* jump/buffer scans according to the -j flag and to img->fd == sdtin */
     buffer_scans = (jump_flag ?
 		    ((jump_scans > 0) ? jump_scans : img->h) :
 		    ((img->fd == stdin) ? 1 : img->h));
-    
+
     if ( !previous_img )
 	/* find a suitable visual for the image */
 	find_appropriate_visual( img );
@@ -724,7 +724,7 @@ char *window_geometry;
     if ( img->img_channels < img->dpy_channels )
 	fprintf(stderr, "%s: dpy_channels > img_channels, %d > %d\n", progname,
  		img->dpy_channels, img->img_channels);
-    
+
     get_dither_colors( img, &img_hdr );
 
     if ( !previous_img )
@@ -778,10 +778,10 @@ char *window_geometry;
     if ( !previous_img ) {
 	determine_icon_size( img->w, img->h, &img->icn_w, &img->icn_h,
 			    &img->icn_factor);
-	
+
 	if ( !img->icn_image )
 	    img->icn_image = get_X_image( img, img->icn_w, img->icn_h, False );
-	
+
 	if ( img->icn_image == NULL ) {
 	    perror("malloc for fancy icon");
 	    return ( MALLOC_FAILURE );
@@ -789,17 +789,17 @@ char *window_geometry;
     }
 
     /*
-     * Get image and icon windows of the right size 
+     * Get image and icon windows of the right size
      */
-    
+
     create_windows( img, window_geometry );
     set_watch_cursor( img->window );
 
     /*
-     * If we did not inherit the image from the previous image, 
+     * If we did not inherit the image from the previous image,
      * allocate it now.
      */
-    if ( !previous_img || previous_img->pixmap == NULL )
+    if ( !previous_img || previous_img->pixmap == 0 )
     {
 	if (!allocate_ximage( img, True ))
 	    return( MALLOC_FAILURE );
