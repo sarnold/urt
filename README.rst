@@ -165,24 +165,10 @@ and is the most featurful of all the toolkit programs.
 Original core authors::
 
 	Spencer W. Thomas
-	EECS Department
-	University of Michigan
-	Ann Arbor, MI 48109
 
 	Rod G. Bogart
-	Computer-Aided Engineering Network
-	University of Michigan
-	Chrysler Building
-	Ann Arbor, MI 48109
 
 	James Painter
-	Computer Science Department
-	University of Utah
-	Salt Lake City, UT 84112
 
-When you get a copy of the toolkit, from whatever source, please let us
-know at one of the addresses below.  That way, we will be able to keep
-you apprised of changes and updates.
+	John W. Peterson  (http://www.saccade.com/)
 
-toolkit-request@cs.utah.edu
-toolkit-request@caen.engin.umich.edu
