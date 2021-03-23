@@ -4,10 +4,7 @@ on: [push]
 
 jobs:
   build_ubuntu:
-    strategy:
-      matrix:
-        platform: [ubuntu-latest, ubuntu-18.04, ubuntu-16.04]
-    runs-on: ${{matrix.platform}}
+    runs-on: ubuntu-latest
     steps:
     - name: Install dependencies
       uses: sudo apt install -y doxygen graphviz
