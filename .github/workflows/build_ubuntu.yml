@@ -6,6 +6,8 @@ jobs:
   build_ubuntu:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: Install dependencies
       uses: sudo apt install -y doxygen graphviz
     - name: Configure
