@@ -9,7 +9,6 @@ jobs:
         platform: [ubuntu-latest, ubuntu-18.04, ubuntu-16.04]
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
     - name: Install dependencies
       uses: sudo apt install -y doxygen graphviz
     - name: Configure
