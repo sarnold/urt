@@ -52,9 +52,9 @@ static Boolean init_separate_color_rw(), init_color_rw(),
     init_separate_color_ro(), init_color_ro(), init_mono_rw(), init_mono_ro();
 static CONST_DECL char *visual_class_to_string();
 
-static Cursor circle_cursor = NULL;
-static Cursor left_ptr_cursor = NULL;
-static Cursor watch_cursor = NULL;
+static Cursor circle_cursor = 0;
+static Cursor left_ptr_cursor = 0;
+static Cursor watch_cursor = 0;
 
 static int specified_screen = -1;	/* No specific screen. */
 
@@ -84,16 +84,16 @@ Window window;
 void get_cursors( window )
 Window window;
 {
-    if (circle_cursor == NULL)
+    if (circle_cursor == 0)
 	circle_cursor = XCreateFontCursor (dpy, XC_circle);
 
-    if (watch_cursor == NULL)
+    if (watch_cursor == 0)
 	watch_cursor = XCreateFontCursor (dpy, XC_watch);
 
-    if (left_ptr_cursor == NULL)
+    if (left_ptr_cursor == 0)
 	left_ptr_cursor = XCreateFontCursor (dpy, XC_left_ptr);
 
-    if (circle_cursor == NULL) {
+    if (circle_cursor == 0) {
 	Pixmap	source;
 	Pixmap	mask;
 	XColor	color_1;
@@ -124,10 +124,10 @@ Window window;
 	XFreePixmap (dpy, mask);
     }
 
-    if (watch_cursor == NULL)
+    if (watch_cursor == 0)
 	watch_cursor = circle_cursor;
 
-    if (left_ptr_cursor == NULL)
+    if (left_ptr_cursor == 0)
 	left_ptr_cursor = circle_cursor;
 }
 
@@ -148,7 +148,7 @@ Boolean share;
 				 (img->binary_img ? 1 : img->dpy_depth), 
 				 (img->binary_img ? XYBitmap : ZPixmap), 
 				 NULL, &img->shm_img, width, height );
-	if ( image != NULL )
+	if ( image != 0 )
 	{
 	    /* Allocate shared segment. */
 	    img->shm_img.shmid =
@@ -267,12 +267,12 @@ static int handle_x_errors( dpy, event)
 	if ( img ) {
 	    if ( xid == img->pixmap ){
 		DPRINTF(stderr, "img->pixmap allocation failed\n");
-		img->pixmap = NULL;
+		img->pixmap = 0;
 		img->pixmap_failed = True;
 	    } else
 	    if ( xid == img->icn_pixmap ){
 		DPRINTF(stderr, "img->icn_pixmap allocation failed\n");
-		img->icn_pixmap = NULL;
+		img->icn_pixmap = 0;
 		img->pixmap_failed = True;
 	    } else
 		_XDefaultError (dpy, event);
@@ -331,10 +331,10 @@ Boolean reallocate;
     int iw = img->w * img->mag_fact;
     int ih = img->h * img->mag_fact;
 
-    if (( img->pixmap != NULL && reallocate ) ||
-	( img->pixmap != NULL && (img->pix_w < iw || img->pix_h < ih ))){
-	free_X_pixmap( dpy, img->pixmap );
-	img->pixmap = NULL;
+    if (( img->pixmap != 0 && reallocate ) ||
+	( img->pixmap != 0 && (img->pix_w < iw || img->pix_h < ih ))){
+	XFreePixmap( dpy, img->pixmap );
+	img->pixmap = 0;
     }
 
     /* reallocate it: use the Min of the winsize and (pic * mag) */
@@ -521,7 +521,7 @@ image_information *img;
 {
     img->colormap = XCreateColormap (dpy, root_window,
 				     img->dpy_visual, AllocNone );
-    if (img->colormap == NULL) 
+    if (img->colormap == 0) 
 	fprintf(stderr, "getx11: Could not create color map for visual\n");
     else {
 	VPRINTF(stderr, "created colormap for visual type %s\n",
@@ -608,8 +608,8 @@ register image_information *img;
      * Now, make the window.
      */
 
-    new_window = (img->window == NULL && img->icn_window == NULL);
-    new_pixmaps = ((img->pixmap == NULL || img->icn_pixmap == NULL) &&
+    new_window = (img->window == 0 && img->icn_window == 0);
+    new_pixmaps = ((img->pixmap == 0 || img->icn_pixmap == 0) &&
 		   !img->pixmap_failed && !stingy_flag);
 
     if ( !img->window )
@@ -1279,7 +1279,7 @@ int npixels;
 	nunique = (p - pixels) + 1;
 
 	DPRINTF(stderr, "In free_unique_pixels \n\nPixels: ");
-	for (i=0;i<nunique;i++) DPRINTF(stderr, " %d ",pixels[i]);
+	for (i=0;i<nunique;i++) DPRINTF(stderr, " %zu ",pixels[i]);
 	DPRINTF(stderr, "\n");
     }
     else
@@ -1340,13 +1340,13 @@ int try_ro;
 	/* try to get a color map entry for each color. */
 	red_index = green_index = blue_index = 0;
 
-#ifdef XLIBINT_H_NOT_AVAILABLE
+#ifndef XLIBINT_H_NOT_AVAILABLE
 	for ( i = 0; i < total_levels; i++ ) {
-	    color_def.red   = map[red_index] << 8;
-	    color_def.green = map[green_index] << 8;
-	    color_def.blue  = map[blue_index] << 8;
+	    color_defs->red   = map[red_index] << 8;
+	    color_defs->green = map[green_index] << 8;
+	    color_defs->blue  = map[blue_index] << 8;
 
-	    if ( XAllocColor (dpy, img->colormap, &color_def ) == 0 ) {
+	    if ( XAllocColor (dpy, img->colormap, color_defs ) == 0 ) {
 		break;
 	    }
 
@@ -1357,7 +1357,7 @@ int try_ro;
 		red_index = 0;
 	    }
 
-	    img->pixel_table[i] = color_def.pixel;
+	    img->pixel_table[i] = color_defs->pixel;
 	}
 
 	/* Check if the colors are available */
@@ -1384,7 +1384,7 @@ int try_ro;
 	    }
 	}
 
-	if (XAllocColors(dpy, img->colormap, color_defs, total_levels, status)== 0)
+	if (XAllocColor(dpy, img->colormap, color_defs, total_levels, status)== 0)
 	{
 	    for ( i = 0, j = 0; i < total_levels; i++ )
 		if (status[i])
@@ -1592,22 +1592,22 @@ int try_ro;
 
 	/* try to get a color map entry for each color.  */
 
-#ifdef XLIBINT_H_NOT_AVAILABLE
+#ifndef XLIBINT_H_NOT_AVAILABLE
 	for ( i = 0; i < num_lvls; i++ ) {
 	    if ( img->mono_color ) {
-		color_def.red   = img->in_cmap[RLE_RED][i] << 8;
-		color_def.green = img->in_cmap[RLE_GREEN][i] << 8;
-		color_def.blue  = img->in_cmap[RLE_BLUE][i] << 8;
+		color_defs->red   = img->in_cmap[RLE_RED][i] << 8;
+		color_defs->green = img->in_cmap[RLE_GREEN][i] << 8;
+		color_defs->blue  = img->in_cmap[RLE_BLUE][i] << 8;
 	    } else {
-		color_def.red   = map[i] << 8;
-		color_def.green = map[i] << 8;
-		color_def.blue  = map[i] << 8;
+		color_defs->red   = map[i] << 8;
+		color_defs->green = map[i] << 8;
+		color_defs->blue  = map[i] << 8;
 	    }
 
-	    if ( XAllocColor (dpy, img->colormap, &color_def ) == 0 ){
+	    if ( XAllocColor (dpy, img->colormap, color_defs ) == 0 ){
 		break;
 	    }
-	    img->pixel_table[i] = color_def.pixel;
+	    img->pixel_table[i] = color_defs->pixel;
 	}
 
 	/* Check if the colors are available */
@@ -1638,7 +1638,7 @@ int try_ro;
 	    }
 	}
 
-	if (XAllocColors(dpy, img->colormap, color_defs, num_lvls, status)== 0)
+	if (XAllocColor(dpy, img->colormap, color_defs, num_lvls, status)== 0)
 	{
 	    for ( i = 0, j = 0; i < num_lvls; i++ )
 		if (status[i])
@@ -1981,7 +1981,7 @@ int use_top;
     font_height = pixel_font_info->ascent + pixel_font_info->descent + 4;
     y = (use_top ? 0 : (h - font_height));
 
-    if ( img->pix_info_window == NULL ) {
+    if ( img->pix_info_window == 0 ) {
 	XSetFont (dpy, img->gc, pixel_font_info->fid );
 	img->pix_info_window = XCreateSimpleWindow(
 	    dpy, img->window, 0, y, w, font_height, 0, None,

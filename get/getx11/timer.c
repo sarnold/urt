@@ -72,8 +72,11 @@ void
 wait_timer()
 {
 #ifndef NO_ITIMER
+    sigset_t sig_alarm_mask;
+    (void) sigemptyset(&sig_alarm_mask);
+    (void) sigaddset(&sig_alarm_mask, SIGALRM);
     while (!ringring)
-	sigpause( ~sigmask(SIGALRM));
+	sigsuspend(&sig_alarm_mask);
     signal(SIGALRM, ofunc);
 #endif
 }

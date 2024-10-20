@@ -203,7 +203,7 @@ FILE	*fd;
 	    EasyFail("EOF in extention\n",TRUE);
 	if (c == 0)
 	    return FALSE;
-	if (read(fd,buf,(int) c)!=(int) c)
+	if (!ReadOK(fd,buf,(int) c))
 	    EasyFail("EOF in extention\n",TRUE);
     }
 }

@@ -30,3 +30,38 @@
 
 # Debug files
 *.dSYM/
+
+# Build generated files
+makefile
+bin/*
+!bin/README
+lib/buildlib
+lib/buildshared
+lib/makefile
+include/makefile
+include/rle_config.h
+man/makefile
+tools/makefile
+get/qcr/makefile
+get/gmr27/makefile
+tools/makefile
+tools/clock/makefile
+get/getx11/makefile
+get/cx3d/makefile
+get/makefile
+cnv/tex/makefile
+cnv/rletogif/makefile
+cnv/rletoabAB62/makefile
+cnv/makefile
+# Install generated files
+man/install*
+get/install*
+get/getx11/install*
+lib/install
+include/install
+tools/install*
+cnv/rletogif/install*
+cnv/install*
+man-dest/man1/*
+man-dest/man3/*
+man-dest/man5/*
