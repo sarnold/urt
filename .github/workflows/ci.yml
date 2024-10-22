@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-20.04]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Ubuntu build deps
+      run: |
+        sudo apt-get install -y doxygen graphviz tox
+
+    - name: configure and build
+      run: |
+        tox -e dist
+
+    - name: make docs
+      run: |
+        tox -e docs
