@@ -107,12 +107,12 @@ image_information *img_info = NULL;
 void init_img_info( i )
 image_information *i;
 {
-    i->window = i->icn_window = NULL;
-    i->pixmap = i->icn_pixmap = NULL;
-    i->pix_info_window = NULL;
+    i->window = i->icn_window = 0;
+    i->pixmap = i->icn_pixmap = 0;
+    i->pix_info_window = 0;
     i->gc = i->icn_gc = NULL;
     i->image = i->icn_image = NULL;
-    i->colormap = NULL;
+    i->colormap = 0;
     i->visual_class = -1;
     i->pixmap_failed = False;
 
@@ -1849,7 +1849,7 @@ Boolean flip_book;
 		}
 	    else handled_key = False;
 		
-	    DPRINTF(stderr, "%s %x, %s String '%s' - %d\n", symstr, keysym,
+	    DPRINTF(stderr, "%s %zx, %s String '%s' - %d\n", symstr, keysym,
 		    ( shifted_key )? "shifted":"unshifted", string, length );
 
 	    if ( !handled_key )

@@ -1,4 +1,4 @@
-#ifndef XLIBINT_H_NOT_AVAILABLE
+#ifdef XLIBINT_H_NOT_AVAILABLE
 
 /* $XConsortium: XGetHClrs.c,v 11.10 88/09/06 16:07:50 martin Exp $ */
 /* Copyright    Massachusetts Institute of Technology    1986	*/
@@ -23,12 +23,13 @@ static int dummy_handle_x_errors( dpy, event)
 }
 
 
-Status XAllocColors(dpy, cmap, defs, ndefs, statuses)
+Status XAllocColor(dpy, cmap, defs, ndefs, statuses)
 register Display *dpy;
 Colormap cmap;
 XColor *defs;
 int ndefs;
 Status *statuses;
+
 {
     xAllocColorReply rep;
     register xAllocColorReq *req;
