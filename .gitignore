@@ -1,3 +1,8 @@
+# general
+.tox/
+__pycache__/
+docs/.keep_dir
+
 # Object files
 *.o
 *.ko

@@ -5,22 +5,12 @@
 (and RLE graphics library)
 ==========================
 
-.. image:: https://img.shields.io/badge/license-GPL2-green.svg?dummy
-   :target: https://github.com/sarnold/urt/blob/master/LICENSE
+|ci|
 
-.. image:: https://badge.fury.io/gh/sarnold%2Furt.svg
-   :target: https://badge.fury.io/gh/sarnold%2Furt
+|tag| |license| |contributors|
 
-.. image:: https://travis-ci.org/sarnold/urt.svg?branch=master
-   :target: https://travis-ci.org/sarnold/urt
 
-.. image:: https://codeclimate.com/github/sarnold/urt/badges/gpa.svg
-   :target: https://codeclimate.com/github/sarnold/urt
-
-.. image:: http://githubbadges.herokuapp.com/sarnold/urt/issues.svg?style=fla$
-   :target: https://github.com/sarnold/urt/issues
-
-This is the Utah Raster Toolkit distribution version 3.x plus build 
+This is the Utah Raster Toolkit distribution version 3.x plus build
 "modernization" and code fixes.  Next release will be a bug-fix
 and build update maintenance release.
 
@@ -154,9 +144,14 @@ Our thanks to some beta testers (and contributors)::
 	Gregg Townsend, CS Dept., U of Arizona
 	John Peterson, Apple Computer
 
+Also thanks to our new Github PR contributors:
+
+@jopadan
+@moshekaplan
+
 And to all of you who submitted new programs or ideas for new
 features, especially Craig Kolb (Yale), whose 'rayshade' program provided
-(indirectly) the incentive for this release.
+(indirectly) the incentive for this (old) release.
 
 A special thanks to Martin Friedmann, MIT Media Lab, who almost
 totally revamped the 'getx11' program, so that it now works correctly,
@@ -172,3 +167,28 @@ Original core authors::
 
 	John W. Peterson  (http://www.saccade.com/)
 
+
+License
+=======
+
+This project is licensed under the GPL license - see the `COPYING file`_ for
+details.
+
+.. _COPYING file: https://github.com/sarnold/urt/blob/master/COPYING
+
+
+.. |ci| image:: https://github.com/sarnold/urt/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/sarnold/urt/actions/workflows/ci.yml
+    :alt: CI Status
+
+.. |license| image:: https://img.shields.io/github/license/sarnold/urt
+    :target: https://github.com/sarnold/urt/blob/master/COPYING
+    :alt: License
+
+.. |tag| image:: https://img.shields.io/github/v/tag/sarnold/urt?color=green&include_prereleases&label=latest%20release
+    :target: https://github.com/sarnold/urt/releases
+    :alt: GitHub tag
+
+.. |contributors| image:: https://img.shields.io/github/contributors/sarnold/urt
+   :target: https://github.com/sarnold/urt/
+   :alt: Contributors
