@@ -5,6 +5,8 @@
 (and RLE graphics library)
 ==========================
 
+|ci|
+
 |tag| |license| |contributors|
 
 
@@ -169,11 +171,15 @@ Original core authors::
 License
 =======
 
-This project is licensed under the GPLv2 license - see the `LICENSE file`_ for
+This project is licensed under the GPL license - see the `COPYING file`_ for
 details.
 
-.. _LICENSE file: https://github.com/sarnold/urt/blob/master/LICENSE
+.. _COPYING file: https://github.com/sarnold/urt/blob/master/COPYING
 
+
+.. |ci| image:: https://github.com/sarnold/urt/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/sarnold/urt/actions/workflows/ci.yml
+    :alt: CI Status
 
 .. |license| image:: https://img.shields.io/github/license/sarnold/urt
     :target: https://github.com/sarnold/urt/blob/master/COPYING
