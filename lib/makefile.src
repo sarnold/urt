@@ -6,7 +6,7 @@ DEST =
 #endif
 
 #ifndef NO_RANLIB
-RANLIB = ranlib
+RANLIB ?= ranlib
 #endif
 
 # If nothing else is specified, default is to build the library.

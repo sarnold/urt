@@ -144,10 +144,11 @@ Our thanks to some beta testers (and contributors)::
 	Gregg Townsend, CS Dept., U of Arizona
 	John Peterson, Apple Computer
 
-Also thanks to our new Github PR contributors:
+Also thanks to the new Github PR contributors::
 
-@jopadan
-@moshekaplan
+	@ceamac
+	@jopadan
+	@moshekaplan
 
 And to all of you who submitted new programs or ideas for new
 features, especially Craig Kolb (Yale), whose 'rayshade' program provided
